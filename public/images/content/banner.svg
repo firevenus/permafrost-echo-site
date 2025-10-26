@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="300" viewBox="0 0 800 300">
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3a7bd5" />
+      <stop offset="100%" stop-color="#00d2ff" />
+    </linearGradient>
+    <linearGradient id="text-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#f0f0f0" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="300" fill="url(#bg-gradient)" />
+  <circle cx="650" cy="80" r="50" fill="rgba(255,255,255,0.2)" />
+  <circle cx="100" cy="220" r="70" fill="rgba(255,255,255,0.1)" />
+  <text x="400" y="150" font-family="Arial, sans-serif" font-size="40" font-weight="bold" fill="url(#text-gradient)" text-anchor="middle">冻土回声 × 东北亚独立游戏联盟</text>
+  <text x="400" y="200" font-family="Arial, sans-serif" font-size="20" fill="rgba(255,255,255,0.8)" text-anchor="middle">连接北境的创意回声，汇聚独立游戏的力量</text>
+</svg>

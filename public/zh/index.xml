@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>冻土回声 × 东北亚独立游戏联盟</title>
+    <link>http://localhost:1313/zh/</link>
+    <description>Recent content on 冻土回声 × 东北亚独立游戏联盟</description>
+    <generator>Hugo -- 0.147.4</generator>
+    <language>zh</language>
+    <lastBuildDate>Mon, 02 Jan 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/zh/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>First Post</title>
+      <link>http://localhost:1313/zh/en/posts/first-post/</link>
+      <pubDate>Mon, 02 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/zh/en/posts/first-post/</guid>
+      <description>&lt;h1 id=&#34;first-post&#34;&gt;First Post&lt;/h1&gt;
+&lt;p&gt;This is an example post showcasing Hugo&amp;rsquo;s multilingual capabilities.&lt;/p&gt;
+&lt;h2 id=&#34;content-example&#34;&gt;Content Example&lt;/h2&gt;
+&lt;p&gt;Here is some example content that you can modify as needed.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;() {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;fmt&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Println&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Hello, Hugo!&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;Multilingual websites can help you reach a wider audience.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>第一篇文章</title>
+      <link>http://localhost:1313/zh/zh/posts/first-post/</link>
+      <pubDate>Mon, 02 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/zh/zh/posts/first-post/</guid>
+      <description>&lt;h1 id=&#34;第一篇文章&#34;&gt;第一篇文章&lt;/h1&gt;
+&lt;p&gt;这是一篇示例文章，展示了Hugo的多语言功能。&lt;/p&gt;
+&lt;h2 id=&#34;内容示例&#34;&gt;内容示例&lt;/h2&gt;
+&lt;p&gt;这里是一些示例内容，您可以根据需要进行修改。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;() {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;fmt&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Println&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Hello, Hugo!&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;结论&#34;&gt;结论&lt;/h2&gt;
+&lt;p&gt;多语言网站可以帮助您接触更广泛的受众。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>About</title>
+      <link>http://localhost:1313/zh/en/about/</link>
+      <pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/zh/en/about/</guid>
+      <description>&lt;h1 id=&#34;about-us&#34;&gt;About Us&lt;/h1&gt;
+&lt;p&gt;This is a multilingual website example built with Hugo.&lt;/p&gt;
+&lt;h2 id=&#34;our-team&#34;&gt;Our Team&lt;/h2&gt;
+&lt;p&gt;We are a passionate team dedicated to creating high-quality website content.&lt;/p&gt;
+&lt;h2 id=&#34;contact-us&#34;&gt;Contact Us&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Email: &lt;a href=&#34;mailto:contact@example.com&#34;&gt;contact@example.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Phone: +123 456 7890&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>关于我们</title>
+      <link>http://localhost:1313/zh/zh/about/</link>
+      <pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/zh/zh/about/</guid>
+      <description>&lt;h1 id=&#34;关于我们&#34;&gt;关于我们&lt;/h1&gt;
+&lt;h2 id=&#34;愿景vision&#34;&gt;愿景（Vision）&lt;/h2&gt;
+&lt;p&gt;打造东北亚地区最具凝聚力的独立游戏创作网络，
+让开发者、艺术家与学者跨越国界，共享创意与资源。&lt;/p&gt;
+&lt;h2 id=&#34;使命mission&#34;&gt;使命（Mission）&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;通过 Game Jam、工作坊、展会等形式，促进区域内游戏开发者的合作。&lt;/li&gt;
+&lt;li&gt;搭建高校与产业间的桥梁，扶持青年开发团队成长。&lt;/li&gt;
+&lt;li&gt;推动东北亚独立游戏文化的国际传播。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;组织structure&#34;&gt;组织（Structure）&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;主办单位：冻土回声（Permafrost Echo）&lt;/li&gt;
+&lt;li&gt;联盟协作成员：来自中国、韩国、日本、俄罗斯、蒙古的高校与独立开发团队&lt;/li&gt;
+&lt;li&gt;支持机构：动漫产业协会、硬件品牌、XR与AI创作平台等合作方&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;名称由来name-origin&#34;&gt;名称由来（Name Origin）&lt;/h2&gt;
+&lt;p&gt;&amp;ldquo;Permafrost Echo&amp;rdquo;（冻土回声）象征着寒冷土地上不灭的声音。
+在这片被冬雪覆盖的北境，我们聆听每一个创作者的心跳与回响。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>活动与展会</title>
+      <link>http://localhost:1313/zh/zh/events/</link>
+      <pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/zh/zh/events/</guid>
+      <description>&lt;h1 id=&#34;活动与展会&#34;&gt;活动与展会&lt;/h1&gt;
+&lt;h2 id=&#34;年度活动&#34;&gt;年度活动&lt;/h2&gt;
+&lt;h3 id=&#34;东北亚-game-jamnea-game-jam&#34;&gt;东北亚 Game Jam（NEA Game Jam）&lt;/h3&gt;
+&lt;p&gt;&lt;img alt=&#34;东北亚游戏开发者大会&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/content/event-image.svg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;每年两次举办，连接东北三省、日韩俄蒙的创作者，共同在短时间内完成原创游戏开发。&lt;/p&gt;
+&lt;h3 id=&#34;冻土回声原创游戏展permafrost-echo-indie-showcase&#34;&gt;冻土回声原创游戏展（Permafrost Echo Indie Showcase）&lt;/h3&gt;
+&lt;p&gt;联合动漫游戏展会，展示区域内优秀原创游戏作品。&lt;/p&gt;
+&lt;h3 id=&#34;开发者工作坊dev-workshop&#34;&gt;开发者工作坊（Dev Workshop）&lt;/h3&gt;
+&lt;p&gt;面向高校社团与独立开发者的专题培训，包括美术、编程、音乐、策划与发行指导。&lt;/p&gt;
+&lt;h2 id=&#34;过往展会案例&#34;&gt;过往展会案例&lt;/h2&gt;
+&lt;h3 id=&#34;冻土回声原创游戏展区--第二弹&#34;&gt;「冻土回声原创游戏展区 · 第二弹」&lt;/h3&gt;
+&lt;p&gt;与沈阳市动漫产业协会、八位堂、华硕辽宁、Rokid、广东大学生游戏创作节联合举办。
+参展作品超过 30 款，覆盖 10 所高校与多个独立团队。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>加入我们</title>
+      <link>http://localhost:1313/zh/zh/join/</link>
+      <pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/zh/zh/join/</guid>
+      <description>&lt;h1 id=&#34;加入我们&#34;&gt;加入我们&lt;/h1&gt;
+&lt;h2 id=&#34;面向对象&#34;&gt;面向对象&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;🎮 高校游戏开发社团&lt;/li&gt;
+&lt;li&gt;🎨 独立开发者与艺术家&lt;/li&gt;
+&lt;li&gt;🧠 教育机构与行业伙伴&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;加入方式&#34;&gt;加入方式&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;通过线上报名表提交信息&lt;/li&gt;
+&lt;li&gt;通过评估后可获得联盟成员资格&lt;/li&gt;
+&lt;li&gt;优先参与联盟 Game Jam、展会及孵化项目&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;成员权益&#34;&gt;成员权益&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;参与区域 Game Jam 与展示活动&lt;/li&gt;
+&lt;li&gt;获取开发资源与合作机会&lt;/li&gt;
+&lt;li&gt;参与冻土学院（Permafrost Academy）课程孵化计划&lt;/li&gt;
+&lt;li&gt;享受联盟推荐与媒体曝光支持&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>联系我们</title>
+      <link>http://localhost:1313/zh/zh/contact/</link>
+      <pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/zh/zh/contact/</guid>
+      <description>&lt;h1 id=&#34;联系我们&#34;&gt;联系我们&lt;/h1&gt;
+&lt;h2 id=&#34;-联系地址&#34;&gt;📍 联系地址&lt;/h2&gt;
+&lt;p&gt;辽宁省沈阳市（沈阳新世界博览馆·冻土回声展区）&lt;/p&gt;
+&lt;h2 id=&#34;-电子邮箱&#34;&gt;📧 电子邮箱&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;mailto:info@permafrost-echo.com&#34;&gt;info@permafrost-echo.com&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;-合作伙伴&#34;&gt;🤝 合作伙伴&lt;/h2&gt;
+&lt;p&gt;欢迎高校、社团、品牌与平台洽谈合作，共同推动东北亚独立游戏生态发展。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>新闻与公告</title>
+      <link>http://localhost:1313/zh/zh/news/</link>
+      <pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/zh/zh/news/</guid>
+      <description>&lt;h1 id=&#34;新闻与公告&#34;&gt;新闻与公告&lt;/h1&gt;
+&lt;h2 id=&#34;-最新动态&#34;&gt;🎙 最新动态&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;「冻土学院课程孵化计划」启动，首期开放美术与程序基础班。&lt;/li&gt;
+&lt;li&gt;东北亚独立游戏联盟官网正式上线！&lt;/li&gt;
+&lt;li&gt;2026 NEA Game Jam 春季站即将开启报名。&lt;/li&gt;
+&lt;li&gt;「冻土回声原创游戏展」冬季档将于沈阳新世界博览馆举办。&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>
