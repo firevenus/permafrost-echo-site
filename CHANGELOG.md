@@ -2,6 +2,12 @@
 
 ## 2026-07-08
 
+### CIGA GameJam 活动图片压缩
+Cloudflare Pages 部署因图片超过 25MB 限制而失败：
+- `ciga-gamejam-2026-shenyang-01.webp` 31MB、`03.webp` 27MB 均超限
+- 使用 `cwebp -resize 1920 0 -q 80` 统一缩放压缩所有 7 张图片
+- 总计从 ~114MB 压缩至 ~1MB，全部通过 Cloudflare Pages 上传校验
+
 ### SSCA 名称修正
 根据真实信息修正全站 SSCA 相关内容：
 - SSCA 实际是"沈阳动漫游戏博览会"（Animation, Comic & Game Expo），是东北地区规模最大的动漫游戏综合展会，每年举办多届
