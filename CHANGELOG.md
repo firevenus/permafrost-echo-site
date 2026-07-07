@@ -2,6 +2,19 @@
 
 ## 2026-07-07
 
+### 设计审计与 UI 优化
+- 新增 `prefers-reduced-motion` 全站支持，尊重用户系统偏好
+- 新增 `:focus-visible` 键盘焦点指示器（冰蓝色光环），提升无障碍体验
+- 桌面/移动端导航添加 `aria-current="page"` 语义标注
+- 移动端菜单改为平滑过渡动画（替换条件渲染为 CSS transition）
+- 所有页面 emoji 图标替换为 Lucide React 图标（风格统一）
+- 首页 Hero 修复 subtitle 文本重复显示的 bug
+- 动画元素添加 `will-change-transform` 提示，4 个浮动光球减至 3 个，降低 GPU 开销
+
+### Skills 安装
+- 安装 `design-taste-frontend`（设计品味审计 / 反模板化）
+- 安装 `ui-ux-pro-max`（UI/UX 设计系统数据库）
+
 ### SEO 全面优化
 - 移除根 layout 的 metadata 冲突，所有 SEO 标签统一由 locale layout 管理
 - 新增 `HtmlLangSetter` 组件，根据当前语言动态设置 `<html lang>` 属性（zh-CN/en/ja/ko/ru/mn）
