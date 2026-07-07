@@ -174,6 +174,7 @@ export default async function LocaleLayout({ children, params }: Props) {
         <main className="flex-1 pt-16">{children}</main>
         <Footer messages={navMessages} />
       </div>
+      <div className="bg-noise" />
     </NextIntlClientProvider>
   );
 }

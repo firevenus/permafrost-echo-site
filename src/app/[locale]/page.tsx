@@ -28,9 +28,34 @@ export default function HomePage() {
   return (
     <div>
       {/* ========== Hero Section ========== */}
-      <section className="relative overflow-hidden min-h-[calc(100vh-64px)] flex items-center">
+      <section className="relative overflow-hidden min-h-[calc(100dvh-64px)] flex items-center">
         {/* Deep space background with permafrost grid */}
         <div className="absolute inset-0 bg-grid pointer-events-none" />
+
+        {/* Frost crystal motif — geometric visual anchor */}
+        <div className="absolute top-[55%] left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none opacity-[0.06]">
+          <svg width="320" height="320" viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="160" cy="160" r="158" stroke="url(#crystal-grad)" strokeWidth="1" />
+            <circle cx="160" cy="160" r="110" stroke="url(#crystal-grad)" strokeWidth="0.5" strokeDasharray="4 6" />
+            <circle cx="160" cy="160" r="60" stroke="url(#crystal-grad)" strokeWidth="0.8" />
+            <line x1="160" y1="2" x2="160" y2="318" stroke="url(#crystal-grad)" strokeWidth="0.5" strokeDasharray="3 8" />
+            <line x1="2" y1="160" x2="318" y2="160" stroke="url(#crystal-grad)" strokeWidth="0.5" strokeDasharray="3 8" />
+            <line x1="48" y1="48" x2="272" y2="272" stroke="url(#crystal-grad)" strokeWidth="0.3" strokeDasharray="2 10" />
+            <line x1="272" y1="48" x2="48" y2="272" stroke="url(#crystal-grad)" strokeWidth="0.3" strokeDasharray="2 10" />
+            {/* Ice crystal sparks */}
+            <circle cx="160" cy="50" r="2" fill="#4cc9f0" opacity="0.6" className="animate-pulse-subtle" />
+            <circle cx="270" cy="160" r="1.5" fill="#2dd4bf" opacity="0.4" className="animate-pulse-subtle" style={{ animationDelay: '1.5s' }} />
+            <circle cx="50" cy="160" r="1.5" fill="#c77dff" opacity="0.4" className="animate-pulse-subtle" style={{ animationDelay: '2.5s' }} />
+            <circle cx="160" cy="270" r="2" fill="#4cc9f0" opacity="0.5" className="animate-pulse-subtle" style={{ animationDelay: '0.8s' }} />
+            <defs>
+              <linearGradient id="crystal-grad" x1="0" y1="0" x2="320" y2="320">
+                <stop stopColor="#4cc9f0" />
+                <stop offset="0.5" stopColor="#2dd4bf" />
+                <stop offset="1" stopColor="#7b2ff7" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
 
         {/* Primary ice aurora — top center, ice blue + tundra green */}
         <div className="absolute top-[-25%] left-1/2 -translate-x-1/2 w-[1200px] h-[700px] bg-[radial-gradient(ellipse,rgba(76,201,240,0.16)_0%,rgba(45,212,191,0.08)_20%,rgba(76,201,240,0.06)_40%,rgba(76,201,240,0.01)_60%,transparent_75%)] pointer-events-none animate-aurora-shift will-change-transform" />
@@ -113,7 +138,7 @@ export default function HomePage() {
         <div className="section-glow-top" />
         <div className="absolute inset-0 scanlines" />
         <div className="page-container relative">
-          <div className="text-center mb-16">
+          <div className="text-center mb-16 section-reveal">
             <span className="section-label">{t('home.activities')}</span>
             <h2 className="section-title mb-4">{t('home.activities')}</h2>
             <p className="text-[rgba(237,242,250,0.4)] max-w-[480px] mx-auto leading-relaxed">
@@ -126,7 +151,8 @@ export default function HomePage() {
               <Link
                 key={activity.id}
                 href="/activities"
-                className="glass-card p-6 game-card no-underline block group"
+                className="glass-card p-6 game-card no-underline block group reveal-up"
+                style={{ animationDelay: `${idx * 100}ms` }}
               >
                 <div className="flex items-start justify-between mb-5">
                   <div className="w-12 h-12 rounded-xl bg-[rgba(76,201,240,0.06)] flex items-center justify-center text-[#4cc9f0] transition-all duration-300 group-hover:bg-[rgba(76,201,240,0.12)] group-hover:scale-110">
@@ -160,7 +186,7 @@ export default function HomePage() {
       <section className="page-section relative overflow-hidden">
         <div className="section-glow-bottom" />
         <div className="page-container relative">
-          <div className="text-center mb-16">
+          <div className="text-center mb-16 section-reveal">
             <span className="section-label">{t('home.upcomingEvents')}</span>
             <h2 className="section-title mb-4">{t('home.upcomingEvents')}</h2>
             <p className="text-[rgba(237,242,250,0.4)] max-w-[480px] mx-auto leading-relaxed">
@@ -171,11 +197,12 @@ export default function HomePage() {
           <div className="max-w-[720px] mx-auto">
             {upcomingActivities.length > 0 ? (
               <div className="space-y-4">
-                {upcomingActivities.map((activity) => (
+                {upcomingActivities.map((activity, idx) => (
                   <Link
                     key={activity.id}
                     href="/activities"
-                    className="glass-card p-5 game-card no-underline flex flex-col sm:flex-row sm:items-center gap-5 group"
+                    className="glass-card p-5 game-card no-underline flex flex-col sm:flex-row sm:items-center gap-5 group reveal-up"
+                    style={{ animationDelay: `${idx * 80}ms` }}
                   >
                     <div className="w-12 h-12 rounded-xl bg-[rgba(244,140,6,0.06)] flex items-center justify-center text-[#f48c06] flex-shrink-0 transition-all duration-300 group-hover:bg-[rgba(244,140,6,0.12)] group-hover:scale-110">
                       <Calendar size={22} />
@@ -225,8 +252,8 @@ export default function HomePage() {
                 {t('home.cta.contactUs')}
                 <ArrowRight size={16} />
               </Link>
-              <Link href="/contact" className="btn-outline">
-                {t('home.cta.joinWechat')}
+              <Link href="/about" className="btn-outline">
+                {t('home.cta.learnMore')}
               </Link>
             </div>
           </div>
