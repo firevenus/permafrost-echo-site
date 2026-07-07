@@ -200,11 +200,11 @@ const zhData: LocalizedData = {
   activities: [
     {
       id: 'ssca-2026',
-      title: 'SSCA 2026 沈阳独立游戏发布会',
-      titleEn: 'SSCA 2026 Shenyang Indie Game Showcase',
+      title: 'SSCA 动漫游戏博览会 · 游戏区',
+      titleEn: 'SSCA Animation, Comic & Game Expo · Game Zone',
       date: '2026-03-15',
       location: '沈阳',
-      description: '沈阳独立游戏创作者联盟年度发布会，集中展示东北亚地区最具创意的独立游戏作品，吸引超过500名开发者和玩家参与。',
+      description: '冻土回声在 SSCA 沈阳动漫游戏博览会上承办独立游戏专区，为东北地区的独立游戏开发者提供展示和交流的平台，吸引超过500名开发者和玩家参与。',
       status: 'completed',
       images: [
         '/images/activities/ssca-2026-01.jpg',
@@ -269,11 +269,11 @@ const zhData: LocalizedData = {
     },
     {
       id: 'ssca-2027',
-      title: 'SSCA 漫展 · 游戏区',
-      titleEn: 'SSCA Convention · Game Zone',
+      title: 'SSCA 动漫游戏博览会 · 游戏区',
+      titleEn: 'SSCA Animation, Comic & Game Expo · Game Zone',
       date: '2027-03',
       location: '沈阳',
-      description: '沈阳独立游戏创作者联盟年度漫展游戏专区，集中展示东北亚地区最具创意的独立游戏作品。',
+      description: '冻土回声在 SSCA 沈阳动漫游戏博览会上承办独立游戏专区，为东北地区的独立游戏开发者提供展示和交流的平台。',
       status: 'upcoming',
     },
     {
@@ -358,8 +358,8 @@ const zhData: LocalizedData = {
     },
     {
       year: '2025.03',
-      title: '首届 SSCA 发布会',
-      description: '成功举办首届沈阳独立游戏创作者联盟发布会，吸引200+参与者。',
+      title: '首届 SSCA 动漫游戏博览会 · 游戏区',
+      description: '首次承办 SSCA 沈阳动漫游戏博览会的独立游戏专区，吸引 200+ 参与者。',
     },
     {
       year: '2025.08',
@@ -373,8 +373,8 @@ const zhData: LocalizedData = {
     },
     {
       year: '2026.03',
-      title: 'SSCA 2026 升级版',
-      description: 'SSCA 2026 规模升级，参展作品增至12款，参与者突破500人。',
+      title: 'SSCA 2026 动漫游戏博览会 · 游戏区',
+      description: 'SSCA 2026 规模升级，冻土回声游戏专区参展作品增至 12 款，参与者突破 500 人。',
     },
     {
       year: '2026.05',
@@ -390,7 +390,7 @@ const zhData: LocalizedData = {
         '建立冻土回声品牌视觉体系',
         '搭建微信社群与QQ社群（600+人）',
         '联合东北12所高校成立联盟',
-        '举办首届SSCA独立游戏发布会',
+        '承办首届SSCA动漫游戏博览会游戏专区',
       ],
       status: 'completed',
     },
@@ -563,11 +563,11 @@ const enData: LocalizedData = {
   activities: [
     {
       id: 'ssca-2026',
-      title: 'SSCA 2026 Shenyang Indie Game Showcase',
-      titleEn: 'SSCA 2026 Shenyang Indie Game Showcase',
+      title: 'SSCA Animation, Comic & Game Expo · Game Zone',
+      titleEn: 'SSCA Animation, Comic & Game Expo · Game Zone',
       date: '2026-03-15',
       location: 'Shenyang',
-      description: 'The annual showcase of the Shenyang Indie Game Creators Alliance, featuring the most creative indie games from Northeast Asia, attracting over 500 developers and players.',
+      description: 'Permafrost Echo hosts the indie game zone at the SSCA Shenyang Animation, Comic & Game Expo, providing a showcase platform for indie developers from Northeast China, attracting over 500 developers and players.',
       status: 'completed',
       images: [
         '/images/activities/ssca-2026-01.jpg',
@@ -632,11 +632,11 @@ const enData: LocalizedData = {
     },
     {
       id: 'ssca-2027',
-      title: 'SSCA Convention · Game Zone',
-      titleEn: 'SSCA Convention · Game Zone',
+      title: 'SSCA Animation, Comic & Game Expo · Game Zone',
+      titleEn: 'SSCA Animation, Comic & Game Expo · Game Zone',
       date: '2027-03',
       location: 'Shenyang',
-      description: 'The annual convention game zone of the Shenyang Indie Game Creators Alliance, showcasing the most creative indie games from Northeast Asia.',
+      description: 'Permafrost Echo hosts the indie game zone at the SSCA Shenyang Animation, Comic & Game Expo, providing a showcase platform for indie developers from Northeast China.',
       status: 'upcoming',
     },
     {
@@ -721,8 +721,8 @@ const enData: LocalizedData = {
     },
     {
       year: '2025.03',
-      title: '1st SSCA Showcase',
-      description: 'Successfully held the first Shenyang Indie Game Creators Alliance showcase, attracting 200+ participants.',
+      title: '1st SSCA Expo · Game Zone',
+      description: 'Hosted the indie game zone at the first SSCA Shenyang Animation, Comic & Game Expo, attracting 200+ participants.',
     },
     {
       year: '2025.08',
@@ -736,8 +736,8 @@ const enData: LocalizedData = {
     },
     {
       year: '2026.03',
-      title: 'SSCA 2026 Upgraded Edition',
-      description: 'SSCA 2026 scaled up with 12 exhibited titles and over 500 participants.',
+      title: 'SSCA 2026 Expo · Game Zone',
+      description: 'SSCA 2026 scaled up with 12 exhibited titles and over 500 participants at the game zone.',
     },
     {
       year: '2026.05',
@@ -753,7 +753,7 @@ const enData: LocalizedData = {
         'Establish Permafrost Echo brand visual identity',
         'Build WeChat & QQ communities (600+ members)',
         'Form alliance with 12 Northeast China universities',
-        'Hold the first SSCA indie game showcase',
+        'Host the first SSCA Animation, Comic & Game Expo game zone',
       ],
       status: 'completed',
     },
@@ -926,11 +926,11 @@ const jaData: LocalizedData = {
   activities: [
     {
       id: 'ssca-2026',
-      title: 'SSCA 2026 瀋陽インディーゲーム発表会',
-      titleEn: 'SSCA 2026 Shenyang Indie Game Showcase',
+      title: 'SSCA アニメ・コミック・ゲーム博覧会 · ゲームゾーン',
+      titleEn: 'SSCA Animation, Comic & Game Expo · Game Zone',
       date: '2026-03-15',
       location: '瀋陽',
-      description: '瀋陽インディーゲームクリエイター連盟の年次発表会。東北アジアで最も創造的なインディーゲーム作品を一堂に展示し、500名以上の開発者とプレイヤーが参加。',
+      description: 'パーマフロスト・エコーがSSCA瀋陽アニメ・コミック・ゲーム博覧会でインディーゲームゾーンを運営。東北地方のインディーゲーム開発者に展示・交流のプラットフォームを提供し、500名以上の開発者とプレイヤーが参加。',
       status: 'completed',
       images: [
         '/images/activities/ssca-2026-01.jpg',
@@ -995,11 +995,11 @@ const jaData: LocalizedData = {
     },
     {
       id: 'ssca-2027',
-      title: 'SSCA コンベンション · ゲームゾーン',
-      titleEn: 'SSCA Convention · Game Zone',
+      title: 'SSCA アニメ・コミック・ゲーム博覧会 · ゲームゾーン',
+      titleEn: 'SSCA Animation, Comic & Game Expo · Game Zone',
       date: '2027-03',
       location: '瀋陽',
-      description: '瀋陽インディーゲームクリエイター連盟の年次コンベンションゲームゾーン。東北アジアで最も創造的なインディーゲーム作品を集中展示。',
+      description: 'パーマフロスト・エコーがSSCA瀋陽アニメ・コミック・ゲーム博覧会でインディーゲームゾーンを運営。東北地方のインディーゲーム開発者に展示・交流のプラットフォームを提供。',
       status: 'upcoming',
     },
     {
@@ -1084,8 +1084,8 @@ const jaData: LocalizedData = {
     },
     {
       year: '2025.03',
-      title: '第1回 SSCA 発表会',
-      description: '第1回瀋陽インディーゲームクリエイター連盟発表会を成功裏に開催。200名以上が参加。',
+      title: '第1回 SSCA 博覧会 · ゲームゾーン',
+      description: '第1回SSCA瀋陽アニメ・コミック・ゲーム博覧会でインディーゲームゾーンを運営。200名以上が参加。',
     },
     {
       year: '2025.08',
@@ -1099,7 +1099,7 @@ const jaData: LocalizedData = {
     },
     {
       year: '2026.03',
-      title: 'SSCA 2026 アップグレード版',
+      title: 'SSCA 2026 博覧会 · ゲームゾーン',
       description: 'SSCA 2026が規模拡大。出展作品が12作品に増え、参加者が500名を突破。',
     },
     {
@@ -1116,7 +1116,7 @@ const jaData: LocalizedData = {
         'パーマフロスト・エコーのブランドビジュアル体系を確立',
         'WeChat・QQコミュニティを構築（600名以上）',
         '東北12大学と連盟を結成',
-        '第1回SSCAインディーゲーム発表会を開催',
+        '第1回SSCAアニメ・コミック・ゲーム博覧会ゲームゾーンを運営',
       ],
       status: 'completed',
     },
@@ -1289,11 +1289,11 @@ const koData: LocalizedData = {
   activities: [
     {
       id: 'ssca-2026',
-      title: 'SSCA 2026 선양 인디 게임 쇼케이스',
-      titleEn: 'SSCA 2026 Shenyang Indie Game Showcase',
+      title: 'SSCA 애니메이션·코믹·게임 엑스포 · 게임 존',
+      titleEn: 'SSCA Animation, Comic & Game Expo · Game Zone',
       date: '2026-03-15',
       location: '선양',
-      description: '선양 인디 게임 크리에이터 연합의 연례 쇼케이스. 동북아시아에서 가장 창의적인 인디 게임 작품을 집중 전시하며 500명 이상의 개발자와 플레이어가 참여.',
+      description: '페름프로스트 에코가 SSCA 선양 애니메이션·코믹·게임 엑스포에서 인디 게임 존을 운영. 동북 지역의 인디 게임 개발자에게 전시·교류 플랫폼을 제공하며 500명 이상의 개발자와 플레이어가 참여.',
       status: 'completed',
       images: [
         '/images/activities/ssca-2026-01.jpg',
@@ -1358,11 +1358,11 @@ const koData: LocalizedData = {
     },
     {
       id: 'ssca-2027',
-      title: 'SSCA 컨벤션 · 게임 존',
-      titleEn: 'SSCA Convention · Game Zone',
+      title: 'SSCA 애니메이션·코믹·게임 엑스포 · 게임 존',
+      titleEn: 'SSCA Animation, Comic & Game Expo · Game Zone',
       date: '2027-03',
       location: '선양',
-      description: '선양 인디 게임 크리에이터 연합의 연례 컨벤션 게임 존. 동북아시아에서 가장 창의적인 인디 게임 작품을 집중 전시.',
+      description: '페름프로스트 에코가 SSCA 선양 애니메이션·코믹·게임 엑스포에서 인디 게임 존을 운영. 동북 지역의 인디 게임 개발자에게 전시·교류 플랫폼을 제공.',
       status: 'upcoming',
     },
     {
@@ -1447,8 +1447,8 @@ const koData: LocalizedData = {
     },
     {
       year: '2025.03',
-      title: '제1회 SSCA 쇼케이스',
-      description: '제1회 선양 인디 게임 크리에이터 연합 쇼케이스를 성공적으로 개최. 200명 이상 참여.',
+      title: '제1회 SSCA 엑스포 · 게임 존',
+      description: '제1회 SSCA 선양 애니메이션·코믹·게임 엑스포에서 인디 게임 존을 운영. 200명 이상 참여.',
     },
     {
       year: '2025.08',
@@ -1462,7 +1462,7 @@ const koData: LocalizedData = {
     },
     {
       year: '2026.03',
-      title: 'SSCA 2026 업그레이드',
+      title: 'SSCA 2026 엑스포 · 게임 존',
       description: 'SSCA 2026 규모 확대. 출품작 12개로 증가, 참여자 500명 돌파.',
     },
     {
@@ -1479,7 +1479,7 @@ const koData: LocalizedData = {
         '페름프로스트 에코 브랜드 비주얼 체계 확립',
         'WeChat 및 QQ 커뮤니티 구축 (600명 이상)',
         '동북 12개 대학과 연합 결성',
-        '제1회 SSCA 인디 게임 쇼케이스 개최',
+        '제1회 SSCA 애니메이션·코믹·게임 엑스포 게임 존 운영',
       ],
       status: 'completed',
     },
@@ -1652,11 +1652,11 @@ const ruData: LocalizedData = {
   activities: [
     {
       id: 'ssca-2026',
-      title: 'SSCA 2026 Шэньянская выставка инди-игр',
-      titleEn: 'SSCA 2026 Shenyang Indie Game Showcase',
+      title: 'SSCA Выставка аниме, комиксов и игр · Игровая зона',
+      titleEn: 'SSCA Animation, Comic & Game Expo · Game Zone',
       date: '2026-03-15',
       location: 'Шэньян',
-      description: 'Ежегодная выставка Шэньянского альянса создателей инди-игр, демонстрирующая самые креативные инди-игры Северо-Восточной Азии, с участием более 500 разработчиков и игроков.',
+      description: 'Permafrost Echo организует зону инди-игр на Шэньянской выставке аниме, комиксов и игр SSCA, предоставляя платформу для демонстрации и общения разработчикам инди-игр Северо-Восточного Китая, с участием более 500 разработчиков и игроков.',
       status: 'completed',
       images: [
         '/images/activities/ssca-2026-01.jpg',
@@ -1721,11 +1721,11 @@ const ruData: LocalizedData = {
     },
     {
       id: 'ssca-2027',
-      title: 'SSCA Конвент · Игровая зона',
-      titleEn: 'SSCA Convention · Game Zone',
+      title: 'SSCA Выставка аниме, комиксов и игр · Игровая зона',
+      titleEn: 'SSCA Animation, Comic & Game Expo · Game Zone',
       date: '2027-03',
       location: 'Шэньян',
-      description: 'Ежегодная игровая зона конвента Шэньянского альянса создателей инди-игр, демонстрирующая самые креативные инди-игры Северо-Восточной Азии.',
+      description: 'Permafrost Echo организует зону инди-игр на Шэньянской выставке аниме, комиксов и игр SSCA, предоставляя платформу для демонстрации и общения разработчикам инди-игр Северо-Восточного Китая.',
       status: 'upcoming',
     },
     {
@@ -1810,8 +1810,8 @@ const ruData: LocalizedData = {
     },
     {
       year: '2025.03',
-      title: 'Первая выставка SSCA',
-      description: 'Успешно проведена первая выставка Шэньянского альянса создателей инди-игр, привлекшая более 200 участников.',
+      title: 'Первая выставка SSCA · Игровая зона',
+      description: 'Организована зона инди-игр на первой Шэньянской выставке аниме, комиксов и игр SSCA, привлекшая более 200 участников.',
     },
     {
       year: '2025.08',
@@ -1825,8 +1825,8 @@ const ruData: LocalizedData = {
     },
     {
       year: '2026.03',
-      title: 'SSCA 2026 — расширенная версия',
-      description: 'SSCA 2026 масштабирована: 12 представленных проектов и более 500 участников.',
+      title: 'SSCA 2026 Выставка · Игровая зона',
+      description: 'SSCA 2026 масштабирована: 12 представленных проектов и более 500 участников игровой зоны.',
     },
     {
       year: '2026.05',
@@ -1842,7 +1842,7 @@ const ruData: LocalizedData = {
         'Создание системы визуальной идентичности бренда Permafrost Echo',
         'Создание сообществ WeChat и QQ (600+ участников)',
         'Формирование альянса с 12 университетами Северо-Восточного Китая',
-        'Проведение первой выставки инди-игр SSCA',
+        'Организация игровой зоны на первой выставке аниме, комиксов и игр SSCA',
       ],
       status: 'completed',
     },
@@ -2015,11 +2015,11 @@ const mnData: LocalizedData = {
   activities: [
     {
       id: 'ssca-2026',
-      title: 'SSCA 2026 Шэньян Инди Тоглоомын Үзэсгэлэн',
-      titleEn: 'SSCA 2026 Shenyang Indie Game Showcase',
+      title: 'SSCA Анимэ, Комик, Тоглоомын Үзэсгэлэн · Тоглоомын Бүс',
+      titleEn: 'SSCA Animation, Comic & Game Expo · Game Zone',
       date: '2026-03-15',
       location: 'Шэньян',
-      description: 'Шэньян Инди Тоглоом Бүтээгчдийн Холбооны жилийн үзэсгэлэн. Зүүн хойд Азийн хамгийн бүтээлч инди тоглоомуудыг дэлгэн харуулж, 500 гаруй хөгжүүлэгч, тоглогч оролцов.',
+      description: 'Мөсөн Хөрсний Цуурай нь SSCA Шэньян Анимэ, Комик, Тоглоомын Үзэсгэлэн дээр инди тоглоомын бүс зохион байгуулж, Зүүн хойд Хятадын инди тоглоом хөгжүүлэгчдэд үзүүлэн, харилцааны платформ бий болгож, 500 гаруй хөгжүүлэгч, тоглогч оролцов.',
       status: 'completed',
       images: [
         '/images/activities/ssca-2026-01.jpg',
@@ -2084,11 +2084,11 @@ const mnData: LocalizedData = {
     },
     {
       id: 'ssca-2027',
-      title: 'SSCA Конвент · Тоглоомын Бүс',
-      titleEn: 'SSCA Convention · Game Zone',
+      title: 'SSCA Анимэ, Комик, Тоглоомын Үзэсгэлэн · Тоглоомын Бүс',
+      titleEn: 'SSCA Animation, Comic & Game Expo · Game Zone',
       date: '2027-03',
       location: 'Шэньян',
-      description: 'Шэньян Инди Тоглоом Бүтээгчдийн Холбооны жилийн конвентын тоглоомын бүс. Зүүн хойд Азийн хамгийн бүтээлч инди тоглоомуудыг дэлгэн харуулна.',
+      description: 'Мөсөн Хөрсний Цуурай нь SSCA Шэньян Анимэ, Комик, Тоглоомын Үзэсгэлэн дээр инди тоглоомын бүс зохион байгуулж, Зүүн хойд Хятадын инди тоглоом хөгжүүлэгчдэд үзүүлэн, харилцааны платформ бий болгоно.',
       status: 'upcoming',
     },
     {
@@ -2173,8 +2173,8 @@ const mnData: LocalizedData = {
     },
     {
       year: '2025.03',
-      title: 'Анхны SSCA Үзэсгэлэн',
-      description: 'Шэньян Инди Тоглоом Бүтээгчдийн Холбооны анхны үзэсгэлэнг амжилттай зохион байгуулж, 200+ оролцогч татав.',
+      title: 'Анхны SSCA Үзэсгэлэн · Тоглоомын Бүс',
+      description: 'Анхны SSCA Анимэ, Комик, Тоглоомын Үзэсгэлэн дээр инди тоглоомын бүс зохион байгуулж, 200+ оролцогч татав.',
     },
     {
       year: '2025.08',
@@ -2188,7 +2188,7 @@ const mnData: LocalizedData = {
     },
     {
       year: '2026.03',
-      title: 'SSCA 2026 — Өргөтгөсөн хувилбар',
+      title: 'SSCA 2026 Үзэсгэлэн · Тоглоомын Бүс',
       description: 'SSCA 2026 цар хүрээгээ тэлж, үзүүлсэн бүтээл 12 болж, оролцогчид 500-г давлаа.',
     },
     {
@@ -2205,7 +2205,7 @@ const mnData: LocalizedData = {
         'Мөсөн Хөрсний Цуурай брендийн харааны таних тогтолцоог бий болгох',
         'WeChat болон QQ нийгэмлэгүүдийг байгуулах (600+ гишүүн)',
         'Зүүн хойд Хятадын 12 их сургуультай холбоо байгуулах',
-        'Анхны SSCA инди тоглоомын үзэсгэлэнг зохион байгуулах',
+        'Анхны SSCA Анимэ, Комик, Тоглоомын Үзэсгэлэнгийн тоглоомын бүс зохион байгуулах',
       ],
       status: 'completed',
     },
