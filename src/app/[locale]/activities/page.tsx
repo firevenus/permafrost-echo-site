@@ -3,7 +3,7 @@
 import { useTranslations, useLocale } from 'next-intl';
 import { getActivities } from '@/lib/data';
 import type { Locale } from '@/i18n/routing';
-import { Calendar, MapPin } from 'lucide-react';
+import { Calendar, MapPin, Gamepad2, Palette, GraduationCap } from 'lucide-react';
 
 export const runtime = 'edge';
 
@@ -49,8 +49,8 @@ export default function ActivitiesPage() {
                   className="glass-card p-6 game-card group"
                 >
                   <div className="flex items-start justify-between mb-4">
-                    <div className="w-12 h-12 rounded-xl bg-[rgba(244,140,6,0.06)] flex items-center justify-center text-2xl transition-all duration-300 group-hover:bg-[rgba(244,140,6,0.12)] group-hover:scale-110">
-                      📅
+                    <div className="w-12 h-12 rounded-xl bg-[rgba(244,140,6,0.06)] flex items-center justify-center text-[#f48c06] transition-all duration-300 group-hover:bg-[rgba(244,140,6,0.12)] group-hover:scale-110">
+                      <Calendar size={22} />
                     </div>
                     <span className="pill-ember">{t('activities.upcoming')}</span>
                   </div>
@@ -96,8 +96,8 @@ export default function ActivitiesPage() {
                   className="glass-card p-6 group"
                 >
                   <div className="flex items-start justify-between mb-4">
-                    <div className="w-12 h-12 rounded-xl bg-[rgba(76,201,240,0.06)] flex items-center justify-center text-2xl transition-all duration-300 group-hover:bg-[rgba(76,201,240,0.12)] group-hover:scale-110">
-                      {activity.id === 'ssca-2026' ? '🎮' : activity.id === 'ggj-2026' ? '🎪' : '🎓'}
+                    <div className="w-12 h-12 rounded-xl bg-[rgba(76,201,240,0.06)] flex items-center justify-center text-[#4cc9f0] transition-all duration-300 group-hover:bg-[rgba(76,201,240,0.12)] group-hover:scale-110">
+                      {activity.id === 'ssca-2026' ? <Gamepad2 size={22} /> : activity.id === 'ggj-2026' ? <Palette size={22} /> : <GraduationCap size={22} />}
                     </div>
                     <span className="pill">{t('activities.completed')}</span>
                   </div>

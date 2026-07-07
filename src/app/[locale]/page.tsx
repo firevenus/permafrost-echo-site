@@ -4,7 +4,7 @@ import { useTranslations, useLocale } from 'next-intl';
 import { Link } from '@/i18n/routing';
 import { getActivities, getUpcomingActivities, getStats } from '@/lib/data';
 import type { Locale } from '@/i18n/routing';
-import { ArrowRight, Calendar, MapPin } from 'lucide-react';
+import { ArrowRight, Calendar, MapPin, Gamepad2, Palette, GraduationCap } from 'lucide-react';
 
 export const runtime = 'edge';
 
@@ -33,22 +33,21 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-grid pointer-events-none" />
 
         {/* Primary ice aurora — top center, ice blue + tundra green */}
-        <div className="absolute top-[-25%] left-1/2 -translate-x-1/2 w-[1200px] h-[700px] bg-[radial-gradient(ellipse,rgba(76,201,240,0.16)_0%,rgba(45,212,191,0.08)_20%,rgba(76,201,240,0.06)_40%,rgba(76,201,240,0.01)_60%,transparent_75%)] pointer-events-none animate-aurora-shift" />
+        <div className="absolute top-[-25%] left-1/2 -translate-x-1/2 w-[1200px] h-[700px] bg-[radial-gradient(ellipse,rgba(76,201,240,0.16)_0%,rgba(45,212,191,0.08)_20%,rgba(76,201,240,0.06)_40%,rgba(76,201,240,0.01)_60%,transparent_75%)] pointer-events-none animate-aurora-shift will-change-transform" />
 
         {/* Secondary purple + tundra aurora — bottom */}
-        <div className="absolute bottom-[-25%] left-1/2 -translate-x-1/2 w-[1000px] h-[550px] bg-[radial-gradient(ellipse,rgba(123,47,247,0.13)_0%,rgba(45,212,191,0.04)_25%,rgba(123,47,247,0.04)_45%,transparent_75%)] pointer-events-none animate-aurora-shift" style={{ animationDelay: '-4s' }} />
+        <div className="absolute bottom-[-25%] left-1/2 -translate-x-1/2 w-[1000px] h-[550px] bg-[radial-gradient(ellipse,rgba(123,47,247,0.13)_0%,rgba(45,212,191,0.04)_25%,rgba(123,47,247,0.04)_45%,transparent_75%)] pointer-events-none animate-aurora-shift will-change-transform" style={{ animationDelay: '-4s' }} />
 
         {/* Warm accent — right side, 东北冬日炉火 */}
-        <div className="absolute top-[25%] right-[-8%] w-[550px] h-[450px] bg-[radial-gradient(ellipse,rgba(244,140,6,0.06)_0%,rgba(220,47,2,0.02)_25%,transparent_60%)] pointer-events-none animate-aurora-shift" style={{ animationDelay: '-7s' }} />
+        <div className="absolute top-[25%] right-[-8%] w-[550px] h-[450px] bg-[radial-gradient(ellipse,rgba(244,140,6,0.06)_0%,rgba(220,47,2,0.02)_25%,transparent_60%)] pointer-events-none animate-aurora-shift will-change-transform" style={{ animationDelay: '-7s' }} />
 
         {/* Frost silver — left side, 白桦银冷光 */}
-        <div className="absolute top-[40%] left-[-5%] w-[450px] h-[350px] bg-[radial-gradient(ellipse,rgba(168,180,196,0.04)_0%,transparent_55%)] pointer-events-none animate-aurora-shift" style={{ animationDelay: '-10s' }} />
+        <div className="absolute top-[40%] left-[-5%] w-[450px] h-[350px] bg-[radial-gradient(ellipse,rgba(168,180,196,0.04)_0%,transparent_55%)] pointer-events-none animate-aurora-shift will-change-transform" style={{ animationDelay: '-10s' }} />
 
         {/* Floating orbs — larger, more atmospheric */}
-        <div className="absolute top-[15%] right-[8%] w-[400px] h-[400px] rounded-full bg-[rgba(45,212,191,0.05)] blur-[120px] pointer-events-none animate-float" />
-        <div className="absolute bottom-[20%] left-[3%] w-[320px] h-[320px] rounded-full bg-[rgba(123,47,247,0.05)] blur-[100px] pointer-events-none animate-float" style={{ animationDelay: '-3s' }} />
-        <div className="absolute top-[50%] left-[35%] w-[250px] h-[250px] rounded-full bg-[rgba(76,201,240,0.03)] blur-[80px] pointer-events-none animate-float" style={{ animationDelay: '-5s' }} />
-        <div className="absolute bottom-[40%] right-[20%] w-[180px] h-[180px] rounded-full bg-[rgba(244,140,6,0.04)] blur-[70px] pointer-events-none animate-float" style={{ animationDelay: '-8s' }} />
+        <div className="absolute top-[15%] right-[8%] w-[400px] h-[400px] rounded-full bg-[rgba(45,212,191,0.05)] blur-[120px] pointer-events-none animate-float will-change-transform" />
+        <div className="absolute bottom-[20%] left-[3%] w-[320px] h-[320px] rounded-full bg-[rgba(123,47,247,0.05)] blur-[100px] pointer-events-none animate-float will-change-transform" style={{ animationDelay: '-3s' }} />
+        <div className="absolute top-[50%] left-[35%] w-[250px] h-[250px] rounded-full bg-[rgba(76,201,240,0.03)] blur-[80px] pointer-events-none animate-float will-change-transform" style={{ animationDelay: '-5s' }} />
 
         <div className="relative max-w-[1200px] mx-auto px-6 py-24 w-full">
           <div className="max-w-[760px] mx-auto text-center">
@@ -74,8 +73,8 @@ export default function HomePage() {
             </p>
 
             {/* Description */}
-            <p className="text-[rgba(237,242,250,0.4)] text-lg mb-12 max-w-[520px] mx-auto leading-relaxed fade-up fade-up-delay-4">
-              {t('hero.subtitle')}
+            <p className="text-[rgba(237,242,250,0.55)] text-lg mb-12 max-w-[520px] mx-auto leading-relaxed fade-up fade-up-delay-4">
+              {t('home.activitiesDesc')}
             </p>
 
             {/* CTA Buttons */}
@@ -130,8 +129,8 @@ export default function HomePage() {
                 className="glass-card p-6 game-card no-underline block group"
               >
                 <div className="flex items-start justify-between mb-5">
-                  <div className="w-12 h-12 rounded-xl bg-[rgba(76,201,240,0.06)] flex items-center justify-center text-2xl transition-all duration-300 group-hover:bg-[rgba(76,201,240,0.12)] group-hover:scale-110">
-                    {activity.id === 'ssca-2026' ? '🎮' : activity.id === 'ggj-2026' ? '🎪' : '🎓'}
+                  <div className="w-12 h-12 rounded-xl bg-[rgba(76,201,240,0.06)] flex items-center justify-center text-[#4cc9f0] transition-all duration-300 group-hover:bg-[rgba(76,201,240,0.12)] group-hover:scale-110">
+                    {activity.id === 'ssca-2026' ? <Gamepad2 size={22} /> : activity.id === 'ggj-2026' ? <Palette size={22} /> : <GraduationCap size={22} />}
                   </div>
                   <span className={`text-xs ${activity.status === 'upcoming' ? 'pill-ember' : 'pill'}`}>
                     {activity.status === 'upcoming' ? t('activities.upcoming') : t('activities.completed')}
@@ -178,8 +177,8 @@ export default function HomePage() {
                     href="/activities"
                     className="glass-card p-5 game-card no-underline flex flex-col sm:flex-row sm:items-center gap-5 group"
                   >
-                    <div className="w-12 h-12 rounded-xl bg-[rgba(244,140,6,0.06)] flex items-center justify-center text-2xl flex-shrink-0 transition-all duration-300 group-hover:bg-[rgba(244,140,6,0.12)] group-hover:scale-110">
-                      📅
+                    <div className="w-12 h-12 rounded-xl bg-[rgba(244,140,6,0.06)] flex items-center justify-center text-[#f48c06] flex-shrink-0 transition-all duration-300 group-hover:bg-[rgba(244,140,6,0.12)] group-hover:scale-110">
+                      <Calendar size={22} />
                     </div>
                     <div className="flex-1 min-w-0">
                       <h3 className="text-sm font-semibold text-[#edf2fa] mb-1.5 group-hover:text-white transition-colors duration-300">

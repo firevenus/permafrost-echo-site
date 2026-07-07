@@ -88,11 +88,12 @@ export default function Header({ messages }: { messages: Record<string, string> 
             <Link
               key={item.key}
               href={item.href}
-              className={`relative px-3 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${
+              className={`relative px-3 py-2 text-sm font-medium rounded-lg transition-all duration-200 focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-[#4cc9f0] ${
                 isActive(item.href)
                   ? 'text-[#4cc9f0] bg-[rgba(76,201,240,0.06)]'
                   : 'text-[rgba(237,242,250,0.5)] hover:text-[#edf2fa] hover:bg-[rgba(255,255,255,0.03)]'
               }`}
+              aria-current={isActive(item.href) ? 'page' : undefined}
             >
               {messages[`nav.${item.key}`] || item.key}
               {isActive(item.href) && (
@@ -146,15 +147,19 @@ export default function Header({ messages }: { messages: Record<string, string> 
       </div>
 
       {/* Mobile Nav */}
-      {mobileOpen && (
-        <div className="lg:hidden bg-[rgba(8,14,22,0.97)] backdrop-blur-xl border-t border-[rgba(76,201,240,0.08)] animate-fade-up">
+      <div
+        className={`lg:hidden transition-all duration-300 ease-out overflow-hidden ${
+          mobileOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
+        }`}
+      >
+        <div className="bg-[rgba(8,14,22,0.97)] backdrop-blur-xl border-t border-[rgba(76,201,240,0.08)]">
           <nav className="px-4 py-4 flex flex-col gap-1">
             {navItems.map((item) => (
               <Link
                 key={item.key}
                 href={item.href}
                 onClick={() => setMobileOpen(false)}
-                className={`px-4 py-3 text-sm font-medium rounded-lg transition-all duration-150 ${
+                className={`px-4 py-3 text-sm font-medium rounded-lg transition-all duration-150 focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-[#4cc9f0] ${
                   isActive(item.href)
                     ? 'text-[#4cc9f0] bg-[rgba(76,201,240,0.06)]'
                     : 'text-[rgba(237,242,250,0.5)] hover:text-[#edf2fa] hover:bg-[rgba(255,255,255,0.03)]'
@@ -165,7 +170,7 @@ export default function Header({ messages }: { messages: Record<string, string> 
             ))}
           </nav>
         </div>
-      )}
+      </div>
     </header>
   );
 }
