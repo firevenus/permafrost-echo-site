@@ -2,6 +2,10 @@
 
 ## 2026-07-07
 
+### 新增活动
+- 新增 2026 CiGA Game Jam 沈阳站（id: `ciga-gamejam-2026-shenyang`），含 7 张现场照片
+- 活动图片采用子文件夹管理：`public/images/activities/{活动id}/`
+
 ### 图片命名简化
 - 活动图片命名规则简化为 `{活动id}-{序号}.jpg`，如 `ssca-2026-01.jpg`
 
