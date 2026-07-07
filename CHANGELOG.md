@@ -2,6 +2,15 @@
 
 ## 2026-07-07
 
+### 设计审计与视觉优化
+- 全站添加噪点胶片纹理层 (`bg-noise`)，增加画面质感深度
+- 首页 Hero 添加霜晶几何 SVG 动效（极光色渐变 + 光点脉冲），解决纯文字无视觉锚点问题
+- 玻璃卡片增强：添加 `inset 0 1px 0 rgba(255,255,255,0.03)` 内发光模拟玻璃折射
+- 全站 Section 标题、活动卡片添加 CSS `animation-timeline: view()` 滚动浮现动效（原生 GPU 加速，零 JS）
+- Hero 使用 `min-h-[100dvh]` 替换 `h-screen`，防止 iOS Safari 地址栏跳动
+- 首页 CTA 按钮区分意图：主按钮「联系我们」→ `/contact`，次按钮「了解更多」→ `/about`（修复重复 intent 违规）
+- 6 个语言文件新增 `home.cta.learnMore` 翻译键
+
 ### Cloudflare 安全加固
 - 新增 `public/.well-known/security.txt` 安全漏洞披露联系文件
 - 新增 `public/_headers`，配置 HSTS（max-age=2年 + includeSubDomains + preload）、X-Content-Type-Options、X-Frame-Options、Referrer-Policy、Permissions-Policy
