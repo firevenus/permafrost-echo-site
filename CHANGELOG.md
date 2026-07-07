@@ -1,5 +1,16 @@
 # Changelog
 
+## 2026-07-08
+
+### SSCA 名称修正
+根据真实信息修正全站 SSCA 相关内容：
+- SSCA 实际是"沈阳动漫游戏博览会"（Animation, Comic & Game Expo），是东北地区规模最大的动漫游戏综合展会，每年举办多届
+- 冻土回声是其**游戏区承办方**，并非主办方
+- 修正 `data.ts` 6 种语言的 SSCA 活动标题/描述、时间线事件、路线图条目
+- 修正 `messages/*.json` 6 种语言的 about/business 描述
+- 重写中英文 SSCA 公告文章（`content/zh|en/articles/ssca-2026-announcement.md`），补充 SSCA 博览会背景介绍
+- 重新生成 `articles-data.ts`
+
 ## 2026-07-07
 
 ### 蒙古语完整翻译
