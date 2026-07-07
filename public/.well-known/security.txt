@@ -1,0 +1,7 @@
+Contact: mailto:hello@permafrost-echo.com
+Expires: 2027-12-31T23:59:59Z
+Preferred-Languages: zh, en
+Canonical: https://permafrost-echo.com/.well-known/security.txt
+
+# 冻土回声 (Permafrost Echo) 安全联系人
+# 如发现安全漏洞，请通过上方邮箱联系。
