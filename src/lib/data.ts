@@ -22,7 +22,7 @@ export interface ActivityInfo {
   description: string;
   status: 'upcoming' | 'completed';
   highlight?: boolean;
-  /** 活动照片路径，相对于 public/ 目录，如 /images/activities/ssca-2026-01-venue.jpg */
+  /** 活动照片路径，相对于 public/ 目录，如 /images/activities/ssca-2026-01.jpg */
   images?: string[];
 }
 
@@ -207,9 +207,9 @@ const zhData: LocalizedData = {
       description: '沈阳独立游戏创作者联盟年度发布会，集中展示东北亚地区最具创意的独立游戏作品，吸引超过500名开发者和玩家参与。',
       status: 'completed',
       images: [
-        '/images/activities/ssca-2026-01-venue-panorama.jpg',
-        '/images/activities/ssca-2026-02-gameplay-screen.jpg',
-        '/images/activities/ssca-2026-03-presentation-stage.jpg',
+        '/images/activities/ssca-2026-01.jpg',
+        '/images/activities/ssca-2026-02.jpg',
+        '/images/activities/ssca-2026-03.jpg',
       ],
     },
     {
@@ -221,9 +221,9 @@ const zhData: LocalizedData = {
       description: '全球最大的游戏创作马拉松活动落地沈阳，48小时内从零开始创作游戏原型，汇聚东北亚地区最具创意的游戏开发者。',
       status: 'completed',
       images: [
-        '/images/activities/ggj-2026-01-wide-shot.jpg',
-        '/images/activities/ggj-2026-02-coding.jpg',
-        '/images/activities/ggj-2026-03-whiteboard.jpg',
+        '/images/activities/ggj-2026-01.jpg',
+        '/images/activities/ggj-2026-02.jpg',
+        '/images/activities/ggj-2026-03.jpg',
       ],
     },
     {
@@ -235,8 +235,8 @@ const zhData: LocalizedData = {
       description: '冻土回声携12款东北亚独立游戏作品亮相北境动漫游戏嘉年华，展示区域游戏创作力量，拓展全国合作网络。',
       status: 'completed',
       images: [
-        '/images/activities/northern-anime-carnival-2026-05-01-overview.jpg',
-        '/images/activities/northern-anime-carnival-2026-05-02-booth.jpg',
+        '/images/activities/northern-anime-carnival-2026-05-01.jpg',
+        '/images/activities/northern-anime-carnival-2026-05-02.jpg',
       ],
     },
     {
@@ -552,9 +552,9 @@ const enData: LocalizedData = {
       description: 'The annual showcase of the Shenyang Indie Game Creators Alliance, featuring the most creative indie games from Northeast Asia, attracting over 500 developers and players.',
       status: 'completed',
       images: [
-        '/images/activities/ssca-2026-01-venue-panorama.jpg',
-        '/images/activities/ssca-2026-02-gameplay-screen.jpg',
-        '/images/activities/ssca-2026-03-presentation-stage.jpg',
+        '/images/activities/ssca-2026-01.jpg',
+        '/images/activities/ssca-2026-02.jpg',
+        '/images/activities/ssca-2026-03.jpg',
       ],
     },
     {
@@ -566,9 +566,9 @@ const enData: LocalizedData = {
       description: "The world's largest game creation jam lands in Shenyang. Create game prototypes from scratch in 48 hours, bringing together Northeast Asia's most creative developers.",
       status: 'completed',
       images: [
-        '/images/activities/ggj-2026-01-wide-shot.jpg',
-        '/images/activities/ggj-2026-02-coding.jpg',
-        '/images/activities/ggj-2026-03-whiteboard.jpg',
+        '/images/activities/ggj-2026-01.jpg',
+        '/images/activities/ggj-2026-02.jpg',
+        '/images/activities/ggj-2026-03.jpg',
       ],
     },
     {
@@ -580,8 +580,8 @@ const enData: LocalizedData = {
       description: 'Permafrost Echo brings 12 Northeast Asia indie game titles to the Beijing Indie Game Expo, showcasing regional creative power and expanding national cooperation networks.',
       status: 'completed',
       images: [
-        '/images/activities/beijing-expo-2026-01-overview.jpg',
-        '/images/activities/beijing-expo-2026-02-booth.jpg',
+        '/images/activities/beijing-expo-2026-01.jpg',
+        '/images/activities/beijing-expo-2026-02.jpg',
       ],
     },
     {
@@ -897,9 +897,9 @@ const jaData: LocalizedData = {
       description: '瀋陽インディーゲームクリエイター連盟の年次発表会。東北アジアで最も創造的なインディーゲーム作品を一堂に展示し、500名以上の開発者とプレイヤーが参加。',
       status: 'completed',
       images: [
-        '/images/activities/ssca-2026-01-venue-panorama.jpg',
-        '/images/activities/ssca-2026-02-gameplay-screen.jpg',
-        '/images/activities/ssca-2026-03-presentation-stage.jpg',
+        '/images/activities/ssca-2026-01.jpg',
+        '/images/activities/ssca-2026-02.jpg',
+        '/images/activities/ssca-2026-03.jpg',
       ],
     },
     {
@@ -911,9 +911,9 @@ const jaData: LocalizedData = {
       description: '世界最大のゲームクリエイションマラソンが瀋陽に上陸。48時間でゼロからゲームプロトタイプを制作し、東北アジアの最も創造的な開発者が集結。',
       status: 'completed',
       images: [
-        '/images/activities/ggj-2026-01-wide-shot.jpg',
-        '/images/activities/ggj-2026-02-coding.jpg',
-        '/images/activities/ggj-2026-03-whiteboard.jpg',
+        '/images/activities/ggj-2026-01.jpg',
+        '/images/activities/ggj-2026-02.jpg',
+        '/images/activities/ggj-2026-03.jpg',
       ],
     },
     {
@@ -925,8 +925,8 @@ const jaData: LocalizedData = {
       description: 'パーマフロスト・エコーが東北アジアのインディーゲーム12作品を携えて北境アニメ・ゲームカーニバルに出展。地域の創作力を示し、全国的な協力ネットワークを拡大。',
       status: 'completed',
       images: [
-        '/images/activities/northern-anime-carnival-2026-05-01-overview.jpg',
-        '/images/activities/northern-anime-carnival-2026-05-02-booth.jpg',
+        '/images/activities/northern-anime-carnival-2026-05-01.jpg',
+        '/images/activities/northern-anime-carnival-2026-05-02.jpg',
       ],
     },
     {
@@ -1242,9 +1242,9 @@ const koData: LocalizedData = {
       description: '선양 인디 게임 크리에이터 연합의 연례 쇼케이스. 동북아시아에서 가장 창의적인 인디 게임 작품을 집중 전시하며 500명 이상의 개발자와 플레이어가 참여.',
       status: 'completed',
       images: [
-        '/images/activities/ssca-2026-01-venue-panorama.jpg',
-        '/images/activities/ssca-2026-02-gameplay-screen.jpg',
-        '/images/activities/ssca-2026-03-presentation-stage.jpg',
+        '/images/activities/ssca-2026-01.jpg',
+        '/images/activities/ssca-2026-02.jpg',
+        '/images/activities/ssca-2026-03.jpg',
       ],
     },
     {
@@ -1256,9 +1256,9 @@ const koData: LocalizedData = {
       description: '세계 최대 게임 창작 마라톤이 선양에 상륙. 48시간 동안 제로부터 게임 프로토타입을 제작하며 동북아시아의 가장 창의적인 개발자들이 집결.',
       status: 'completed',
       images: [
-        '/images/activities/ggj-2026-01-wide-shot.jpg',
-        '/images/activities/ggj-2026-02-coding.jpg',
-        '/images/activities/ggj-2026-03-whiteboard.jpg',
+        '/images/activities/ggj-2026-01.jpg',
+        '/images/activities/ggj-2026-02.jpg',
+        '/images/activities/ggj-2026-03.jpg',
       ],
     },
     {
@@ -1270,8 +1270,8 @@ const koData: LocalizedData = {
       description: '페름프로스트 에코가 동북아시아 인디 게임 12작품을 가지고 베이징 인디 게임 엑스포에 출품. 지역 창작 역량을 보여주고 전국적인 협력 네트워크를 확장.',
       status: 'completed',
       images: [
-        '/images/activities/beijing-expo-2026-01-overview.jpg',
-        '/images/activities/beijing-expo-2026-02-booth.jpg',
+        '/images/activities/beijing-expo-2026-01.jpg',
+        '/images/activities/beijing-expo-2026-02.jpg',
       ],
     },
     {
@@ -1587,9 +1587,9 @@ const ruData: LocalizedData = {
       description: 'Ежегодная выставка Шэньянского альянса создателей инди-игр, демонстрирующая самые креативные инди-игры Северо-Восточной Азии, с участием более 500 разработчиков и игроков.',
       status: 'completed',
       images: [
-        '/images/activities/ssca-2026-01-venue-panorama.jpg',
-        '/images/activities/ssca-2026-02-gameplay-screen.jpg',
-        '/images/activities/ssca-2026-03-presentation-stage.jpg',
+        '/images/activities/ssca-2026-01.jpg',
+        '/images/activities/ssca-2026-02.jpg',
+        '/images/activities/ssca-2026-03.jpg',
       ],
     },
     {
@@ -1601,9 +1601,9 @@ const ruData: LocalizedData = {
       description: 'Крупнейший в мире марафон по созданию игр проходит в Шэньяне. Создайте прототип игры с нуля за 48 часов вместе с самыми креативными разработчиками Северо-Восточной Азии.',
       status: 'completed',
       images: [
-        '/images/activities/ggj-2026-01-wide-shot.jpg',
-        '/images/activities/ggj-2026-02-coding.jpg',
-        '/images/activities/ggj-2026-03-whiteboard.jpg',
+        '/images/activities/ggj-2026-01.jpg',
+        '/images/activities/ggj-2026-02.jpg',
+        '/images/activities/ggj-2026-03.jpg',
       ],
     },
     {
@@ -1615,8 +1615,8 @@ const ruData: LocalizedData = {
       description: 'Permafrost Echo представляет 12 инди-игр Северо-Восточной Азии на Пекинской выставке инди-игр, демонстрируя творческую мощь региона и расширяя национальную сеть сотрудничества.',
       status: 'completed',
       images: [
-        '/images/activities/beijing-expo-2026-01-overview.jpg',
-        '/images/activities/beijing-expo-2026-02-booth.jpg',
+        '/images/activities/beijing-expo-2026-01.jpg',
+        '/images/activities/beijing-expo-2026-02.jpg',
       ],
     },
     {
