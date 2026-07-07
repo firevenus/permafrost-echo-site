@@ -15,9 +15,46 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale, slug } = await params;
   const article = getArticleBySlug(locale, slug);
   if (!article) return { title: 'Article Not Found' };
+
+  const BASE_URL = 'https://permafrost-echo.com';
+  const title = `${article.title} | Permafrost Echo`;
+  const url = `${BASE_URL}/${locale}/articles/${slug}`;
+
   return {
-    title: `${article.title} | Permafrost Echo`,
+    title,
     description: article.excerpt,
+    alternates: {
+      canonical: url,
+    },
+    robots: {
+      index: true,
+      follow: true,
+      'max-snippet': -1,
+      'max-image-preview': 'large',
+    },
+    openGraph: {
+      type: 'article',
+      title,
+      description: article.excerpt,
+      url,
+      publishedTime: article.date,
+      authors: article.author ? [article.author] : undefined,
+      tags: article.tags,
+      images: [
+        {
+          url: `${BASE_URL}/images/og-default.svg`,
+          width: 1200,
+          height: 630,
+          alt: title,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description: article.excerpt,
+      images: [`${BASE_URL}/images/og-default.svg`],
+    },
   };
 }
 

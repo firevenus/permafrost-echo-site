@@ -1,4 +1,5 @@
 import { getMessages } from 'next-intl/server';
+import { routing } from '@/i18n/routing';
 import type { Metadata } from 'next';
 
 const BASE_URL = 'https://permafrost-echo.com';
@@ -18,7 +19,7 @@ function getNested(obj: Record<string, unknown>, path: string): string {
 
 /**
  * Generate page-level metadata based on translation keys.
- * Title format: "{pageTitle} | 冻土回声 Permafrost Echo" (via template in root layout)
+ * Includes canonical URL, hreflang alternates, OpenGraph, and Twitter cards.
  */
 export async function getPageMetadata(
   locale: string,
@@ -30,17 +31,32 @@ export async function getPageMetadata(
 
   const pageTitle = getNested(messages, titleKey);
   const pageDescription = getNested(messages, descriptionKey);
+  const titleWithBrand = `${pageTitle} | 冻土回声 Permafrost Echo`;
 
   const url = `${BASE_URL}/${locale}${path}`;
 
+  // Hreflang alternates for this page across all locales
+  const languages: Record<string, string> = {};
+  for (const loc of routing.locales) {
+    languages[loc] = `${BASE_URL}/${loc}${path}`;
+  }
+
   return {
-    title: pageTitle,
+    title: titleWithBrand,
     description: pageDescription,
     alternates: {
       canonical: url,
+      languages,
+    },
+    robots: {
+      index: true,
+      follow: true,
+      'max-snippet': -1,
+      'max-image-preview': 'large',
+      'max-video-preview': -1,
     },
     openGraph: {
-      title: `${pageTitle} | 冻土回声 Permafrost Echo`,
+      title: titleWithBrand,
       description: pageDescription,
       url,
       images: [
@@ -48,13 +64,13 @@ export async function getPageMetadata(
           url: `${BASE_URL}/images/og-default.svg`,
           width: 1200,
           height: 630,
-          alt: `${pageTitle} | 冻土回声 Permafrost Echo`,
+          alt: titleWithBrand,
         },
       ],
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${pageTitle} | 冻土回声 Permafrost Echo`,
+      title: titleWithBrand,
       description: pageDescription,
       images: [`${BASE_URL}/images/og-default.svg`],
     },
