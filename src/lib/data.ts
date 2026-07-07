@@ -215,12 +215,12 @@ const zhData: LocalizedData = {
       status: 'completed',
     },
     {
-      id: 'beijing-expo-2026',
-      title: '北京独立游戏博览会 2026',
-      titleEn: 'Beijing Indie Game Expo 2026',
+      id: 'northern-anime-carnival-2026-05',
+      title: '北境动漫游戏嘉年华',
+      titleEn: 'Northern Anime & Game Carnival',
       date: '2026-05',
-      location: '北京',
-      description: '冻土回声携12款东北亚独立游戏作品亮相北京独立游戏博览会，展示区域游戏创作力量，拓展全国合作网络。',
+      location: '沈阳',
+      description: '冻土回声携12款东北亚独立游戏作品亮相北境动漫游戏嘉年华，展示区域游戏创作力量，拓展全国合作网络。',
       status: 'completed',
     },
     {
@@ -344,8 +344,8 @@ const zhData: LocalizedData = {
     },
     {
       year: '2026.05',
-      title: '北京博览会亮相',
-      description: '携12款作品首次亮相北京独立游戏博览会，拓展全国影响力。',
+      title: '北境动漫游戏嘉年华',
+      description: '携12款作品亮相北境动漫游戏嘉年华，拓展全国影响力。',
     },
   ],
   roadmapPhases: [
@@ -877,12 +877,12 @@ const jaData: LocalizedData = {
       status: 'completed',
     },
     {
-      id: 'beijing-expo-2026',
-      title: '北京インディーゲーム博覧会 2026',
-      titleEn: 'Beijing Indie Game Expo 2026',
+      id: 'northern-anime-carnival-2026-05',
+      title: '北境アニメ・ゲームカーニバル',
+      titleEn: 'Northern Anime & Game Carnival',
       date: '2026-05',
-      location: '北京',
-      description: 'パーマフロスト・エコーが東北アジアのインディーゲーム12作品を携えて北京インディーゲーム博覧会に出展。地域の創作力を示し、全国的な協力ネットワークを拡大。',
+      location: '瀋陽',
+      description: 'パーマフロスト・エコーが東北アジアのインディーゲーム12作品を携えて北境アニメ・ゲームカーニバルに出展。地域の創作力を示し、全国的な協力ネットワークを拡大。',
       status: 'completed',
     },
     {
@@ -1006,8 +1006,8 @@ const jaData: LocalizedData = {
     },
     {
       year: '2026.05',
-      title: '北京博覧会デビュー',
-      description: '12作品を携えて北京インディーゲーム博覧会に初出展。全国的な影響力を拡大。',
+      title: '北境アニメ・ゲームカーニバル',
+      description: '12作品を携えて北境アニメ・ゲームカーニバルに初出展。全国的な影響力を拡大。',
     },
   ],
   roadmapPhases: [
