@@ -9,6 +9,11 @@ interface TeamMember {
   nameEn: string;
 }
 
+function avatarId(nameEn: string): string {
+  // Extract the "clean" identifier: lowercase, keep only alphanumeric
+  return nameEn.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
+}
+
 export default function TeamPage() {
   const t = useTranslations();
   const messages = useMessages();
@@ -34,19 +39,6 @@ export default function TeamPage() {
         </div>
       </section>
 
-      {/* Staff Count */}
-      <section className="page-section relative overflow-hidden">
-        <div className="section-glow-top" />
-        <div className="page-container relative">
-          <div className="glass-card p-10 text-center max-w-[400px] mx-auto mb-20">
-            <div className="stat-number gradient-text mb-2.5">{t('team.staffCountValue')}</div>
-            <p className="text-sm text-[rgba(237,242,250,0.4)]">
-              {t('team.staffCount')} · {t('team.staffLabel')}
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* Core Team */}
       <section className="page-section relative overflow-hidden">
         <div className="section-glow-bottom" />
@@ -57,11 +49,22 @@ export default function TeamPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-[1000px] mx-auto">
-            {members.map((member, i) => (
+            {members.map((member, i) => {
+              const id = avatarId(member.nameEn);
+              const avatarSrc = `/images/team/${id}.webp`;
+              return (
               <div key={i} className="glass-card p-6 game-card group">
                 <div className="flex items-center gap-4">
-                  <div className="w-14 h-14 rounded-full bg-gradient-to-br from-[#4cc9f0] to-[#7b2ff7] flex items-center justify-center text-white text-lg font-bold flex-shrink-0 shadow-[0_0_20px_rgba(76,201,240,0.2)] transition-shadow duration-300 group-hover:shadow-[0_0_30px_rgba(76,201,240,0.35)]">
-                    {member.nameEn?.charAt(0).toUpperCase()}
+                  <div className="w-14 h-14 rounded-full bg-gradient-to-br from-[#4cc9f0] to-[#7b2ff7] flex items-center justify-center flex-shrink-0 shadow-[0_0_20px_rgba(76,201,240,0.2)] transition-shadow duration-300 group-hover:shadow-[0_0_30px_rgba(76,201,240,0.35)] overflow-hidden relative">
+                    <span className="text-white text-lg font-bold absolute">
+                      {member.nameEn?.charAt(0).toUpperCase()}
+                    </span>
+                    <img
+                      src={avatarSrc}
+                      alt={member.name}
+                      className="absolute inset-0 w-full h-full object-cover rounded-full"
+                      onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
+                    />
                   </div>
                   <div>
                     <h3 className="text-sm font-semibold text-[#edf2fa] group-hover:text-white transition-colors duration-300">
@@ -71,7 +74,8 @@ export default function TeamPage() {
                   </div>
                 </div>
               </div>
-            ))}
+              );
+            })}
           </div>
 
           {/* Volunteers */}
