@@ -105,11 +105,14 @@
   "games": {
     "title": "Games",
     "description": "Creative works from Northeast Asia indie game developers",
-    "all": "All",
+    "comingSoon": "Coming Soon",
     "categories": {
-      "doomsday": "Post-Apocalyptic & Cyber-Chinese",
-      "healing": "Healing Idle & Hardcore Strategy",
-      "innovation": "Innovative Gameplay"
+      "gamejam": "Born from Game Jam",
+      "gamejamDesc": "Game demos created during Game Jams",
+      "exhibition": "Showcased at Exhibitions",
+      "exhibitionDesc": "Indie games exhibited at game expos",
+      "upcoming": "Upcoming Releases",
+      "upcomingDesc": "Game publishing projects in preparation"
     },
     "status": {
       "demo": "Demo",

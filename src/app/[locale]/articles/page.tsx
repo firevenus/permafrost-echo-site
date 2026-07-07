@@ -1,7 +1,9 @@
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/routing';
-import { getArticles } from '@/lib/articles';
+import { getArticles } from '@/lib/articles-data';
 import { Calendar, ArrowRight } from 'lucide-react';
+
+export const runtime = 'edge';
 
 type Props = {
   params: Promise<{ locale: string }>;

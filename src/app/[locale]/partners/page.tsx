@@ -5,6 +5,8 @@ import { getPartners } from '@/lib/data';
 import type { Locale } from '@/i18n/routing';
 import { ExternalLink } from 'lucide-react';
 
+export const runtime = 'edge';
+
 export default function PartnersPage() {
   const t = useTranslations();
   const locale = useLocale() as Locale;

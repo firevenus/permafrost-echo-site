@@ -122,7 +122,9 @@
     "universities": {
       "title": "高校联盟",
       "description": "联合东北地区高校，建立校园独立游戏开发者网络",
-      "cta": "即将更新"
+      "cta": "即将更新",
+      "comingSoon": "社团名称",
+      "stayTuned": "社团介绍"
     },
     "partners": {
       "title": "合作伙伴",

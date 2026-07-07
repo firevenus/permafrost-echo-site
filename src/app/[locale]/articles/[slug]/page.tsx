@@ -1,11 +1,11 @@
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/routing';
-import { getArticleBySlug } from '@/lib/articles';
-import ReactMarkdown from 'react-markdown';
-import remarkGfm from 'remark-gfm';
-import rehypeRaw from 'rehype-raw';
+import { getArticleBySlug } from '@/lib/articles-data';
+import MarkdownContent from '@/components/MarkdownContent';
 import { ArrowLeft, Calendar } from 'lucide-react';
 import type { Metadata } from 'next';
+
+export const runtime = 'edge';
 
 type Props = {
   params: Promise<{ locale: string; slug: string }>;
@@ -77,9 +77,7 @@ export default async function ArticleDetailPage({ params }: Props) {
       <section className="page-section">
         <div className="page-container">
           <article className="max-w-[800px] mx-auto glass-card p-8 md:p-12 article-content">
-            <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]}>
-              {article.content}
-            </ReactMarkdown>
+            <MarkdownContent content={article.content} />
           </article>
         </div>
       </section>

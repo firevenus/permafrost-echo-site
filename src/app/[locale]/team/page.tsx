@@ -2,6 +2,8 @@
 
 import { useTranslations } from 'next-intl';
 
+export const runtime = 'edge';
+
 export default function TeamPage() {
   const t = useTranslations();
 

@@ -6,6 +6,8 @@ import { getActivities, getUpcomingActivities, getStats } from '@/lib/data';
 import type { Locale } from '@/i18n/routing';
 import { ArrowRight, Calendar, MapPin } from 'lucide-react';
 
+export const runtime = 'edge';
+
 export default function HomePage() {
   const t = useTranslations();
   const locale = useLocale() as Locale;

@@ -5,6 +5,8 @@ import { getUniversities, getPartners } from '@/lib/data';
 import type { Locale } from '@/i18n/routing';
 import { Building2, Users, MessageCircle, HeartHandshake } from 'lucide-react';
 
+export const runtime = 'edge';
+
 export default function CommunityPage() {
   const t = useTranslations();
   const locale = useLocale() as Locale;

@@ -3,6 +3,8 @@
 import { useTranslations } from 'next-intl';
 import { Gamepad2, MonitorPlay, Rocket } from 'lucide-react';
 
+export const runtime = 'edge';
+
 const categoryConfig = [
   {
     key: 'gamejam',

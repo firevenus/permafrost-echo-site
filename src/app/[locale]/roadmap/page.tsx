@@ -4,6 +4,8 @@ import { useTranslations, useLocale } from 'next-intl';
 import { getTimelineEvents, getRoadmapPhases } from '@/lib/data';
 import type { Locale } from '@/i18n/routing';
 
+export const runtime = 'edge';
+
 export default function RoadmapPage() {
   const t = useTranslations();
   const locale = useLocale() as Locale;

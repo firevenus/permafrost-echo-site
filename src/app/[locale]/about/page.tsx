@@ -3,6 +3,8 @@
 import { useTranslations } from 'next-intl';
 import { Quote, Target, Gamepad2, Calendar, Users, GraduationCap, Shield, Radio } from 'lucide-react';
 
+export const runtime = 'edge';
+
 export default function AboutPage() {
   const t = useTranslations();
 

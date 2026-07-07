@@ -105,11 +105,14 @@
   "games": {
     "title": "게임",
     "description": "동북아시아 인디 게임 개발자들의 창의적인 작품",
-    "all": "전체",
+    "comingSoon": "곧 공개 예정",
     "categories": {
-      "doomsday": "포스트 아포칼립스 & 사이버 차이니즈",
-      "healing": "힐링 방치 & 하드코어 전략",
-      "innovation": "혁신적인 게임플레이"
+      "gamejam": "Game Jam 탄생",
+      "gamejamDesc": "Game Jam에서 탄생한 게임 데모",
+      "exhibition": "게임 전시회 출품",
+      "exhibitionDesc": "게임 전시회에서 선보인 인디 게임",
+      "upcoming": "출시 예정",
+      "upcomingDesc": "준비 중인 게임 퍼블리싱 프로젝트"
     },
     "status": {
       "demo": "데모",

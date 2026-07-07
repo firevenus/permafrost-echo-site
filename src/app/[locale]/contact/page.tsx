@@ -3,6 +3,8 @@
 import { useTranslations } from 'next-intl';
 import { Mail, MessageCircle, ExternalLink } from 'lucide-react';
 
+export const runtime = 'edge';
+
 export default function ContactPage() {
   const t = useTranslations();
 

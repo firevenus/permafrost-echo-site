@@ -105,11 +105,14 @@
   "games": {
     "title": "ゲーム",
     "description": "東北アジアのインディーゲーム開発者による創造的な作品",
-    "all": "すべて",
+    "comingSoon": "近日公開",
     "categories": {
-      "doomsday": "終末廃土 & サイバー中華",
-      "healing": "癒し放置 & ハードコア戦略",
-      "innovation": "革新的ゲームプレイ"
+      "gamejam": "Game Jam 発祥",
+      "gamejamDesc": "Game Jamで生まれたゲームデモ",
+      "exhibition": "ゲーム展示会出展",
+      "exhibitionDesc": "ゲーム展示会で披露されたインディーゲーム",
+      "upcoming": "近日発売",
+      "upcomingDesc": "準備中のゲームパブリッシングプロジェクト"
     },
     "status": {
       "demo": "デモ",
