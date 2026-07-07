@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from 'react';
 import { useLocale } from 'next-intl';
 import { usePathname } from 'next/navigation';
 import { Link } from '@/i18n/routing';
+import Image from 'next/image';
 import { Menu, X, Globe, ChevronDown } from 'lucide-react';
 import type { Locale } from '@/i18n/routing';
 import { localeLabels } from '@/i18n/routing';
@@ -13,6 +14,7 @@ const navItems: { key: string; href: string }[] = [
   { key: 'about', href: '/about' },
   { key: 'activities', href: '/activities' },
   { key: 'games', href: '/games' },
+  { key: 'articles', href: '/articles' },
   { key: 'community', href: '/community' },
   { key: 'team', href: '/team' },
   { key: 'partners', href: '/partners' },
@@ -68,9 +70,11 @@ export default function Header({ messages }: { messages: Record<string, string> 
       <div className="max-w-[1200px] mx-auto px-6 flex items-center justify-between h-16">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3 no-underline group">
-          <img
+          <Image
             src="/images/logo.png"
             alt="冻土回声 Permafrost Echo"
+            width={32}
+            height={32}
             className="w-8 h-8 rounded-lg object-contain shadow-[0_0_16px_rgba(76,201,240,0.3)] transition-shadow duration-300 group-hover:shadow-[0_0_24px_rgba(76,201,240,0.5)]"
           />
           <span className="text-sm font-semibold text-[#edf2fa] hidden sm:block">

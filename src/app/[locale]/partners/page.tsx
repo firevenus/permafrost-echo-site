@@ -37,8 +37,12 @@ export default function PartnersPage() {
             {partners.map((partner) => (
               <div key={partner.id} className="glass-card p-6 game-card group">
                 <div className="flex items-start gap-4">
-                  <div className="w-14 h-14 rounded-xl bg-[rgba(76,201,240,0.04)] flex items-center justify-center text-2xl flex-shrink-0 transition-all duration-300 group-hover:bg-[rgba(76,201,240,0.08)] group-hover:scale-110">
-                    {partner.logo}
+                  <div className="w-14 h-14 rounded-xl bg-[rgba(76,201,240,0.04)] flex items-center justify-center flex-shrink-0 overflow-hidden transition-all duration-300 group-hover:bg-[rgba(76,201,240,0.08)] group-hover:scale-110">
+                    <img
+                      src={partner.logo}
+                      alt={partner.name}
+                      className="w-12 h-12 object-contain"
+                    />
                   </div>
                   <div className="flex-1 min-w-0">
                     <h3 className="text-sm font-semibold text-[#edf2fa] mb-1 group-hover:text-white transition-colors duration-300">

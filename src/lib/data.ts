@@ -273,7 +273,7 @@ const zhData: LocalizedData = {
       nameEn: 'Unity China',
       category: '引擎技术',
       description: '全球领先的实时 3D 内容创作平台，为独立游戏开发者提供强大的技术支持与生态资源。',
-      logo: '🎬',
+      logo: '/images/partners/unity.svg',
     },
     {
       id: 'netease-digital',
@@ -281,7 +281,7 @@ const zhData: LocalizedData = {
       nameEn: 'Netease Shenyang Digital Industry Center',
       category: '产业孵化',
       description: '网易在东北地区设立的数字产业创新基地，聚焦游戏、数字内容与科技产业孵化。',
-      logo: '🏢',
+      logo: '/images/partners/netease-digital.svg',
     },
     {
       id: 'netease-edu',
@@ -289,7 +289,7 @@ const zhData: LocalizedData = {
       nameEn: 'Netease Game Academy',
       category: '教育培养',
       description: '网易游戏旗下的游戏人才培养平台，提供游戏设计、开发、美术等专业课程与培训。',
-      logo: '🎓',
+      logo: '/images/partners/netease-edu.svg',
     },
     {
       id: 'tencent-edu',
@@ -297,7 +297,7 @@ const zhData: LocalizedData = {
       nameEn: 'Tencent Game Academy',
       category: '教育培养',
       description: '腾讯游戏旗下的游戏人才培养与学术交流平台，致力于推动游戏产业人才发展。',
-      logo: '📚',
+      logo: '/images/partners/tencent-edu.svg',
     },
     {
       id: 'asus-liaoning',
@@ -305,7 +305,7 @@ const zhData: LocalizedData = {
       nameEn: 'ASUS Liaoning',
       category: '硬件设备',
       description: '华硕在辽宁地区的分支机构，为游戏活动与开发者提供高性能硬件设备支持。',
-      logo: '💻',
+      logo: '/images/partners/asus.svg',
     },
     {
       id: 'aura',
@@ -313,7 +313,7 @@ const zhData: LocalizedData = {
       nameEn: 'Aura',
       category: '外设装备',
       description: '知名电竞外设品牌，为独立游戏开发者和玩家提供专业级外设装备。',
-      logo: '🖱️',
+      logo: '/images/partners/aura.svg',
     },
   ],
   timelineEvents: [
@@ -604,7 +604,7 @@ const enData: LocalizedData = {
       nameEn: 'Unity China',
       category: 'Engine Technology',
       description: "The world's leading real-time 3D content creation platform, providing powerful technical support and ecosystem resources for indie game developers.",
-      logo: '🎬',
+      logo: '/images/partners/unity.svg',
     },
     {
       id: 'netease-digital',
@@ -612,7 +612,7 @@ const enData: LocalizedData = {
       nameEn: 'Netease Shenyang Digital Industry Center',
       category: 'Industry Incubation',
       description: "Netease's digital industry innovation base in Northeast China, focusing on game, digital content, and tech industry incubation.",
-      logo: '🏢',
+      logo: '/images/partners/netease-digital.svg',
     },
     {
       id: 'netease-edu',
@@ -620,7 +620,7 @@ const enData: LocalizedData = {
       nameEn: 'Netease Game Academy',
       category: 'Education & Training',
       description: "Netease Games' talent cultivation platform, offering professional courses and training in game design, development, and art.",
-      logo: '🎓',
+      logo: '/images/partners/netease-edu.svg',
     },
     {
       id: 'tencent-edu',
@@ -628,7 +628,7 @@ const enData: LocalizedData = {
       nameEn: 'Tencent Game Academy',
       category: 'Education & Training',
       description: "Tencent Games' talent cultivation and academic exchange platform, dedicated to advancing game industry talent development.",
-      logo: '📚',
+      logo: '/images/partners/tencent-edu.svg',
     },
     {
       id: 'asus-liaoning',
@@ -636,7 +636,7 @@ const enData: LocalizedData = {
       nameEn: 'ASUS Liaoning',
       category: 'Hardware',
       description: "ASUS's regional branch in Liaoning, providing high-performance hardware support for game events and developers.",
-      logo: '💻',
+      logo: '/images/partners/asus.svg',
     },
     {
       id: 'aura',
@@ -644,7 +644,7 @@ const enData: LocalizedData = {
       nameEn: 'Aura',
       category: 'Gaming Peripherals',
       description: 'A renowned esports peripherals brand, providing professional-grade gear for indie game developers and players.',
-      logo: '🖱️',
+      logo: '/images/partners/aura.svg',
     },
   ],
   timelineEvents: [
@@ -935,7 +935,7 @@ const jaData: LocalizedData = {
       nameEn: 'Unity China',
       category: 'エンジン技術',
       description: '世界をリードするリアルタイム3Dコンテンツ制作プラットフォーム。インディーゲーム開発者に強力な技術サポートとエコシステムリソースを提供。',
-      logo: '🎬',
+      logo: '/images/partners/unity.svg',
     },
     {
       id: 'netease-digital',
@@ -943,7 +943,7 @@ const jaData: LocalizedData = {
       nameEn: 'Netease Shenyang Digital Industry Center',
       category: '産業インキュベーション',
       description: 'NetEaseが東北地域に設立したデジタル産業イノベーション拠点。ゲーム、デジタルコンテンツ、テクノロジー産業のインキュベーションに注力。',
-      logo: '🏢',
+      logo: '/images/partners/netease-digital.svg',
     },
     {
       id: 'netease-edu',
@@ -951,7 +951,7 @@ const jaData: LocalizedData = {
       nameEn: 'Netease Game Academy',
       category: '教育育成',
       description: 'NetEase Games傘下のゲーム人材育成プラットフォーム。ゲームデザイン、開発、アートなどの専門コースとトレーニングを提供。',
-      logo: '🎓',
+      logo: '/images/partners/netease-edu.svg',
     },
     {
       id: 'tencent-edu',
@@ -959,7 +959,7 @@ const jaData: LocalizedData = {
       nameEn: 'Tencent Game Academy',
       category: '教育育成',
       description: 'Tencent Games傘下のゲーム人材育成と学術交流プラットフォーム。ゲーム産業の人材発展を推進。',
-      logo: '📚',
+      logo: '/images/partners/tencent-edu.svg',
     },
     {
       id: 'asus-liaoning',
@@ -967,7 +967,7 @@ const jaData: LocalizedData = {
       nameEn: 'ASUS Liaoning',
       category: 'ハードウェア',
       description: 'ASUSの遼寧地域支社。ゲームイベントと開発者に高性能ハードウェアサポートを提供。',
-      logo: '💻',
+      logo: '/images/partners/asus.svg',
     },
     {
       id: 'aura',
@@ -975,7 +975,7 @@ const jaData: LocalizedData = {
       nameEn: 'Aura',
       category: 'ゲーミングデバイス',
       description: '有名なeスポーツ周辺機器ブランド。インディーゲーム開発者とプレイヤーにプロフェッショナルグレードのデバイスを提供。',
-      logo: '🖱️',
+      logo: '/images/partners/aura.svg',
     },
   ],
   timelineEvents: [
@@ -1266,7 +1266,7 @@ const koData: LocalizedData = {
       nameEn: 'Unity China',
       category: '엔진 기술',
       description: '세계를 선도하는 실시간 3D 콘텐츠 제작 플랫폼. 인디 게임 개발자에게 강력한 기술 지원과 생태계 리소스를 제공합니다.',
-      logo: '🎬',
+      logo: '/images/partners/unity.svg',
     },
     {
       id: 'netease-digital',
@@ -1274,7 +1274,7 @@ const koData: LocalizedData = {
       nameEn: 'Netease Shenyang Digital Industry Center',
       category: '산업 인큐베이션',
       description: 'NetEase가 동북 지역에 설립한 디지털 산업 혁신 거점. 게임, 디지털 콘텐츠 및 기술 산업 인큐베이션에 주력.',
-      logo: '🏢',
+      logo: '/images/partners/netease-digital.svg',
     },
     {
       id: 'netease-edu',
@@ -1282,7 +1282,7 @@ const koData: LocalizedData = {
       nameEn: 'Netease Game Academy',
       category: '교육 육성',
       description: 'NetEase Games 산하 게임 인재 육성 플랫폼. 게임 디자인, 개발, 아트 등 전문 과정과 교육을 제공합니다.',
-      logo: '🎓',
+      logo: '/images/partners/netease-edu.svg',
     },
     {
       id: 'tencent-edu',
@@ -1290,7 +1290,7 @@ const koData: LocalizedData = {
       nameEn: 'Tencent Game Academy',
       category: '교육 육성',
       description: 'Tencent Games 산하 게임 인재 육성 및 학술 교류 플랫폼. 게임 산업 인재 발전에 전념.',
-      logo: '📚',
+      logo: '/images/partners/tencent-edu.svg',
     },
     {
       id: 'asus-liaoning',
@@ -1298,7 +1298,7 @@ const koData: LocalizedData = {
       nameEn: 'ASUS Liaoning',
       category: '하드웨어',
       description: 'ASUS의 랴오닝 지역 지사. 게임 이벤트와 개발자에게 고성능 하드웨어 지원을 제공합니다.',
-      logo: '💻',
+      logo: '/images/partners/asus.svg',
     },
     {
       id: 'aura',
@@ -1306,7 +1306,7 @@ const koData: LocalizedData = {
       nameEn: 'Aura',
       category: '게이밍 기기',
       description: '유명 e스포츠 주변기기 브랜드. 인디 게임 개발자와 플레이어에게 전문가급 기기를 제공합니다.',
-      logo: '🖱️',
+      logo: '/images/partners/aura.svg',
     },
   ],
   timelineEvents: [
@@ -1597,7 +1597,7 @@ const ruData: LocalizedData = {
       nameEn: 'Unity China',
       category: 'Игровой движок',
       description: 'Ведущая в мире платформа для создания 3D-контента в реальном времени, предоставляющая мощную техническую поддержку и ресурсы экосистемы для разработчиков инди-игр.',
-      logo: '🎬',
+      logo: '/images/partners/unity.svg',
     },
     {
       id: 'netease-digital',
@@ -1605,7 +1605,7 @@ const ruData: LocalizedData = {
       nameEn: 'Netease Shenyang Digital Industry Center',
       category: 'Инкубация индустрии',
       description: 'Инновационная база цифровой индустрии NetEase в Северо-Восточном Китае, специализирующаяся на инкубации игр, цифрового контента и технологических отраслей.',
-      logo: '🏢',
+      logo: '/images/partners/netease-digital.svg',
     },
     {
       id: 'netease-edu',
@@ -1613,7 +1613,7 @@ const ruData: LocalizedData = {
       nameEn: 'Netease Game Academy',
       category: 'Образование',
       description: 'Платформа подготовки кадров NetEase Games, предлагающая профессиональные курсы по геймдизайну, разработке и искусству.',
-      logo: '🎓',
+      logo: '/images/partners/netease-edu.svg',
     },
     {
       id: 'tencent-edu',
@@ -1621,7 +1621,7 @@ const ruData: LocalizedData = {
       nameEn: 'Tencent Game Academy',
       category: 'Образование',
       description: 'Платформа подготовки кадров и академического обмена Tencent Games, посвящённая развитию талантов в игровой индустрии.',
-      logo: '📚',
+      logo: '/images/partners/tencent-edu.svg',
     },
     {
       id: 'asus-liaoning',
@@ -1629,7 +1629,7 @@ const ruData: LocalizedData = {
       nameEn: 'ASUS Liaoning',
       category: 'Оборудование',
       description: 'Региональное отделение ASUS в Ляонине, обеспечивающее высокопроизводительную аппаратную поддержку для игровых мероприятий и разработчиков.',
-      logo: '💻',
+      logo: '/images/partners/asus.svg',
     },
     {
       id: 'aura',
@@ -1637,7 +1637,7 @@ const ruData: LocalizedData = {
       nameEn: 'Aura',
       category: 'Игровая периферия',
       description: 'Известный бренд киберспортивной периферии, предоставляющий профессиональное оборудование для разработчиков инди-игр и игроков.',
-      logo: '🖱️',
+      logo: '/images/partners/aura.svg',
     },
   ],
   timelineEvents: [
@@ -1720,13 +1720,22 @@ const ruData: LocalizedData = {
   ],
 };
 
+const mnData: LocalizedData = {
+  games: [...ruData.games],
+  activities: [...ruData.activities],
+  universities: [...ruData.universities],
+  partners: [...ruData.partners],
+  timelineEvents: [...ruData.timelineEvents],
+  roadmapPhases: [...ruData.roadmapPhases],
+};
+
 const dataMap: Record<Locale, LocalizedData> = {
   zh: zhData,
   en: enData,
   ja: jaData,
   ko: koData,
   ru: ruData,
-  mn: ruData,
+  mn: mnData,
 };
 
 function getData(locale: Locale): LocalizedData {

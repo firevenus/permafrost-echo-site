@@ -2,6 +2,7 @@
 
 import { Link } from '@/i18n/routing';
 import { useLocale } from 'next-intl';
+import Image from 'next/image';
 import { Mail } from 'lucide-react';
 import type { Locale } from '@/i18n/routing';
 
@@ -31,9 +32,11 @@ export default function Footer({ messages }: { messages: Record<string, string> 
           {/* Brand */}
           <div>
             <div className="flex items-center gap-3 mb-5">
-              <img
+              <Image
                 src="/images/logo.png"
                 alt="冻土回声 Permafrost Echo"
+                width={36}
+                height={36}
                 className="w-9 h-9 rounded-lg object-contain shadow-[0_0_16px_rgba(76,201,240,0.25)]"
               />
               <span className="text-sm font-semibold text-[#edf2fa]">
@@ -85,11 +88,12 @@ export default function Footer({ messages }: { messages: Record<string, string> 
             <h3 className="text-xs font-semibold text-[rgba(237,242,250,0.5)] uppercase tracking-[0.08em] mb-5">
               {t('footer.wechatQr')}
             </h3>
-            <div className="w-28 h-28 rounded-xl overflow-hidden border border-[rgba(76,201,240,0.08)] bg-[rgba(255,255,255,0.02)]">
-              <img
+            <div className="w-28 h-28 rounded-xl overflow-hidden border border-[rgba(76,201,240,0.08)] bg-[rgba(255,255,255,0.02)] relative">
+              <Image
                 src="/images/qr/wechat-official.png"
                 alt={t('footer.wechatQr')}
-                className="w-full h-full object-cover"
+                fill
+                className="object-cover"
               />
             </div>
           </div>

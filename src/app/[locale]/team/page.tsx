@@ -1,35 +1,21 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
+import { useTranslations, useMessages } from 'next-intl';
 
 export const runtime = 'edge';
 
+interface TeamMember {
+  name: string;
+  nameEn: string;
+}
+
 export default function TeamPage() {
   const t = useTranslations();
-
-  const rawMessages = t as unknown as (key: string) => unknown;
-  const members = [
-    {
-      name: rawMessages('team.members.0.name') as string || 'L',
-      nameEn: rawMessages('team.members.0.nameEn') as string || 'L',
-    },
-    {
-      name: rawMessages('team.members.1.name') as string || '成思',
-      nameEn: rawMessages('team.members.1.nameEn') as string || 'Enki',
-    },
-    {
-      name: rawMessages('team.members.2.name') as string || '疯兔',
-      nameEn: rawMessages('team.members.2.nameEn') as string || 'FungTO',
-    },
-    {
-      name: rawMessages('team.members.3.name') as string || '麻团',
-      nameEn: rawMessages('team.members.3.nameEn') as string || 'MattUan',
-    },
-    {
-      name: rawMessages('team.members.4.name') as string || '漆玄',
-      nameEn: rawMessages('team.members.4.nameEn') as string || 'Akv_Qixuan',
-    },
-  ];
+  const messages = useMessages();
+  const members = (messages as Record<string, unknown>).team &&
+    typeof (messages as Record<string, unknown>).team === 'object'
+    ? ((messages as Record<string, { members?: TeamMember[] }>).team?.members || [])
+    : [];
 
   return (
     <div>

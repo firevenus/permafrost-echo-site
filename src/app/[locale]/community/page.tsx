@@ -70,17 +70,18 @@ export default function CommunityPage() {
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 max-w-[900px] mx-auto">
-            {Array.from({ length: 4 }).map((_, i) => (
-              <div key={i} className="glass-card p-6 text-center game-card group">
-                <div className="w-14 h-14 rounded-xl bg-[rgba(76,201,240,0.04)] flex items-center justify-center mx-auto mb-3 transition-all duration-300 group-hover:bg-[rgba(76,201,240,0.08)] group-hover:scale-110">
-                  <span className="text-2xl">🏫</span>
+            {universities.map((uni) => (
+              <div key={uni.id} className="glass-card p-5 text-center game-card group">
+                <div className="w-12 h-12 rounded-xl bg-[rgba(76,201,240,0.04)] flex items-center justify-center mx-auto mb-3 transition-all duration-300 group-hover:bg-[rgba(76,201,240,0.08)] group-hover:scale-110">
+                  <span className="text-xl">🏛️</span>
                 </div>
-                <p className="text-sm font-medium text-[rgba(237,242,250,0.35)] mb-1 group-hover:text-[rgba(237,242,250,0.5)] transition-colors duration-300">
-                  {t('community.universities.comingSoon')}
+                <p className="text-sm font-medium text-[rgba(237,242,250,0.6)] mb-1 group-hover:text-[#edf2fa] transition-colors duration-300">
+                  {uni.name}
                 </p>
-                <p className="text-xs text-[rgba(237,242,250,0.2)] leading-relaxed">
-                  {t('community.universities.stayTuned')}
+                <p className="text-xs text-[rgba(237,242,250,0.3)]">
+                  {uni.nameEn}
                 </p>
+                <p className="text-[10px] text-[rgba(237,242,250,0.2)] mt-1">{uni.location}</p>
               </div>
             ))}
           </div>
@@ -111,7 +112,13 @@ export default function CommunityPage() {
                 key={partner.id}
                 className="glass-card p-5 text-center game-card group"
               >
-                <div className="text-3xl mb-2.5 transition-transform duration-300 group-hover:scale-110">{partner.logo}</div>
+                <div className="w-12 h-12 mx-auto mb-2.5 transition-transform duration-300 group-hover:scale-110">
+                  <img
+                    src={partner.logo}
+                    alt={partner.name}
+                    className="w-full h-full object-contain"
+                  />
+                </div>
                 <p className="text-xs text-[rgba(237,242,250,0.5)] font-medium group-hover:text-[#edf2fa] transition-colors duration-300">
                   {partner.name}
                 </p>
