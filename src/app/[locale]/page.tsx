@@ -1,6 +1,7 @@
 'use client';
 
 import { useTranslations, useLocale } from 'next-intl';
+import Image from 'next/image';
 import { Link } from '@/i18n/routing';
 import { getActivities, getUpcomingActivities, getStats } from '@/lib/data';
 import type { Locale } from '@/i18n/routing';
@@ -151,9 +152,24 @@ export default function HomePage() {
               <Link
                 key={activity.id}
                 href="/activities"
-                className="glass-card p-6 game-card no-underline block group reveal-up"
+                className="glass-card game-card no-underline block group reveal-up overflow-hidden"
                 style={{ animationDelay: `${idx * 100}ms` }}
               >
+                {activity.images && activity.images.length > 0 && (
+                  <div className="activity-card-image">
+                    <Image
+                      src={activity.images[0]}
+                      alt={activity.title}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                      className="object-cover"
+                    />
+                    {activity.images.length > 1 && (
+                      <span className="image-counter">{activity.images.length} 张</span>
+                    )}
+                  </div>
+                )}
+                <div className={activity.images?.length ? 'p-6 pt-0' : 'p-6'}>
                 <div className="flex items-start justify-between mb-5">
                   <div className="w-12 h-12 rounded-xl bg-[rgba(76,201,240,0.06)] flex items-center justify-center text-[#4cc9f0] transition-all duration-300 group-hover:bg-[rgba(76,201,240,0.12)] group-hover:scale-110">
                     {activity.id === 'ssca-2026' ? <Gamepad2 size={22} /> : activity.id === 'ggj-2026' ? <Palette size={22} /> : <GraduationCap size={22} />}
@@ -176,6 +192,7 @@ export default function HomePage() {
                 <p className="text-sm text-[rgba(237,242,250,0.4)] line-clamp-2 leading-relaxed">
                   {activity.description}
                 </p>
+                </div>
               </Link>
             ))}
           </div>
