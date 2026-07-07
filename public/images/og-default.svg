@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4cc9f0;stop-opacity:1"/>
+      <stop offset="50%" style="stop-color:#2dd4bf;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#7b2ff7;stop-opacity:1"/>
+    </linearGradient>
+    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="#080e16"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <ellipse cx="600" cy="200" rx="500" ry="250" fill="rgba(76,201,240,0.06)"/>
+  <ellipse cx="600" cy="500" rx="400" ry="200" fill="rgba(123,47,247,0.04)"/>
+  <text x="600" y="280" text-anchor="middle" font-family="sans-serif" font-weight="900" font-size="72" fill="url(#g)">冻土回声</text>
+  <text x="600" y="350" text-anchor="middle" font-family="sans-serif" font-weight="700" font-size="36" fill="rgba(237,242,250,0.7)" letter-spacing="8">Permafrost Echo</text>
+  <text x="600" y="410" text-anchor="middle" font-family="sans-serif" font-weight="400" font-size="22" fill="rgba(237,242,250,0.35)" letter-spacing="6">破土而出 · 回响世界</text>
+  <text x="600" y="470" text-anchor="middle" font-family="sans-serif" font-weight="400" font-size="16" fill="rgba(237,242,250,0.22)">东北亚独立游戏生态平台</text>
+</svg>

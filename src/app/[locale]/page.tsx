@@ -1,0 +1,236 @@
+'use client';
+
+import { useTranslations, useLocale } from 'next-intl';
+import { Link } from '@/i18n/routing';
+import { getActivities, getUpcomingActivities, getStats } from '@/lib/data';
+import type { Locale } from '@/i18n/routing';
+import { ArrowRight, Calendar, MapPin } from 'lucide-react';
+
+export default function HomePage() {
+  const t = useTranslations();
+  const locale = useLocale() as Locale;
+
+  const stats = getStats();
+  const allActivities = getActivities(locale);
+  const upcomingActivities = getUpcomingActivities(locale);
+
+  const coreActivities = allActivities.slice(0, 3);
+
+  const statItems = [
+    { value: `${stats.members}+`, label: t('hero.stats.members') },
+    { value: `${stats.universities}+`, label: t('hero.stats.universities') },
+    { value: `${stats.games}+`, label: t('hero.stats.games') },
+    { value: stats.years.toString(), label: t('hero.stats.years') },
+  ];
+
+  return (
+    <div>
+      {/* ========== Hero Section ========== */}
+      <section className="relative overflow-hidden min-h-[calc(100vh-64px)] flex items-center">
+        {/* Deep space background with permafrost grid */}
+        <div className="absolute inset-0 bg-grid pointer-events-none" />
+
+        {/* Primary ice aurora — top center, ice blue + tundra green */}
+        <div className="absolute top-[-25%] left-1/2 -translate-x-1/2 w-[1200px] h-[700px] bg-[radial-gradient(ellipse,rgba(76,201,240,0.16)_0%,rgba(45,212,191,0.08)_20%,rgba(76,201,240,0.06)_40%,rgba(76,201,240,0.01)_60%,transparent_75%)] pointer-events-none animate-aurora-shift" />
+
+        {/* Secondary purple + tundra aurora — bottom */}
+        <div className="absolute bottom-[-25%] left-1/2 -translate-x-1/2 w-[1000px] h-[550px] bg-[radial-gradient(ellipse,rgba(123,47,247,0.13)_0%,rgba(45,212,191,0.04)_25%,rgba(123,47,247,0.04)_45%,transparent_75%)] pointer-events-none animate-aurora-shift" style={{ animationDelay: '-4s' }} />
+
+        {/* Warm accent — right side, 东北冬日炉火 */}
+        <div className="absolute top-[25%] right-[-8%] w-[550px] h-[450px] bg-[radial-gradient(ellipse,rgba(244,140,6,0.06)_0%,rgba(220,47,2,0.02)_25%,transparent_60%)] pointer-events-none animate-aurora-shift" style={{ animationDelay: '-7s' }} />
+
+        {/* Frost silver — left side, 白桦银冷光 */}
+        <div className="absolute top-[40%] left-[-5%] w-[450px] h-[350px] bg-[radial-gradient(ellipse,rgba(168,180,196,0.04)_0%,transparent_55%)] pointer-events-none animate-aurora-shift" style={{ animationDelay: '-10s' }} />
+
+        {/* Floating orbs — larger, more atmospheric */}
+        <div className="absolute top-[15%] right-[8%] w-[400px] h-[400px] rounded-full bg-[rgba(45,212,191,0.05)] blur-[120px] pointer-events-none animate-float" />
+        <div className="absolute bottom-[20%] left-[3%] w-[320px] h-[320px] rounded-full bg-[rgba(123,47,247,0.05)] blur-[100px] pointer-events-none animate-float" style={{ animationDelay: '-3s' }} />
+        <div className="absolute top-[50%] left-[35%] w-[250px] h-[250px] rounded-full bg-[rgba(76,201,240,0.03)] blur-[80px] pointer-events-none animate-float" style={{ animationDelay: '-5s' }} />
+        <div className="absolute bottom-[40%] right-[20%] w-[180px] h-[180px] rounded-full bg-[rgba(244,140,6,0.04)] blur-[70px] pointer-events-none animate-float" style={{ animationDelay: '-8s' }} />
+
+        <div className="relative max-w-[1200px] mx-auto px-6 py-24 w-full">
+          <div className="max-w-[760px] mx-auto text-center">
+            {/* Subtitle with enhanced label — 冰晶光泽 */}
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[rgba(76,201,240,0.06)] border border-[rgba(76,201,240,0.1)] mb-10 fade-up shadow-[0_0_20px_rgba(76,201,240,0.06)]">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#4cc9f0] shadow-[0_0_8px_rgba(76,201,240,0.6),0_0_16px_rgba(76,201,240,0.3)]" />
+              <span className="text-xs font-medium text-[#4cc9f0] tracking-[0.06em] uppercase">
+                {t('hero.subtitle')}
+              </span>
+            </div>
+
+            {/* Main Brand Title */}
+            <h1 className="brand-title gradient-text mb-2 fade-up fade-up-delay-1">
+              冻土回声
+            </h1>
+            <p className="brand-title-en mb-6 fade-up fade-up-delay-2">
+              Permafrost Echo
+            </p>
+
+            {/* Tagline — 破土而出，回响世界 */}
+            <p className="brand-tagline mb-8 fade-up fade-up-delay-3">
+              破土而出，回响世界
+            </p>
+
+            {/* Description */}
+            <p className="text-[rgba(237,242,250,0.4)] text-lg mb-12 max-w-[520px] mx-auto leading-relaxed fade-up fade-up-delay-4">
+              {t('hero.subtitle')}
+            </p>
+
+            {/* CTA Buttons */}
+            <div className="flex items-center justify-center gap-4 mb-20 fade-up fade-up-delay-5">
+              <Link href="/about" className="btn-primary">
+                {t('hero.cta1')}
+                <ArrowRight size={16} />
+              </Link>
+              <Link href="/contact" className="btn-outline">
+                {t('hero.cta2')}
+              </Link>
+            </div>
+
+            {/* Stats — enhanced cards */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 fade-up fade-up-delay-6">
+              {statItems.map((stat, i) => (
+                <div
+                  key={i}
+                  className="glass-card p-5 text-center group cursor-default"
+                >
+                  <div className="stat-number gradient-text mb-1.5 transition-transform duration-300 group-hover:scale-110">
+                    {stat.value}
+                  </div>
+                  <div className="text-xs text-[rgba(237,242,250,0.4)] font-medium">
+                    {stat.label}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ========== Core Activities ========== */}
+      <section className="page-section relative overflow-hidden">
+        <div className="section-glow-top" />
+        <div className="absolute inset-0 scanlines" />
+        <div className="page-container relative">
+          <div className="text-center mb-16">
+            <span className="section-label">{t('home.activities')}</span>
+            <h2 className="section-title mb-4">{t('home.activities')}</h2>
+            <p className="text-[rgba(237,242,250,0.4)] max-w-[480px] mx-auto leading-relaxed">
+              {t('home.activitiesDesc')}
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {coreActivities.map((activity, idx) => (
+              <Link
+                key={activity.id}
+                href="/activities"
+                className="glass-card p-6 game-card no-underline block group"
+              >
+                <div className="flex items-start justify-between mb-5">
+                  <div className="w-12 h-12 rounded-xl bg-[rgba(76,201,240,0.06)] flex items-center justify-center text-2xl transition-all duration-300 group-hover:bg-[rgba(76,201,240,0.12)] group-hover:scale-110">
+                    {activity.id === 'ssca-2026' ? '🎮' : activity.id === 'ggj-2026' ? '🎪' : '🎓'}
+                  </div>
+                  <span className={`text-xs ${activity.status === 'upcoming' ? 'pill-ember' : 'pill'}`}>
+                    {activity.status === 'upcoming' ? t('activities.upcoming') : t('activities.completed')}
+                  </span>
+                </div>
+                <h3 className="text-base font-semibold text-[#edf2fa] mb-2.5 group-hover:text-white transition-colors duration-300">
+                  {activity.title}
+                </h3>
+                <div className="flex items-center gap-3 text-xs text-[rgba(237,242,250,0.35)] mb-3">
+                  <span className="flex items-center gap-1">
+                    <Calendar size={12} /> {activity.date}
+                  </span>
+                  <span className="flex items-center gap-1">
+                    <MapPin size={12} /> {activity.location}
+                  </span>
+                </div>
+                <p className="text-sm text-[rgba(237,242,250,0.4)] line-clamp-2 leading-relaxed">
+                  {activity.description}
+                </p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========== Upcoming Events ========== */}
+      <section className="page-section relative overflow-hidden">
+        <div className="section-glow-bottom" />
+        <div className="page-container relative">
+          <div className="text-center mb-16">
+            <span className="section-label">{t('home.upcomingEvents')}</span>
+            <h2 className="section-title mb-4">{t('home.upcomingEvents')}</h2>
+            <p className="text-[rgba(237,242,250,0.4)] max-w-[480px] mx-auto leading-relaxed">
+              {t('home.upcomingEventsDesc')}
+            </p>
+          </div>
+
+          <div className="max-w-[720px] mx-auto">
+            {upcomingActivities.length > 0 ? (
+              <div className="space-y-4">
+                {upcomingActivities.map((activity) => (
+                  <Link
+                    key={activity.id}
+                    href="/activities"
+                    className="glass-card p-5 game-card no-underline flex flex-col sm:flex-row sm:items-center gap-5 group"
+                  >
+                    <div className="w-12 h-12 rounded-xl bg-[rgba(244,140,6,0.06)] flex items-center justify-center text-2xl flex-shrink-0 transition-all duration-300 group-hover:bg-[rgba(244,140,6,0.12)] group-hover:scale-110">
+                      📅
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <h3 className="text-sm font-semibold text-[#edf2fa] mb-1.5 group-hover:text-white transition-colors duration-300">
+                        {activity.title}
+                      </h3>
+                      <div className="flex items-center gap-3 text-xs text-[rgba(237,242,250,0.35)]">
+                        <span className="flex items-center gap-1">
+                          <Calendar size={12} /> {activity.date}
+                        </span>
+                        <span className="flex items-center gap-1">
+                          <MapPin size={12} /> {activity.location}
+                        </span>
+                      </div>
+                    </div>
+                    <span className="pill-ember flex-shrink-0 self-start">
+                      {t('activities.upcoming')}
+                    </span>
+                  </Link>
+                ))}
+              </div>
+            ) : (
+              <div className="text-center py-16 text-[rgba(237,242,250,0.3)]">
+                {t('activities.noUpcoming')}
+              </div>
+            )}
+          </div>
+        </div>
+      </section>
+
+      {/* ========== CTA Section ========== */}
+      <section className="page-section relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(76,201,240,0.09)_0%,rgba(45,212,191,0.04)_20%,rgba(123,47,247,0.06)_40%,rgba(244,140,6,0.03)_60%,transparent_80%)]" />
+        <div className="absolute inset-0 scanlines" />
+        <div className="page-container relative">
+          <div className="max-w-[640px] mx-auto text-center">
+            <h2 className="cta-title mb-5">
+              <span className="gradient-text">{t('home.cta.title')}</span>
+            </h2>
+            <p className="text-[rgba(237,242,250,0.4)] mb-10 text-balance leading-relaxed">
+              {t('home.cta.desc')}
+            </p>
+            <div className="flex items-center justify-center gap-4">
+              <Link href="/contact" className="btn-primary">
+                {t('home.cta.contactUs')}
+                <ArrowRight size={16} />
+              </Link>
+              <Link href="/contact" className="btn-outline">
+                {t('home.cta.joinWechat')}
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}

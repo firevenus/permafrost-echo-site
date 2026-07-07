@@ -1,0 +1,786 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================
+   设计令牌 (Design Tokens)
+   ============================================ */
+:root {
+  /* 底色 — 冻土深蓝灰 */
+  --bg-base: #080e16;
+  --bg-base-deep: #050a12;
+  --bg-surface: rgba(255, 255, 255, 0.03);
+  --bg-surface-2: rgba(255, 255, 255, 0.055);
+  --bg-elevated: rgba(255, 255, 255, 0.08);
+
+  /* 冰蓝（主色） */
+  --ice-50: #e0f4fe;
+  --ice-100: #4cc9f0;
+  --ice-200: #2abde6;
+  --ice-300: #1895c0;
+  --ice-400: #0d6e8a;
+
+  /* 极光紫（渐变辅助） */
+  --aurora-100: #c77dff;
+  --aurora-200: #7b2ff7;
+  --aurora-300: #5a1fd0;
+
+  /* 松花江青（第二强调色） */
+  --tundra-100: #2dd4bf;
+  --tundra-200: #14b8a6;
+  --tundra-300: #0d9488;
+
+  /* 暖橙（强调/温度） */
+  --ember-100: #f48c06;
+  --ember-200: #dc2f02;
+
+  /* 白桦银（霜冻白） */
+  --frost-100: #e8edf0;
+  --frost-200: #c8d6e0;
+  --frost-300: #a0b4c4;
+
+  /* 文字 */
+  --text-primary: #edf2fa;
+  --text-secondary: rgba(237, 242, 250, 0.6);
+  --text-tertiary: rgba(237, 242, 250, 0.38);
+  --text-disabled: rgba(237, 242, 250, 0.2);
+
+  /* 边框 */
+  --border-subtle: rgba(76, 201, 240, 0.08);
+  --border-default: rgba(76, 201, 240, 0.15);
+  --border-strong: rgba(76, 201, 240, 0.24);
+
+  /* 磨砂玻璃 */
+  --glass-bg: rgba(8, 14, 22, 0.78);
+  --glass-border: rgba(76, 201, 240, 0.09);
+  --glass-blur: 20px;
+
+  /* 字体 */
+  --font-sans: 'Inter', 'Noto Sans SC', 'Noto Sans JP', 'Noto Sans KR', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  /* 圆角 */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  /* 间距 */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+  --space-4xl: 96px;
+
+  /* 过渡 */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --duration-fast: 150ms;
+  --duration-normal: 300ms;
+  --duration-slow: 500ms;
+}
+
+/* ============================================
+   全局基础样式
+   ============================================ */
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--bg-base);
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.6;
+  }
+
+  /* ============================================
+     全局背景 — 冻土极光 · 东北夜空
+     三层叠加：深邃冻土底 + 动态极光光晕 + 冰晶网格纹理
+     ============================================ */
+
+  /* Layer 1: 冻土底色 + 极光渐变 */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: -3;
+    background:
+      /* 主极光 — 顶部冰蓝·松花江青色带 */
+      radial-gradient(ellipse 100% 60% at 50% -8%, rgba(76, 201, 240, 0.09) 0%, rgba(45, 212, 191, 0.04) 20%, rgba(76, 201, 240, 0.02) 40%, transparent 65%),
+      /* 左中 — 白桦银冷光斑 */
+      radial-gradient(ellipse 45% 40% at 15% 40%, rgba(168, 180, 196, 0.04) 0%, rgba(168, 180, 196, 0.01) 30%, transparent 55%),
+      /* 右下 — 暖橙余烬（东北冬日炉火感） */
+      radial-gradient(ellipse 50% 40% at 90% 85%, rgba(244, 140, 6, 0.05) 0%, rgba(220, 47, 2, 0.02) 30%, transparent 60%),
+      /* 底部 — 极光紫光带 */
+      radial-gradient(ellipse 75% 50% at 50% 108%, rgba(123, 47, 247, 0.07) 0%, rgba(123, 47, 247, 0.02) 35%, transparent 65%),
+      /* 右中 — 紫色点缀 */
+      radial-gradient(ellipse 35% 40% at 80% 55%, rgba(123, 47, 247, 0.04) 0%, transparent 55%),
+      /* 左上 — 松花江青色点缀 */
+      radial-gradient(ellipse 40% 35% at 8% 20%, rgba(45, 212, 191, 0.04) 0%, transparent 50%),
+      var(--bg-base);
+    pointer-events: none;
+    animation: bg-aurora-breathe 14s ease-in-out infinite;
+  }
+
+  /* Layer 2: 动态呼吸光晕 — 更大更柔和的渐变层 */
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    pointer-events: none;
+    background:
+      radial-gradient(ellipse 70% 30% at 40% 25%, rgba(45, 212, 191, 0.06) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 35% at 70% 70%, rgba(76, 201, 240, 0.05) 0%, transparent 60%);
+    animation: bg-aurora-breathe 18s ease-in-out infinite reverse;
+  }
+
+  @keyframes bg-aurora-breathe {
+    0%, 100% { opacity: 0.8; }
+    50% { opacity: 1; }
+  }
+
+  /* Layer 3: 冰晶网格纹理 — 冻土裂纹感 */
+  .bg-permafrost {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    /* 双层网格：粗网 + 细网 */
+    background-image:
+      linear-gradient(rgba(76, 201, 240, 0.025) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(76, 201, 240, 0.025) 1px, transparent 1px),
+      linear-gradient(rgba(45, 212, 191, 0.015) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(45, 212, 191, 0.015) 1px, transparent 1px);
+    background-size: 80px 80px, 80px 80px, 16px 16px, 16px 16px;
+    mask-image: radial-gradient(ellipse 75% 55% at 50% 35%, black 20%, transparent 68%);
+    -webkit-mask-image: radial-gradient(ellipse 75% 55% at 50% 35%, black 20%, transparent 68%);
+  }
+
+  ::selection {
+    background: rgba(76, 201, 240, 0.3);
+    color: #fff;
+  }
+
+  /* 滚动条 */
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(76, 201, 240, 0.15);
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(76, 201, 240, 0.3);
+  }
+}
+
+/* ============================================
+   动画关键帧
+   ============================================ */
+@keyframes fade-up {
+  0% { opacity: 0; transform: translateY(32px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  33% { transform: translateY(-12px) rotate(1deg); }
+  66% { transform: translateY(-6px) rotate(-0.5deg); }
+}
+
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 0.9; }
+}
+
+@keyframes aurora-shift {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 0.7; transform: scale(1.05); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes border-glow {
+  0%, 100% { border-color: rgba(76, 201, 240, 0.08); box-shadow: 0 0 20px rgba(76, 201, 240, 0); }
+  50% { border-color: rgba(76, 201, 240, 0.2); box-shadow: 0 0 30px rgba(76, 201, 240, 0.06); }
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ============================================
+   组件工具类
+   ============================================ */
+@layer components {
+  /* 磨砂玻璃卡片 — 冻土冰晶感 */
+  .glass-card {
+    position: relative;
+    background: var(--glass-bg);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: border-color var(--duration-normal) var(--ease-out),
+                box-shadow var(--duration-normal) var(--ease-out),
+                transform var(--duration-normal) var(--ease-out),
+                background var(--duration-normal) var(--ease-out);
+  }
+
+  /* 卡片顶部冰晶光泽装饰线 */
+  .glass-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 16px;
+    right: 16px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(45, 212, 191, 0.2), rgba(76, 201, 240, 0.2), rgba(123, 47, 247, 0.15), transparent);
+    opacity: 0;
+    transition: opacity var(--duration-normal) var(--ease-out);
+    z-index: 1;
+  }
+
+  .glass-card:hover::before {
+    opacity: 1;
+  }
+
+  /* 卡片底部微光反射 */
+  .glass-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(255,255,255,0.02) 0%, transparent 40%, rgba(45,212,191,0.02) 100%);
+    pointer-events: none;
+    border-radius: inherit;
+  }
+
+  /* 渐变文字 — 冰蓝→松花江青→极光紫 */
+  .gradient-text {
+    background: linear-gradient(135deg, var(--ice-100) 0%, var(--tundra-100) 50%, var(--aurora-100) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* 纯冰蓝渐变文字 */
+  .gradient-text-ice {
+    background: linear-gradient(135deg, var(--ice-100) 0%, var(--ice-200) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* 极光渐变主按钮 — 冰蓝→松花江青 */
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 28px;
+    background: linear-gradient(135deg, var(--ice-100) 0%, var(--tundra-100) 50%, var(--ice-300) 100%);
+    background-size: 200% 200%;
+    animation: gradient-shift 6s ease-in-out infinite;
+    color: #fff;
+    font-weight: 600;
+    font-size: 14px;
+    border-radius: var(--radius-full);
+    border: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: transform var(--duration-fast) var(--ease-spring),
+                box-shadow var(--duration-normal) var(--ease-out);
+  }
+
+  .btn-primary::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0) 40%, rgba(255,255,255,0.15) 50%, rgba(255,255,255,0) 60%);
+    background-size: 200% 100%;
+    animation: shimmer 2.5s ease-in-out infinite;
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 40px rgba(76, 201, 240, 0.35), 0 0 60px rgba(45, 212, 191, 0.15);
+  }
+
+  .btn-primary:active {
+    transform: translateY(0);
+  }
+
+  /* 冰蓝边框次级按钮 — 增强版 */
+  .btn-outline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 28px;
+    background: transparent;
+    color: var(--ice-100);
+    font-weight: 600;
+    font-size: 14px;
+    border: 1px solid rgba(76, 201, 240, 0.3);
+    border-radius: var(--radius-full);
+    cursor: pointer;
+    transition: background var(--duration-fast) var(--ease-out),
+                border-color var(--duration-fast) var(--ease-out),
+                transform var(--duration-fast) var(--ease-spring),
+                box-shadow var(--duration-fast) var(--ease-out);
+  }
+
+  .btn-outline:hover {
+    background: rgba(76, 201, 240, 0.08);
+    border-color: rgba(76, 201, 240, 0.6);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(76, 201, 240, 0.1);
+  }
+
+  .btn-outline:active {
+    transform: translateY(0);
+  }
+
+  /* 标签 (Pill) — 增强版 */
+  .pill {
+    display: inline-flex;
+    align-items: center;
+    padding: 3px 12px;
+    background: rgba(76, 201, 240, 0.1);
+    color: var(--ice-100);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    border-radius: var(--radius-full);
+    border: 1px solid rgba(76, 201, 240, 0.14);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+
+  .pill-tundra {
+    display: inline-flex;
+    align-items: center;
+    padding: 3px 12px;
+    background: rgba(45, 212, 191, 0.1);
+    color: var(--tundra-100);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    border-radius: var(--radius-full);
+    border: 1px solid rgba(45, 212, 191, 0.14);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+
+  .pill-ember {
+    display: inline-flex;
+    align-items: center;
+    padding: 3px 12px;
+    background: rgba(244, 140, 6, 0.1);
+    color: var(--ember-100);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    border-radius: var(--radius-full);
+    border: 1px solid rgba(244, 140, 6, 0.14);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+
+  .pill-aurora {
+    display: inline-flex;
+    align-items: center;
+    padding: 3px 12px;
+    background: rgba(123, 47, 247, 0.1);
+    color: var(--aurora-100);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    border-radius: var(--radius-full);
+    border: 1px solid rgba(123, 47, 247, 0.14);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+
+  .pill-frost {
+    display: inline-flex;
+    align-items: center;
+    padding: 3px 12px;
+    background: rgba(168, 180, 196, 0.1);
+    color: var(--frost-100);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    border-radius: var(--radius-full);
+    border: 1px solid rgba(168, 180, 196, 0.14);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+
+  /* 分区标签 — 增强版 */
+  .section-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--ice-100);
+    margin-bottom: 16px;
+  }
+
+  .section-label::before {
+    content: '';
+    width: 28px;
+    height: 1px;
+    background: linear-gradient(90deg, var(--tundra-100), var(--ice-100), transparent);
+    opacity: 0.7;
+  }
+
+  /* 分区标题 */
+  .section-title {
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    color: var(--text-primary);
+  }
+
+  /* Hero 主标题 */
+  .hero-title {
+    font-size: clamp(2.6rem, 5.5vw, 4.2rem);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.04em;
+  }
+
+  /* 品牌超大标题 — 冻土回声 Logo 级展示 */
+  .brand-title {
+    font-size: clamp(3rem, 7vw, 5.6rem);
+    font-weight: 900;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    text-shadow: 0 0 80px rgba(76, 201, 240, 0.25), 0 0 160px rgba(45, 212, 191, 0.12);
+  }
+
+  .brand-title-en {
+    font-size: clamp(1.4rem, 3vw, 2.2rem);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: 0.06em;
+    color: rgba(237, 242, 250, 0.75);
+    text-shadow: 0 0 40px rgba(76, 201, 240, 0.15);
+  }
+
+  /* 品牌标语 — 破土而出，回响世界 */
+  .brand-tagline {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    color: rgba(160, 180, 196, 0.7);
+    text-shadow: 0 0 20px rgba(76, 201, 240, 0.08);
+  }
+
+  /* CTA 标题 */
+  .cta-title {
+    font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+    font-weight: 700;
+    line-height: 1.25;
+  }
+
+  /* 极光背景光晕 — 增强版 */
+  .aurora-glow-top {
+    position: absolute;
+    top: -15%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 900px;
+    height: 500px;
+    background: radial-gradient(ellipse, rgba(76, 201, 240, 0.12) 0%, rgba(45, 212, 191, 0.04) 25%, rgba(76, 201, 240, 0.03) 45%, transparent 75%);
+    pointer-events: none;
+    animation: aurora-shift 8s ease-in-out infinite;
+  }
+
+  .aurora-glow-bottom {
+    position: absolute;
+    bottom: -15%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 700px;
+    height: 400px;
+    background: radial-gradient(ellipse, rgba(123, 47, 247, 0.1) 0%, rgba(45, 212, 191, 0.03) 30%, rgba(123, 47, 247, 0.02) 50%, transparent 75%);
+    pointer-events: none;
+    animation: aurora-shift 10s ease-in-out infinite reverse;
+  }
+
+  /* 滚动浮现动画 */
+  .fade-up {
+    animation: fade-up 0.7s var(--ease-out) both;
+  }
+  .fade-up-delay-1 { animation-delay: 0.1s; }
+  .fade-up-delay-2 { animation-delay: 0.2s; }
+  .fade-up-delay-3 { animation-delay: 0.3s; }
+  .fade-up-delay-4 { animation-delay: 0.4s; }
+  .fade-up-delay-5 { animation-delay: 0.5s; }
+  .fade-up-delay-6 { animation-delay: 0.6s; }
+
+  /* 统计数字 */
+  .stat-number {
+    font-size: clamp(2rem, 3.5vw, 3rem);
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+
+  /* 页面通用容器 */
+  .page-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--space-lg);
+  }
+
+  .page-section {
+    padding: 80px 0;
+  }
+
+  /* 游戏/活动卡片悬停效果 — 冻土冰晶感 */
+  .game-card {
+    transition: transform var(--duration-normal) var(--ease-out),
+                box-shadow var(--duration-normal) var(--ease-out),
+                border-color var(--duration-normal) var(--ease-out);
+  }
+  .game-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), 0 0 40px rgba(76, 201, 240, 0.08), 0 0 60px rgba(45, 212, 191, 0.04);
+    border-color: rgba(76, 201, 240, 0.22);
+  }
+
+  /* 导航链接 — 增强版 */
+  .nav-link {
+    position: relative;
+    color: var(--text-secondary);
+    transition: color var(--duration-fast) var(--ease-out);
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .nav-link:hover,
+  .nav-link.active {
+    color: var(--text-primary);
+  }
+  .nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 4px;
+    background: var(--ice-100);
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(76, 201, 240, 0.5);
+  }
+
+  /* 极光背景装饰 */
+  .aurora-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    pointer-events: none;
+    opacity: 0.12;
+    will-change: transform;
+  }
+
+  /* 页脚链接 */
+  .footer-link {
+    color: var(--text-tertiary);
+    transition: color var(--duration-fast) var(--ease-out);
+  }
+  .footer-link:hover {
+    color: var(--ice-100);
+  }
+
+  /* 时间线 — 冻土极光色 */
+  .timeline-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: linear-gradient(to bottom, transparent, rgba(45, 212, 191, 0.15), rgba(76, 201, 240, 0.25), var(--ice-100), rgba(123, 47, 247, 0.25), transparent);
+    transform: translateX(-50%);
+  }
+
+  .timeline-dot {
+    position: absolute;
+    left: 50%;
+    top: 24px;
+    width: 14px;
+    height: 14px;
+    background: linear-gradient(135deg, var(--ice-100), var(--tundra-100));
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 16px rgba(76, 201, 240, 0.5), 0 0 40px rgba(45, 212, 191, 0.15);
+  }
+
+  /* Markdown 文章样式 */
+  .article-content h1 { font-size: 1.8rem; font-weight: 700; margin: 2rem 0 1rem; color: var(--text-primary); }
+  .article-content h2 { font-size: 1.4rem; font-weight: 600; margin: 1.8rem 0 0.8rem; color: var(--text-primary); }
+  .article-content h3 { font-size: 1.15rem; font-weight: 600; margin: 1.5rem 0 0.6rem; color: var(--text-primary); }
+  .article-content p { margin: 1rem 0; line-height: 1.8; color: var(--text-secondary); }
+  .article-content a { color: var(--ice-100); text-decoration: underline; }
+  .article-content a:hover { color: var(--ice-200); }
+  .article-content ul, .article-content ol { padding-left: 1.5rem; margin: 1rem 0; }
+  .article-content li { margin: 0.4rem 0; color: var(--text-secondary); }
+  .article-content blockquote {
+    border-left: 3px solid var(--ice-100);
+    padding: 0.5rem 1rem;
+    margin: 1rem 0;
+    background: rgba(76, 201, 240, 0.04);
+    color: var(--text-secondary);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  }
+  .article-content code {
+    background: rgba(255, 255, 255, 0.07);
+    padding: 2px 6px;
+    border-radius: var(--radius-sm);
+    font-family: var(--font-mono);
+    font-size: 0.9em;
+  }
+  .article-content pre {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    padding: 1rem;
+    overflow-x: auto;
+    margin: 1rem 0;
+  }
+  .article-content pre code {
+    background: none;
+    padding: 0;
+  }
+  .article-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+  }
+  .article-content th, .article-content td {
+    border: 1px solid var(--border-subtle);
+    padding: 0.5rem 0.75rem;
+    text-align: left;
+  }
+  .article-content th {
+    background: rgba(255, 255, 255, 0.04);
+    font-weight: 600;
+    color: var(--text-primary);
+  }
+  .article-content img {
+    max-width: 100%;
+    border-radius: var(--radius-md);
+  }
+  .article-content hr {
+    border: none;
+    border-top: 1px solid var(--border-subtle);
+    margin: 2rem 0;
+  }
+}
+
+/* ============================================
+   工具类
+   ============================================ */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .animate-delay-100 { animation-delay: 100ms; }
+  .animate-delay-200 { animation-delay: 200ms; }
+  .animate-delay-300 { animation-delay: 300ms; }
+  .animate-delay-400 { animation-delay: 400ms; }
+  .animate-delay-500 { animation-delay: 500ms; }
+
+  .bg-grid {
+    background-image:
+      linear-gradient(rgba(76, 201, 240, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(76, 201, 240, 0.03) 1px, transparent 1px),
+      linear-gradient(rgba(45, 212, 191, 0.018) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(45, 212, 191, 0.018) 1px, transparent 1px);
+    background-size: 80px 80px, 80px 80px, 16px 16px, 16px 16px;
+    mask-image: radial-gradient(ellipse 80% 60% at 50% 30%, black 20%, transparent 70%);
+    -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 30%, black 20%, transparent 70%);
+  }
+
+  /* 顶部极光光晕 — 用于 section header */
+  .section-glow-top {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1000px;
+    max-width: 100vw;
+    height: 500px;
+    background: radial-gradient(ellipse at 50% 0%, rgba(76, 201, 240, 0.09) 0%, rgba(45, 212, 191, 0.04) 25%, rgba(76, 201, 240, 0.02) 45%, transparent 75%);
+    pointer-events: none;
+  }
+
+  /* 底部极光光晕 — 用于 section footer */
+  .section-glow-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 800px;
+    max-width: 100vw;
+    height: 400px;
+    background: radial-gradient(ellipse at 50% 100%, rgba(123, 47, 247, 0.07) 0%, rgba(45, 212, 191, 0.02) 30%, rgba(123, 47, 247, 0.02) 45%, transparent 75%);
+    pointer-events: none;
+  }
+
+  /* 噪点纹理叠加层 */
+  .noise-overlay {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.03;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    background-size: 256px 256px;
+  }
+
+  /* 对角线扫描线 — 超细微科技感 */
+  .scanlines {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.015;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(255, 255, 255, 0.5) 2px,
+      rgba(255, 255, 255, 0.5) 3px
+    );
+  }
+}

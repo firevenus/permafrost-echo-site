@@ -1,0 +1,232 @@
+{
+  "nav": {
+    "home": "首页",
+    "about": "关于我们",
+    "activities": "活动",
+    "games": "游戏作品",
+    "community": "社群生态",
+    "team": "团队介绍",
+    "roadmap": "发展路线图",
+    "contact": "联系方式",
+    "partners": "合作伙伴",
+    "articles": "文章"
+  },
+  "hero": {
+    "title1": "破土而出",
+    "title2": "回响世界",
+    "subtitle": "东北亚独立游戏生态平台",
+    "cta1": "了解更多",
+    "cta2": "加入社群",
+    "stats": {
+      "members": "社群成员",
+      "universities": "高校联盟",
+      "games": "合作游戏作品",
+      "years": "年深耕"
+    }
+  },
+  "home": {
+    "activities": "核心活动",
+    "activitiesDesc": "Game Jam、展会、高校联盟——我们为独立游戏创作者提供展示舞台",
+    "featuredGames": "精选游戏",
+    "featuredGamesDesc": "来自东北亚独立游戏开发者的创意之作",
+    "viewAllGames": "查看全部作品",
+    "upcomingEvents": "即将举办",
+    "upcomingEventsDesc": "标记你的日历，不要错过这些精彩活动",
+    "cta": {
+      "title": "加入冻土回声社群",
+      "desc": "获取最新活动资讯、与独立游戏开发者交流、发现更多精彩游戏作品",
+      "contactUs": "联系我们",
+      "joinWechat": "加入微信群"
+    }
+  },
+  "about": {
+    "title": "关于我们",
+    "brandName": "冻土回声",
+    "brandNameEn": "Permafrost Echo",
+    "slogan": "破土而出，回响世界",
+    "oneLiner": "以叙事、视觉、声音与交互为媒介，创造能够穿越时间、持续回响的数字内容体验。",
+    "intro": "冻土回声（Permafrost Echo）是一家面向未来叙事、数字内容与沉浸式体验的创新型公司。我们以\"冻土\"象征时间、记忆与深层结构，以\"回声\"代表声音、反馈与持续传播，致力于将冷峻而辽阔的想象力转化为可感知、可互动、可被长期记住的内容体验。",
+    "intro2": "公司关注科技、艺术与人文之间的交汇地带，通过创意策划、视觉设计、交互体验、音频叙事与数字化制作，为品牌、机构和文化项目提供具有辨识度的内容解决方案。冻土回声相信，真正有生命力的作品不只停留在一瞬间的观看，而会在用户心中形成持续的回响。",
+    "philosophy": {
+      "title": "品牌理念",
+      "content": "冻土之下，保存着被时间封存的痕迹；回声之中，延续着人与世界之间的回应。Permafrost Echo 的名字表达了公司对\"深度\"\"记忆\"\"环境\"\"声音\"和\"未来感\"的关注。我们希望通过克制、精确且富有情绪张力的创作方式，让复杂议题变得可理解，让抽象概念拥有形状，让品牌表达具备更长久的穿透力。"
+    },
+    "business": {
+      "title": "业务方向",
+      "item1": "Global Game Jam 与 CiGA Game Jam 承办",
+      "item2": "SSCA 漫展及北境动漫嘉年华游戏区承办",
+      "item3": "东北游戏开发行业社群运营",
+      "item4": "东北高校游戏开发社团联盟运营",
+      "item5": "游戏发行合规与展示支持",
+      "item6": "游戏社群媒体运营"
+    },
+    "advantage": {
+      "title": "核心优势",
+      "content": "冻土回声强调概念深度与执行精度并重。我们既重视前期策略中的问题定义，也重视最终呈现中的细节质感。团队可通过跨学科协作，将文本、图像、声音、空间与交互机制整合为统一体验。",
+      "point1": "以叙事建立记忆点，让品牌和项目拥有可被复述的核心表达",
+      "point2": "以设计提升感知力，让信息在视觉、声音与交互中形成一致体验",
+      "point3": "以技术拓展边界，让内容从静态展示走向动态连接和长期运营"
+    },
+    "mission": {
+      "title": "使命",
+      "item1": "通过 Game Jam、工作坊、展会等形式，促进区域内游戏开发者的合作",
+      "item2": "搭建高校与产业间的桥梁，扶持青年开发团队成长",
+      "item3": "推动东北亚独立游戏文化的国际传播"
+    },
+    "origin": {
+      "title": "名称由来",
+      "content": "\"Permafrost Echo\"（冻土回声）象征着寒冷土地上不灭的声音。在这片被冬雪覆盖的北境，我们聆听每一个创作者的心跳与回响。"
+    },
+    "vision": {
+      "title": "愿景",
+      "content": "打造东北亚地区最具凝聚力的独立游戏创作网络，让开发者、艺术家与学者跨越国界，共享创意与资源。"
+    },
+    "founder": {
+      "title": "创始人",
+      "name": "闫思",
+      "nameEn": "Enki Yan",
+      "education": "东北财经大学金融学博士 · 旧金山州立大学 MBA",
+      "bio": "深耕游戏产业多年，致力于推动东北亚独立游戏生态发展。坚信区域游戏创作者的潜力，以连接与赋能为核心使命。"
+    },
+    "brand": {
+      "title": "品牌视觉",
+      "theme": "深夜冻土 · 极光科技感 · 东北工业美学",
+      "description": "我们的视觉风格融合了东北工业美学的厚重力量感与极光冰川的科技感，以深色冻土为底色，冰蓝为主色调，极光紫为渐变辅助，暖橙为人情温度。",
+      "colorLabels": ["深夜冻土", "冰蓝", "极光紫", "暖橙"]
+    }
+  },
+  "activities": {
+    "title": "活动",
+    "description": "我们举办和参与的各种独立游戏活动",
+    "upcoming": "即将举办",
+    "completed": "往期活动",
+    "noUpcoming": "暂无即将举办的活动",
+    "noCompleted": "暂无往期活动记录"
+  },
+  "games": {
+    "title": "游戏作品",
+    "description": "来自东北亚独立游戏开发者的创意之作",
+    "comingSoon": "敬请期待",
+    "categories": {
+      "gamejam": "Game Jam 诞生",
+      "gamejamDesc": "在 Game Jam 中诞生的游戏 Demo 作品",
+      "exhibition": "游戏展展出",
+      "exhibitionDesc": "游戏展中展出的独立游戏作品",
+      "upcoming": "即将发行",
+      "upcomingDesc": "正在筹备中的游戏发行项目"
+    }
+  },
+  "community": {
+    "title": "社群生态",
+    "description": "高校联盟、合作伙伴与社群数据",
+    "universities": {
+      "title": "高校联盟",
+      "description": "联合东北地区高校，建立校园独立游戏开发者网络",
+      "cta": "即将更新"
+    },
+    "partners": {
+      "title": "合作伙伴",
+      "description": "感谢以下合作伙伴对冻土回声的支持"
+    },
+    "stats": {
+      "title": "社群数据",
+      "wechat": "微信群",
+      "wechatCount": "约 600 人",
+      "qq": "QQ 群",
+      "qqCount": "约 300+ 人",
+      "alliance": "东北亚独立游戏联盟群",
+      "allianceDate": "2026-05-29 建立"
+    }
+  },
+  "team": {
+    "title": "团队介绍",
+    "description": "冻土回声背后的核心团队",
+    "coreTeam": "核心团队",
+    "staffCount": "工作人员",
+    "staffCountValue": "15+",
+    "staffLabel": "名成员",
+    "founder": "创始人",
+    "volunteers": "广大志愿者们",
+    "members": [
+      {
+        "name": "L",
+        "nameEn": "L"
+      },
+      {
+        "name": "成思",
+        "nameEn": "Enki"
+      },
+      {
+        "name": "疯兔",
+        "nameEn": "FungTO"
+      },
+      {
+        "name": "麻团",
+        "nameEn": "MattUan"
+      },
+      {
+        "name": "漆玄",
+        "nameEn": "Akv_Qixuan"
+      }
+    ]
+  },
+  "roadmap": {
+    "title": "发展路线图",
+    "description": "回顾历程，展望未来",
+    "timeline": "品牌历程",
+    "futurePlan": "更多内容将在冻土回声年报发布后更新",
+    "status": {
+      "completed": "已完成",
+      "in-progress": "进行中",
+      "planned": "规划中"
+    }
+  },
+  "contact": {
+    "title": "联系方式",
+    "description": "期待与您建立连接",
+    "email": {
+      "title": "联系邮箱",
+      "value": "contact@permafrost-echo.com",
+      "description": "商务合作、媒体采访、活动咨询，欢迎来信"
+    },
+    "wechat": {
+      "title": "微信公众号",
+      "description": "关注「冻土回声」微信公众号，获取最新活动资讯与独立游戏推荐"
+    },
+    "social": {
+      "title": "社交媒体",
+      "description": "在以下平台关注我们"
+    }
+  },
+  "partners": {
+    "title": "合作伙伴",
+    "description": "与冻土回声携手推动东北亚独立游戏生态发展的伙伴们",
+    "cta": "想要成为冻土回声的合作伙伴？我们期待与更多志同道合的品牌和机构建立连接。",
+    "ctaButton": "成为合作伙伴",
+    "visitWebsite": "访问官网"
+  },
+  "articles": {
+    "title": "文章",
+    "description": "最新公告、活动回顾与深度内容",
+    "noArticles": "暂无文章",
+    "readMore": "阅读全文",
+    "backToList": "返回文章列表",
+    "publishedOn": "发布于",
+    "tags": "标签",
+    "author": "作者"
+  },
+  "footer": {
+    "brand": "冻土回声 · Permafrost Echo",
+    "brandDesc": "东北亚独立游戏生态平台",
+    "quickLinks": "快速链接",
+    "contact": "联系方式",
+    "wechatQr": "微信公众号",
+    "copyright": "© 2026 冻土回声 Permafrost Echo. All rights reserved."
+  },
+  "common": {
+    "loading": "加载中...",
+    "error": "出错了，请稍后再试",
+    "pageNotFound": "页面未找到",
+    "backToHome": "返回首页"
+  }
+}

@@ -1,0 +1,249 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "activities": "Activities",
+    "games": "Games",
+    "community": "Community",
+    "team": "Team",
+    "roadmap": "Roadmap",
+    "contact": "Contact",
+    "articles": "Articles"
+  },
+  "hero": {
+    "title1": "Break Through",
+    "title2": "Echo Worldwide",
+    "subtitle": "Northeast Asia Indie Game Ecosystem Platform",
+    "cta1": "Learn More",
+    "cta2": "Join Community",
+    "stats": {
+      "members": "Community Members",
+      "universities": "University Partners",
+      "games": "Partner Games",
+      "years": "Years Active"
+    }
+  },
+  "home": {
+    "activities": "Core Activities",
+    "activitiesDesc": "Game Jams, exhibitions, university alliances — providing a stage for indie game creators",
+    "featuredGames": "Featured Games",
+    "featuredGamesDesc": "Creative works from Northeast Asia indie game developers",
+    "viewAllGames": "View All Games",
+    "upcomingEvents": "Upcoming Events",
+    "upcomingEventsDesc": "Mark your calendar, don't miss these exciting events",
+    "cta": {
+      "title": "Join the Permafrost Echo Community",
+      "desc": "Get the latest event updates, connect with indie game developers, and discover more amazing games",
+      "contactUs": "Contact Us",
+      "joinWechat": "Join WeChat Group"
+    }
+  },
+  "about": {
+    "title": "About Us",
+    "brandName": "Permafrost Echo",
+    "brandNameEn": "Permafrost Echo",
+    "slogan": "Break Through, Echo Worldwide",
+    "oneLiner": "Using narrative, visual, sound, and interaction as media, creating digital content experiences that transcend time and resonate continuously.",
+    "intro": "Permafrost Echo is an innovative company focused on future narrative, digital content, and immersive experiences. We use \"permafrost\" to symbolize time, memory, and deep structures, and \"echo\" to represent sound, feedback, and continuous dissemination — transforming cold, expansive imagination into perceptible, interactive, and memorable content experiences.",
+    "intro2": "The company focuses on the intersection of technology, art, and humanities. Through creative planning, visual design, interactive experiences, audio narrative, and digital production, we provide distinctive content solutions for brands, institutions, and cultural projects. Permafrost Echo believes that truly vital works don't just stay in a moment of viewing, but form lasting echoes in the hearts of audiences.",
+    "philosophy": {
+      "title": "Brand Philosophy",
+      "content": "Beneath the permafrost lie traces sealed by time; within the echo, the dialogue between people and the world continues. The name Permafrost Echo expresses the company's focus on depth, memory, environment, sound, and a sense of the future. We aim to make complex issues understandable, give shape to abstract concepts, and endow brand expressions with lasting penetration through restrained, precise, and emotionally charged creative approaches."
+    },
+    "business": {
+      "title": "Business Directions",
+      "item1": "Global Game Jam & CiGA Game Jam Hosting",
+      "item2": "SSCA Convention & Northern Anime Carnival Game Zone Hosting",
+      "item3": "Northeast Game Development Industry Community Operations",
+      "item4": "Northeast University Game Development Club Alliance Operations",
+      "item5": "Game Publishing Compliance & Exhibition Support",
+      "item6": "Game Community Media Operations"
+    },
+    "advantage": {
+      "title": "Core Advantages",
+      "content": "Permafrost Echo emphasizes both conceptual depth and execution precision. We value problem definition in early-stage strategy as much as the textural details in final presentation. Through interdisciplinary collaboration, the team integrates text, imagery, sound, space, and interaction mechanisms into unified experiences.",
+      "point1": "Establish memory anchors through narrative, giving brands and projects core expressions that can be retold",
+      "point2": "Enhance perception through design, creating consistent experiences across visual, sound, and interaction",
+      "point3": "Expand boundaries through technology, evolving content from static display to dynamic connection and long-term operation"
+    },
+    "mission": {
+      "title": "Mission",
+      "item1": "Promote collaboration among game developers in the region through Game Jams, workshops, exhibitions, and other formats",
+      "item2": "Build bridges between universities and industry, supporting the growth of young development teams",
+      "item3": "Promote the international dissemination of Northeast Asia indie game culture"
+    },
+    "origin": {
+      "title": "Name Origin",
+      "content": "\"Permafrost Echo\" symbolizes the undying voice from the frozen land. On this northern ground covered by winter snow, we listen to the heartbeat and echoes of every creator."
+    },
+    "vision": {
+      "title": "Vision",
+      "content": "Build the most cohesive indie game creation network in Northeast Asia, enabling developers, artists, and scholars to share creativity and resources across borders."
+    },
+    "founder": {
+      "title": "Founder",
+      "name": "Yan Si",
+      "nameEn": "Enki Yan",
+      "education": "Ph.D. in Finance, Dongbei University of Finance and Economics · MBA, San Francisco State University",
+      "bio": "Years of experience in the game industry, dedicated to promoting the development of the Northeast Asia indie game ecosystem. Believes in the potential of regional game creators, with connection and empowerment as the core mission."
+    },
+    "brand": {
+      "title": "Brand Visual Identity",
+      "theme": "Deep Night Permafrost · Aurora Tech · Northeast Industrial Aesthetics",
+      "description": "Our visual style blends the heavy strength of Northeast industrial aesthetics with the tech feel of aurora glaciers — dark permafrost as the base, ice blue as the primary color, aurora purple for gradients, and warm orange for human warmth.",
+      "colorLabels": ["Deep Permafrost", "Ice Blue", "Aurora Purple", "Warm Orange"]
+    }
+  },
+  "activities": {
+    "title": "Activities",
+    "description": "Various indie game events we host and participate in",
+    "upcoming": "Upcoming",
+    "completed": "Past Events",
+    "noUpcoming": "No upcoming events",
+    "noCompleted": "No past event records"
+  },
+  "games": {
+    "title": "Games",
+    "description": "Creative works from Northeast Asia indie game developers",
+    "all": "All",
+    "categories": {
+      "doomsday": "Post-Apocalyptic & Cyber-Chinese",
+      "healing": "Healing Idle & Hardcore Strategy",
+      "innovation": "Innovative Gameplay"
+    },
+    "status": {
+      "demo": "Demo",
+      "pv": "PV",
+      "released": "Released",
+      "dev": "In Development"
+    },
+    "visitSteam": "Visit Steam Page",
+    "visitWebsite": "Visit Website",
+    "noGames": "No games available"
+  },
+  "community": {
+    "title": "Community",
+    "description": "University alliances, partners, and community data",
+    "universities": {
+      "title": "University Alliance",
+      "description": "Partnering with universities across Northeast China to build a campus indie game developer network",
+      "cta": "Coming Soon",
+      "comingSoon": "Club Name",
+      "stayTuned": "Club Introduction"
+    },
+    "partners": {
+      "title": "Partners",
+      "description": "Thank you to our partners for supporting Permafrost Echo"
+    },
+    "stats": {
+      "title": "Community Stats",
+      "wechat": "WeChat Group",
+      "wechatCount": "~600 members",
+      "qq": "QQ Group",
+      "qqCount": "~300+ members",
+      "alliance": "Northeast Asia Indie Game Alliance",
+      "allianceDate": "Established 2026-05-29"
+    }
+  },
+  "team": {
+    "title": "Team",
+    "description": "The core team behind Permafrost Echo",
+    "coreTeam": "Core Team",
+    "staffCount": "Staff",
+    "staffCountValue": "15+",
+    "staffLabel": "members",
+    "founder": "Founder",
+    "volunteers": "Volunteers",
+    "members": [
+      {
+        "name": "Yan Si",
+        "nameEn": "Enki Yan",
+        "role": "Founder / Director",
+        "bio": "Ph.D. in Finance from DUFE, MBA from SFSU. Deep experience in the game industry, committed to developing the Northeast Asia indie game ecosystem."
+      },
+      {
+        "name": "Ming Zhang",
+        "nameEn": "Ming Zhang",
+        "role": "Tech Lead",
+        "bio": "Full-stack engineer with ten years of game development experience, responsible for technical architecture and product development."
+      },
+      {
+        "name": "Xue Li",
+        "nameEn": "Xue Li",
+        "role": "Operations Lead",
+        "bio": "Community operations expert, responsible for university alliances, partner relations, and event planning."
+      },
+      {
+        "name": "Hao Wang",
+        "nameEn": "Hao Wang",
+        "role": "Content Lead",
+        "bio": "Veteran game media professional, responsible for content creation, brand communication, and media cooperation."
+      },
+      {
+        "name": "Si Chen",
+        "nameEn": "Si Chen",
+        "role": "Design Lead",
+        "bio": "Visual designer, responsible for brand visual identity system, UI/UX design, and event visuals."
+      }
+    ]
+  },
+  "roadmap": {
+    "title": "Roadmap",
+    "description": "Looking back at our journey, looking forward to the future",
+    "timeline": "Brand Timeline",
+    "futurePlan": "Future Plans",
+    "status": {
+      "completed": "Completed",
+      "in-progress": "In Progress",
+      "planned": "Planned"
+    }
+  },
+  "partners": {
+    "title": "Partners",
+    "description": "Partners working with Permafrost Echo to advance the Northeast Asia indie game ecosystem",
+    "cta": "Want to become a partner of Permafrost Echo? We look forward to connecting with more like-minded brands and organizations.",
+    "ctaButton": "Become a Partner",
+    "visitWebsite": "Visit Website"
+  },
+  "contact": {
+    "title": "Contact",
+    "description": "We look forward to connecting with you",
+    "email": {
+      "title": "Email",
+      "value": "contact@permafrost-echo.com",
+      "description": "For business cooperation, media interviews, and event inquiries"
+    },
+    "wechat": {
+      "title": "WeChat Official Account",
+      "description": "Follow '冻土回声' on WeChat for the latest event updates and indie game recommendations"
+    },
+    "social": {
+      "title": "Social Media",
+      "description": "Follow us on these platforms"
+    }
+  },
+  "articles": {
+    "title": "Articles",
+    "description": "Latest announcements, event recaps, and in-depth content",
+    "noArticles": "No articles yet",
+    "readMore": "Read More",
+    "backToList": "Back to Articles",
+    "publishedOn": "Published on",
+    "tags": "Tags",
+    "author": "Author"
+  },
+  "footer": {
+    "brand": "Permafrost Echo",
+    "brandDesc": "Northeast Asia Indie Game Ecosystem Platform",
+    "quickLinks": "Quick Links",
+    "contact": "Contact",
+    "wechatQr": "WeChat Official Account",
+    "copyright": "© 2026 Permafrost Echo. All rights reserved."
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Something went wrong. Please try again.",
+    "pageNotFound": "Page Not Found",
+    "backToHome": "Back to Home"
+  }
+}
