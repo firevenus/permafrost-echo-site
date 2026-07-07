@@ -2,6 +2,12 @@
 
 ## 2026-07-07
 
+### Cloudflare 安全加固
+- 新增 `public/.well-known/security.txt` 安全漏洞披露联系文件
+- 新增 `public/_headers`，配置 HSTS（max-age=2年 + includeSubDomains + preload）、X-Content-Type-Options、X-Frame-Options、Referrer-Policy、Permissions-Policy
+- 静态资源设置 `Cache-Control: public, max-age=31536000, immutable`
+- `next.config.mjs` 添加安全响应头作为兜底方案
+
 ### 设计审计与 UI 优化
 - 新增 `prefers-reduced-motion` 全站支持，尊重用户系统偏好
 - 新增 `:focus-visible` 键盘焦点指示器（冰蓝色光环），提升无障碍体验
