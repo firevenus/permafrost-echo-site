@@ -6,6 +6,10 @@
 - 基准字号从 16px 调整为 17px（+6.25%），CSS 中 px 定值字体统一转 rem
 - 西文字体从 Inter 更换为 Space Grotesk（几何感、科技感），中文保留 Noto Sans SC
 
+### 多语言国际化
+- CIGA GameJam 作品展示页完成多语言同步：zh, en, ko, ja, ru, mn 6 种语言
+- 页面组件全部使用 `useTranslations` 替代硬编码中文
+
 ### CIGA GameJam 2026 沈阳站 · 作品展示页
 - 新增 `/zh/activities/ciga-gamejam-2026-shenyang` 作品展示页，含 26 款作品卡片
 - 每张卡片：截图、序号、作品名、团队名、简介、GMHub/B站/试玩链接
