@@ -2,6 +2,13 @@
 
 ## 2026-07-08
 
+### SEO 增强（第二轮）
+- 集成 Google Analytics 4：新增 `GoogleAnalytics` 组件 + `gtag.ts` 工具库，设置 `NEXT_PUBLIC_GA_MEASUREMENT_ID` 即可启用
+- Google Search Console 验证：所有 metadata 支持注入 GSC 验证码（`NEXT_PUBLIC_GSC_VERIFICATION`）
+- 面包屑结构化数据（BreadcrumbList）：新增 `AutoBreadcrumb` 组件，自动为所有页面生成 Schema.org BreadcrumbList
+- Content-Security-Policy 安全头：新增 CSP 头，允许 GA4/GTM 脚本，防御 XSS
+- `.env.local` 新增 GA4 和 GSC 环境变量占位
+
 ### SEO 全面优化
 - OG 图片从 SVG 改为 PNG（1200×630），兼容 Twitter/Facebook/LinkedIn 等社交平台
 - CIGA GameJam 详情页新增 `layout.tsx` 提供完整 metadata（title/description/canonical/hreflang/OG）
