@@ -3,7 +3,7 @@
 ## 2026-07-08
 
 ### SEO 增强（第二轮）
-- 集成 Google Analytics 4：新增 `GoogleAnalytics` 组件 + `gtag.ts` 工具库，设置 `NEXT_PUBLIC_GA_MEASUREMENT_ID` 即可启用
+- 集成 Google Analytics 4：`GoogleAnalytics` 组件使用 Google 原始 gtag 代码，已配置 G-0R5DCM2JEB
 - Google Search Console 验证：所有 metadata 支持注入 GSC 验证码（`NEXT_PUBLIC_GSC_VERIFICATION`）
 - 面包屑结构化数据（BreadcrumbList）：新增 `AutoBreadcrumb` 组件，自动为所有页面生成 Schema.org BreadcrumbList
 - Content-Security-Policy 安全头：新增 CSP 头，允许 GA4/GTM 脚本，防御 XSS
