@@ -4,6 +4,7 @@ import { routing } from '@/i18n/routing';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import JsonLd from '@/components/seo/JsonLd';
+import AutoBreadcrumb from '@/components/seo/AutoBreadcrumb';
 import type { Metadata } from 'next';
 
 const BASE_URL = 'https://permafrost-echo.com';
@@ -135,6 +136,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       apple: '/favicon.svg',
     },
     manifest: '/manifest.webmanifest',
+    // Google Search Console verification — set NEXT_PUBLIC_GSC_VERIFICATION in .env.local
+    ...(process.env.NEXT_PUBLIC_GSC_VERIFICATION
+      ? {
+          verification: {
+            google: process.env.NEXT_PUBLIC_GSC_VERIFICATION,
+          },
+        }
+      : {}),
   };
 }
 
@@ -167,6 +176,7 @@ export default async function LocaleLayout({ children, params }: Props) {
   return (
     <NextIntlClientProvider messages={messages}>
       <JsonLd />
+      <AutoBreadcrumb />
       <div className="min-h-screen bg-[#080e16] flex flex-col">
         <Header messages={navMessages} />
         <main className="flex-1 pt-16">{children}</main>

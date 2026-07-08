@@ -55,6 +55,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: article.excerpt,
       images: [`${BASE_URL}/images/og-default.png`],
     },
+    // Google Search Console verification
+    ...(process.env.NEXT_PUBLIC_GSC_VERIFICATION
+      ? {
+          verification: {
+            google: process.env.NEXT_PUBLIC_GSC_VERIFICATION,
+          },
+        }
+      : {}),
   };
 }
 

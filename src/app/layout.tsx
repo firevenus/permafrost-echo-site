@@ -1,6 +1,7 @@
 import type { Viewport } from 'next';
 import '@/app/globals.css';
 import { Space_Grotesk, Noto_Sans_SC, Noto_Sans_JP, Noto_Sans_KR } from 'next/font/google';
+import GoogleAnalytics from '@/components/seo/GoogleAnalytics';
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
@@ -46,6 +47,7 @@ export default function RootLayout({
       className={`${spaceGrotesk.variable} ${notoSansSC.variable} ${notoSansJP.variable} ${notoSansKR.variable}`}
     >
       <body className="antialiased bg-[#080e16] text-[#e8edf5] min-h-screen">
+        <GoogleAnalytics />
         <div className="bg-permafrost" />
         {children}
       </body>

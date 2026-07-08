@@ -90,5 +90,13 @@ export async function getPageMetadata(
       description: pageDescription,
       images: [`${BASE_URL}/images/og-default.png`],
     },
+    // Google Search Console verification — set NEXT_PUBLIC_GSC_VERIFICATION in .env.local
+    ...(process.env.NEXT_PUBLIC_GSC_VERIFICATION
+      ? {
+          verification: {
+            google: process.env.NEXT_PUBLIC_GSC_VERIFICATION,
+          },
+        }
+      : {}),
   };
 }
