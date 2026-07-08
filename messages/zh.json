@@ -115,7 +115,16 @@
       "exhibitionDesc": "游戏展中展出的独立游戏作品",
       "upcoming": "即将发行",
       "upcomingDesc": "正在筹备中的游戏发行项目"
-    }
+    },
+    "status": {
+      "demo": "Demo",
+      "pv": "PV",
+      "released": "已发布",
+      "dev": "开发中"
+    },
+    "visitSteam": "访问 Steam 页面",
+    "visitWebsite": "访问官网",
+    "noGames": "暂无游戏作品"
   },
   "community": {
     "title": "社群生态",
@@ -153,27 +162,39 @@
     "members": [
       {
         "name": "L",
-        "nameEn": "L"
+        "nameEn": "L",
+        "role": "联合创始人 / 运营",
+        "bio": ""
       },
       {
         "name": "成思",
-        "nameEn": "Enki"
+        "nameEn": "Enki",
+        "role": "联合创始人 / 技术",
+        "bio": ""
       },
       {
         "name": "疯兔",
-        "nameEn": "FungTO"
+        "nameEn": "FungTO",
+        "role": "美术",
+        "bio": ""
       },
       {
         "name": "麻团",
-        "nameEn": "MattUan"
+        "nameEn": "MattUan",
+        "role": "策划",
+        "bio": ""
       },
       {
         "name": "漆玄",
-        "nameEn": "Akv_Qixuan"
+        "nameEn": "Akv_Qixuan",
+        "role": "程序",
+        "bio": ""
       },
       {
         "name": "ZZK",
-        "nameEn": "ZZK"
+        "nameEn": "ZZK",
+        "role": "",
+        "bio": ""
       }
     ]
   },

@@ -115,7 +115,16 @@
       "exhibitionDesc": "Тоглоомын үзэсгэлэнд үзүүлсэн инди тоглоомууд",
       "upcoming": "Удахгүй гарах",
       "upcomingDesc": "Бэлтгэгдэж буй тоглоом нийтлэлтийн төслүүд"
-    }
+    },
+    "status": {
+      "demo": "Демо",
+      "pv": "PV",
+      "released": "Гарсан",
+      "dev": "Хөгжүүлэлтэд"
+    },
+    "visitSteam": "Steam хуудас",
+    "visitWebsite": "Вебсайт",
+    "noGames": "Тоглоом байхгүй"
   },
   "community": {
     "title": "Нийтийн экосистем",
@@ -153,27 +162,39 @@
     "members": [
       {
         "name": "L",
-        "nameEn": "L"
+        "nameEn": "L",
+        "role": "Хамтран үүсгэн байгуулагч / Үйл ажиллагаа",
+        "bio": ""
       },
       {
         "name": "Чэн Сы",
-        "nameEn": "Enki"
+        "nameEn": "Enki",
+        "role": "Хамтран үүсгэн байгуулагч / Техник",
+        "bio": ""
       },
       {
         "name": "Фэн Тү",
-        "nameEn": "FungTO"
+        "nameEn": "FungTO",
+        "role": "Уран бүтээл",
+        "bio": ""
       },
       {
         "name": "Ма Туан",
-        "nameEn": "MattUan"
+        "nameEn": "MattUan",
+        "role": "Төлөвлөлт",
+        "bio": ""
       },
       {
         "name": "Ци Сюань",
-        "nameEn": "Akv_Qixuan"
+        "nameEn": "Akv_Qixuan",
+        "role": "Программ",
+        "bio": ""
       },
       {
         "name": "ZZK",
-        "nameEn": "ZZK"
+        "nameEn": "ZZK",
+        "role": "",
+        "bio": ""
       }
     ]
   },

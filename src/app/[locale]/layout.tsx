@@ -84,11 +84,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const config = localeConfig[locale] || localeConfig.zh;
 
-  const alternates: Record<string, string> = {};
-  for (const loc of routing.locales) {
-    alternates[loc] = `${BASE_URL}/${loc}`;
-  }
-
   return {
     title: config.title,
     description: config.description,
@@ -103,10 +98,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       'max-snippet': -1,
       'max-image-preview': 'large',
       'max-video-preview': -1,
-    },
-    alternates: {
-      canonical: `${BASE_URL}/${locale}`,
-      languages: alternates,
     },
     openGraph: {
       type: 'website',
