@@ -680,6 +680,189 @@
     border: 1px solid rgba(255, 255, 255, 0.08);
   }
 
+  /* 活动卡片图片悬停层 */
+  .activity-image-hover {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: #fff;
+    opacity: 0;
+    transition: opacity var(--duration-fast) var(--ease-out);
+    cursor: pointer;
+    z-index: 2;
+  }
+  .activity-card-image:hover .activity-image-hover {
+    opacity: 1;
+  }
+  .activity-image-hover span {
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+  }
+
+  /* 图片被点击后不要让卡片 hover 缩放干扰 */
+  .activity-card-image:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: -2px;
+    border-radius: var(--radius-md);
+  }
+
+  /* ===== Lightbox ===== */
+  .lightbox-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.92);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: lightbox-in 0.2s ease-out;
+  }
+  @keyframes lightbox-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1001;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background var(--duration-fast);
+  }
+  .lightbox-close:hover {
+    background: rgba(255, 255, 255, 0.16);
+  }
+
+  .lightbox-counter {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1001;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 13px;
+    font-weight: 500;
+    font-variant-numeric: tabular-nums;
+    padding: 6px 16px;
+    border-radius: 9999px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .lightbox-image-container {
+    position: relative;
+    width: 90vw;
+    height: 80vh;
+    max-width: 1400px;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+  }
+  .lightbox-image {
+    object-fit: contain;
+  }
+
+  .lightbox-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1001;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background var(--duration-fast);
+  }
+  .lightbox-nav:hover {
+    background: rgba(255, 255, 255, 0.14);
+  }
+  .lightbox-prev {
+    left: 24px;
+  }
+  .lightbox-next {
+    right: 24px;
+  }
+
+  .lightbox-dots {
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1001;
+    display: flex;
+    gap: 8px;
+    padding: 8px 16px;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 9999px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  .lightbox-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: background var(--duration-fast), transform var(--duration-fast);
+  }
+  .lightbox-dot.active {
+    background: #fff;
+    transform: scale(1.3);
+  }
+  .lightbox-dot:hover {
+    background: rgba(255, 255, 255, 0.6);
+  }
+
+  /* 移动端适配 */
+  @media (max-width: 768px) {
+    .lightbox-image-container {
+      width: 96vw;
+      height: 60vh;
+    }
+    .lightbox-nav {
+      width: 40px;
+      height: 40px;
+    }
+    .lightbox-prev {
+      left: 12px;
+    }
+    .lightbox-next {
+      right: 12px;
+    }
+  }
+
   /* 导航链接 — 增强版 */
   .nav-link {
     position: relative;

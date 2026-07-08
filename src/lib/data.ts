@@ -206,11 +206,6 @@ const zhData: LocalizedData = {
       location: '沈阳',
       description: '冻土回声在 SSCA 沈阳动漫游戏博览会上承办独立游戏专区，为东北地区的独立游戏开发者提供展示和交流的平台，吸引超过500名开发者和玩家参与。',
       status: 'completed',
-      images: [
-        '/images/activities/ssca-2026-01.jpg',
-        '/images/activities/ssca-2026-02.jpg',
-        '/images/activities/ssca-2026-03.jpg',
-      ],
     },
     {
       id: 'ggj-2026',
@@ -220,11 +215,6 @@ const zhData: LocalizedData = {
       location: '沈阳（线上+线下）',
       description: '全球最大的游戏创作马拉松活动落地沈阳，48小时内从零开始创作游戏原型，汇聚东北亚地区最具创意的游戏开发者。',
       status: 'completed',
-      images: [
-        '/images/activities/ggj-2026-01.jpg',
-        '/images/activities/ggj-2026-02.jpg',
-        '/images/activities/ggj-2026-03.jpg',
-      ],
     },
     {
       id: 'northern-anime-carnival-2026-05',
@@ -234,10 +224,6 @@ const zhData: LocalizedData = {
       location: '沈阳',
       description: '冻土回声携12款东北亚独立游戏作品亮相北境动漫游戏嘉年华，展示区域游戏创作力量，拓展全国合作网络。',
       status: 'completed',
-      images: [
-        '/images/activities/northern-anime-carnival-2026-05-01.jpg',
-        '/images/activities/northern-anime-carnival-2026-05-02.jpg',
-      ],
     },
     {
       id: 'ciga-gamejam-2026-shenyang',
@@ -569,11 +555,6 @@ const enData: LocalizedData = {
       location: 'Shenyang',
       description: 'Permafrost Echo hosts the indie game zone at the SSCA Shenyang Animation, Comic & Game Expo, providing a showcase platform for indie developers from Northeast China, attracting over 500 developers and players.',
       status: 'completed',
-      images: [
-        '/images/activities/ssca-2026-01.jpg',
-        '/images/activities/ssca-2026-02.jpg',
-        '/images/activities/ssca-2026-03.jpg',
-      ],
     },
     {
       id: 'ggj-2026',
@@ -583,11 +564,6 @@ const enData: LocalizedData = {
       location: 'Shenyang (Online + Offline)',
       description: "The world's largest game creation jam lands in Shenyang. Create game prototypes from scratch in 48 hours, bringing together Northeast Asia's most creative developers.",
       status: 'completed',
-      images: [
-        '/images/activities/ggj-2026-01.jpg',
-        '/images/activities/ggj-2026-02.jpg',
-        '/images/activities/ggj-2026-03.jpg',
-      ],
     },
     {
       id: 'beijing-expo-2026',
@@ -597,10 +573,6 @@ const enData: LocalizedData = {
       location: 'Beijing',
       description: 'Permafrost Echo brings 12 Northeast Asia indie game titles to the Beijing Indie Game Expo, showcasing regional creative power and expanding national cooperation networks.',
       status: 'completed',
-      images: [
-        '/images/activities/beijing-expo-2026-01.jpg',
-        '/images/activities/beijing-expo-2026-02.jpg',
-      ],
     },
     {
       id: 'ciga-gamejam-2026-shenyang',
@@ -932,11 +904,6 @@ const jaData: LocalizedData = {
       location: '瀋陽',
       description: 'パーマフロスト・エコーがSSCA瀋陽アニメ・コミック・ゲーム博覧会でインディーゲームゾーンを運営。東北地方のインディーゲーム開発者に展示・交流のプラットフォームを提供し、500名以上の開発者とプレイヤーが参加。',
       status: 'completed',
-      images: [
-        '/images/activities/ssca-2026-01.jpg',
-        '/images/activities/ssca-2026-02.jpg',
-        '/images/activities/ssca-2026-03.jpg',
-      ],
     },
     {
       id: 'ggj-2026',
@@ -946,11 +913,6 @@ const jaData: LocalizedData = {
       location: '瀋陽（オンライン＋オフライン）',
       description: '世界最大のゲームクリエイションマラソンが瀋陽に上陸。48時間でゼロからゲームプロトタイプを制作し、東北アジアの最も創造的な開発者が集結。',
       status: 'completed',
-      images: [
-        '/images/activities/ggj-2026-01.jpg',
-        '/images/activities/ggj-2026-02.jpg',
-        '/images/activities/ggj-2026-03.jpg',
-      ],
     },
     {
       id: 'northern-anime-carnival-2026-05',
@@ -960,10 +922,6 @@ const jaData: LocalizedData = {
       location: '瀋陽',
       description: 'パーマフロスト・エコーが東北アジアのインディーゲーム12作品を携えて北境アニメ・ゲームカーニバルに出展。地域の創作力を示し、全国的な協力ネットワークを拡大。',
       status: 'completed',
-      images: [
-        '/images/activities/northern-anime-carnival-2026-05-01.jpg',
-        '/images/activities/northern-anime-carnival-2026-05-02.jpg',
-      ],
     },
     {
       id: 'ciga-gamejam-2026-shenyang',
@@ -1295,11 +1253,6 @@ const koData: LocalizedData = {
       location: '선양',
       description: '페름프로스트 에코가 SSCA 선양 애니메이션·코믹·게임 엑스포에서 인디 게임 존을 운영. 동북 지역의 인디 게임 개발자에게 전시·교류 플랫폼을 제공하며 500명 이상의 개발자와 플레이어가 참여.',
       status: 'completed',
-      images: [
-        '/images/activities/ssca-2026-01.jpg',
-        '/images/activities/ssca-2026-02.jpg',
-        '/images/activities/ssca-2026-03.jpg',
-      ],
     },
     {
       id: 'ggj-2026',
@@ -1309,11 +1262,6 @@ const koData: LocalizedData = {
       location: '선양 (온라인 + 오프라인)',
       description: '세계 최대 게임 창작 마라톤이 선양에 상륙. 48시간 동안 제로부터 게임 프로토타입을 제작하며 동북아시아의 가장 창의적인 개발자들이 집결.',
       status: 'completed',
-      images: [
-        '/images/activities/ggj-2026-01.jpg',
-        '/images/activities/ggj-2026-02.jpg',
-        '/images/activities/ggj-2026-03.jpg',
-      ],
     },
     {
       id: 'beijing-expo-2026',
@@ -1323,10 +1271,6 @@ const koData: LocalizedData = {
       location: '베이징',
       description: '페름프로스트 에코가 동북아시아 인디 게임 12작품을 가지고 베이징 인디 게임 엑스포에 출품. 지역 창작 역량을 보여주고 전국적인 협력 네트워크를 확장.',
       status: 'completed',
-      images: [
-        '/images/activities/beijing-expo-2026-01.jpg',
-        '/images/activities/beijing-expo-2026-02.jpg',
-      ],
     },
     {
       id: 'ciga-gamejam-2026-shenyang',
@@ -1658,11 +1602,6 @@ const ruData: LocalizedData = {
       location: 'Шэньян',
       description: 'Permafrost Echo организует зону инди-игр на Шэньянской выставке аниме, комиксов и игр SSCA, предоставляя платформу для демонстрации и общения разработчикам инди-игр Северо-Восточного Китая, с участием более 500 разработчиков и игроков.',
       status: 'completed',
-      images: [
-        '/images/activities/ssca-2026-01.jpg',
-        '/images/activities/ssca-2026-02.jpg',
-        '/images/activities/ssca-2026-03.jpg',
-      ],
     },
     {
       id: 'ggj-2026',
@@ -1672,11 +1611,6 @@ const ruData: LocalizedData = {
       location: 'Шэньян (онлайн + офлайн)',
       description: 'Крупнейший в мире марафон по созданию игр проходит в Шэньяне. Создайте прототип игры с нуля за 48 часов вместе с самыми креативными разработчиками Северо-Восточной Азии.',
       status: 'completed',
-      images: [
-        '/images/activities/ggj-2026-01.jpg',
-        '/images/activities/ggj-2026-02.jpg',
-        '/images/activities/ggj-2026-03.jpg',
-      ],
     },
     {
       id: 'beijing-expo-2026',
@@ -1686,10 +1620,6 @@ const ruData: LocalizedData = {
       location: 'Пекин',
       description: 'Permafrost Echo представляет 12 инди-игр Северо-Восточной Азии на Пекинской выставке инди-игр, демонстрируя творческую мощь региона и расширяя национальную сеть сотрудничества.',
       status: 'completed',
-      images: [
-        '/images/activities/beijing-expo-2026-01.jpg',
-        '/images/activities/beijing-expo-2026-02.jpg',
-      ],
     },
     {
       id: 'ciga-gamejam-2026-shenyang',
@@ -2021,11 +1951,6 @@ const mnData: LocalizedData = {
       location: 'Шэньян',
       description: 'Мөсөн Хөрсний Цуурай нь SSCA Шэньян Анимэ, Комик, Тоглоомын Үзэсгэлэн дээр инди тоглоомын бүс зохион байгуулж, Зүүн хойд Хятадын инди тоглоом хөгжүүлэгчдэд үзүүлэн, харилцааны платформ бий болгож, 500 гаруй хөгжүүлэгч, тоглогч оролцов.',
       status: 'completed',
-      images: [
-        '/images/activities/ssca-2026-01.jpg',
-        '/images/activities/ssca-2026-02.jpg',
-        '/images/activities/ssca-2026-03.jpg',
-      ],
     },
     {
       id: 'ggj-2026',
@@ -2035,11 +1960,6 @@ const mnData: LocalizedData = {
       location: 'Шэньян (онлайн + офлайн)',
       description: 'Дэлхийн хамгийн том тоглоом бүтээх марафон Шэньян хотод зохион байгуулагдлаа. 48 цагийн дотор тоглоомын прототипийг эхнээс нь бүтээж, Зүүн хойд Азийн хамгийн бүтээлч хөгжүүлэгчид цугларав.',
       status: 'completed',
-      images: [
-        '/images/activities/ggj-2026-01.jpg',
-        '/images/activities/ggj-2026-02.jpg',
-        '/images/activities/ggj-2026-03.jpg',
-      ],
     },
     {
       id: 'beijing-expo-2026',
@@ -2049,10 +1969,6 @@ const mnData: LocalizedData = {
       location: 'Бээжин',
       description: 'Мөсөн Хөрсний Цуурай Зүүн хойд Азийн 12 инди тоглоомыг Бээжин Инди Тоглоомын Экспод авчирч, бүс нутгийн бүтээлч хүчийг харуулж, үндэсний хамтын ажиллагааны сүлжээг өргөжүүлэв.',
       status: 'completed',
-      images: [
-        '/images/activities/beijing-expo-2026-01.jpg',
-        '/images/activities/beijing-expo-2026-02.jpg',
-      ],
     },
     {
       id: 'ciga-gamejam-2026-shenyang',

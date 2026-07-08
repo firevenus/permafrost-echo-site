@@ -1,10 +1,12 @@
 'use client';
 
+import { useState } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
 import Image from 'next/image';
 import { getActivities } from '@/lib/data';
 import type { Locale } from '@/i18n/routing';
-import { Calendar, MapPin, Gamepad2, Palette, GraduationCap } from 'lucide-react';
+import { Calendar, MapPin, Gamepad2, Palette, GraduationCap, Images } from 'lucide-react';
+import Lightbox from '@/components/ui/Lightbox';
 
 export const runtime = 'edge';
 
@@ -15,6 +17,68 @@ export default function ActivitiesPage() {
   const allActivities = getActivities(locale);
   const upcomingActivities = allActivities.filter((a) => a.status === 'upcoming');
   const completedActivities = allActivities.filter((a) => a.status === 'completed');
+
+  /* ===== 灯箱状态 ===== */
+  const [lightbox, setLightbox] = useState<{
+    images: string[];
+    index: number;
+    alt: string;
+  } | null>(null);
+
+  const openLightbox = (images: string[], index: number, alt: string) => {
+    setLightbox({ images, index, alt });
+  };
+
+  const closeLightbox = () => setLightbox(null);
+
+  const lightboxPrev = () => {
+    if (!lightbox) return;
+    setLightbox({
+      ...lightbox,
+      index: (lightbox.index - 1 + lightbox.images.length) % lightbox.images.length,
+    });
+  };
+
+  const lightboxNext = () => {
+    if (!lightbox) return;
+    setLightbox({
+      ...lightbox,
+      index: (lightbox.index + 1) % lightbox.images.length,
+    });
+  };
+
+  const lightboxSelect = (i: number) => {
+    if (!lightbox) return;
+    setLightbox({ ...lightbox, index: i });
+  };
+
+  const renderActivityImage = (activity: (typeof allActivities)[0]) => {
+    if (!activity.images || activity.images.length === 0) return null;
+
+    return (
+      <button
+        className="activity-card-image group/image"
+        onClick={() => openLightbox(activity.images!, 0, activity.title)}
+        aria-label={`查看 ${activity.title} 的 ${activity.images!.length} 张照片`}
+      >
+        <Image
+          src={activity.images[0]}
+          alt={activity.title}
+          fill
+          sizes="(max-width: 768px) 100vw, 50vw"
+          className="object-cover"
+        />
+        {/* 悬浮提示层 */}
+        <div className="activity-image-hover">
+          <Images size={20} />
+          <span>{activity.images.length} 张</span>
+        </div>
+        {activity.images.length > 1 && (
+          <span className="image-counter">{activity.images.length} 张</span>
+        )}
+      </button>
+    );
+  };
 
   return (
     <div>
@@ -49,20 +113,7 @@ export default function ActivitiesPage() {
                   key={activity.id}
                   className="glass-card game-card group overflow-hidden"
                 >
-                  {activity.images && activity.images.length > 0 && (
-                    <div className="activity-card-image">
-                      <Image
-                        src={activity.images[0]}
-                        alt={activity.title}
-                        fill
-                        sizes="(max-width: 768px) 100vw, 50vw"
-                        className="object-cover"
-                      />
-                      {activity.images.length > 1 && (
-                        <span className="image-counter">{activity.images.length} 张</span>
-                      )}
-                    </div>
-                  )}
+                  {renderActivityImage(activity)}
                   <div className={activity.images?.length ? 'p-6 pt-0' : 'p-6'}>
                     <div className="flex items-start justify-between mb-4">
                       <div className="w-12 h-12 rounded-xl bg-[rgba(244,140,6,0.06)] flex items-center justify-center text-[#f48c06] transition-all duration-300 group-hover:bg-[rgba(244,140,6,0.12)] group-hover:scale-110">
@@ -112,20 +163,7 @@ export default function ActivitiesPage() {
                   key={activity.id}
                   className="glass-card group overflow-hidden"
                 >
-                  {activity.images && activity.images.length > 0 && (
-                    <div className="activity-card-image">
-                      <Image
-                        src={activity.images[0]}
-                        alt={activity.title}
-                        fill
-                        sizes="(max-width: 768px) 100vw, 50vw"
-                        className="object-cover"
-                      />
-                      {activity.images.length > 1 && (
-                        <span className="image-counter">{activity.images.length} 张</span>
-                      )}
-                    </div>
-                  )}
+                  {renderActivityImage(activity)}
                   <div className={activity.images?.length ? 'p-6 pt-0' : 'p-6'}>
                     <div className="flex items-start justify-between mb-4">
                       <div className="w-12 h-12 rounded-xl bg-[rgba(76,201,240,0.06)] flex items-center justify-center text-[#4cc9f0] transition-all duration-300 group-hover:bg-[rgba(76,201,240,0.12)] group-hover:scale-110">
@@ -158,6 +196,19 @@ export default function ActivitiesPage() {
           )}
         </div>
       </section>
+
+      {/* ===== Lightbox ===== */}
+      {lightbox && (
+        <Lightbox
+          images={lightbox.images}
+          currentIndex={lightbox.index}
+          alt={lightbox.alt}
+          onClose={closeLightbox}
+          onPrev={lightboxPrev}
+          onNext={lightboxNext}
+          onSelect={lightboxSelect}
+        />
+      )}
     </div>
   );
 }

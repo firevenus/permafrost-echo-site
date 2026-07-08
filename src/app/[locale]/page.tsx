@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { Link } from '@/i18n/routing';
 import { getActivities, getUpcomingActivities, getStats } from '@/lib/data';
 import type { Locale } from '@/i18n/routing';
-import { ArrowRight, Calendar, MapPin, Gamepad2, Palette, GraduationCap } from 'lucide-react';
+import { ArrowRight, Calendar, MapPin, Gamepad2, Palette, GraduationCap, Images } from 'lucide-react';
 
 export const runtime = 'edge';
 
@@ -156,7 +156,7 @@ export default function HomePage() {
                 style={{ animationDelay: `${idx * 100}ms` }}
               >
                 {activity.images && activity.images.length > 0 && (
-                  <div className="activity-card-image">
+                  <div className="activity-card-image group/image">
                     <Image
                       src={activity.images[0]}
                       alt={activity.title}
@@ -164,6 +164,10 @@ export default function HomePage() {
                       sizes="(max-width: 768px) 100vw, 33vw"
                       className="object-cover"
                     />
+                    <div className="activity-image-hover">
+                      <Images size={20} />
+                      <span>{activity.images.length} 张照片</span>
+                    </div>
                     {activity.images.length > 1 && (
                       <span className="image-counter">{activity.images.length} 张</span>
                     )}
