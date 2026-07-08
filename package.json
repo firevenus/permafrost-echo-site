@@ -26,7 +26,18 @@
     "@types/react-dom": "^19.0.0",
     "autoprefixer": "^10.4.20",
     "postcss": "^8.5.0",
+    "sharp": "^0.35.3",
     "tailwindcss": "^3.4.17",
     "typescript": "^5.7.0"
+  },
+  "allowScripts": {
+    "esbuild@0.14.47": true,
+    "esbuild@0.15.18": true,
+    "esbuild@0.28.1": true,
+    "sharp@0.34.5": true,
+    "sharp@0.35.3": true,
+    "workerd@1.20250718.0": true,
+    "workerd@1.20260701.1": true,
+    "fsevents@2.3.3": true
   }
 }

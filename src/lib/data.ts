@@ -2193,7 +2193,12 @@ export function getFeaturedGames(locale?: Locale): GameInfo[] {
 
 export function getActivities(locale?: Locale): ActivityInfo[] {
   const data = getData(locale || 'zh');
-  return data.activities;
+  // 已完成按日期倒序（最近结束的在最前面），即将开始保持原序
+  const completed = data.activities
+    .filter((a) => a.status === 'completed')
+    .sort((a, b) => b.date.localeCompare(a.date));
+  const upcoming = data.activities.filter((a) => a.status === 'upcoming');
+  return [...completed, ...upcoming];
 }
 
 export function getUpcomingActivities(locale?: Locale): ActivityInfo[] {
