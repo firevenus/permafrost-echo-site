@@ -1,10 +1,11 @@
 import type { Viewport } from 'next';
 import '@/app/globals.css';
-import { Inter, Noto_Sans_SC, Noto_Sans_JP, Noto_Sans_KR } from 'next/font/google';
+import { Space_Grotesk, Noto_Sans_SC, Noto_Sans_JP, Noto_Sans_KR } from 'next/font/google';
 
-const inter = Inter({
+const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
-  variable: '--font-inter',
+  weight: ['300', '400', '500', '600', '700'],
+  variable: '--font-space-grotesk',
   display: 'swap',
 });
 
@@ -43,7 +44,7 @@ export default function RootLayout({
   return (
     <html
       lang="zh"
-      className={`${inter.variable} ${notoSansSC.variable} ${notoSansJP.variable} ${notoSansKR.variable}`}
+      className={`${spaceGrotesk.variable} ${notoSansSC.variable} ${notoSansJP.variable} ${notoSansKR.variable}`}
     >
       <body className="antialiased bg-[#080e16] text-[#e8edf5] min-h-screen">
         <div className="bg-permafrost" />

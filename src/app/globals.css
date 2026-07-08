@@ -56,7 +56,7 @@
   --glass-blur: 20px;
 
   /* 字体 */
-  --font-sans: 'Inter', 'Noto Sans SC', 'Noto Sans JP', 'Noto Sans KR', system-ui, sans-serif;
+  --font-sans: 'Space Grotesk', 'Noto Sans SC', 'Noto Sans JP', 'Noto Sans KR', system-ui, sans-serif;
   --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
 
   /* 圆角 */
@@ -94,6 +94,7 @@
 
   html {
     scroll-behavior: smooth;
+    font-size: 17px;
   }
 
   body {
@@ -372,7 +373,7 @@
     animation: gradient-shift 6s ease-in-out infinite;
     color: #fff;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 0.875rem;
     border-radius: var(--radius-full);
     border: none;
     cursor: pointer;
@@ -410,7 +411,7 @@
     background: transparent;
     color: var(--ice-100);
     font-weight: 600;
-    font-size: 14px;
+    font-size: 0.875rem;
     border: 1px solid rgba(76, 201, 240, 0.3);
     border-radius: var(--radius-full);
     cursor: pointer;
@@ -438,7 +439,7 @@
     padding: 3px 12px;
     background: rgba(76, 201, 240, 0.1);
     color: var(--ice-100);
-    font-size: 11px;
+    font-size: 0.6875rem;
     font-weight: 600;
     letter-spacing: 0.02em;
     border-radius: var(--radius-full);
@@ -453,7 +454,7 @@
     padding: 3px 12px;
     background: rgba(45, 212, 191, 0.1);
     color: var(--tundra-100);
-    font-size: 11px;
+    font-size: 0.6875rem;
     font-weight: 600;
     letter-spacing: 0.02em;
     border-radius: var(--radius-full);
@@ -468,7 +469,7 @@
     padding: 3px 12px;
     background: rgba(244, 140, 6, 0.1);
     color: var(--ember-100);
-    font-size: 11px;
+    font-size: 0.6875rem;
     font-weight: 600;
     letter-spacing: 0.02em;
     border-radius: var(--radius-full);
@@ -483,7 +484,7 @@
     padding: 3px 12px;
     background: rgba(123, 47, 247, 0.1);
     color: var(--aurora-100);
-    font-size: 11px;
+    font-size: 0.6875rem;
     font-weight: 600;
     letter-spacing: 0.02em;
     border-radius: var(--radius-full);
@@ -498,7 +499,7 @@
     padding: 3px 12px;
     background: rgba(168, 180, 196, 0.1);
     color: var(--frost-100);
-    font-size: 11px;
+    font-size: 0.6875rem;
     font-weight: 600;
     letter-spacing: 0.02em;
     border-radius: var(--radius-full);
@@ -512,7 +513,7 @@
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    font-size: 11px;
+    font-size: 0.6875rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.14em;
@@ -674,7 +675,7 @@
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     color: var(--text-secondary);
-    font-size: 11px;
+    font-size: 0.6875rem;
     padding: 2px 8px;
     border-radius: 9999px;
     border: 1px solid rgba(255, 255, 255, 0.08);
@@ -700,7 +701,7 @@
     opacity: 1;
   }
   .activity-image-hover span {
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 500;
     letter-spacing: 0.02em;
   }
@@ -765,7 +766,7 @@
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     color: rgba(255, 255, 255, 0.85);
-    font-size: 13px;
+    font-size: 0.8125rem;
     font-weight: 500;
     font-variant-numeric: tabular-nums;
     padding: 6px 16px;
@@ -868,7 +869,7 @@
     position: relative;
     color: var(--text-secondary);
     transition: color var(--duration-fast) var(--ease-out);
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 500;
   }
   .nav-link:hover,

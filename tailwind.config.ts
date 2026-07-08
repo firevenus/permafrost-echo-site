@@ -47,7 +47,7 @@ const config: Config = {
         'text-tertiary': 'rgba(237,242,250,0.38)',
       },
       fontFamily: {
-        sans: ['Inter', 'Noto Sans SC', 'Noto Sans JP', 'Noto Sans KR', 'system-ui', 'sans-serif'],
+        sans: ['Space Grotesk', 'Noto Sans SC', 'Noto Sans JP', 'Noto Sans KR', 'system-ui', 'sans-serif'],
       },
       backgroundImage: {
         'gradient-primary': 'linear-gradient(135deg, #4cc9f0 0%, #2dd4bf 50%, #7b2ff7 100%)',
