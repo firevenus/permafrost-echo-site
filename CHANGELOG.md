@@ -1,5 +1,15 @@
 # Changelog
 
+## 2026-07-09
+
+### 网站全面优化
+- 新增 not-found.tsx 和 error.tsx 全局错误/404 页面（深色主题 + 品牌色）
+- 修复子页面 hreflang alternates 指向错误（移除根 layout 中的硬编码）
+- 补全 zh.json 和 mn.json 缺失翻译（games.status, team.members role/bio, visitSteam 等）
+- 拆分 src/lib/data.ts (106KB) 为 8 个模块文件（games/activities/universities/partners/timeline/roadmap/stats）
+- 添加 vitest 测试框架 + 8 个单元测试（gtag + breadcrumbs）
+- 清理空目录 src/components/home/
+
 ## 2026-07-08
 
 ### SEO 增强（第二轮）
