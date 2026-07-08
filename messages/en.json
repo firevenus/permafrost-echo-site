@@ -248,6 +248,23 @@
     "wechatQr": "WeChat Official Account",
     "copyright": "© 2026 Permafrost Echo. All rights reserved."
   },
+  "gamejamDetail": {
+    "backToActivities": "Back to Activities",
+    "badge": "CiGA Game Jam · Shenyang",
+    "title": "2026 CiGA Game Jam Shenyang",
+    "subtitle": "Game Showcase",
+    "intro1": "The annual CiGA (China Independent Game Alliance) Game Jam landed in Shenyang — 48 hours of creation, bringing together the most creative game development forces from Northeast China.",
+    "intro2": "With the theme \"Anchor\", 26 games were born during this event.",
+    "statGames": "26 Games",
+    "statTeams": "26 Teams",
+    "statGmhub": "11 on GMHub",
+    "worksSection": "Works",
+    "worksTitle": "All Games",
+    "worksSubtitle": "{count} games · Theme: Anchor",
+    "bilibili": "Bilibili",
+    "play": "Play",
+    "footerNote": "Data source: participant feedback forms · Compiled by Permafrost Echo · 2026-07-08"
+  },
   "common": {
     "loading": "Loading...",
     "error": "Something went wrong. Please try again.",

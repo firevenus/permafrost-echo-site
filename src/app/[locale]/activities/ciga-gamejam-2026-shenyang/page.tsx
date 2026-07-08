@@ -1,6 +1,6 @@
 'use client';
 
-import { useLocale } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
 import { cigaGameJamGames } from '@/lib/gamejam-data';
@@ -11,6 +11,7 @@ export const runtime = 'edge';
 
 export default function CigaGameJamDetailPage() {
   const locale = useLocale() as Locale;
+  const t = useTranslations('gamejamDetail');
 
   return (
     <div>
@@ -29,39 +30,39 @@ export default function CigaGameJamDetailPage() {
             className="inline-flex items-center gap-2 text-sm text-[rgba(237,242,250,0.4)] hover:text-[#4cc9f0] transition-colors mb-8"
           >
             <ArrowLeft size={14} />
-            返回活动列表
+            {t('backToActivities')}
           </Link>
 
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[rgba(76,201,240,0.06)] border border-[rgba(76,201,240,0.1)] mb-6">
             <span className="w-1.5 h-1.5 rounded-full bg-[#4cc9f0] shadow-[0_0_8px_rgba(76,201,240,0.6)]" />
             <span className="text-xs font-medium text-[#4cc9f0] tracking-[0.06em] uppercase">
-              CiGA Game Jam · 沈阳站
+              {t('badge')}
             </span>
           </div>
 
           <h1 className="hero-title mb-3">
-            <span className="gradient-text">2026 CiGA Game Jam 沈阳站</span>
+            <span className="gradient-text">{t('title')}</span>
           </h1>
-          <p className="text-lg text-[#4cc9f0] mb-4">作品展示</p>
+          <p className="text-lg text-[#4cc9f0] mb-4">{t('subtitle')}</p>
           <p className="text-[rgba(237,242,250,0.4)] max-w-[600px] mx-auto leading-relaxed mb-8">
-            中国独立游戏联盟（CiGA）年度 Game Jam 落地沈阳，48 小时限时创作，汇聚东北地区最具创意的游戏开发力量。
-            本次主题「Anchor」，共诞生 26 款作品。
+            {t('intro1')}
+            {t('intro2')}
           </p>
 
           {/* Stats row */}
           <div className="flex items-center justify-center gap-8 text-sm text-[rgba(237,242,250,0.35)]">
             <span className="flex items-center gap-2">
               <Gamepad2 size={14} className="text-[#4cc9f0]" />
-              26 款作品
+              {t('statGames')}
             </span>
             <span className="flex items-center gap-2">
               <Users size={14} className="text-[#4cc9f0]" />
-              26 组团队
+              {t('statTeams')}
             </span>
             <span className="flex items-center gap-2">
               <ExternalLink size={14} className="text-[#4cc9f0]" />
-              11 款已上线 GMHub
+              {t('statGmhub')}
             </span>
           </div>
         </div>
@@ -72,10 +73,10 @@ export default function CigaGameJamDetailPage() {
         <div className="section-glow-bottom" />
         <div className="page-container relative">
           <div className="mb-12">
-            <span className="section-label">作品列表</span>
-            <h2 className="section-title mb-2">全部作品</h2>
+            <span className="section-label">{t('worksSection')}</span>
+            <h2 className="section-title mb-2">{t('worksTitle')}</h2>
             <p className="text-[rgba(237,242,250,0.4)] text-sm">
-              共 {cigaGameJamGames.length} 款作品，主题：Anchor
+              {t('worksSubtitle', { count: cigaGameJamGames.length })}
             </p>
           </div>
 
@@ -136,7 +137,7 @@ export default function CigaGameJamDetailPage() {
                           className="inline-flex items-center gap-1.5 text-xs text-[rgba(237,242,250,0.4)] hover:text-[#f48c06] transition-colors"
                         >
                           <Play size={12} />
-                          B站
+                          {t('bilibili')}
                           <ExternalLink size={10} />
                         </a>
                       )}
@@ -148,7 +149,7 @@ export default function CigaGameJamDetailPage() {
                           className="inline-flex items-center gap-1.5 text-xs text-[rgba(237,242,250,0.4)] hover:text-[#2dd4bf] transition-colors"
                         >
                           <Play size={12} />
-                          试玩
+                          {t('play')}
                           <ExternalLink size={10} />
                         </a>
                       )}
@@ -165,7 +166,7 @@ export default function CigaGameJamDetailPage() {
       <section className="page-section relative overflow-hidden">
         <div className="page-container relative text-center pb-12">
           <p className="text-xs text-[rgba(237,242,250,0.25)]">
-            数据来源：参赛团队反馈表 · 冻土回声（Permafrost Echo）整理 · 2026-07-08
+            {t('footerNote')}
           </p>
         </div>
       </section>

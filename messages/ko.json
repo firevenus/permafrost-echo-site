@@ -220,6 +220,23 @@
     "wechatQr": "위챗 공식 계정",
     "copyright": "© 2026 페름프로스트 에코. All rights reserved."
   },
+  "gamejamDetail": {
+    "backToActivities": "활동 목록으로 돌아가기",
+    "badge": "CiGA Game Jam · 선양",
+    "title": "2026 CiGA Game Jam 선양",
+    "subtitle": "작품 전시",
+    "intro1": "중국 독립 게임 연맹(CiGA) 연례 Game Jam이 선양에 상륙 — 48시간 한정 창작으로 동북 지역의 가장 창의적인 게임 개발 역량을 모았습니다.",
+    "intro2": "이번 주제 「Anchor」로 총 26개의 작품이 탄생했습니다.",
+    "statGames": "26개 작품",
+    "statTeams": "26개 팀",
+    "statGmhub": "11개 GMHub 출시",
+    "worksSection": "작품 목록",
+    "worksTitle": "전체 작품",
+    "worksSubtitle": "총 {count}개 작품 · 주제: Anchor",
+    "bilibili": "Bilibili",
+    "play": "플레이",
+    "footerNote": "데이터 출처: 참가팀 피드백 양식 · Permafrost Echo 정리 · 2026-07-08"
+  },
   "common": {
     "loading": "로딩 중...",
     "error": "문제가 발생했습니다. 다시 시도해 주세요.",

@@ -230,6 +230,23 @@
     "wechatQr": "微信公众号",
     "copyright": "© 2026 冻土回声 Permafrost Echo. All rights reserved."
   },
+  "gamejamDetail": {
+    "backToActivities": "返回活动列表",
+    "badge": "CiGA Game Jam · 沈阳站",
+    "title": "2026 CiGA Game Jam 沈阳站",
+    "subtitle": "作品展示",
+    "intro1": "中国独立游戏联盟（CiGA）年度 Game Jam 落地沈阳，48 小时限时创作，汇聚东北地区最具创意的游戏开发力量。",
+    "intro2": "本次主题「Anchor」，共诞生 26 款作品。",
+    "statGames": "26 款作品",
+    "statTeams": "26 组团队",
+    "statGmhub": "11 款已上线 GMHub",
+    "worksSection": "作品列表",
+    "worksTitle": "全部作品",
+    "worksSubtitle": "共 {count} 款作品，主题：Anchor",
+    "bilibili": "B站",
+    "play": "试玩",
+    "footerNote": "数据来源：参赛团队反馈表 · 冻土回声（Permafrost Echo）整理 · 2026-07-08"
+  },
   "common": {
     "loading": "加载中...",
     "error": "出错了，请稍后再试",
