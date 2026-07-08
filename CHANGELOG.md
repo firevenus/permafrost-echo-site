@@ -2,6 +2,15 @@
 
 ## 2026-07-08
 
+### SEO 全面优化
+- OG 图片从 SVG 改为 PNG（1200×630），兼容 Twitter/Facebook/LinkedIn 等社交平台
+- CIGA GameJam 详情页新增 `layout.tsx` 提供完整 metadata（title/description/canonical/hreflang/OG）
+- `<html lang>` 从客户端 JS 动态设置改为 SSR 移除，后续由服务端 layout 接管
+- JSON-LD 结构化数据增强：新增 `WebSite`（SearchAction）、`logo` 字段
+- Sitemap 新增 GameJam 详情页 + 动态文章列表，移除虚假 `lastModified`
+- PWA manifest 新增 192×192 和 512×512 PNG 图标，`start_url` 改为 `/`，`lang` 移除硬编码
+- `getPageMetadata` 补充 `og:type`/`og:locale`/`og:siteName`
+
 ### 全局字体调整
 - 基准字号从 16px 调整为 17px（+6.25%），CSS 中 px 定值字体统一转 rem
 - 西文字体从 Inter 更换为 Space Grotesk（几何感、科技感），中文保留 Noto Sans SC
