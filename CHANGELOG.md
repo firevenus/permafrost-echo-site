@@ -2,6 +2,14 @@
 
 ## 2026-07-08
 
+### 活动图片子文件夹结构
+为后续图片管理规范化，为所有活动创建专用子文件夹：
+- `ssca-2026/`、`ggj-2026/`、`northern-anime-carnival-2026-05/`
+- `beijing-expo-2026/`、`northern-anime-2026/`
+- `ssca-2027/`、`ggj-2027/`
+- 已有 `ciga-gamejam-2026-shenyang/`
+- 图片命名规范：`{活动id}-01.webp`、`{活动id}-02.webp`...
+
 ### CIGA GameJam 活动图片压缩
 Cloudflare Pages 部署因图片超过 25MB 限制而失败：
 - `ciga-gamejam-2026-shenyang-01.webp` 31MB、`03.webp` 27MB 均超限
