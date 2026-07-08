@@ -4,7 +4,6 @@ import { routing } from '@/i18n/routing';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import JsonLd from '@/components/seo/JsonLd';
-import HtmlLangSetter from '@/components/seo/HtmlLangSetter';
 import type { Metadata } from 'next';
 
 const BASE_URL = 'https://permafrost-echo.com';
@@ -117,7 +116,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       url: `${BASE_URL}/${locale}`,
       images: [
         {
-          url: `${BASE_URL}/images/og-default.svg`,
+          url: `${BASE_URL}/images/og-default.png`,
           width: 1200,
           height: 630,
           alt: config.title,
@@ -128,7 +127,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       card: 'summary_large_image',
       title: config.title,
       description: config.description,
-      images: [`${BASE_URL}/images/og-default.svg`],
+      images: [`${BASE_URL}/images/og-default.png`],
     },
     icons: {
       icon: '/favicon.svg',
@@ -167,7 +166,6 @@ export default async function LocaleLayout({ children, params }: Props) {
 
   return (
     <NextIntlClientProvider messages={messages}>
-      <HtmlLangSetter lang={config.lang} />
       <JsonLd />
       <div className="min-h-screen bg-[#080e16] flex flex-col">
         <Header messages={navMessages} />

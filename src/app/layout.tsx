@@ -43,7 +43,6 @@ export default function RootLayout({
 }) {
   return (
     <html
-      lang="zh"
       className={`${spaceGrotesk.variable} ${notoSansSC.variable} ${notoSansJP.variable} ${notoSansKR.variable}`}
     >
       <body className="antialiased bg-[#080e16] text-[#e8edf5] min-h-screen">

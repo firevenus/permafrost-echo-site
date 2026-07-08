@@ -4,6 +4,19 @@ import type { Metadata } from 'next';
 
 const BASE_URL = 'https://permafrost-echo.com';
 
+const ogLocaleMap: Record<string, string> = {
+  zh: 'zh_CN',
+  en: 'en_US',
+  ko: 'ko_KR',
+  ja: 'ja_JP',
+  ru: 'ru_RU',
+  mn: 'mn_MN',
+};
+
+function getOgLocale(locale: string): string {
+  return ogLocaleMap[locale] || 'zh_CN';
+}
+
 function getNested(obj: Record<string, unknown>, path: string): string {
   const parts = path.split('.');
   let current: unknown = obj;
@@ -56,12 +69,15 @@ export async function getPageMetadata(
       'max-video-preview': -1,
     },
     openGraph: {
+      type: 'website',
+      locale: getOgLocale(locale),
+      siteName: '冻土回声 | Permafrost Echo',
       title: titleWithBrand,
       description: pageDescription,
       url,
       images: [
         {
-          url: `${BASE_URL}/images/og-default.svg`,
+          url: `${BASE_URL}/images/og-default.png`,
           width: 1200,
           height: 630,
           alt: titleWithBrand,
@@ -72,7 +88,7 @@ export async function getPageMetadata(
       card: 'summary_large_image',
       title: titleWithBrand,
       description: pageDescription,
-      images: [`${BASE_URL}/images/og-default.svg`],
+      images: [`${BASE_URL}/images/og-default.png`],
     },
   };
 }

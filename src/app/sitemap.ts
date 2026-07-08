@@ -1,12 +1,14 @@
 import type { MetadataRoute } from 'next';
 import { routing } from '@/i18n/routing';
+import { articleSlugs } from '@/lib/articles-data';
 
 const BASE_URL = 'https://permafrost-echo.com';
 
-const pages = [
+const staticPages = [
   '',
   '/about',
   '/activities',
+  '/activities/ciga-gamejam-2026-shenyang',
   '/games',
   '/community',
   '/team',
@@ -14,20 +16,27 @@ const pages = [
   '/contact',
   '/partners',
   '/articles',
-  '/articles/game-jam-2026-review',
-  '/articles/ssca-2026-announcement',
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = [];
 
   for (const locale of routing.locales) {
-    for (const page of pages) {
+    for (const page of staticPages) {
       entries.push({
         url: `${BASE_URL}/${locale}${page}`,
-        lastModified: new Date(),
         changeFrequency: page === '' ? 'weekly' : 'monthly',
         priority: page === '' ? 1.0 : 0.8,
+      });
+    }
+
+    // Dynamic article pages
+    const slugs = articleSlugs[locale] || [];
+    for (const slug of slugs) {
+      entries.push({
+        url: `${BASE_URL}/${locale}/articles/${slug}`,
+        changeFrequency: 'monthly' as const,
+        priority: 0.7,
       });
     }
   }
