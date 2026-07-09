@@ -4,7 +4,7 @@ export function getStats() {
     universities: 20,
     games: 30,
     years: 4,
-    partners: 9,
+    partners: 7,
     events: 6,
   };
 }

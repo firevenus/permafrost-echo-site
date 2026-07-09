@@ -59,6 +59,15 @@ const zhPartners: PartnerInfo[] = [
     description: '知名电竞外设品牌，为独立游戏开发者和玩家提供专业级外设装备。',
     logo: '/images/partners/aura.svg',
   },
+  {
+    id: 'xirang-games',
+    name: '戏壤科技',
+    nameEn: 'Xirang Games',
+    category: '游戏开发',
+    description: '位于沈阳的独立游戏开发公司，致力于创造承载光阴故事的游戏作品。「游戏承载着光阴的故事。」',
+    logo: '/images/partners/xirang-games.png',
+    website: 'https://www.xirang.games/',
+  },
 ];
 
 const enPartners: PartnerInfo[] = [
@@ -109,6 +118,15 @@ const enPartners: PartnerInfo[] = [
     category: 'Gaming Peripherals',
     description: 'A renowned esports peripherals brand, providing professional-grade gear for indie game developers and players.',
     logo: '/images/partners/aura.svg',
+  },
+  {
+    id: 'xirang-games',
+    name: 'Xirang Games',
+    nameEn: 'Xirang Games',
+    category: 'Game Development',
+    description: 'An indie game development studio based in Shenyang, dedicated to creating games that carry the story of time. "Games carry the story of time."',
+    logo: '/images/partners/xirang-games.png',
+    website: 'https://www.xirang.games/',
   },
 ];
 
@@ -161,6 +179,15 @@ const jaPartners: PartnerInfo[] = [
     description: '有名なeスポーツ周辺機器ブランド。インディーゲーム開発者とプレイヤーにプロフェッショナルグレードのデバイスを提供。',
     logo: '/images/partners/aura.svg',
   },
+  {
+    id: 'xirang-games',
+    name: '戯壤科技（Xirang Games）',
+    nameEn: 'Xirang Games',
+    category: 'ゲーム開発',
+    description: '瀋陽を拠点とするインディーゲーム開発スタジオ。時間の物語を紡ぐゲーム制作に取り組む。「ゲームは時間の物語を紡ぐ。」',
+    logo: '/images/partners/xirang-games.png',
+    website: 'https://www.xirang.games/',
+  },
 ];
 
 const koPartners: PartnerInfo[] = [
@@ -211,6 +238,15 @@ const koPartners: PartnerInfo[] = [
     category: '게이밍 기기',
     description: '유명 e스포츠 주변기기 브랜드. 인디 게임 개발자와 플레이어에게 전문가급 기기를 제공합니다.',
     logo: '/images/partners/aura.svg',
+  },
+  {
+    id: 'xirang-games',
+    name: 'Xirang Games',
+    nameEn: 'Xirang Games',
+    category: '게임 개발',
+    description: '선양에 기반을 둔 인디 게임 개발 스튜디오. 시간의 이야기를 담은 게임을 만드는 데 전념합니다. "게임은 시간의 이야기를 담습니다."',
+    logo: '/images/partners/xirang-games.png',
+    website: 'https://www.xirang.games/',
   },
 ];
 
@@ -263,6 +299,15 @@ const ruPartners: PartnerInfo[] = [
     description: 'Известный бренд киберспортивной периферии, предоставляющий профессиональное оборудование для разработчиков инди-игр и игроков.',
     logo: '/images/partners/aura.svg',
   },
+  {
+    id: 'xirang-games',
+    name: 'Xirang Games',
+    nameEn: 'Xirang Games',
+    category: 'Разработка игр',
+    description: 'Студия инди-игр из Шэньяна, создающая игры, хранящие историю времени. «Игры хранят историю времени.»',
+    logo: '/images/partners/xirang-games.png',
+    website: 'https://www.xirang.games/',
+  },
 ];
 
 const mnPartners: PartnerInfo[] = [
@@ -313,6 +358,15 @@ const mnPartners: PartnerInfo[] = [
     category: 'Тоглоомын дагалдах хэрэгсэл',
     description: 'Алдарт цахим спортын дагалдах хэрэгслийн брэнд. Инди тоглоом хөгжүүлэгчид болон тоглогчдод мэргэжлийн түвшний төхөөрөмж нийлүүлдэг.',
     logo: '/images/partners/aura.svg',
+  },
+  {
+    id: 'xirang-games',
+    name: 'Xirang Games',
+    nameEn: 'Xirang Games',
+    category: 'Тоглоом хөгжүүлэлт',
+    description: 'Шэньян хотод төвтэй инди тоглоом хөгжүүлэгч студи. Цаг хугацааны түүхийг агуулсан тоглоом бүтээхэд зориулагдсан. "Тоглоом цаг хугацааны түүхийг агуулдаг."',
+    logo: '/images/partners/xirang-games.png',
+    website: 'https://www.xirang.games/',
   },
 ];
 
