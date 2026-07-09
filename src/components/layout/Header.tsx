@@ -11,14 +11,12 @@ import { localeLabels } from '@/i18n/routing';
 
 const navItems: { key: string; href: string }[] = [
   { key: 'home', href: '/' },
-  { key: 'about', href: '/about' },
   { key: 'activities', href: '/activities' },
   { key: 'games', href: '/games' },
   { key: 'articles', href: '/articles' },
   { key: 'community', href: '/community' },
   { key: 'partners', href: '/partners' },
-  { key: 'roadmap', href: '/roadmap' },
-  { key: 'contact', href: '/contact' },
+  { key: 'about', href: '/about' },
 ];
 
 export default function Header({ messages }: { messages: Record<string, string> }) {
