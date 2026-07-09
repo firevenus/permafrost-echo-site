@@ -1,12 +1,29 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
-import { Quote, Target, Gamepad2, Calendar, Users, GraduationCap, Shield, Radio } from 'lucide-react';
+import { useTranslations, useMessages } from 'next-intl';
+import { Quote, Target, Gamepad2, Calendar, Users, GraduationCap, Shield, Radio, Heart } from 'lucide-react';
 
 export const runtime = 'edge';
 
+interface TeamMember {
+  name: string;
+  nameEn: string;
+  role?: string;
+  bio?: string;
+}
+
+function avatarId(nameEn: string): string {
+  return nameEn.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
+}
+
 export default function AboutPage() {
   const t = useTranslations();
+  const messages = useMessages();
+  const members: TeamMember[] =
+    (messages as Record<string, unknown>).team &&
+    typeof (messages as Record<string, unknown>).team === 'object'
+      ? ((messages as Record<string, { members?: TeamMember[] }>).team?.members || [])
+      : [];
 
   const bizIcons = [
     <Gamepad2 key="0" size={18} />,
@@ -231,31 +248,66 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Founder */}
+      {/* Team */}
       <section className="page-section">
         <div className="page-container">
           <div className="max-w-[800px] mx-auto">
             <div className="text-center mb-12">
-              <span className="section-label">{t('about.founder.title')}</span>
-              <h2 className="section-title mb-4">{t('about.founder.title')}</h2>
+              <span className="section-label">
+                {t('team.coreTeam')}
+              </span>
+              <h2 className="section-title mb-4">
+                {t('team.coreTeam')}
+              </h2>
             </div>
-            <div className="glass-card p-10 md:p-14 flex flex-col md:flex-row gap-8 items-center md:items-start">
-              <div className="w-24 h-24 rounded-full bg-gradient-to-br from-[#4cc9f0] to-[#7b2ff7] flex items-center justify-center text-white text-3xl font-bold flex-shrink-0 shadow-[0_0_30px_rgba(76,201,240,0.2)]">
-                EY
-              </div>
-              <div>
-                <h3 className="text-xl font-bold text-[#edf2fa] mb-1">
-                  {t('about.founder.name')}
-                </h3>
-                <p className="text-sm text-[#4cc9f0] font-medium mb-2">{t('about.founder.nameEn')}</p>
-                <p className="text-xs text-[rgba(237,242,250,0.35)] mb-4">
-                  {t('about.founder.education')}
-                </p>
-                <p className="text-[rgba(237,242,250,0.5)] leading-relaxed">
-                  {t('about.founder.bio')}
-                </p>
-              </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              {members.map((member) => {
+                const id = avatarId(member.nameEn);
+                const avatarSrc = `/images/team/${id}.webp`;
+                return (
+                  <div key={id} className="glass-card p-5 game-card group flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#4cc9f0] to-[#7b2ff7] flex items-center justify-center flex-shrink-0 shadow-[0_0_16px_rgba(76,201,240,0.2)] overflow-hidden relative">
+                      <span className="text-white text-sm font-bold absolute">
+                        {member.nameEn?.charAt(0).toUpperCase()}
+                      </span>
+                      <img
+                        src={avatarSrc}
+                        alt={member.name}
+                        className="absolute inset-0 w-full h-full object-cover rounded-full"
+                        onError={(e) => {
+                          (e.target as HTMLImageElement).style.display = 'none';
+                        }}
+                      />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <h3 className="text-sm font-semibold text-[#edf2fa] group-hover:text-white transition-colors duration-300">
+                        {member.name}
+                      </h3>
+                      <p className="text-xs text-[#4cc9f0] font-medium">{member.nameEn}</p>
+                      {member.role && (
+                        <p className="text-xs text-[rgba(237,242,250,0.35)] mt-1">{member.role}</p>
+                      )}
+                      {member.bio && (
+                        <p className="text-xs text-[rgba(237,242,250,0.4)] mt-2 leading-relaxed line-clamp-3">
+                          {member.bio}
+                        </p>
+                      )}
+                    </div>
+                  </div>
+                );
+              })}
             </div>
+
+            {/* Volunteers */}
+            {members.length > 0 && (
+              <div className="text-center mt-10">
+                <span className="text-sm text-[rgba(237,242,250,0.35)]">
+                  <Heart size={12} className="inline mr-1 text-[#f48c06]" />
+                  {t('team.volunteers')}
+                </span>
+              </div>
+            )}
           </div>
         </div>
       </section>

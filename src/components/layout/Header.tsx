@@ -16,7 +16,6 @@ const navItems: { key: string; href: string }[] = [
   { key: 'games', href: '/games' },
   { key: 'articles', href: '/articles' },
   { key: 'community', href: '/community' },
-  { key: 'team', href: '/team' },
   { key: 'partners', href: '/partners' },
   { key: 'roadmap', href: '/roadmap' },
   { key: 'contact', href: '/contact' },
