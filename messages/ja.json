@@ -159,12 +159,12 @@
     "founder": "創業者",
     "volunteers": "ボランティアの皆様",
     "members": [
-      { "name": "エンキー・ヤン", "nameEn": "Enki Yan", "role": "創業者 / 総責任者", "bio": "東北財経大学金融学博士、サンフランシスコ州立大学MBA。ゲーム業界に深く関わり、東北アジアのインディーゲームエコシステム発展に尽力。" },
-      { "name": "ミン・チャン", "nameEn": "Ming Zhang", "role": "技術責任者", "bio": "フルスタックエンジニア、10年のゲーム開発経験。技術アーキテクチャと製品開発を担当。" },
-      { "name": "シュエ・リー", "nameEn": "Xue Li", "role": "運営責任者", "bio": "コミュニティ運営の専門家。大学連携、パートナー関係、イベント企画を担当。" },
-      { "name": "ハオ・ワン", "nameEn": "Hao Wang", "role": "コンテンツ責任者", "bio": "ベテランゲームメディアプロフェッショナル。コンテンツ制作、ブランドコミュニケーション、メディア協力を担当。" },
-      { "name": "スー・チェン", "nameEn": "Si Chen", "role": "デザイン責任者", "bio": "ビジュアルデザイナー。ブランドビジュアルアイデンティティ、UI/UXデザイン、イベントビジュアルを担当。" },
-      { "name": "ZZK", "nameEn": "ZZK" }
+      { "name": "L", "nameEn": "L", "role": "共同創設者 / 運営", "bio": "" },
+      { "name": "成思", "nameEn": "Enki", "role": "共同創設者 / 技術", "bio": "" },
+      { "name": "疯兔", "nameEn": "FungTO", "role": "美術", "bio": "" },
+      { "name": "麻团", "nameEn": "MattUan", "role": "企画", "bio": "" },
+      { "name": "漆玄", "nameEn": "Akv_Qixuan", "role": "プログラマー", "bio": "" },
+      { "name": "ZZK", "nameEn": "ZZK", "role": "", "bio": "" }
     ]
   },
   "roadmap": {

@@ -159,40 +159,12 @@
     "founder": "Founder",
     "volunteers": "Volunteers",
     "members": [
-      {
-        "name": "Yan Si",
-        "nameEn": "Enki Yan",
-        "role": "Founder / Director",
-        "bio": "Ph.D. in Finance from DUFE, MBA from SFSU. Deep experience in the game industry, committed to developing the Northeast Asia indie game ecosystem."
-      },
-      {
-        "name": "Ming Zhang",
-        "nameEn": "Ming Zhang",
-        "role": "Tech Lead",
-        "bio": "Full-stack engineer with ten years of game development experience, responsible for technical architecture and product development."
-      },
-      {
-        "name": "Xue Li",
-        "nameEn": "Xue Li",
-        "role": "Operations Lead",
-        "bio": "Community operations expert, responsible for university alliances, partner relations, and event planning."
-      },
-      {
-        "name": "Hao Wang",
-        "nameEn": "Hao Wang",
-        "role": "Content Lead",
-        "bio": "Veteran game media professional, responsible for content creation, brand communication, and media cooperation."
-      },
-      {
-        "name": "Si Chen",
-        "nameEn": "Si Chen",
-        "role": "Design Lead",
-        "bio": "Visual designer, responsible for brand visual identity system, UI/UX design, and event visuals."
-      },
-      {
-        "name": "ZZK",
-        "nameEn": "ZZK"
-      }
+      { "name": "L", "nameEn": "L", "role": "Co-Founder / Operations", "bio": "" },
+      { "name": "Cheng Si", "nameEn": "Enki", "role": "Co-Founder / Tech", "bio": "" },
+      { "name": "Feng Tu", "nameEn": "FungTO", "role": "Art", "bio": "" },
+      { "name": "Ma Tuan", "nameEn": "MattUan", "role": "Design", "bio": "" },
+      { "name": "Qi Xuan", "nameEn": "Akv_Qixuan", "role": "Developer", "bio": "" },
+      { "name": "ZZK", "nameEn": "ZZK", "role": "", "bio": "" }
     ]
   },
   "roadmap": {

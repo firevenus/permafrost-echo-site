@@ -159,12 +159,12 @@
     "founder": "설립자",
     "volunteers": "자원봉사자 여러분",
     "members": [
-      { "name": "옌쓰", "nameEn": "Enki Yan", "role": "설립자 / 총괄", "bio": "동북재경대학 금융학 박사, 샌프란시스코 주립대 MBA. 게임 산업에 깊이 관여하며 동북아시아 인디 게임 생태계 발전에 전념." },
-      { "name": "장밍", "nameEn": "Ming Zhang", "role": "기술 책임자", "bio": "풀스택 엔지니어, 10년 게임 개발 경력, 기술 아키텍처 및 제품 개발 담당." },
-      { "name": "리쉐", "nameEn": "Xue Li", "role": "운영 책임자", "bio": "커뮤니티 운영 전문가, 대학 연합, 파트너 관계 및 이벤트 기획 담당." },
-      { "name": "왕하오", "nameEn": "Hao Wang", "role": "콘텐츠 책임자", "bio": "베테랑 게임 미디어 전문가, 콘텐츠 제작, 브랜드 커뮤니케이션 및 미디어 협력 담당." },
-      { "name": "천쓰", "nameEn": "Si Chen", "role": "디자인 책임자", "bio": "비주얼 디자이너, 브랜드 비주얼 아이덴티티, UI/UX 디자인 및 이벤트 비주얼 담당." },
-      { "name": "ZZK", "nameEn": "ZZK" }
+      { "name": "L", "nameEn": "L", "role": "공동 창립자 / 운영", "bio": "" },
+      { "name": "成思", "nameEn": "Enki", "role": "공동 창립자 / 기술", "bio": "" },
+      { "name": "疯兔", "nameEn": "FungTO", "role": "미술", "bio": "" },
+      { "name": "麻团", "nameEn": "MattUan", "role": "기획", "bio": "" },
+      { "name": "漆玄", "nameEn": "Akv_Qixuan", "role": "프로그래머", "bio": "" },
+      { "name": "ZZK", "nameEn": "ZZK", "role": "", "bio": "" }
     ]
   },
   "roadmap": {
