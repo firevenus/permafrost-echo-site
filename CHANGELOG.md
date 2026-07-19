@@ -1,5 +1,17 @@
 # Changelog
 
+## 2026-07-19
+
+### LinkedIn 社交集成
+- Footer 新增 LinkedIn 图标链接（原生 SVG），指向公司页面 https://www.linkedin.com/company/permafrost-echo/
+- Contact 页面社交媒体区首位替换为 LinkedIn
+- SEO JsonLd 添加 sameAs 字段关联 LinkedIn 主页
+- 6 语言消息文件同步添加 footer.linkedin 翻译
+
+### 项目工程化
+- 添加 `.nvmrc` 锁定 Node 版本（22.20.0）
+- 新增 `scripts/setup.ps1` 一键初始化脚本
+
 ## 2026-07-09
 
 ### 游戏作品页增强

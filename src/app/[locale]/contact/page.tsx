@@ -87,10 +87,10 @@ export default function ContactPage() {
 
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-[600px] mx-auto">
             {[
+              { icon: '💼', name: 'LinkedIn', href: 'https://www.linkedin.com/company/permafrost-echo/' },
               { icon: '📺', name: 'Bilibili', href: '#' },
               { icon: '📱', name: 'WeChat', href: '#' },
               { icon: '🎯', name: 'Indienova', href: '#' },
-              { icon: '🎙️', name: '机核', href: '#' },
             ].map((social, i) => (
               <a
                 key={i}

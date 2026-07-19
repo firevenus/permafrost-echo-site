@@ -10,6 +10,7 @@ export default function JsonLd() {
       description:
         '东北亚独立游戏生态平台 — 专注于独立游戏生态的内容与活动组织平台，立足沈阳，覆盖东北亚。',
       email: 'contact@permafrost-echo.com',
+      sameAs: ['https://www.linkedin.com/company/permafrost-echo/'],
       foundingDate: '2024',
       areaServed: {
         '@type': 'Continent',

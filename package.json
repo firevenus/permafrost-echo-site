@@ -3,6 +3,7 @@
   "version": "2.0.0",
   "private": true,
   "scripts": {
+    "setup": "powershell -ExecutionPolicy Bypass -File ./scripts/setup.ps1",
     "dev": "next dev",
     "build": "node scripts/generate-articles-data.mjs && next build",
     "start": "next start",
