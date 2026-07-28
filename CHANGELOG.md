@@ -11,6 +11,8 @@
 - 团队介绍统一角色描述为「核心团队成员」（中文），去掉原美术/策划/程序等分类（6 语言已同步）
 - 团队头像改为渐变首字母占位（移除不存在的图片引用，修复头像不显示问题）
 - 新增 Indienova 社交卡片，链接指向东北三省首届 Game Jam 报道：https://indienova.com/indie-game-development/the-first-game-jam-in-three-provinces-of-northeast-china/
+- 替换 Indienova logo 为用户提供的官方宽屏版式（黑底 + 橙色手柄 + INDIE NOVA）
+- WeChat 社交卡片优化：中文页面显示为「微信公众号」；悬停 / 点击时弹出二维码悬浮层（中文/英文均生效）；新增微信官方 logo（public/images/social/wechat.png）
 
 ### 文案更新
 - 首页活动描述改为「GameJam · EXPO · 高校联盟 · 企业生态 / 我们为游戏业态提供全新的舞台」，page.tsx 添加 whitespace-pre-line 支持换行

@@ -90,27 +90,50 @@ export default function ContactPage() {
               { icon: '💼', name: 'LinkedIn', href: 'https://www.linkedin.com/company/permafrost-echo/' },
               { icon: null, img: '/images/social/indieloop.png', name: 'IndieLoop', href: 'https://indieloop.com/#/journal/gameMedia?id=78' },
               { icon: null, img: '/images/social/bilibili.png', name: 'Bilibili', href: 'https://space.bilibili.com/3632304897395308' },
-              { icon: '📱', name: 'WeChat', href: '#' },
+              { icon: null, img: '/images/social/wechat.png', name: 'WeChat', isWechat: true, qr: '/images/qr/wechat-official.png' },
               { icon: null, img: '/images/social/indienova.png', name: 'Indienova', href: 'https://indienova.com/indie-game-development/the-first-game-jam-in-three-provinces-of-northeast-china/' },
             ].map((social, i) => (
-              <a
-                key={i}
-                href={social.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="glass-card p-5 text-center game-card no-underline group"
-              >
-                <div className="flex items-center justify-center h-8 mb-2.5 transition-transform duration-300 group-hover:scale-110">
-                  {social.img ? (
+              social.isWechat ? (
+                <div
+                  key={i}
+                  className="glass-card p-5 text-center game-card group relative cursor-pointer"
+                >
+                  <div className="flex items-center justify-center h-8 mb-2.5 transition-transform duration-300 group-hover:scale-110">
                     <img src={social.img} alt={social.name} className="h-8 w-auto object-contain" />
-                  ) : (
-                    <span className="text-2xl">{social.icon}</span>
-                  )}
+                  </div>
+                  <p className="text-xs text-[rgba(237,242,250,0.4)] group-hover:text-[rgba(237,242,250,0.6)] transition-colors duration-300">
+                    {t('contact.wechat.title')}
+                  </p>
+                  {/* 二维码悬浮层 */}
+                  <div className="absolute inset-0 z-10 hidden group-hover:flex group-focus-within:flex items-center justify-center bg-[rgba(13,18,28,0.95)] backdrop-blur-sm rounded-lg p-2">
+                    <div className="text-center">
+                      <img src={social.qr} alt="WeChat QR" className="w-32 h-32 mx-auto rounded bg-white p-1" />
+                      <p className="text-[10px] text-[rgba(237,242,250,0.7)] mt-1.5 leading-tight">
+                        {t('contact.wechat.title')}
+                      </p>
+                    </div>
+                  </div>
                 </div>
-                <p className="text-xs text-[rgba(237,242,250,0.4)] group-hover:text-[rgba(237,242,250,0.6)] transition-colors duration-300">
-                  {social.name}
-                </p>
-              </a>
+              ) : (
+                <a
+                  key={i}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="glass-card p-5 text-center game-card no-underline group"
+                >
+                  <div className="flex items-center justify-center h-8 mb-2.5 transition-transform duration-300 group-hover:scale-110">
+                    {social.img ? (
+                      <img src={social.img} alt={social.name} className="h-8 w-auto object-contain" />
+                    ) : (
+                      <span className="text-2xl">{social.icon}</span>
+                    )}
+                  </div>
+                  <p className="text-xs text-[rgba(237,242,250,0.4)] group-hover:text-[rgba(237,242,250,0.6)] transition-colors duration-300">
+                    {social.name}
+                  </p>
+                </a>
+              )
             ))}
           </div>
         </div>
