@@ -6,7 +6,7 @@
    设计令牌 (Design Tokens)
    ============================================ */
 :root {
-  /* 底色 — 冻土深蓝灰 */
+  /* 底色 �?冻土深蓝�?*/
   --bg-base: #080e16;
   --bg-base-deep: #050a12;
   --bg-surface: rgba(255, 255, 255, 0.03);
@@ -20,17 +20,17 @@
   --ice-300: #1895c0;
   --ice-400: #0d6e8a;
 
-  /* 极光紫（渐变辅助） */
+  /* 极光紫（渐变辅助�?*/
   --aurora-100: #c77dff;
   --aurora-200: #7b2ff7;
   --aurora-300: #5a1fd0;
 
-  /* 松花江青（第二强调色） */
+  /* 松花江青（第二强调色�?*/
   --tundra-100: #2dd4bf;
   --tundra-200: #14b8a6;
   --tundra-300: #0d9488;
 
-  /* 暖橙（强调/温度） */
+  /* 暖橙（强�?温度�?*/
   --ember-100: #f48c06;
   --ember-200: #dc2f02;
 
@@ -107,8 +107,8 @@
   }
 
   /* ============================================
-     全局背景 — 冻土极光 · 东北夜空
-     三层叠加：深邃冻土底 + 动态极光光晕 + 冰晶网格纹理
+     全局背景 �?冻土极光 · 东北夜空
+     三层叠加：深邃冻土底 + 动态极光光�?+ 冰晶网格纹理
      ============================================ */
 
   /* Layer 1: 冻土底色 + 极光渐变 */
@@ -118,24 +118,24 @@
     inset: 0;
     z-index: -3;
     background:
-      /* 主极光 — 顶部冰蓝·松花江青色带 */
+      /* 主极�?�?顶部冰蓝·松花江青色带 */
       radial-gradient(ellipse 100% 60% at 50% -8%, rgba(76, 201, 240, 0.09) 0%, rgba(45, 212, 191, 0.04) 20%, rgba(76, 201, 240, 0.02) 40%, transparent 65%),
-      /* 左中 — 白桦银冷光斑 */
+      /* 左中 �?白桦银冷光斑 */
       radial-gradient(ellipse 45% 40% at 15% 40%, rgba(168, 180, 196, 0.04) 0%, rgba(168, 180, 196, 0.01) 30%, transparent 55%),
-      /* 右下 — 暖橙余烬（东北冬日炉火感） */
+      /* 右下 �?暖橙余烬（东北冬日炉火感�?*/
       radial-gradient(ellipse 50% 40% at 90% 85%, rgba(244, 140, 6, 0.05) 0%, rgba(220, 47, 2, 0.02) 30%, transparent 60%),
-      /* 底部 — 极光紫光带 */
+      /* 底部 �?极光紫光�?*/
       radial-gradient(ellipse 75% 50% at 50% 108%, rgba(123, 47, 247, 0.07) 0%, rgba(123, 47, 247, 0.02) 35%, transparent 65%),
-      /* 右中 — 紫色点缀 */
+      /* 右中 �?紫色点缀 */
       radial-gradient(ellipse 35% 40% at 80% 55%, rgba(123, 47, 247, 0.04) 0%, transparent 55%),
-      /* 左上 — 松花江青色点缀 */
+      /* 左上 �?松花江青色点缀 */
       radial-gradient(ellipse 40% 35% at 8% 20%, rgba(45, 212, 191, 0.04) 0%, transparent 50%),
       var(--bg-base);
     pointer-events: none;
     animation: bg-aurora-breathe 14s ease-in-out infinite;
   }
 
-  /* Layer 2: 动态呼吸光晕 — 更大更柔和的渐变层 */
+  /* Layer 2: 动态呼吸光�?�?更大更柔和的渐变�?*/
   body::after {
     content: '';
     position: fixed;
@@ -153,13 +153,13 @@
     50% { opacity: 1; }
   }
 
-  /* Layer 3: 冰晶网格纹理 — 冻土裂纹感 */
+  /* Layer 3: 冰晶网格纹理 �?冻土裂纹�?*/
   .bg-permafrost {
     position: fixed;
     inset: 0;
     z-index: -1;
     pointer-events: none;
-    /* 双层网格：粗网 + 细网 */
+    /* 双层网格：粗�?+ 细网 */
     background-image:
       linear-gradient(rgba(76, 201, 240, 0.025) 1px, transparent 1px),
       linear-gradient(90deg, rgba(76, 201, 240, 0.025) 1px, transparent 1px),
@@ -170,7 +170,7 @@
     -webkit-mask-image: radial-gradient(ellipse 75% 55% at 50% 35%, black 20%, transparent 68%);
   }
 
-  /* Layer 4: 噪点纹理 — 全站胶片颗粒感 (fixed, pointer-events-none) */
+  /* Layer 4: 噪点纹理 �?全站胶片颗粒�?(fixed, pointer-events-none) */
   .bg-noise {
     position: fixed;
     inset: 0;
@@ -182,24 +182,24 @@
   }
 
   /* ============================================
-     无障碍 & 交互增强
+     无障�?& 交互增强
      ============================================ */
 
-  /* 键盘焦点指示器 */
+  /* 键盘焦点指示�?*/
   :focus-visible {
     outline: 2px solid rgba(76, 201, 240, 0.5);
     outline-offset: 2px;
     border-radius: 4px;
   }
 
-  /* 按钮类元素的自定义 focus-visible */
+  /* 按钮类元素的自定�?focus-visible */
   a:focus-visible,
   button:focus-visible {
     outline: 2px solid rgba(76, 201, 240, 0.6);
     outline-offset: 2px;
   }
 
-  /* 减弱动画 — 尊重用户系统偏好 */
+  /* 减弱动画 �?尊重用户系统偏好 */
   @media (prefers-reduced-motion: reduce) {
     *,
     *::before,
@@ -216,7 +216,7 @@
     color: #fff;
   }
 
-  /* 滚动条 */
+  /* 滚动�?*/
   ::-webkit-scrollbar {
     width: 5px;
   }
@@ -233,8 +233,26 @@
 }
 
 /* ============================================
-   动画关键帧
+   动画关键�?
    ============================================ */
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  0% { opacity: 0; transform: scale(0.92); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.2s ease-out forwards;
+}
+
+.animate-scaleIn {
+  animation: scaleIn 0.25s ease-out forwards;
+}
 @keyframes fade-up {
   0% { opacity: 0; transform: translateY(32px); }
   100% { opacity: 1; transform: translateY(0); }
@@ -295,10 +313,10 @@
 }
 
 /* ============================================
-   组件工具类
+   组件工具�?
    ============================================ */
 @layer components {
-  /* 磨砂玻璃卡片 — 冻土冰晶感 */
+  /* 磨砂玻璃卡片 �?冻土冰晶�?*/
   .glass-card {
     position: relative;
     background: var(--glass-bg);
@@ -311,13 +329,13 @@
                 box-shadow var(--duration-normal) var(--ease-out),
                 transform var(--duration-normal) var(--ease-out),
                 background var(--duration-normal) var(--ease-out);
-    /* 微妙内发光 — 模拟玻璃内部折射 */
+    /* 微妙内发�?�?模拟玻璃内部折射 */
     box-shadow:
       inset 0 1px 0 rgba(255, 255, 255, 0.03),
       0 4px 30px rgba(0, 0, 0, 0.35);
   }
 
-  /* 卡片顶部冰晶光泽装饰线 */
+  /* 卡片顶部冰晶光泽装饰�?*/
   .glass-card::before {
     content: '';
     position: absolute;
@@ -345,7 +363,7 @@
     border-radius: inherit;
   }
 
-  /* 渐变文字 — 冰蓝→松花江青→极光紫 */
+  /* 渐变文字 �?冰蓝→松花江青→极光�?*/
   .gradient-text {
     background: linear-gradient(135deg, var(--ice-100) 0%, var(--tundra-100) 50%, var(--aurora-100) 100%);
     -webkit-background-clip: text;
@@ -353,7 +371,7 @@
     background-clip: text;
   }
 
-  /* 纯冰蓝渐变文字 */
+  /* 纯冰蓝渐变文�?*/
   .gradient-text-ice {
     background: linear-gradient(135deg, var(--ice-100) 0%, var(--ice-200) 100%);
     -webkit-background-clip: text;
@@ -361,7 +379,7 @@
     background-clip: text;
   }
 
-  /* 极光渐变主按钮 — 冰蓝→松花江青 */
+  /* 极光渐变主按�?�?冰蓝→松花江�?*/
   .btn-primary {
     display: inline-flex;
     align-items: center;
@@ -401,7 +419,7 @@
     transform: translateY(0);
   }
 
-  /* 冰蓝边框次级按钮 — 增强版 */
+  /* 冰蓝边框次级按钮 �?增强�?*/
   .btn-outline {
     display: inline-flex;
     align-items: center;
@@ -432,7 +450,7 @@
     transform: translateY(0);
   }
 
-  /* 标签 (Pill) — 增强版 */
+  /* 标签 (Pill) �?增强�?*/
   .pill {
     display: inline-flex;
     align-items: center;
@@ -508,7 +526,7 @@
     -webkit-backdrop-filter: blur(8px);
   }
 
-  /* 分区标签 — 增强版 */
+  /* 分区标签 �?增强�?*/
   .section-label {
     display: inline-flex;
     align-items: center;
@@ -538,7 +556,7 @@
     color: var(--text-primary);
   }
 
-  /* Hero 主标题 */
+  /* Hero 主标�?*/
   .hero-title {
     font-size: clamp(2.6rem, 5.5vw, 4.2rem);
     font-weight: 800;
@@ -546,7 +564,7 @@
     letter-spacing: -0.04em;
   }
 
-  /* 品牌超大标题 — 冻土回声 Logo 级展示 */
+  /* 品牌超大标题 �?冻土回声 Logo 级展�?*/
   .brand-title {
     font-size: clamp(3rem, 7vw, 5.6rem);
     font-weight: 900;
@@ -564,7 +582,7 @@
     text-shadow: 0 0 40px rgba(76, 201, 240, 0.15);
   }
 
-  /* 品牌标语 — 破土而出，回响世界 */
+  /* 品牌标语 �?破土而出，回响世�?*/
   .brand-tagline {
     font-size: clamp(1rem, 2vw, 1.25rem);
     font-weight: 500;
@@ -580,7 +598,7 @@
     line-height: 1.25;
   }
 
-  /* 极光背景光晕 — 增强版 */
+  /* 极光背景光晕 �?增强�?*/
   .aurora-glow-top {
     position: absolute;
     top: -15%;
@@ -635,7 +653,7 @@
     padding: 80px 0;
   }
 
-  /* 游戏/活动卡片悬停效果 — 冻土冰晶感 */
+  /* 游戏/活动卡片悬停效果 �?冻土冰晶�?*/
   .game-card {
     transition: transform var(--duration-normal) var(--ease-out),
                 box-shadow var(--duration-normal) var(--ease-out),
@@ -666,7 +684,7 @@
   .group:hover .activity-card-image img {
     transform: scale(1.05);
   }
-  /* 多图滚动指示器 */
+  /* 多图滚动指示�?*/
   .activity-card-image .image-counter {
     position: absolute;
     bottom: 8px;
@@ -681,7 +699,7 @@
     border: 1px solid rgba(255, 255, 255, 0.08);
   }
 
-  /* 活动卡片图片悬停层 */
+  /* 活动卡片图片悬停�?*/
   .activity-image-hover {
     position: absolute;
     inset: 0;
@@ -706,7 +724,7 @@
     letter-spacing: 0.02em;
   }
 
-  /* 图片被点击后不要让卡片 hover 缩放干扰 */
+  /* 图片被点击后不要让卡�?hover 缩放干扰 */
   .activity-card-image:focus-visible {
     outline: 2px solid var(--accent);
     outline-offset: -2px;
@@ -864,7 +882,7 @@
     }
   }
 
-  /* 导航链接 — 增强版 */
+  /* 导航链接 �?增强�?*/
   .nav-link {
     position: relative;
     color: var(--text-secondary);
@@ -908,7 +926,7 @@
     color: var(--ice-100);
   }
 
-  /* 时间线 — 冻土极光色 */
+  /* 时间�?�?冻土极光�?*/
   .timeline-line {
     position: absolute;
     left: 50%;
@@ -995,7 +1013,7 @@
   /* ============================================
      滚动浮现动画 (Scroll-Triggered Reveal)
      使用 CSS animation-timeline: view()
-     现代浏览器原生支持，旧浏览器降级为立即显示
+     现代浏览器原生支持，旧浏览器降级为立即显�?
      ============================================ */
 
   @supports (animation-timeline: view()) {
@@ -1035,7 +1053,7 @@
 }
 
 /* ============================================
-   工具类
+   工具�?
    ============================================ */
 @layer utilities {
   .text-balance {
@@ -1059,7 +1077,7 @@
     -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 30%, black 20%, transparent 70%);
   }
 
-  /* 顶部极光光晕 — 用于 section header */
+  /* 顶部极光光晕 �?用于 section header */
   .section-glow-top {
     position: absolute;
     top: 0;
@@ -1072,7 +1090,7 @@
     pointer-events: none;
   }
 
-  /* 底部极光光晕 — 用于 section footer */
+  /* 底部极光光晕 �?用于 section footer */
   .section-glow-bottom {
     position: absolute;
     bottom: 0;
@@ -1085,7 +1103,7 @@
     pointer-events: none;
   }
 
-  /* 噪点纹理叠加层 */
+  /* 噪点纹理叠加�?*/
   .noise-overlay {
     position: absolute;
     inset: 0;
@@ -1095,7 +1113,7 @@
     background-size: 256px 256px;
   }
 
-  /* 对角线扫描线 — 超细微科技感 */
+  /* 对角线扫描线 �?超细微科技�?*/
   .scanlines {
     position: absolute;
     inset: 0;
