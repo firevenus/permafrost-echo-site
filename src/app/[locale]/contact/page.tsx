@@ -85,10 +85,11 @@ export default function ContactPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-[600px] mx-auto">
+          <div className="grid grid-cols-2 sm:grid-cols-5 gap-4 max-w-[640px] mx-auto">
             {[
               { icon: '💼', name: 'LinkedIn', href: 'https://www.linkedin.com/company/permafrost-echo/' },
               { icon: null, img: '/images/social/indieloop.png', name: 'IndieLoop', href: 'https://indieloop.com/#/journal/gameMedia?id=78' },
+              { icon: null, img: '/images/social/bilibili.png', name: 'Bilibili', href: 'https://space.bilibili.com/3632304897395308' },
               { icon: '📱', name: 'WeChat', href: '#' },
               { icon: '🎯', name: 'Indienova', href: '#' },
             ].map((social, i) => (
