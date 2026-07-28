@@ -99,7 +99,7 @@ export default function HomePage() {
             </p>
 
             {/* Description */}
-            <p className="text-[rgba(237,242,250,0.55)] text-lg mb-12 max-w-[520px] mx-auto leading-relaxed fade-up fade-up-delay-4">
+            <p className="text-[rgba(237,242,250,0.55)] text-lg mb-12 max-w-[520px] mx-auto leading-relaxed whitespace-pre-line fade-up fade-up-delay-4">
               {t('home.activitiesDesc')}
             </p>
 
@@ -142,7 +142,7 @@ export default function HomePage() {
           <div className="text-center mb-16 section-reveal">
             <span className="section-label">{t('home.activities')}</span>
             <h2 className="section-title mb-4">{t('home.activities')}</h2>
-            <p className="text-[rgba(237,242,250,0.4)] max-w-[480px] mx-auto leading-relaxed">
+            <p className="text-[rgba(237,242,250,0.4)] max-w-[480px] mx-auto leading-relaxed whitespace-pre-line">
               {t('home.activitiesDesc')}
             </p>
           </div>

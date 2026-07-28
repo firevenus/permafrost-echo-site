@@ -26,7 +26,7 @@
   },
   "home": {
     "activities": "核心活动",
-    "activitiesDesc": "Game Jam、展会、高校联盟——我们为独立游戏创作者提供展示舞台",
+    "activitiesDesc": "GameJam · EXPO · 高校联盟 · 企业生态\n我们为游戏业态提供全新的舞台",
     "featuredGames": "精选游戏",
     "featuredGamesDesc": "来自东北亚独立游戏开发者的创意之作",
     "viewAllGames": "查看全部作品",
@@ -215,7 +215,7 @@
     "email": {
       "title": "联系邮箱",
       "value": "contact@permafrost-echo.com",
-      "description": "商务合作、媒体采访、活动咨询，欢迎来信"
+      "description": "商务合作、媒体采访、活动咨询，我们期待来自您的消息"
     },
     "wechat": {
       "title": "微信公众号",
