@@ -429,7 +429,6 @@ export default function AboutPage() {
                 { icon: null, img: '/images/social/indieloop.png', name: 'IndieLoop', href: 'https://indieloop.com/#/journal/gameMedia?id=78' },
                 { icon: '📱', name: 'WeChat', href: '#' },
                 { icon: '🎯', name: 'Indienova', href: '#' },
-                { icon: '🎙️', name: '机核', href: '#' },
               ].map((social) => (
                 <a
                   key={social.name}
