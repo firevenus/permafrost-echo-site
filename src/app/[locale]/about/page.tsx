@@ -189,7 +189,7 @@ export default function AboutPage() {
                 <Target size={24} className="text-[#f48c06] mb-5 transition-transform duration-300 group-hover:scale-110" />
                 <h3 className="text-lg font-bold text-[#edf2fa] mb-4">{t('about.mission.title')}</h3>
                 <div className="space-y-3">
-                  {[t('about.mission.item1'), t('about.mission.item2'), t('about.mission.item3')].map((item, i) => (
+                  {[t('about.mission.item1'), t('about.mission.item2'), t('about.mission.item3'), t('about.mission.item4')].map((item, i) => (
                     <div key={i} className="flex items-start gap-3">
                       <span className="text-[#f48c06] text-xs mt-1 flex-shrink-0">◆</span>
                       <p className="text-xs text-[rgba(237,242,250,0.45)] leading-relaxed">{item}</p>

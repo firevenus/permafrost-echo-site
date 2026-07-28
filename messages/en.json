@@ -69,9 +69,10 @@
     },
     "mission": {
       "title": "Mission",
-      "item1": "Promote collaboration among game developers in the region through Game Jams, workshops, exhibitions, and other formats",
-      "item2": "Build bridges between universities and industry, supporting the growth of young development teams",
-      "item3": "Promote the international dissemination of Northeast Asia indie game culture"
+      "item1": "Foster exchange among game developers in the region",
+      "item2": "Promote diverse game culture content to society",
+      "item3": "Connect industry with universities to support youth team growth and development",
+      "item4": "Promote international exchange and dissemination of Northeast Asia game culture"
     },
     "origin": {
       "title": "Name Origin",
