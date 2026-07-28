@@ -1,7 +1,7 @@
 'use client';
 
 import { useTranslations, useLocale } from 'next-intl';
-import { getTimelineEvents, getRoadmapPhases } from '@/lib/data';
+import { getTimelineEvents } from '@/lib/data';
 import type { Locale } from '@/i18n/routing';
 
 export const runtime = 'edge';
@@ -11,7 +11,6 @@ export default function RoadmapPage() {
   const locale = useLocale() as Locale;
 
   const timelineEvents = getTimelineEvents(locale);
-  const roadmapPhases = getRoadmapPhases(locale);
 
   return (
     <div>
@@ -83,43 +82,6 @@ export default function RoadmapPage() {
         </div>
       </section>
 
-      {/* Roadmap Phases */}
-      <section className="page-section relative overflow-hidden">
-        <div className="section-glow-bottom" />
-        <div className="page-container relative">
-          <div className="max-w-[800px] mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {roadmapPhases.map((phase) => (
-                <div key={phase.phase} className="glass-card p-6 game-card group">
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="text-xs font-bold text-[#4cc9f0]">{phase.phase}</span>
-                    <span className={`text-[10px] px-2 py-0.5 rounded-full font-medium ${
-                      phase.status === 'completed'
-                        ? 'bg-[rgba(76,201,240,0.08)] text-[#4cc9f0]'
-                        : phase.status === 'in-progress'
-                        ? 'bg-[rgba(244,140,6,0.08)] text-[#f48c06]'
-                        : 'bg-[rgba(237,242,250,0.04)] text-[rgba(237,242,250,0.3)]'
-                    }`}>
-                      {t(`roadmap.status.${phase.status}`)}
-                    </span>
-                  </div>
-                  <h3 className="text-sm font-semibold text-[#edf2fa] mb-3 group-hover:text-white transition-colors duration-300">
-                    {phase.title}
-                  </h3>
-                  <ul className="space-y-2.5">
-                    {phase.items.map((item, j) => (
-                      <li key={j} className="text-xs text-[rgba(237,242,250,0.4)] flex items-start gap-2 leading-relaxed">
-                        <span className="text-[#4cc9f0] mt-1 flex-shrink-0">•</span>
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   );
 }
