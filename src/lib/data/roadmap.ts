@@ -14,7 +14,7 @@ const zhRoadmap: RoadmapPhase[] = [
     items: [
       '建立冻土回声品牌视觉体系，搭建微信/QQ社群（600+人）',
       '联合东北12所高校成立联盟',
-      '承办首届SSCA动漫游戏博览会游戏专区',
+      '承办第十七届SSCA动漫游戏博览会游戏专区',
     ],
     status: 'completed',
   },
@@ -57,7 +57,7 @@ const enRoadmap: RoadmapPhase[] = [
     items: [
       'Establish brand visual identity, build WeChat & QQ communities (600+ members)',
       'Form alliance with 12 Northeast China universities',
-      'Host the first SSCA Animation, Comic & Game Expo game zone',
+      'Host the 17th SSCA Animation, Comic & Game Expo game zone',
     ],
     status: 'completed',
   },
@@ -100,7 +100,7 @@ const jaRoadmap: RoadmapPhase[] = [
     items: [
       'パーマフロスト・エコーのブランドビジュアル体系を確立',
       '東北12大学と連盟を結成',
-      '第1回SSCAアニメ・コミック・ゲーム博覧会ゲームゾーンを運営',
+      '第17回SSCAアニメ・コミック・ゲーム博覧会ゲームゾーンを運営',
     ],
     status: 'completed',
   },
@@ -143,7 +143,7 @@ const koRoadmap: RoadmapPhase[] = [
     items: [
       '페름프로스트 에코 브랜드 비주얼 체계 확립',
       '동북 12개 대학과 연합 결성',
-      '제1회 SSCA 애니메이션·코믹·게임 엑스포 게임 존 운영',
+      '제17회 SSCA 애니메이션·코믹·게임 엑스포 게임 존 운영',
     ],
     status: 'completed',
   },
@@ -186,7 +186,7 @@ const ruRoadmap: RoadmapPhase[] = [
     items: [
       'Создание системы визуальной идентичности бренда Permafrost Echo',
       'Формирование альянса с 12 университетами Северо-Восточного Китая',
-      'Организация игровой зоны на первой выставке аниме, комиксов и игр SSCA',
+      'Организация игровой зоны на 17-й выставке аниме, комиксов и игр SSCA',
     ],
     status: 'completed',
   },
@@ -229,7 +229,7 @@ const mnRoadmap: RoadmapPhase[] = [
     items: [
       'Мөсөн Хөрсний Цуурай брендийн харааны таних тогтолцоог бий болгох',
       'Зүүн хойд Хятадын 12 их сургуультай холбоо байгуулах',
-      'Анхны SSCA Анимэ, Комик, Тоглоомын Үзэсгэлэнгийн тоглоомын бүс зохион байгуулах',
+      '17 дахь SSCA Анимэ, Комик, Тоглоомын Үзэсгэлэнгийн тоглоомын бүс зохион байгуулах',
     ],
     status: 'completed',
   },

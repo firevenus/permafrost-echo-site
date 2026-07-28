@@ -19,7 +19,7 @@ const zhTimeline: TimelineEvent[] = [
   },
   {
     year: '2025.10',
-    title: '首届 SSCA 动漫游戏博览会 · 游戏区',
+    title: '第十七届 SSCA 动漫游戏博览会 · 游戏区',
     description: '首次承办沈阳第十七届 SSCA 动漫游戏博览会游戏展区，吸引 200+ 参与者。',
   },
   {
@@ -52,7 +52,7 @@ const enTimeline: TimelineEvent[] = [
   },
   {
     year: '2025.10',
-    title: '1st SSCA Expo · Game Zone',
+    title: '17th SSCA Expo · Game Zone',
     description: 'Hosted the game zone at the 17th Shenyang SSCA Animation, Comic & Game Expo, attracting 200+ participants.',
   },
   {
