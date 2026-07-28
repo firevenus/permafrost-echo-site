@@ -9,7 +9,7 @@
 - 关于页、联系页社交卡片新增 Bilibili（链接指向 https://space.bilibili.com/3632304897395308）
 - 更新 Bilibili logo 为官方蓝色 TV 图标（#23ADE5）
 - 团队介绍统一角色描述为「核心团队成员」（中文），去掉原美术/策划/程序等分类（6 语言已同步）
-- 团队头像改为渐变首字母占位（移除不存在的图片引用，修复头像不显示问题）
+- SSCA 内容更新：2025年10月首次承办沈阳第十七届 SSCA 动漫游戏博览会游戏展区（原为 2026年3月）
 - 新增 Indienova 社交卡片，链接指向东北三省首届 Game Jam 报道：https://indienova.com/indie-game-development/the-first-game-jam-in-three-provinces-of-northeast-china/
 - 替换 Indienova logo 为用户提供的官方宽屏版式（黑底 + 橙色手柄 + INDIE NOVA）
 - WeChat 社交卡片优化：中文页面显示为「微信公众号」；点击弹出模态框显示二维码（支持点击背景 / ESC 关闭）；替换 logo 为微信气泡（双气泡）图标；新增 components/WechatQrModal.tsx 通用组件

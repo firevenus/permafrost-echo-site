@@ -8,15 +8,15 @@ author: Permafrost Echo
 
 ## Event Announcement
 
-Permafrost Echo is proud to announce that it will host the **Indie Game Zone** at the **SSCA Shenyang Animation, Comic & Game Expo** on **March 15, 2026** in Shenyang.
+Permafrost Echo is proud to announce that it will host the **Game Zone** at the **17th Shenyang SSCA Animation, Comic & Game Expo** in **October 2025**, marking our debut in organizing the game exhibition area.
 
-The SSCA Animation, Comic & Game Expo is one of the largest anime, comic, and game conventions in Northeast China, attracting tens of thousands of ACG enthusiasts and gamers each session. Permafrost Echo has been invited to curate an indie game zone within the expo, providing indie game developers from Northeast China with a showcase platform directly facing the general gaming public.
+The SSCA Animation, Comic & Game Expo is one of the largest anime, comic, and game conventions in Northeast China, attracting tens of thousands of ACG enthusiasts and gamers each session. Permafrost Echo's debut as the game zone operator provides indie game developers from Northeast China with a showcase platform directly facing the general gaming public.
 
 ## Event Highlights
 
-### Scaled Up
+### Highlights
 
-Compared to our debut appearance, this year's game zone has been fully upgraded:
+Compared to previous editions, this game zone features:
 
 - **Exhibited Titles**: Increased from 8 to 12+
 - **Participants**: The expo attracts over 10,000 visitors; the game zone expects to host 500+ demo players
@@ -47,8 +47,8 @@ As the game zone operator at SSCA, Permafrost Echo is dedicated to carving out a
 
 ## Registration Information
 
-**Event Date**: March 15, 2026, 10:00 AM – 6:00 PM  
-**Venue**: Shenyang (specific location TBA)  
+**Event Date**: October 2025 (specific date TBA)  
+**Venue**: Shenyang  
 **Registration**: Follow the WeChat official account "冻土回声" for the registration link
 
 ## Partners
