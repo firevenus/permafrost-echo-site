@@ -95,6 +95,8 @@ export default function ContactPage() {
               <a
                 key={i}
                 href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="glass-card p-5 text-center game-card no-underline group"
               >
                 <div className="flex items-center justify-center h-8 mb-2.5 transition-transform duration-300 group-hover:scale-110">

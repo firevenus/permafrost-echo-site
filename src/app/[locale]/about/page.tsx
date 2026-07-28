@@ -433,6 +433,8 @@ export default function AboutPage() {
                 <a
                   key={social.name}
                   href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="glass-card p-4 text-center game-card no-underline group"
                 >
                   <div className="flex items-center justify-center h-6 mb-1.5 transition-transform duration-300 group-hover:scale-110">
