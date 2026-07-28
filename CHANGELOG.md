@@ -1,5 +1,35 @@
 # Changelog
 
+## 2026-07-29
+
+### 全站品牌视觉锚点
+- 全站「冻土回声」统一添加中文直角引号「冻土回声」（60+ 处，覆盖 `src/` `content/` `messages/` 共 18 个文件）
+
+### 愿景卡片修复
+- 愿景卡片新增 `Eye` 图标，标题字体与使命卡片保持一致的 `h3` 样式
+
+### 社群生态页面修复
+- 修复 lucide-react 不存在的图标名：`ChipIcon`→`Cpu`、`UsersIcon`→`Users`、`BuildingIcon`→`Building2`
+
+### GGJ 2027 文案修正
+- 描述中「落地沈阳」改为「举办」
+
+### 高校联盟数据全面重构
+- `universities.ts` 严格按 `content/zh/alliance/index.md` 重建 16 个社团数据
+- 修正 6 城名称：锦州→阜新、呼和浩特→吉林市
+- 同步更新 `community/page.tsx` metadata 和 6 语言 `messages/*.json` 中的城市描述
+- 移除未使用的 `skillCategories` 导出
+
+### 业务方向 SSCA 精简
+- `about.business.item2` 从长描述简化为一句话：「承办游戏展」
+- 同步更新 en/ja/ko/ru/mn 5 个语言文件
+
+### 多语言全量同步
+- 5 个语言文件（en/ja/ko/ru/mn）同步中文最新内容：
+  - SSCA 业务方向文案
+  - 路线图 `roadmap.futurePlan`
+  - 团队角色统一为「核心团队成员」
+
 ## 2026-07-28
 
 - 更新愿景表述："打造富有凝聚力的游戏文化社区，让开发者、艺术家与学者跨越国界，共享创意与未来"（原表述包含"东北亚地区""独立游戏创作网络""资源"等词）
