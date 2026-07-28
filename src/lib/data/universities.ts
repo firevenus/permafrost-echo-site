@@ -1,115 +1,244 @@
-import type { Locale } from '@/i18n/routing';
-
 export interface UniversityInfo {
   id: string;
   name: string;
   nameEn: string;
+  school: string;
+  schoolEn: string;
+  logoUrl?: string;
+  partnerUrl?: string;
   location: string;
+  locationEn: string;
+  skills: string[];
 }
 
-const zhUniversities: UniversityInfo[] = [
-  { id: 'neu', name: '东北大学', nameEn: 'Northeastern University', location: '沈阳' },
-  { id: 'lnu', name: '辽宁大学', nameEn: 'Liaoning University', location: '沈阳' },
-  { id: 'dlut', name: '大连理工大学', nameEn: 'Dalian University of Technology', location: '大连' },
-  { id: 'dlu', name: '大连大学', nameEn: 'Dalian University', location: '大连' },
-  { id: 'jlu', name: '吉林大学', nameEn: 'Jilin University', location: '长春' },
-  { id: 'nenu', name: '东北师范大学', nameEn: 'Northeast Normal University', location: '长春' },
-  { id: 'hit', name: '哈尔滨工业大学', nameEn: 'Harbin Institute of Technology', location: '哈尔滨' },
-  { id: 'hrbeu', name: '哈尔滨工程大学', nameEn: 'Harbin Engineering University', location: '哈尔滨' },
-  { id: 'imu', name: '内蒙古大学', nameEn: 'Inner Mongolia University', location: '呼和浩特' },
-  { id: 'syau', name: '沈阳农业大学', nameEn: 'Shenyang Agricultural University', location: '沈阳' },
-  { id: 'sut', name: '沈阳工业大学', nameEn: 'Shenyang University of Technology', location: '沈阳' },
-  { id: 'dufe', name: '东北财经大学', nameEn: 'Dongbei University of Finance and Economics', location: '大连' },
+export interface CityGroup {
+  city: string;
+  cityEn: string;
+  description: string;
+  descriptionEn: string;
+  clubs: UniversityInfo[];
+}
+
+export const cityGroups: CityGroup[] = [
+  {
+    city: '哈尔滨',
+    cityEn: 'Harbin',
+    description: '哈尔滨作为东北游戏开发领域的核心城市，汇聚了多所高校的游戏开发社团。这里的核心社群由哈工大游戏开发社牵头，以独立游戏创作为载体，形成以程序与美术为核心的开发协作氛围。',
+    descriptionEn: 'As a core city for game development in Northeast China, Harbin brings together game development clubs from multiple universities. The core community is led by the HIT Game Dev Club, fostering a collaborative environment centered on programming and art through indie game creation.',
+    clubs: [
+      {
+        id: 'hit',
+        name: '哈工大游戏开发社',
+        nameEn: 'HIT Game Dev Club',
+        school: '哈尔滨工业大学',
+        schoolEn: 'Harbin Institute of Technology',
+        location: '哈尔滨',
+        locationEn: 'Harbin',
+        skills: ['程序开发', '游戏美术'],
+      },
+      {
+        id: 'heu',
+        name: '哈工程游戏开发社',
+        nameEn: 'HEU Game Dev Club',
+        school: '哈尔滨工程大学',
+        schoolEn: 'Harbin Engineering University',
+        location: '哈尔滨',
+        locationEn: 'Harbin',
+        skills: ['程序开发', '游戏美术'],
+      },
+      {
+        id: 'hrbnu',
+        name: '哈师大数字游戏社',
+        nameEn: 'HRBNU Digital Game Club',
+        school: '哈尔滨师范大学',
+        schoolEn: 'Harbin Normal University',
+        location: '哈尔滨',
+        locationEn: 'Harbin',
+        skills: ['程序开发', '游戏美术'],
+      },
+      {
+        id: 'nefu',
+        name: '东北林大游戏开发社',
+        nameEn: 'NEFU Game Dev Club',
+        school: '东北林业大学',
+        schoolEn: 'Northeast Forestry University',
+        location: '哈尔滨',
+        locationEn: 'Harbin',
+        skills: ['程序开发', '游戏美术'],
+      },
+      {
+        id: 'usth',
+        name: '黑龙江科技大学游戏开发社',
+        nameEn: 'USTH Game Dev Club',
+        school: '黑龙江科技大学',
+        schoolEn: 'Heilongjiang University of Science and Technology',
+        location: '哈尔滨',
+        locationEn: 'Harbin',
+        skills: ['游戏美术', '游戏策划'],
+      },
+      {
+        id: 'hlju',
+        name: '黑龙江大学游戏开发社',
+        nameEn: 'HLJU Game Dev Club',
+        school: '黑龙江大学',
+        schoolEn: 'Heilongjiang University',
+        location: '哈尔滨',
+        locationEn: 'Harbin',
+        skills: ['游戏美术', '游戏策划'],
+      },
+      {
+        id: 'nepu',
+        name: '东北石油大学游戏开发社',
+        nameEn: 'NEPU Game Dev Club',
+        school: '东北石油大学',
+        schoolEn: 'Northeast Petroleum University',
+        location: '哈尔滨',
+        locationEn: 'Harbin',
+        skills: ['程序开发', '游戏管理'],
+      },
+    ],
+  },
+  {
+    city: '长春',
+    cityEn: 'Changchun',
+    description: '长春在高校游戏开发领域具有吉林大学等优势高校的支撑，致力于为东北地区高校游戏开发提供人才与创意。',
+    descriptionEn: 'Changchun benefits from the support of leading universities such as Jilin University, dedicated to providing talent and creativity for game development in Northeast China.',
+    clubs: [
+      {
+        id: 'jlu',
+        name: '吉林大学游戏开发社',
+        nameEn: 'JLU Game Dev Club',
+        school: '吉林大学',
+        schoolEn: 'Jilin University',
+        location: '长春',
+        locationEn: 'Changchun',
+        skills: ['程序开发', '游戏美术'],
+      },
+      {
+        id: 'nenu',
+        name: '东北师大游戏开发社',
+        nameEn: 'NENU Game Dev Club',
+        school: '东北师范大学',
+        schoolEn: 'Northeast Normal University',
+        location: '长春',
+        locationEn: 'Changchun',
+        skills: ['程序开发'],
+      },
+    ],
+  },
+  {
+    city: '沈阳',
+    cityEn: 'Shenyang',
+    description: '鲁迅美术学院作为沈阳地区的核心社团节点，在程序开发、游戏美术与动画领域为联盟注入了多维度的艺术与技术资源。',
+    descriptionEn: 'Lu Xun Academy of Fine Arts, as the core club hub in Shenyang, brings multi-dimensional artistic and technical resources to the alliance in programming, game art, and animation.',
+    clubs: [
+      {
+        id: 'lafa',
+        name: '鲁迅美术学院游戏开发社',
+        nameEn: 'LAFA Game Dev Club',
+        school: '鲁迅美术学院',
+        schoolEn: 'Lu Xun Academy of Fine Arts',
+        location: '沈阳',
+        locationEn: 'Shenyang',
+        skills: ['程序开发', '游戏美术', '2D动画', '3D动画'],
+      },
+      {
+        id: 'neu',
+        name: '东北大学游戏开发社',
+        nameEn: 'NEU Game Dev Club',
+        school: '东北大学',
+        schoolEn: 'Northeastern University',
+        location: '沈阳',
+        locationEn: 'Shenyang',
+        skills: ['程序开发', '游戏美术'],
+      },
+      {
+        id: 'sjzu',
+        name: '沈阳建筑大学游戏开发社',
+        nameEn: 'SJZU Game Dev Club',
+        school: '沈阳建筑大学',
+        schoolEn: 'Shenyang Jianzhu University',
+        location: '沈阳',
+        locationEn: 'Shenyang',
+        skills: ['程序开发', '游戏美术'],
+      },
+      {
+        id: 'imeu',
+        name: '沈阳城市学院游戏开发社',
+        nameEn: 'IMEU Game Dev Club',
+        school: '沈阳城市学院',
+        schoolEn: 'Shenyang City University',
+        location: '沈阳',
+        locationEn: 'Shenyang',
+        skills: ['程序开发', '游戏美术'],
+      },
+    ],
+  },
+  {
+    city: '大连',
+    cityEn: 'Dalian',
+    description: '大连理工大学游戏开发社是大连地区联盟的核心力量，以程序开发和美术见长。',
+    descriptionEn: 'The DLUT Game Dev Club is the core force of the alliance in Dalian, excelling in programming and game art.',
+    clubs: [
+      {
+        id: 'dlut',
+        name: '大连理工大学游戏开发社',
+        nameEn: 'DLUT Game Dev Club',
+        school: '大连理工大学',
+        schoolEn: 'Dalian University of Technology',
+        location: '大连',
+        locationEn: 'Dalian',
+        skills: ['程序开发', '游戏美术'],
+      },
+    ],
+  },
+  {
+    city: '锦州',
+    cityEn: 'Jinzhou',
+    description: '渤海大学游戏开发社是锦州地区的重要社团力量，致力于程序开发与游戏美术。',
+    descriptionEn: 'The Bohai University Game Dev Club is an important force in Jinzhou, dedicated to programming and game art.',
+    clubs: [
+      {
+        id: 'bu',
+        name: '渤海大学游戏开发社',
+        nameEn: 'BU Game Dev Club',
+        school: '渤海大学',
+        schoolEn: 'Bohai University',
+        location: '锦州',
+        locationEn: 'Jinzhou',
+        skills: ['程序开发', '游戏美术'],
+      },
+    ],
+  },
+  {
+    city: '呼和浩特',
+    cityEn: 'Hohhot',
+    description: '内蒙古大学游戏开发社是呼和浩特地区的代表社团，为联盟带来了内蒙古的游戏开发潜力。',
+    descriptionEn: 'The IMU Game Dev Club represents Hohhot, bringing the game development potential of Inner Mongolia to the alliance.',
+    clubs: [
+      {
+        id: 'imu',
+        name: '内蒙古大学游戏开发社',
+        nameEn: 'IMU Game Dev Club',
+        school: '内蒙古大学',
+        schoolEn: 'Inner Mongolia University',
+        location: '呼和浩特',
+        locationEn: 'Hohhot',
+        skills: ['程序开发', '游戏美术'],
+      },
+    ],
+  },
 ];
 
-const enUniversities: UniversityInfo[] = [
-  { id: 'neu', name: 'Northeastern University', nameEn: 'Northeastern University', location: 'Shenyang' },
-  { id: 'lnu', name: 'Liaoning University', nameEn: 'Liaoning University', location: 'Shenyang' },
-  { id: 'dlut', name: 'Dalian University of Technology', nameEn: 'Dalian University of Technology', location: 'Dalian' },
-  { id: 'dlu', name: 'Dalian University', nameEn: 'Dalian University', location: 'Dalian' },
-  { id: 'jlu', name: 'Jilin University', nameEn: 'Jilin University', location: 'Changchun' },
-  { id: 'nenu', name: 'Northeast Normal University', nameEn: 'Northeast Normal University', location: 'Changchun' },
-  { id: 'hit', name: 'Harbin Institute of Technology', nameEn: 'Harbin Institute of Technology', location: 'Harbin' },
-  { id: 'hrbeu', name: 'Harbin Engineering University', nameEn: 'Harbin Engineering University', location: 'Harbin' },
-  { id: 'imu', name: 'Inner Mongolia University', nameEn: 'Inner Mongolia University', location: 'Hohhot' },
-  { id: 'syau', name: 'Shenyang Agricultural University', nameEn: 'Shenyang Agricultural University', location: 'Shenyang' },
-  { id: 'sut', name: 'Shenyang University of Technology', nameEn: 'Shenyang University of Technology', location: 'Shenyang' },
-  { id: 'dufe', name: 'Dongbei University of Finance and Economics', nameEn: 'Dongbei University of Finance and Economics', location: 'Dalian' },
-];
+export function getAllUniversityInfos(): UniversityInfo[] {
+  return cityGroups.flatMap((g) => g.clubs);
+}
 
-const jaUniversities: UniversityInfo[] = [
-  { id: 'neu', name: '東北大学', nameEn: 'Northeastern University', location: '瀋陽' },
-  { id: 'lnu', name: '遼寧大学', nameEn: 'Liaoning University', location: '瀋陽' },
-  { id: 'dlut', name: '大連理工大学', nameEn: 'Dalian University of Technology', location: '大連' },
-  { id: 'dlu', name: '大連大学', nameEn: 'Dalian University', location: '大連' },
-  { id: 'jlu', name: '吉林大学', nameEn: 'Jilin University', location: '長春' },
-  { id: 'nenu', name: '東北師範大学', nameEn: 'Northeast Normal University', location: '長春' },
-  { id: 'hit', name: 'ハルビン工業大学', nameEn: 'Harbin Institute of Technology', location: 'ハルビン' },
-  { id: 'hrbeu', name: 'ハルビン工程大学', nameEn: 'Harbin Engineering University', location: 'ハルビン' },
-  { id: 'imu', name: '内モンゴル大学', nameEn: 'Inner Mongolia University', location: 'フフホト' },
-  { id: 'syau', name: '瀋陽農業大学', nameEn: 'Shenyang Agricultural University', location: '瀋陽' },
-  { id: 'sut', name: '瀋陽工業大学', nameEn: 'Shenyang University of Technology', location: '瀋陽' },
-  { id: 'dufe', name: '東北財経大学', nameEn: 'Dongbei University of Finance and Economics', location: '大連' },
-];
-
-const koUniversities: UniversityInfo[] = [
-  { id: 'neu', name: '둥베이대학', nameEn: 'Northeastern University', location: '선양' },
-  { id: 'lnu', name: '랴오닝대학', nameEn: 'Liaoning University', location: '선양' },
-  { id: 'dlut', name: '다롄이공대학', nameEn: 'Dalian University of Technology', location: '다롄' },
-  { id: 'dlu', name: '다롄대학', nameEn: 'Dalian University', location: '다롄' },
-  { id: 'jlu', name: '지린대학', nameEn: 'Jilin University', location: '창춘' },
-  { id: 'nenu', name: '둥베이사범대학', nameEn: 'Northeast Normal University', location: '창춘' },
-  { id: 'hit', name: '하얼빈공업대학', nameEn: 'Harbin Institute of Technology', location: '하얼빈' },
-  { id: 'hrbeu', name: '하얼빈공정대학', nameEn: 'Harbin Engineering University', location: '하얼빈' },
-  { id: 'imu', name: '내몽골대학', nameEn: 'Inner Mongolia University', location: '후허하오터' },
-  { id: 'syau', name: '선양농업대학', nameEn: 'Shenyang Agricultural University', location: '선양' },
-  { id: 'sut', name: '선양공업대학', nameEn: 'Shenyang University of Technology', location: '선양' },
-  { id: 'dufe', name: '둥베이재경대학', nameEn: 'Dongbei University of Finance and Economics', location: '다롄' },
-];
-
-const ruUniversities: UniversityInfo[] = [
-  { id: 'neu', name: 'Северо-Восточный университет', nameEn: 'Northeastern University', location: 'Шэньян' },
-  { id: 'lnu', name: 'Ляонинский университет', nameEn: 'Liaoning University', location: 'Шэньян' },
-  { id: 'dlut', name: 'Даляньский технологический университет', nameEn: 'Dalian University of Technology', location: 'Далянь' },
-  { id: 'dlu', name: 'Даляньский университет', nameEn: 'Dalian University', location: 'Далянь' },
-  { id: 'jlu', name: 'Цзилиньский университет', nameEn: 'Jilin University', location: 'Чанчунь' },
-  { id: 'nenu', name: 'Северо-Восточный педагогический университет', nameEn: 'Northeast Normal University', location: 'Чанчунь' },
-  { id: 'hit', name: 'Харбинский политехнический институт', nameEn: 'Harbin Institute of Technology', location: 'Харбин' },
-  { id: 'hrbeu', name: 'Харбинский инженерный университет', nameEn: 'Harbin Engineering University', location: 'Харбин' },
-  { id: 'imu', name: 'Университет Внутренней Монголии', nameEn: 'Inner Mongolia University', location: 'Хух-Хото' },
-  { id: 'syau', name: 'Шэньянский сельскохозяйственный университет', nameEn: 'Shenyang Agricultural University', location: 'Шэньян' },
-  { id: 'sut', name: 'Шэньянский технологический университет', nameEn: 'Shenyang University of Technology', location: 'Шэньян' },
-  { id: 'dufe', name: 'Дунбэйский университет финансов и экономики', nameEn: 'Dongbei University of Finance and Economics', location: 'Далянь' },
-];
-
-const mnUniversities: UniversityInfo[] = [
-  { id: 'neu', name: 'Зүүн Хойд Их Сургууль', nameEn: 'Northeastern University', location: 'Шэньян' },
-  { id: 'lnu', name: 'Ляонин Их Сургууль', nameEn: 'Liaoning University', location: 'Шэньян' },
-  { id: 'dlut', name: 'Далянь Технологийн Их Сургууль', nameEn: 'Dalian University of Technology', location: 'Далянь' },
-  { id: 'dlu', name: 'Далянь Их Сургууль', nameEn: 'Dalian University', location: 'Далянь' },
-  { id: 'jlu', name: 'Жилин Их Сургууль', nameEn: 'Jilin University', location: 'Чанчунь' },
-  { id: 'nenu', name: 'Зүүн Хойд Багшийн Их Сургууль', nameEn: 'Northeast Normal University', location: 'Чанчунь' },
-  { id: 'hit', name: 'Харбин Политехникийн Хүрээлэн', nameEn: 'Harbin Institute of Technology', location: 'Харбин' },
-  { id: 'hrbeu', name: 'Харбин Инженерийн Их Сургууль', nameEn: 'Harbin Engineering University', location: 'Харбин' },
-  { id: 'imu', name: 'Өвөр Монголын Их Сургууль', nameEn: 'Inner Mongolia University', location: 'Хөх хот' },
-  { id: 'syau', name: 'Шэньян Хөдөө Аж Ахуйн Их Сургууль', nameEn: 'Shenyang Agricultural University', location: 'Шэньян' },
-  { id: 'sut', name: 'Шэньян Технологийн Их Сургууль', nameEn: 'Shenyang University of Technology', location: 'Шэньян' },
-  { id: 'dufe', name: 'Зүүн Хойд Санхүү Эдийн Засгийн Их Сургууль', nameEn: 'Dongbei University of Finance and Economics', location: 'Далянь' },
-];
-
-const universitiesMap: Record<Locale, UniversityInfo[]> = {
-  zh: zhUniversities,
-  en: enUniversities,
-  ja: jaUniversities,
-  ko: koUniversities,
-  ru: ruUniversities,
-  mn: mnUniversities,
+export const skillCategories: Record<string, string[]> = {
+  '程序开发': ['Unity', 'UE', 'Godot', '策划', 'C++', 'Blend'],
+  '游戏美术': ['3D', '2D', '场景', '角色'],
+  '游戏策划': ['玩法', '数值', '关卡'],
+  '游戏管理': ['社团运营', '活动运营', '渠道运营'],
+  '2D动画': ['角色动画', '角色与场景', '特效', '2DPV'],
+  '3D动画': ['角色动画', '场景建构', '特效', '3DPV'],
 };
-
-function getUniData(locale: Locale): UniversityInfo[] {
-  return universitiesMap[locale] || zhUniversities;
-}
-
-export function getUniversities(locale?: Locale): UniversityInfo[] {
-  return getUniData(locale || 'zh');
-}

@@ -1,133 +1,173 @@
-'use client';
+import { useTranslations } from 'next-intl';
+import { useLocale } from 'next-intl';
+import { Metadata } from 'next';
+import {
+  ChipIcon,
+  UsersIcon,
+  BuildingIcon,
+} from 'lucide-react';
+import { cityGroups, getAllUniversityInfos } from '@/lib/data/universities';
+import type { UniversityInfo } from '@/lib/data/universities';
 
-import { useTranslations, useLocale } from 'next-intl';
-import { getUniversities, getPartners } from '@/lib/data';
-import type { Locale } from '@/i18n/routing';
-import { Building2, Users, MessageCircle, HeartHandshake } from 'lucide-react';
+export const metadata: Metadata = {
+  title: '社群生态 | 冻土回声',
+  description:
+    '东北高校游戏开发社团联盟 — 覆盖哈尔滨、长春、沈阳、大连、锦州、呼和浩特 6 座城市的多所高校',
+};
 
-export const runtime = 'edge';
-
-export default function CommunityPage() {
-  const t = useTranslations();
-  const locale = useLocale() as Locale;
-
-  const universities = getUniversities(locale);
-  const partners = getPartners(locale);
-
+function SkillBadge({ skill }: { skill: string }) {
   return (
-    <div>
-      {/* Page Header */}
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-grid pointer-events-none" />
-        <div className="absolute inset-0 scanlines" />
-        <div className="section-glow-top" />
-        <div className="page-container relative py-24 text-center">
-          <h1 className="hero-title mb-5">
-            <span className="gradient-text">{t('community.title')}</span>
-          </h1>
-          <p className="text-[rgba(237,242,250,0.4)] text-lg max-w-[520px] mx-auto leading-relaxed">
-            {t('community.description')}
+    <span className="inline-flex items-center gap-1 rounded-full border border-ice-100/30 bg-ice-100/10 px-2.5 py-1 text-xs font-medium text-ice-200">
+      <ChipIcon className="h-3 w-3" />
+      {skill}
+    </span>
+  );
+}
+
+function ClubCard({
+  club,
+  locale,
+}: {
+  club: UniversityInfo;
+  locale: string;
+}) {
+  const isZh = locale === 'zh';
+  return (
+    <div className="group relative overflow-hidden rounded-2xl border border-ice-100/15 bg-tundra-950/60 p-6 backdrop-blur-sm transition-all duration-300 hover:border-ice-100/40 hover:bg-tundra-950/80 hover:shadow-lg hover:shadow-ice-100/5">
+      <div className="mb-4 flex items-start justify-between">
+        <div className="flex-1">
+          <h3 className="text-lg font-semibold text-stone-100">
+            {club.name}
+          </h3>
+          <p className="mt-1 text-sm text-stone-400">
+            {isZh ? club.school : club.schoolEn}
           </p>
         </div>
-      </section>
-
-      {/* Community Stats */}
-      <section className="page-section relative overflow-hidden">
-        <div className="section-glow-top" />
-        <div className="page-container relative">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-20">
-            {[
-              { icon: <Users size={24} />, value: '1000+', label: t('community.stats.wechatCount'), sub: t('community.stats.wechat') },
-              { icon: <MessageCircle size={24} />, value: '500+', label: t('community.stats.qqCount'), sub: t('community.stats.qq') },
-              { icon: <Building2 size={24} />, value: '20+', label: t('hero.stats.universities'), sub: t('community.universities.title') },
-              { icon: <HeartHandshake size={24} />, value: '9', label: t('community.partners.title'), sub: t('community.partners.title') },
-            ].map((stat, i) => (
-              <div key={i} className="glass-card p-6 text-center group">
-                <div className="text-[#4cc9f0] mb-3 flex justify-center opacity-80 group-hover:opacity-100 transition-opacity duration-300">
-                  {stat.icon}
-                </div>
-                <div className="stat-number gradient-text mb-1.5 transition-transform duration-300 group-hover:scale-110">
-                  {stat.value}
-                </div>
-                <div className="text-xs text-[rgba(237,242,250,0.4)] font-medium">{stat.label}</div>
-                <div className="text-xs text-[rgba(237,242,250,0.25)] mt-1">{stat.sub}</div>
-              </div>
-            ))}
-          </div>
+        <div className="flex h-10 w-10 items-center justify-center rounded-full bg-ice-100/10 text-sm font-bold text-ice-200">
+          {((isZh ? club.name : club.nameEn) || '').charAt(0)}
         </div>
-      </section>
+      </div>
 
-      {/* University Alliance */}
-      <section className="page-section relative overflow-hidden">
-        <div className="section-glow-top" />
-        <div className="page-container relative">
-          <div className="text-center mb-12">
-            <span className="section-label">{t('community.universities.title')}</span>
-            <h2 className="section-title mb-4">{t('community.universities.title')}</h2>
-            <p className="text-[rgba(237,242,250,0.4)] max-w-[480px] mx-auto leading-relaxed">
-              {t('community.universities.description')}
-            </p>
-          </div>
-
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 max-w-[900px] mx-auto">
-            {universities.map((uni) => (
-              <div key={uni.id} className="glass-card p-5 text-center game-card group">
-                <div className="w-12 h-12 rounded-xl bg-[rgba(76,201,240,0.04)] flex items-center justify-center mx-auto mb-3 transition-all duration-300 group-hover:bg-[rgba(76,201,240,0.08)] group-hover:scale-110">
-                  <span className="text-xl">🏛️</span>
-                </div>
-                <p className="text-sm font-medium text-[rgba(237,242,250,0.6)] mb-1 group-hover:text-[#edf2fa] transition-colors duration-300">
-                  {uni.name}
-                </p>
-                <p className="text-xs text-[rgba(237,242,250,0.3)]">
-                  {uni.nameEn}
-                </p>
-                <p className="text-[10px] text-[rgba(237,242,250,0.2)] mt-1">{uni.location}</p>
-              </div>
-            ))}
-          </div>
-
-          <div className="text-center mt-10">
-            <span className="text-xs text-[rgba(237,242,250,0.25)]">
-              {t('community.universities.cta')}
-            </span>
-          </div>
-        </div>
-      </section>
-
-      {/* Partners */}
-      <section className="page-section relative overflow-hidden">
-        <div className="section-glow-bottom" />
-        <div className="page-container relative">
-          <div className="text-center mb-12">
-            <span className="section-label">{t('community.partners.title')}</span>
-            <h2 className="section-title mb-4">{t('community.partners.title')}</h2>
-            <p className="text-[rgba(237,242,250,0.4)] max-w-[480px] mx-auto leading-relaxed">
-              {t('community.partners.description')}
-            </p>
-          </div>
-
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 max-w-[700px] mx-auto">
-            {partners.slice(0, 6).map((partner) => (
-              <div
-                key={partner.id}
-                className="glass-card p-5 text-center game-card group"
-              >
-                <div className="w-12 h-12 mx-auto mb-2.5 transition-transform duration-300 group-hover:scale-110">
-                  <img
-                    src={partner.logo}
-                    alt={partner.name}
-                    className="w-full h-full object-contain"
-                  />
-                </div>
-                <p className="text-xs text-[rgba(237,242,250,0.5)] font-medium group-hover:text-[#edf2fa] transition-colors duration-300">
-                  {partner.name}
-                </p>
-                <p className="text-[10px] text-[rgba(237,242,250,0.25)] mt-1">{partner.category}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <div className="flex flex-wrap gap-1.5">
+        {club.skills.map((skill) => (
+          <SkillBadge key={skill} skill={skill} />
+        ))}
+      </div>
     </div>
+  );
+}
+
+function CitySection({
+  city,
+  cityEn,
+  description,
+  descriptionEn,
+  clubs,
+  locale,
+}: {
+  city: string;
+  cityEn: string;
+  description: string;
+  descriptionEn: string;
+  clubs: UniversityInfo[];
+  locale: string;
+}) {
+  const isZh = locale === 'zh';
+  return (
+    <section className="mb-16">
+      <div className="mb-8">
+        <div className="flex items-center gap-4">
+          <h2 className="section-label text-3xl font-bold text-stone-100">
+            {isZh ? city : cityEn}
+          </h2>
+          <span className="rounded-full bg-ice-100/15 px-3 py-0.5 text-xs font-medium text-ice-200">
+            {clubs.length} {isZh ? '个社团' : 'clubs'}
+          </span>
+        </div>
+        <p className="mt-3 max-w-3xl text-sm leading-relaxed text-stone-400">
+          {isZh ? description : descriptionEn}
+        </p>
+      </div>
+
+      <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        {clubs.map((club) => (
+          <ClubCard key={club.id} club={club} locale={locale} />
+        ))}
+      </div>
+    </section>
+  );
+}
+
+export default function CommunityPage() {
+  const t = useTranslations('community');
+  const locale = useLocale();
+  const isZh = locale === 'zh';
+
+  const allClubs = getAllUniversityInfos();
+  const totalSchools = new Set(allClubs.map((c) => c.school)).size;
+
+  return (
+    <main className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
+      {/* Header */}
+      <section className="mb-20 text-center">
+        <span className="section-label text-sm font-medium tracking-widest text-ice-200">
+          {isZh ? '社群生态' : 'COMMUNITY'}
+        </span>
+        <h1 className="mt-4 text-4xl font-bold tracking-tight text-stone-100 sm:text-5xl">
+          {isZh
+            ? '东北高校游戏开发社团联盟'
+            : 'Northeast University Game Dev Club Alliance'}
+        </h1>
+        <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-stone-400">
+          {isZh
+            ? '覆盖哈尔滨、长春、沈阳、大连、锦州、呼和浩特 6 座城市，联合 20 余所高校，通过 16 个游戏开发社团构建东北高校独立游戏开发生态网络，致力于为东北地区的独立游戏开发者提供展示与交流的平台。'
+            : 'Covering 6 cities — Harbin, Changchun, Shenyang, Dalian, Jinzhou, and Hohhot — uniting 20+ universities through 16 game development clubs to build an indie game development ecosystem network across Northeast China, dedicated to providing a showcase and networking platform for indie game developers.'}
+        </p>
+
+        {/* Stats */}
+        <div className="mt-12 grid grid-cols-3 gap-6 sm:gap-8">
+          <div className="rounded-2xl border border-ice-100/15 bg-tundra-950/60 p-6 backdrop-blur-sm">
+            <div className="flex items-center justify-center gap-2 text-3xl font-bold text-stone-100">
+              <BuildingIcon className="h-6 w-6 text-ice-200" />
+              {cityGroups.length}
+            </div>
+            <div className="mt-2 text-xs font-medium tracking-wide text-stone-400">
+              {isZh ? '覆盖城市' : 'Cities'}
+            </div>
+          </div>
+          <div className="rounded-2xl border border-ice-100/15 bg-tundra-950/60 p-6 backdrop-blur-sm">
+            <div className="flex items-center justify-center gap-2 text-3xl font-bold text-stone-100">
+              <UsersIcon className="h-6 w-6 text-ice-200" />
+              {allClubs.length}
+            </div>
+            <div className="mt-2 text-xs font-medium tracking-wide text-stone-400">
+              {isZh ? '游戏开发社团' : 'Game Dev Clubs'}
+            </div>
+          </div>
+          <div className="rounded-2xl border border-ice-100/15 bg-tundra-950/60 p-6 backdrop-blur-sm">
+            <div className="flex items-center justify-center gap-2 text-3xl font-bold text-stone-100">
+              <BuildingIcon className="h-6 w-6 text-ice-200" />
+              {totalSchools}
+            </div>
+            <div className="mt-2 text-xs font-medium tracking-wide text-stone-400">
+              {isZh ? '覆盖高校' : 'Universities'}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* City Groups */}
+      {cityGroups.map((group) => (
+        <CitySection
+          key={group.city}
+          city={group.city}
+          cityEn={group.cityEn}
+          description={group.description}
+          descriptionEn={group.descriptionEn}
+          clubs={group.clubs}
+          locale={locale}
+        />
+      ))}
+    </main>
   );
 }

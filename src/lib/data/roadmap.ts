@@ -13,7 +13,7 @@ const zhRoadmap: RoadmapPhase[] = [
     title: '品牌建立与社群运营',
     items: [
       '建立冻土回声品牌视觉体系，搭建微信/QQ社群（600+人）',
-      '联合东北12所高校成立联盟',
+      '联合东北20余所高校发起东北高校游戏开发社团联盟',
       '承办第十七届SSCA动漫游戏博览会游戏专区',
     ],
     status: 'completed',
@@ -56,7 +56,7 @@ const enRoadmap: RoadmapPhase[] = [
     title: 'Brand Building & Community Operations',
     items: [
       'Establish brand visual identity, build WeChat & QQ communities (600+ members)',
-      'Form alliance with 12 Northeast China universities',
+      'Form Northeast University Game Dev Club Alliance with 20+ universities',
       'Host the 17th SSCA Animation, Comic & Game Expo game zone',
     ],
     status: 'completed',
@@ -99,7 +99,7 @@ const jaRoadmap: RoadmapPhase[] = [
     title: 'ブランド構築とコミュニティ運営',
     items: [
       'パーマフロスト・エコーのブランドビジュアル体系を確立',
-      '東北12大学と連盟を結成',
+      '東北20以上の大学とゲーム開発クラブ連盟を結成',
       '第17回SSCAアニメ・コミック・ゲーム博覧会ゲームゾーンを運営',
     ],
     status: 'completed',
@@ -142,7 +142,7 @@ const koRoadmap: RoadmapPhase[] = [
     title: '브랜드 구축 및 커뮤니티 운영',
     items: [
       '페름프로스트 에코 브랜드 비주얼 체계 확립',
-      '동북 12개 대학과 연합 결성',
+      '동북 20여 개 대학과 게임 개발 클럽 연합 결성',
       '제17회 SSCA 애니메이션·코믹·게임 엑스포 게임 존 운영',
     ],
     status: 'completed',
@@ -185,7 +185,7 @@ const ruRoadmap: RoadmapPhase[] = [
     title: 'Создание бренда и управление сообществом',
     items: [
       'Создание системы визуальной идентичности бренда Permafrost Echo',
-      'Формирование альянса с 12 университетами Северо-Восточного Китая',
+      'Формирование Северо-Восточного альянса клубов разработки игр с 20+ вузами',
       'Организация игровой зоны на 17-й выставке аниме, комиксов и игр SSCA',
     ],
     status: 'completed',
@@ -228,7 +228,7 @@ const mnRoadmap: RoadmapPhase[] = [
     title: 'Бренд бий болголт ба нийгэмлэгийн үйл ажиллагаа',
     items: [
       'Мөсөн Хөрсний Цуурай брендийн харааны таних тогтолцоог бий болгох',
-      'Зүүн хойд Хятадын 12 их сургуультай холбоо байгуулах',
+      'Зүүн хойд Хятадын 20 гаруй их сургуультай тоглоом хөгжүүлэлтийн клуб холбоо байгуулах',
       '17 дахь SSCA Анимэ, Комик, Тоглоомын Үзэсгэлэнгийн тоглоомын бүс зохион байгуулах',
     ],
     status: 'completed',

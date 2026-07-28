@@ -15,7 +15,7 @@ const zhTimeline: TimelineEvent[] = [
   {
     year: '2025.08',
     title: '高校联盟启动',
-    description: '联合东北地区12所高校成立独立游戏高校联盟，建立校园开发者网络。',
+    description: '联合东北地区20余所高校发起东北高校游戏开发社团联盟，16个游戏开发社团加入，构建校园开发者网络。',
   },
   {
     year: '2025.10',
@@ -48,7 +48,7 @@ const enTimeline: TimelineEvent[] = [
   {
     year: '2025.08',
     title: 'University Alliance Launch',
-    description: 'Established an indie game university alliance with 12 universities across Northeast China, building a campus developer network.',
+    description: 'Launched the Northeast University Game Dev Club Alliance with 20+ universities and 16 game development clubs across Northeast China, building a campus developer network.',
   },
   {
     year: '2025.10',
@@ -81,7 +81,7 @@ const jaTimeline: TimelineEvent[] = [
   {
     year: '2025.08',
     title: '大学連盟始動',
-    description: '東北地域の12大学と連携し、インディーゲーム大学連盟を設立。キャンパス開発者ネットワークを構築。',
+    description: '東北地域の20以上の大学と連携し、東北大学ゲーム開発クラブ連盟を設立。16のゲーム開発クラブが参加し、キャンパス開発者ネットワークを構築。',
   },
   {
     year: '2025.10',
@@ -114,7 +114,7 @@ const koTimeline: TimelineEvent[] = [
   {
     year: '2025.08',
     title: '대학 연합 출범',
-    description: '동북 지역 12개 대학과 연합하여 인디 게임 대학 연합을 설립. 캠퍼스 개발자 네트워크 구축.',
+    description: '동북 지역 20여 개 대학과 연합하여 동북 대학 게임 개발 클럽 연합을 설립. 16개 게임 개발 클럽이 참여하여 캠퍼스 개발자 네트워크를 구축.',
   },
   {
     year: '2025.10',
@@ -147,7 +147,7 @@ const ruTimeline: TimelineEvent[] = [
   {
     year: '2025.08',
     title: 'Запуск университетского альянса',
-    description: 'Создан альянс инди-игр с 12 университетами Северо-Восточного Китая, построена сеть кампусных разработчиков.',
+    description: 'Создан Северо-Восточный альянс клубов разработки игр при университетах, объединяющий более 20 вузов и 16 клубов разработки, формирующий сеть кампусных разработчиков.',
   },
   {
     year: '2025.10',
@@ -180,7 +180,7 @@ const mnTimeline: TimelineEvent[] = [
   {
     year: '2025.08',
     title: 'Их сургуулийн холбоо эхэлсэн',
-    description: 'Зүүн хойд Хятадын 12 их сургуультай хамтран инди тоглоомын их сургуулийн холбоог байгуулж, кампусын хөгжүүлэгчдийн сүлжээг бий болгов.',
+    description: 'Зүүн хойд Хятадын 20 гаруй их сургуультай хамтран Зүүн хойд их сургуулийн тоглоом хөгжүүлэлтийн клуб холбоог байгуулж, 16 тоглоом хөгжүүлэлтийн клуб нэгдэж, кампусын хөгжүүлэгчдийн сүлжээг бий болгов.',
   },
   {
     year: '2025.10',
