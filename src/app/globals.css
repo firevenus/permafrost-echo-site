@@ -3,70 +3,70 @@
 @tailwind utilities;
 
 /* ============================================
-   设计令牌 (Design Tokens)
+   璁捐浠ょ墝 (Design Tokens)
    ============================================ */
 :root {
-  /* 底色 �?冻土深蓝�?*/
+  /* 搴曡壊 鈥?鍐诲湡娣辫摑鐏?*/
   --bg-base: #080e16;
   --bg-base-deep: #050a12;
   --bg-surface: rgba(255, 255, 255, 0.03);
   --bg-surface-2: rgba(255, 255, 255, 0.055);
   --bg-elevated: rgba(255, 255, 255, 0.08);
 
-  /* 冰蓝（主色） */
+  /* 鍐拌摑锛堜富鑹诧級 */
   --ice-50: #e0f4fe;
   --ice-100: #4cc9f0;
   --ice-200: #2abde6;
   --ice-300: #1895c0;
   --ice-400: #0d6e8a;
 
-  /* 极光紫（渐变辅助�?*/
+  /* 鏋佸厜绱紙娓愬彉杈呭姪锛?*/
   --aurora-100: #c77dff;
   --aurora-200: #7b2ff7;
   --aurora-300: #5a1fd0;
 
-  /* 松花江青（第二强调色�?*/
+  /* 鏉捐姳姹熼潚锛堢浜屽己璋冭壊锛?*/
   --tundra-100: #2dd4bf;
   --tundra-200: #14b8a6;
   --tundra-300: #0d9488;
 
-  /* 暖橙（强�?温度�?*/
+  /* 鏆栨锛堝己璋?娓╁害锛?*/
   --ember-100: #f48c06;
   --ember-200: #dc2f02;
 
-  /* 白桦银（霜冻白） */
+  /* 鐧芥ˇ閾讹紙闇滃喕鐧斤級 */
   --frost-100: #e8edf0;
   --frost-200: #c8d6e0;
   --frost-300: #a0b4c4;
 
-  /* 文字 */
+  /* 鏂囧瓧 */
   --text-primary: #edf2fa;
   --text-secondary: rgba(237, 242, 250, 0.6);
   --text-tertiary: rgba(237, 242, 250, 0.38);
   --text-disabled: rgba(237, 242, 250, 0.2);
 
-  /* 边框 */
+  /* 杈规 */
   --border-subtle: rgba(76, 201, 240, 0.08);
   --border-default: rgba(76, 201, 240, 0.15);
   --border-strong: rgba(76, 201, 240, 0.24);
 
-  /* 磨砂玻璃 */
+  /* 纾ㄧ爞鐜荤拑 */
   --glass-bg: rgba(8, 14, 22, 0.78);
   --glass-border: rgba(76, 201, 240, 0.09);
   --glass-blur: 20px;
 
-  /* 字体 */
+  /* 瀛椾綋 */
   --font-sans: 'Space Grotesk', 'Noto Sans SC', 'Noto Sans JP', 'Noto Sans KR', system-ui, sans-serif;
   --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
 
-  /* 圆角 */
+  /* 鍦嗚 */
   --radius-sm: 6px;
   --radius-md: 10px;
   --radius-lg: 16px;
   --radius-xl: 24px;
   --radius-full: 9999px;
 
-  /* 间距 */
+  /* 闂磋窛 */
   --space-xs: 4px;
   --space-sm: 8px;
   --space-md: 16px;
@@ -76,7 +76,7 @@
   --space-3xl: 64px;
   --space-4xl: 96px;
 
-  /* 过渡 */
+  /* 杩囨浮 */
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
   --duration-fast: 150ms;
@@ -85,7 +85,7 @@
 }
 
 /* ============================================
-   全局基础样式
+   鍏ㄥ眬鍩虹鏍峰紡
    ============================================ */
 @layer base {
   * {
@@ -107,35 +107,35 @@
   }
 
   /* ============================================
-     全局背景 �?冻土极光 · 东北夜空
-     三层叠加：深邃冻土底 + 动态极光光�?+ 冰晶网格纹理
+     鍏ㄥ眬鑳屾櫙 鈥?鍐诲湡鏋佸厜 路 涓滃寳澶滅┖
+     涓夊眰鍙犲姞锛氭繁閭冨喕鍦熷簳 + 鍔ㄦ€佹瀬鍏夊厜鏅?+ 鍐版櫠缃戞牸绾圭悊
      ============================================ */
 
-  /* Layer 1: 冻土底色 + 极光渐变 */
+  /* Layer 1: 鍐诲湡搴曡壊 + 鏋佸厜娓愬彉 */
   body::before {
     content: '';
     position: fixed;
     inset: 0;
     z-index: -3;
     background:
-      /* 主极�?�?顶部冰蓝·松花江青色带 */
+      /* 涓绘瀬鍏?鈥?椤堕儴鍐拌摑路鏉捐姳姹熼潚鑹插甫 */
       radial-gradient(ellipse 100% 60% at 50% -8%, rgba(76, 201, 240, 0.09) 0%, rgba(45, 212, 191, 0.04) 20%, rgba(76, 201, 240, 0.02) 40%, transparent 65%),
-      /* 左中 �?白桦银冷光斑 */
+      /* 宸︿腑 鈥?鐧芥ˇ閾跺喎鍏夋枒 */
       radial-gradient(ellipse 45% 40% at 15% 40%, rgba(168, 180, 196, 0.04) 0%, rgba(168, 180, 196, 0.01) 30%, transparent 55%),
-      /* 右下 �?暖橙余烬（东北冬日炉火感�?*/
+      /* 鍙充笅 鈥?鏆栨浣欑儸锛堜笢鍖楀啲鏃ョ倝鐏劅锛?*/
       radial-gradient(ellipse 50% 40% at 90% 85%, rgba(244, 140, 6, 0.05) 0%, rgba(220, 47, 2, 0.02) 30%, transparent 60%),
-      /* 底部 �?极光紫光�?*/
+      /* 搴曢儴 鈥?鏋佸厜绱厜甯?*/
       radial-gradient(ellipse 75% 50% at 50% 108%, rgba(123, 47, 247, 0.07) 0%, rgba(123, 47, 247, 0.02) 35%, transparent 65%),
-      /* 右中 �?紫色点缀 */
+      /* 鍙充腑 鈥?绱壊鐐圭紑 */
       radial-gradient(ellipse 35% 40% at 80% 55%, rgba(123, 47, 247, 0.04) 0%, transparent 55%),
-      /* 左上 �?松花江青色点缀 */
+      /* 宸︿笂 鈥?鏉捐姳姹熼潚鑹茬偣缂€ */
       radial-gradient(ellipse 40% 35% at 8% 20%, rgba(45, 212, 191, 0.04) 0%, transparent 50%),
       var(--bg-base);
     pointer-events: none;
     animation: bg-aurora-breathe 14s ease-in-out infinite;
   }
 
-  /* Layer 2: 动态呼吸光�?�?更大更柔和的渐变�?*/
+  /* Layer 2: 鍔ㄦ€佸懠鍚稿厜鏅?鈥?鏇村ぇ鏇存煍鍜岀殑娓愬彉灞?*/
   body::after {
     content: '';
     position: fixed;
@@ -153,13 +153,13 @@
     50% { opacity: 1; }
   }
 
-  /* Layer 3: 冰晶网格纹理 �?冻土裂纹�?*/
+  /* Layer 3: 鍐版櫠缃戞牸绾圭悊 鈥?鍐诲湡瑁傜汗鎰?*/
   .bg-permafrost {
     position: fixed;
     inset: 0;
     z-index: -1;
     pointer-events: none;
-    /* 双层网格：粗�?+ 细网 */
+    /* 鍙屽眰缃戞牸锛氱矖缃?+ 缁嗙綉 */
     background-image:
       linear-gradient(rgba(76, 201, 240, 0.025) 1px, transparent 1px),
       linear-gradient(90deg, rgba(76, 201, 240, 0.025) 1px, transparent 1px),
@@ -170,7 +170,7 @@
     -webkit-mask-image: radial-gradient(ellipse 75% 55% at 50% 35%, black 20%, transparent 68%);
   }
 
-  /* Layer 4: 噪点纹理 �?全站胶片颗粒�?(fixed, pointer-events-none) */
+  /* Layer 4: 鍣偣绾圭悊 鈥?鍏ㄧ珯鑳剁墖棰楃矑鎰?(fixed, pointer-events-none) */
   .bg-noise {
     position: fixed;
     inset: 0;
@@ -182,24 +182,24 @@
   }
 
   /* ============================================
-     无障�?& 交互增强
+     鏃犻殰纰?& 浜や簰澧炲己
      ============================================ */
 
-  /* 键盘焦点指示�?*/
+  /* 閿洏鐒︾偣鎸囩ず鍣?*/
   :focus-visible {
     outline: 2px solid rgba(76, 201, 240, 0.5);
     outline-offset: 2px;
     border-radius: 4px;
   }
 
-  /* 按钮类元素的自定�?focus-visible */
+  /* 鎸夐挳绫诲厓绱犵殑鑷畾涔?focus-visible */
   a:focus-visible,
   button:focus-visible {
     outline: 2px solid rgba(76, 201, 240, 0.6);
     outline-offset: 2px;
   }
 
-  /* 减弱动画 �?尊重用户系统偏好 */
+  /* 鍑忓急鍔ㄧ敾 鈥?灏婇噸鐢ㄦ埛绯荤粺鍋忓ソ */
   @media (prefers-reduced-motion: reduce) {
     *,
     *::before,
@@ -216,7 +216,7 @@
     color: #fff;
   }
 
-  /* 滚动�?*/
+  /* 婊氬姩鏉?*/
   ::-webkit-scrollbar {
     width: 5px;
   }
@@ -233,7 +233,7 @@
 }
 
 /* ============================================
-   动画关键�?
+   鍔ㄧ敾鍏抽敭甯?
    ============================================ */
 
 @keyframes fadeIn {
@@ -313,10 +313,10 @@
 }
 
 /* ============================================
-   组件工具�?
+   缁勪欢宸ュ叿绫?
    ============================================ */
 @layer components {
-  /* 磨砂玻璃卡片 �?冻土冰晶�?*/
+  /* 纾ㄧ爞鐜荤拑鍗＄墖 鈥?鍐诲湡鍐版櫠鎰?*/
   .glass-card {
     position: relative;
     background: var(--glass-bg);
@@ -329,13 +329,13 @@
                 box-shadow var(--duration-normal) var(--ease-out),
                 transform var(--duration-normal) var(--ease-out),
                 background var(--duration-normal) var(--ease-out);
-    /* 微妙内发�?�?模拟玻璃内部折射 */
+    /* 寰鍐呭彂鍏?鈥?妯℃嫙鐜荤拑鍐呴儴鎶樺皠 */
     box-shadow:
       inset 0 1px 0 rgba(255, 255, 255, 0.03),
       0 4px 30px rgba(0, 0, 0, 0.35);
   }
 
-  /* 卡片顶部冰晶光泽装饰�?*/
+  /* 鍗＄墖椤堕儴鍐版櫠鍏夋辰瑁呴グ绾?*/
   .glass-card::before {
     content: '';
     position: absolute;
@@ -353,7 +353,7 @@
     opacity: 1;
   }
 
-  /* 卡片底部微光反射 */
+  /* 鍗＄墖搴曢儴寰厜鍙嶅皠 */
   .glass-card::after {
     content: '';
     position: absolute;
@@ -363,7 +363,7 @@
     border-radius: inherit;
   }
 
-  /* 渐变文字 �?冰蓝→松花江青→极光�?*/
+  /* 娓愬彉鏂囧瓧 鈥?鍐拌摑鈫掓澗鑺辨睙闈掆啋鏋佸厜绱?*/
   .gradient-text {
     background: linear-gradient(135deg, var(--ice-100) 0%, var(--tundra-100) 50%, var(--aurora-100) 100%);
     -webkit-background-clip: text;
@@ -371,7 +371,7 @@
     background-clip: text;
   }
 
-  /* 纯冰蓝渐变文�?*/
+  /* 绾啺钃濇笎鍙樻枃瀛?*/
   .gradient-text-ice {
     background: linear-gradient(135deg, var(--ice-100) 0%, var(--ice-200) 100%);
     -webkit-background-clip: text;
@@ -379,7 +379,7 @@
     background-clip: text;
   }
 
-  /* 极光渐变主按�?�?冰蓝→松花江�?*/
+  /* 鏋佸厜娓愬彉涓绘寜閽?鈥?鍐拌摑鈫掓澗鑺辨睙闈?*/
   .btn-primary {
     display: inline-flex;
     align-items: center;
@@ -419,7 +419,7 @@
     transform: translateY(0);
   }
 
-  /* 冰蓝边框次级按钮 �?增强�?*/
+  /* 鍐拌摑杈规娆＄骇鎸夐挳 鈥?澧炲己鐗?*/
   .btn-outline {
     display: inline-flex;
     align-items: center;
@@ -450,7 +450,7 @@
     transform: translateY(0);
   }
 
-  /* 标签 (Pill) �?增强�?*/
+  /* 鏍囩 (Pill) 鈥?澧炲己鐗?*/
   .pill {
     display: inline-flex;
     align-items: center;
@@ -526,7 +526,7 @@
     -webkit-backdrop-filter: blur(8px);
   }
 
-  /* 分区标签 �?增强�?*/
+  /* 鍒嗗尯鏍囩 鈥?澧炲己鐗?*/
   .section-label {
     display: inline-flex;
     align-items: center;
@@ -547,7 +547,15 @@
     opacity: 0.7;
   }
 
-  /* 分区标题 */
+  .section-label::after {
+    content: '';
+    width: 28px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--ice-100), var(--tundra-100));
+    opacity: 0.7;
+  }
+
+  /* 鍒嗗尯鏍囬 */
   .section-title {
     font-size: clamp(1.8rem, 3vw, 2.6rem);
     font-weight: 700;
@@ -556,7 +564,7 @@
     color: var(--text-primary);
   }
 
-  /* Hero 主标�?*/
+  /* Hero 涓绘爣棰?*/
   .hero-title {
     font-size: clamp(2.6rem, 5.5vw, 4.2rem);
     font-weight: 800;
@@ -564,7 +572,7 @@
     letter-spacing: -0.04em;
   }
 
-  /* 品牌超大标题 �?冻土回声 Logo 级展�?*/
+  /* 鍝佺墝瓒呭ぇ鏍囬 鈥?鍐诲湡鍥炲０ Logo 绾у睍绀?*/
   .brand-title {
     font-size: clamp(3rem, 7vw, 5.6rem);
     font-weight: 900;
@@ -582,7 +590,7 @@
     text-shadow: 0 0 40px rgba(76, 201, 240, 0.15);
   }
 
-  /* 品牌标语 �?破土而出，回响世�?*/
+  /* 鍝佺墝鏍囪 鈥?鐮村湡鑰屽嚭锛屽洖鍝嶄笘鐣?*/
   .brand-tagline {
     font-size: clamp(1rem, 2vw, 1.25rem);
     font-weight: 500;
@@ -591,14 +599,14 @@
     text-shadow: 0 0 20px rgba(76, 201, 240, 0.08);
   }
 
-  /* CTA 标题 */
+  /* CTA 鏍囬 */
   .cta-title {
     font-size: clamp(1.6rem, 3.5vw, 2.4rem);
     font-weight: 700;
     line-height: 1.25;
   }
 
-  /* 极光背景光晕 �?增强�?*/
+  /* 鏋佸厜鑳屾櫙鍏夋檿 鈥?澧炲己鐗?*/
   .aurora-glow-top {
     position: absolute;
     top: -15%;
@@ -623,7 +631,7 @@
     animation: aurora-shift 10s ease-in-out infinite reverse;
   }
 
-  /* 滚动浮现动画 */
+  /* 婊氬姩娴幇鍔ㄧ敾 */
   .fade-up {
     animation: fade-up 0.7s var(--ease-out) both;
   }
@@ -634,7 +642,7 @@
   .fade-up-delay-5 { animation-delay: 0.5s; }
   .fade-up-delay-6 { animation-delay: 0.6s; }
 
-  /* 统计数字 */
+  /* 缁熻鏁板瓧 */
   .stat-number {
     font-size: clamp(2rem, 3.5vw, 3rem);
     font-weight: 800;
@@ -642,7 +650,7 @@
     letter-spacing: -0.02em;
   }
 
-  /* 页面通用容器 */
+  /* 椤甸潰閫氱敤瀹瑰櫒 */
   .page-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -653,7 +661,7 @@
     padding: 80px 0;
   }
 
-  /* 游戏/活动卡片悬停效果 �?冻土冰晶�?*/
+  /* 娓告垙/娲诲姩鍗＄墖鎮仠鏁堟灉 鈥?鍐诲湡鍐版櫠鎰?*/
   .game-card {
     transition: transform var(--duration-normal) var(--ease-out),
                 box-shadow var(--duration-normal) var(--ease-out),
@@ -665,7 +673,7 @@
     border-color: rgba(76, 201, 240, 0.22);
   }
 
-  /* 活动卡片图片 */
+  /* 娲诲姩鍗＄墖鍥剧墖 */
   .activity-card-image {
     position: relative;
     width: 100%;
@@ -684,7 +692,7 @@
   .group:hover .activity-card-image img {
     transform: scale(1.05);
   }
-  /* 多图滚动指示�?*/
+  /* 澶氬浘婊氬姩鎸囩ず鍣?*/
   .activity-card-image .image-counter {
     position: absolute;
     bottom: 8px;
@@ -699,7 +707,7 @@
     border: 1px solid rgba(255, 255, 255, 0.08);
   }
 
-  /* 活动卡片图片悬停�?*/
+  /* 娲诲姩鍗＄墖鍥剧墖鎮仠灞?*/
   .activity-image-hover {
     position: absolute;
     inset: 0;
@@ -724,7 +732,7 @@
     letter-spacing: 0.02em;
   }
 
-  /* 图片被点击后不要让卡�?hover 缩放干扰 */
+  /* 鍥剧墖琚偣鍑诲悗涓嶈璁╁崱鐗?hover 缂╂斁骞叉壈 */
   .activity-card-image:focus-visible {
     outline: 2px solid var(--accent);
     outline-offset: -2px;
@@ -864,7 +872,7 @@
     background: rgba(255, 255, 255, 0.6);
   }
 
-  /* 移动端适配 */
+  /* 绉诲姩绔€傞厤 */
   @media (max-width: 768px) {
     .lightbox-image-container {
       width: 96vw;
@@ -882,7 +890,7 @@
     }
   }
 
-  /* 导航链接 �?增强�?*/
+  /* 瀵艰埅閾炬帴 鈥?澧炲己鐗?*/
   .nav-link {
     position: relative;
     color: var(--text-secondary);
@@ -907,7 +915,7 @@
     box-shadow: 0 0 8px rgba(76, 201, 240, 0.5);
   }
 
-  /* 极光背景装饰 */
+  /* 鏋佸厜鑳屾櫙瑁呴グ */
   .aurora-orb {
     position: absolute;
     border-radius: 50%;
@@ -917,7 +925,7 @@
     will-change: transform;
   }
 
-  /* 页脚链接 */
+  /* 椤佃剼閾炬帴 */
   .footer-link {
     color: var(--text-tertiary);
     transition: color var(--duration-fast) var(--ease-out);
@@ -926,7 +934,7 @@
     color: var(--ice-100);
   }
 
-  /* 时间�?�?冻土极光�?*/
+  /* 鏃堕棿绾?鈥?鍐诲湡鏋佸厜鑹?*/
   .timeline-line {
     position: absolute;
     left: 50%;
@@ -949,7 +957,7 @@
     box-shadow: 0 0 16px rgba(76, 201, 240, 0.5), 0 0 40px rgba(45, 212, 191, 0.15);
   }
 
-  /* Markdown 文章样式 */
+  /* Markdown 鏂囩珷鏍峰紡 */
   .article-content h1 { font-size: 1.8rem; font-weight: 700; margin: 2rem 0 1rem; color: var(--text-primary); }
   .article-content h2 { font-size: 1.4rem; font-weight: 600; margin: 1.8rem 0 0.8rem; color: var(--text-primary); }
   .article-content h3 { font-size: 1.15rem; font-weight: 600; margin: 1.5rem 0 0.6rem; color: var(--text-primary); }
@@ -1011,9 +1019,9 @@
   }
 
   /* ============================================
-     滚动浮现动画 (Scroll-Triggered Reveal)
-     使用 CSS animation-timeline: view()
-     现代浏览器原生支持，旧浏览器降级为立即显�?
+     婊氬姩娴幇鍔ㄧ敾 (Scroll-Triggered Reveal)
+     浣跨敤 CSS animation-timeline: view()
+     鐜颁唬娴忚鍣ㄥ師鐢熸敮鎸侊紝鏃ф祻瑙堝櫒闄嶇骇涓虹珛鍗虫樉绀?
      ============================================ */
 
   @supports (animation-timeline: view()) {
@@ -1040,7 +1048,7 @@
     }
   }
 
-  /* 降级方案：不支持 view-timeline 的浏览器默认可见 */
+  /* 闄嶇骇鏂规锛氫笉鏀寔 view-timeline 鐨勬祻瑙堝櫒榛樿鍙 */
   @supports not (animation-timeline: view()) {
     .reveal-up,
     .reveal-scale,
@@ -1053,7 +1061,7 @@
 }
 
 /* ============================================
-   工具�?
+   宸ュ叿绫?
    ============================================ */
 @layer utilities {
   .text-balance {
@@ -1077,7 +1085,7 @@
     -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 30%, black 20%, transparent 70%);
   }
 
-  /* 顶部极光光晕 �?用于 section header */
+  /* 椤堕儴鏋佸厜鍏夋檿 鈥?鐢ㄤ簬 section header */
   .section-glow-top {
     position: absolute;
     top: 0;
@@ -1090,7 +1098,7 @@
     pointer-events: none;
   }
 
-  /* 底部极光光晕 �?用于 section footer */
+  /* 搴曢儴鏋佸厜鍏夋檿 鈥?鐢ㄤ簬 section footer */
   .section-glow-bottom {
     position: absolute;
     bottom: 0;
@@ -1103,7 +1111,7 @@
     pointer-events: none;
   }
 
-  /* 噪点纹理叠加�?*/
+  /* 鍣偣绾圭悊鍙犲姞灞?*/
   .noise-overlay {
     position: absolute;
     inset: 0;
@@ -1113,7 +1121,7 @@
     background-size: 256px 256px;
   }
 
-  /* 对角线扫描线 �?超细微科技�?*/
+  /* 瀵硅绾挎壂鎻忕嚎 鈥?瓒呯粏寰鎶€鎰?*/
   .scanlines {
     position: absolute;
     inset: 0;

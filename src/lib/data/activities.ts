@@ -15,6 +15,15 @@ export interface ActivityInfo {
 
 const zhActivities: ActivityInfo[] = [
   {
+    id: 'ssca-2025',
+    title: 'SSCA 动漫游戏博览会 · 游戏区',
+    titleEn: 'SSCA Animation, Comic & Game Expo · Game Zone',
+    date: '2025-10',
+    location: '沈阳',
+    description: '冻土回声首次承办沈阳第十七届 SSCA 动漫游戏博览会游戏展区，为东北地区的独立游戏开发者提供展示与交流的平台，吸引超过200名开发者和玩家参与。',
+    status: 'completed',
+  },
+  {
     id: 'ssca-2026',
     title: 'SSCA 动漫游戏博览会 · 游戏区',
     titleEn: 'SSCA Animation, Comic & Game Expo · Game Zone',
@@ -90,6 +99,15 @@ const zhActivities: ActivityInfo[] = [
 ];
 
 const enActivities: ActivityInfo[] = [
+  {
+    id: 'ssca-2025',
+    title: 'SSCA Animation, Comic & Game Expo · Game Zone',
+    titleEn: 'SSCA Animation, Comic & Game Expo · Game Zone',
+    date: '2025-10',
+    location: 'Shenyang',
+    description: 'Permafrost Echo hosted the game zone at the 17th Shenyang SSCA Animation, Comic & Game Expo for the first time, providing a showcase platform for indie developers from Northeast China, attracting over 200 developers and players.',
+    status: 'completed',
+  },
   {
     id: 'ssca-2026',
     title: 'SSCA Animation, Comic & Game Expo · Game Zone',
@@ -167,6 +185,15 @@ const enActivities: ActivityInfo[] = [
 
 const jaActivities: ActivityInfo[] = [
   {
+    id: 'ssca-2025',
+    title: 'SSCA アニメ・コミック・ゲーム博覧会 · ゲームゾーン',
+    titleEn: 'SSCA Animation, Comic & Game Expo · Game Zone',
+    date: '2025-10',
+    location: '瀋陽',
+    description: 'パーマフロスト・エコーが第17回SSCA瀋陽アニメ・コミック・ゲーム博覧会でゲームゾーンを初運営。東北地方のインディーゲーム開発者に展示・交流の場を提供し、200名以上が参加。',
+    status: 'completed',
+  },
+  {
     id: 'ssca-2026',
     title: 'SSCA アニメ・コミック・ゲーム博覧会 · ゲームゾーン',
     titleEn: 'SSCA Animation, Comic & Game Expo · Game Zone',
@@ -242,6 +269,15 @@ const jaActivities: ActivityInfo[] = [
 ];
 
 const koActivities: ActivityInfo[] = [
+  {
+    id: 'ssca-2025',
+    title: 'SSCA 애니메이션·코믹·게임 엑스포 · 게임 존',
+    titleEn: 'SSCA Animation, Comic & Game Expo · Game Zone',
+    date: '2025-10',
+    location: '선양',
+    description: '페름프로스트 에코가 제17회 SSCA 선양 애니메이션·코믹·게임 엑스포에서 게임 존을 처음 운영. 동북 지역 인디 게임 개발자에게 전시·교류의 장을 제공하며 200명 이상 참여.',
+    status: 'completed',
+  },
   {
     id: 'ssca-2026',
     title: 'SSCA 애니메이션·코믹·게임 엑스포 · 게임 존',
@@ -319,6 +355,15 @@ const koActivities: ActivityInfo[] = [
 
 const ruActivities: ActivityInfo[] = [
   {
+    id: 'ssca-2025',
+    title: '17-я выставка SSCA · Игровая зона',
+    titleEn: 'SSCA Animation, Comic & Game Expo · Game Zone',
+    date: '2025-10',
+    location: 'Шэньян',
+    description: 'Permafrost Echo впервые организовал игровую зону на 17-й Шэньянской выставке аниме, комиксов и игр SSCA, предоставив платформу для инди-разработчиков Северо-Восточного Китая, с участием более 200 человек.',
+    status: 'completed',
+  },
+  {
     id: 'ssca-2026',
     title: 'SSCA Выставка аниме, комиксов и игр · Игровая зона',
     titleEn: 'SSCA Animation, Comic & Game Expo · Game Zone',
@@ -394,6 +439,15 @@ const ruActivities: ActivityInfo[] = [
 ];
 
 const mnActivities: ActivityInfo[] = [
+  {
+    id: 'ssca-2025',
+    title: '17 дахь SSCA Үзэсгэлэн · Тоглоомын Бүс',
+    titleEn: 'SSCA Animation, Comic & Game Expo · Game Zone',
+    date: '2025-10',
+    location: 'Шэньян',
+    description: 'Мөсөн Хөрсний Цуурай нь 17 дахь SSCA Шэньян Анимэ, Комик, Тоглоомын Үзэсгэлэн дээр тоглоомын бүс анх удаа зохион байгуулж, Зүүн хойд Хятадын инди тоглоом хөгжүүлэгчдэд үзүүлэн, харилцааны тавцан бий болгож, 200 гаруй хөгжүүлэгч, тоглогч оролцов.',
+    status: 'completed',
+  },
   {
     id: 'ssca-2026',
     title: 'SSCA Анимэ, Комик, Тоглоомын Үзэсгэлэн · Тоглоомын Бүс',

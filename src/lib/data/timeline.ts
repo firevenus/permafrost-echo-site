@@ -13,14 +13,14 @@ const zhTimeline: TimelineEvent[] = [
     description: '冻土回声（Permafrost Echo）品牌在沈阳正式成立，定位为东北亚独立游戏生态平台。',
   },
   {
-    year: '2025.03',
-    title: '首届 SSCA 动漫游戏博览会 · 游戏区',
-    description: '首次承办 SSCA 沈阳动漫游戏博览会的独立游戏专区，吸引 200+ 参与者。',
-  },
-  {
     year: '2025.08',
     title: '高校联盟启动',
     description: '联合东北地区12所高校成立独立游戏高校联盟，建立校园开发者网络。',
+  },
+  {
+    year: '2025.10',
+    title: '首届 SSCA 动漫游戏博览会 · 游戏区',
+    description: '首次承办沈阳第十七届 SSCA 动漫游戏博览会游戏展区，吸引 200+ 参与者。',
   },
   {
     year: '2026.02',
@@ -46,14 +46,14 @@ const enTimeline: TimelineEvent[] = [
     description: 'Permafrost Echo brand officially established in Shenyang, positioned as a Northeast Asia indie game ecosystem platform.',
   },
   {
-    year: '2025.03',
-    title: '1st SSCA Expo · Game Zone',
-    description: 'Hosted the indie game zone at the first SSCA Shenyang Animation, Comic & Game Expo, attracting 200+ participants.',
-  },
-  {
     year: '2025.08',
     title: 'University Alliance Launch',
     description: 'Established an indie game university alliance with 12 universities across Northeast China, building a campus developer network.',
+  },
+  {
+    year: '2025.10',
+    title: '1st SSCA Expo · Game Zone',
+    description: 'Hosted the game zone at the 17th Shenyang SSCA Animation, Comic & Game Expo, attracting 200+ participants.',
   },
   {
     year: '2026.02',
@@ -79,14 +79,14 @@ const jaTimeline: TimelineEvent[] = [
     description: 'パーマフロスト・エコー（Permafrost Echo）ブランドが瀋陽で正式に設立。東北アジアのインディーゲームエコシステムプラットフォームとして位置づけられる。',
   },
   {
-    year: '2025.03',
-    title: '第1回 SSCA 博覧会 · ゲームゾーン',
-    description: '第1回SSCA瀋陽アニメ・コミック・ゲーム博覧会でインディーゲームゾーンを運営。200名以上が参加。',
-  },
-  {
     year: '2025.08',
     title: '大学連盟始動',
     description: '東北地域の12大学と連携し、インディーゲーム大学連盟を設立。キャンパス開発者ネットワークを構築。',
+  },
+  {
+    year: '2025.10',
+    title: '第17回 SSCA 博覧会 · ゲームゾーン',
+    description: '第17回SSCA瀋陽アニメ・コミック・ゲーム博覧会でゲームゾーンを初運営。200名以上が参加。',
   },
   {
     year: '2026.02',
@@ -112,14 +112,14 @@ const koTimeline: TimelineEvent[] = [
     description: '페름프로스트 에코(Permafrost Echo) 브랜드가 선양에서 공식 설립. 동북아시아 인디 게임 생태계 플랫폼으로 자리매김.',
   },
   {
-    year: '2025.03',
-    title: '제1회 SSCA 엑스포 · 게임 존',
-    description: '제1회 SSCA 선양 애니메이션·코믹·게임 엑스포에서 인디 게임 존을 운영. 200명 이상 참여.',
-  },
-  {
     year: '2025.08',
     title: '대학 연합 출범',
     description: '동북 지역 12개 대학과 연합하여 인디 게임 대학 연합을 설립. 캠퍼스 개발자 네트워크 구축.',
+  },
+  {
+    year: '2025.10',
+    title: '제17회 SSCA 엑스포 · 게임 존',
+    description: '제17회 SSCA 선양 애니메이션·코믹·게임 엑스포에서 게임 존을 처음 운영. 200명 이상 참여.',
   },
   {
     year: '2026.02',
@@ -145,14 +145,14 @@ const ruTimeline: TimelineEvent[] = [
     description: 'Бренд Permafrost Echo официально основан в Шэньяне, позиционируется как платформа экосистемы инди-игр Северо-Восточной Азии.',
   },
   {
-    year: '2025.03',
-    title: 'Первая выставка SSCA · Игровая зона',
-    description: 'Организована зона инди-игр на первой Шэньянской выставке аниме, комиксов и игр SSCA, привлекшая более 200 участников.',
-  },
-  {
     year: '2025.08',
     title: 'Запуск университетского альянса',
     description: 'Создан альянс инди-игр с 12 университетами Северо-Восточного Китая, построена сеть кампусных разработчиков.',
+  },
+  {
+    year: '2025.10',
+    title: '17-я выставка SSCA · Игровая зона',
+    description: 'Впервые организована игровая зона на 17-й Шэньянской выставке аниме, комиксов и игр SSCA, привлекшая более 200 участников.',
   },
   {
     year: '2026.02',
@@ -178,14 +178,14 @@ const mnTimeline: TimelineEvent[] = [
     description: 'Мөсөн Хөрсний Цуурай (Permafrost Echo) бренд Шэньян хотод албан ёсоор байгуулагдаж, Зүүн хойд Азийн инди тоглоомын экосистемийн платформ болон байр сууриа тодорхойлов.',
   },
   {
-    year: '2025.03',
-    title: 'Анхны SSCA Үзэсгэлэн · Тоглоомын Бүс',
-    description: 'Анхны SSCA Анимэ, Комик, Тоглоомын Үзэсгэлэн дээр инди тоглоомын бүс зохион байгуулж, 200+ оролцогч татав.',
-  },
-  {
     year: '2025.08',
     title: 'Их сургуулийн холбоо эхэлсэн',
     description: 'Зүүн хойд Хятадын 12 их сургуультай хамтран инди тоглоомын их сургуулийн холбоог байгуулж, кампусын хөгжүүлэгчдийн сүлжээг бий болгов.',
+  },
+  {
+    year: '2025.10',
+    title: '17 дахь SSCA Үзэсгэлэн · Тоглоомын Бүс',
+    description: '17 дахь SSCA Шэньян Анимэ, Комик, Тоглоомын Үзэсгэлэн дээр тоглоомын бүс анх удаа зохион байгуулж, 200+ оролцогч татав.',
   },
   {
     year: '2026.02',
