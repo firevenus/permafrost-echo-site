@@ -69,7 +69,7 @@ export default function Header({ messages }: { messages: Record<string, string> 
         <Link href="/" className="flex items-center gap-3 no-underline group">
           <Image
             src="/images/logo.png"
-            alt="冻土回声 Permafrost Echo"
+            alt="「冻土回声」 Permafrost Echo"
             width={32}
             height={32}
             className="w-8 h-8 rounded-lg object-contain shadow-[0_0_16px_rgba(76,201,240,0.3)] transition-shadow duration-300 group-hover:shadow-[0_0_24px_rgba(76,201,240,0.5)]"

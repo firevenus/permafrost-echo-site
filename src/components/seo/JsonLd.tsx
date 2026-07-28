@@ -3,8 +3,8 @@ export default function JsonLd() {
     {
       '@context': 'https://schema.org',
       '@type': 'Organization',
-      name: '冻土回声 | Permafrost Echo',
-      alternateName: ['Permafrost Echo', '冻土回声'],
+      name: '「冻土回声」 | Permafrost Echo',
+      alternateName: ['Permafrost Echo', '「冻土回声」'],
       url: 'https://permafrost-echo.com',
       logo: 'https://permafrost-echo.com/images/logo.png',
       description:
@@ -27,7 +27,7 @@ export default function JsonLd() {
     {
       '@context': 'https://schema.org',
       '@type': 'WebSite',
-      name: '冻土回声 | Permafrost Echo',
+      name: '「冻土回声」 | Permafrost Echo',
       url: 'https://permafrost-echo.com',
       potentialAction: {
         '@type': 'SearchAction',

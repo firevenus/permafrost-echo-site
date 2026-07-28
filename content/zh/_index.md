@@ -4,9 +4,9 @@ date: 2023-01-01
 draft: false
 ---
 
-![冻土回声 × 东北亚独立游戏联盟](/images/content/banner.svg)
+![「冻土回声」 × 东北亚独立游戏联盟](/images/content/banner.svg)
 
-# 冻土回声 × 东北亚独立游戏联盟
+# 「冻土回声」 × 东北亚独立游戏联盟
 
 ## 连接北境的创意回声，汇聚独立游戏的力量。
 

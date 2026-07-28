@@ -21,7 +21,7 @@ export default function HomePage() {
 
   const statItems = [
     { value: `${stats.members}+`, label: t('hero.stats.members') },
-    { value: `${stats.universities}+`, label: t('hero.stats.universities') },
+    { value: `${stats.universities}+`, label: t('hero.stats.universities'), sublabel: '高校联盟' },
     { value: `${stats.games}+`, label: t('hero.stats.games') },
     { value: stats.years.toString(), label: t('hero.stats.years') },
   ];
@@ -87,7 +87,7 @@ export default function HomePage() {
 
             {/* Main Brand Title */}
             <h1 className="brand-title gradient-text mb-2 fade-up fade-up-delay-1">
-              冻土回声
+              「冻土回声」
             </h1>
             <p className="brand-title-en mb-6 fade-up fade-up-delay-2">
               Permafrost Echo
@@ -127,6 +127,11 @@ export default function HomePage() {
                   <div className="text-xs text-[rgba(237,242,250,0.4)] font-medium">
                     {stat.label}
                   </div>
+                  {stat.sublabel && (
+                    <div className="text-[10px] text-[rgba(237,242,250,0.25)] font-medium mt-0.5">
+                      {stat.sublabel}
+                    </div>
+                  )}
                 </div>
               ))}
             </div>

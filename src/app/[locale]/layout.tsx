@@ -33,10 +33,10 @@ const localeConfig: Record<
   zh: {
     lang: 'zh-CN',
     ogLocale: 'zh_CN',
-    title: '冻土回声 | Permafrost Echo — 东北亚独立游戏生态平台',
+    title: '「冻土回声」 | Permafrost Echo — 东北亚独立游戏生态平台',
     description:
-      '冻土回声（Permafrost Echo）— 专注于游戏开发的独立游戏生态平台，立足中国东北沈阳，覆盖东北亚。举办 Game Jam、SSCA 游戏展区、高校联盟等活动。探秘中国游戏市场新势力。',
-    keywords: [...baseKeywords, '冻土回声', 'Permafrost Echo', '独立游戏', '游戏开发', '中国游戏市场', '中国东北', '东北亚', '沈阳', '游戏社区', '独立游戏生态', '游戏开发社区'],
+      '「冻土回声」（Permafrost Echo）— 专注于游戏开发的独立游戏生态平台，立足中国东北沈阳，覆盖东北亚。举办 Game Jam、SSCA 游戏展区、高校联盟等活动。探秘中国游戏市场新势力。',
+    keywords: [...baseKeywords, '「冻土回声」', 'Permafrost Echo', '独立游戏', '游戏开发', '中国游戏市场', '中国东北', '东北亚', '沈阳', '游戏社区', '独立游戏生态', '游戏开发社区'],
   },
   en: {
     lang: 'en',
@@ -89,9 +89,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: config.description,
     metadataBase: new URL(BASE_URL),
     keywords: config.keywords,
-    authors: [{ name: '冻土回声 Permafrost Echo' }],
-    creator: '冻土回声 Permafrost Echo',
-    publisher: '冻土回声 Permafrost Echo',
+    authors: [{ name: '「冻土回声」 Permafrost Echo' }],
+    creator: '「冻土回声」 Permafrost Echo',
+    publisher: '「冻土回声」 Permafrost Echo',
     robots: {
       index: true,
       follow: true,
@@ -102,7 +102,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       type: 'website',
       locale: config.ogLocale,
-      siteName: '冻土回声 | Permafrost Echo',
+      siteName: '「冻土回声」 | Permafrost Echo',
       title: config.title,
       description: config.description,
       url: `${BASE_URL}/${locale}`,

@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { useTranslations, useMessages, useLocale } from 'next-intl';
-import { Quote, Target, Gamepad2, Calendar, Users, GraduationCap, Shield, Radio, Heart, Mail, MessageCircle, ExternalLink, MapPin } from 'lucide-react';
+import { Quote, Target, Gamepad2, Calendar, Users, GraduationCap, Shield, Radio, Heart, Mail, MessageCircle, ExternalLink, MapPin, Eye } from 'lucide-react';
 import { getTimelineEvents } from '@/lib/data';
 import type { Locale } from '@/i18n/routing';
 import WechatQrModal from '@/components/WechatQrModal';
@@ -203,9 +203,8 @@ export default function AboutPage() {
               {/* Vision */}
               <div className="glass-card p-8 md:p-10 game-card group relative overflow-hidden flex flex-col justify-center">
                 <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#7b2ff7] to-transparent opacity-40" />
-                <div className="mb-5">
-                  <span className="section-label text-left inline-block">{t('about.vision.title')}</span>
-                </div>
+                <Eye size={24} className="text-[#7b2ff7] mb-5 transition-transform duration-300 group-hover:scale-110" />
+                <h3 className="text-lg font-bold text-[#edf2fa] mb-4">{t('about.vision.title')}</h3>
                 <p className="text-[rgba(237,242,250,0.5)] leading-relaxed text-base italic">
                   &ldquo;{t('about.vision.content')}&rdquo;
                 </p>

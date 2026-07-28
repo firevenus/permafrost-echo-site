@@ -10,7 +10,7 @@ const zhTimeline: TimelineEvent[] = [
   {
     year: '2024',
     title: '品牌创立',
-    description: '冻土回声（Permafrost Echo）品牌在沈阳正式成立，定位为东北亚独立游戏生态平台。',
+    description: '「冻土回声」（Permafrost Echo）品牌在沈阳正式成立，定位为东北亚独立游戏生态平台。',
   },
   {
     year: '2025.08',
@@ -30,7 +30,7 @@ const zhTimeline: TimelineEvent[] = [
   {
     year: '2026.03',
     title: 'SSCA 2026 动漫游戏博览会 · 游戏展区',
-    description: 'SSCA 2026 规模升级，冻土回声游戏专区参展作品增至 12 款，为更多独立游戏开发者提供展示与交流的平台。',
+    description: 'SSCA 2026 规模升级，「冻土回声」游戏专区参展作品增至 12 款，为更多独立游戏开发者提供展示与交流的平台。',
   },
   {
     year: '2026.05',

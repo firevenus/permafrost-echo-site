@@ -14,7 +14,7 @@ draft: false
 
 每年两次举办，连接东北三省、日韩俄蒙的创作者，共同在短时间内完成原创游戏开发。
 
-### 冻土回声原创游戏展（Permafrost Echo Indie Showcase）
+### 「冻土回声」原创游戏展（Permafrost Echo Indie Showcase）
 联合动漫游戏展会，展示区域内优秀原创游戏作品。
 
 ### 开发者工作坊（Dev Workshop）

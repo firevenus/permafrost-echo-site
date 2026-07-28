@@ -44,7 +44,7 @@ export async function getPageMetadata(
 
   const pageTitle = getNested(messages, titleKey);
   const pageDescription = getNested(messages, descriptionKey);
-  const titleWithBrand = `${pageTitle} | 冻土回声 Permafrost Echo`;
+  const titleWithBrand = `${pageTitle} | 「冻土回声」 Permafrost Echo`;
 
   const url = `${BASE_URL}/${locale}${path}`;
 
@@ -71,7 +71,7 @@ export async function getPageMetadata(
     openGraph: {
       type: 'website',
       locale: getOgLocale(locale),
-      siteName: '冻土回声 | Permafrost Echo',
+      siteName: '「冻土回声」 | Permafrost Echo',
       title: titleWithBrand,
       description: pageDescription,
       url,

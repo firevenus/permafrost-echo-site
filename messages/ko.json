@@ -54,7 +54,7 @@
     "business": {
       "title": "사업 방향",
       "item1": "Global Game Jam 및 CiGA Game Jam 개최",
-      "item2": "SSCA 애니메이션·코믹·게임 엑스포 및 북경 애니메이션 게임 카니발 게임존 운영",
+      "item2": "게임 전시 운영",
       "item3": "동북 게임 개발 업계 커뮤니티 운영",
       "item4": "동북 대학 게임 개발 동아리 연합 운영",
       "item5": "게임 퍼블리싱 컴플라이언스 및 전시 지원",
@@ -131,7 +131,7 @@
     "description": "대학 연합, 파트너 및 커뮤니티 데이터",
     "universities": {
       "title": "동북 대학 게임 개발 클럽 연합",
-      "description": "하얼빈, 선양, 창춘, 다롄, 진저우, 후허하오터 6개 도시를 커버하며 20여 개 대학 16개 게임 개발 클럽을 결집",
+      "description": "하얼빈, 선양, 창춘, 다롄, 푸신, 지린시 6개 도시를 커버하며 20여 개 대학 16개 게임 개발 클럽을 결집",
       "cta": "자세히 보기",
       "comingSoon": "동아리 이름",
       "stayTuned": "동아리 소개"
@@ -160,19 +160,19 @@
     "founder": "설립자",
     "volunteers": "자원봉사자 여러분",
     "members": [
-      { "name": "L", "nameEn": "L", "role": "공동 창립자 / 운영", "bio": "" },
-      { "name": "成思", "nameEn": "Enki", "role": "공동 창립자 / 기술", "bio": "" },
-      { "name": "疯兔", "nameEn": "FungTO", "role": "미술", "bio": "" },
-      { "name": "麻团", "nameEn": "MattUan", "role": "기획", "bio": "" },
-      { "name": "漆玄", "nameEn": "Akv_Qixuan", "role": "프로그래머", "bio": "" },
-      { "name": "ZZK", "nameEn": "ZZK", "role": "", "bio": "" }
+      { "name": "L", "nameEn": "L", "role": "핵심 팀 멤버", "bio": "" },
+      { "name": "成思", "nameEn": "Enki", "role": "핵심 팀 멤버", "bio": "" },
+      { "name": "疯兔", "nameEn": "FungTO", "role": "핵심 팀 멤버", "bio": "" },
+      { "name": "麻团", "nameEn": "MattUan", "role": "핵심 팀 멤버", "bio": "" },
+      { "name": "漆玄", "nameEn": "Akv_Qixuan", "role": "핵심 팀 멤버", "bio": "" },
+      { "name": "ZZK", "nameEn": "ZZK", "role": "핵심 팀 멤버", "bio": "" }
     ]
   },
   "roadmap": {
     "title": "로드맵",
     "description": "우리의 여정을 돌아보고 미래를 내다봅니다",
     "timeline": "브랜드 연혁",
-    "futurePlan": "미래 계획",
+    "futurePlan": "더 많은 콘텐츠는 연례 보고서 발표 후 업데이트됩니다",
     "status": {
       "completed": "완료",
       "in-progress": "진행 중",

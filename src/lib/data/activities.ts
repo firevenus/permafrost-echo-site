@@ -20,7 +20,7 @@ const zhActivities: ActivityInfo[] = [
     titleEn: 'SSCA Animation, Comic & Game Expo · Game Zone',
     date: '2025-10',
     location: '沈阳',
-    description: '冻土回声首次承办沈阳第十七届 SSCA 动漫游戏博览会游戏展区，为东北地区的独立游戏开发者提供展示与交流的平台。',
+    description: '「冻土回声」首次承办沈阳第十七届 SSCA 动漫游戏博览会游戏展区，为东北地区的独立游戏开发者提供展示与交流的平台。',
     status: 'completed',
   },
   {
@@ -29,7 +29,7 @@ const zhActivities: ActivityInfo[] = [
     titleEn: 'SSCA Animation, Comic & Game Expo · Game Zone',
     date: '2026-03-15',
     location: '沈阳',
-    description: '冻土回声在 SSCA 沈阳动漫游戏博览会上承办独立游戏专区，为东北地区的独立游戏开发者提供展示和交流的平台。',
+    description: '「冻土回声」在 SSCA 沈阳动漫游戏博览会上承办独立游戏专区，为东北地区的独立游戏开发者提供展示和交流的平台。',
     status: 'completed',
   },
   {
@@ -47,7 +47,7 @@ const zhActivities: ActivityInfo[] = [
     titleEn: 'Northern Anime & Game Carnival',
     date: '2026-05',
     location: '沈阳',
-    description: '冻土回声携12款东北亚独立游戏作品亮相北境动漫游戏嘉年华，展示区域游戏创作力量，拓展全国合作网络。',
+    description: '「冻土回声」携12款东北亚独立游戏作品亮相北境动漫游戏嘉年华，展示区域游戏创作力量，拓展全国合作网络。',
     status: 'completed',
   },
   {
@@ -74,7 +74,7 @@ const zhActivities: ActivityInfo[] = [
     titleEn: 'Northern Anime & Game Carnival · Game Zone',
     date: '2026-10',
     location: '沈阳',
-    description: '北境动漫游戏嘉年华独立游戏专区，冻土回声联合承办，为东北亚独立游戏开发者提供展示与交流平台。',
+    description: '北境动漫游戏嘉年华独立游戏专区，「冻土回声」联合承办，为东北亚独立游戏开发者提供展示与交流平台。',
     status: 'upcoming',
     highlight: true,
   },
@@ -84,7 +84,7 @@ const zhActivities: ActivityInfo[] = [
     titleEn: 'SSCA Animation, Comic & Game Expo · Game Zone',
     date: '2027-03',
     location: '沈阳',
-    description: '冻土回声在 SSCA 沈阳动漫游戏博览会上承办独立游戏专区，为东北地区的独立游戏开发者提供展示和交流的平台。',
+    description: '「冻土回声」在 SSCA 沈阳动漫游戏博览会上承办独立游戏专区，为东北地区的独立游戏开发者提供展示和交流的平台。',
     status: 'upcoming',
   },
   {
@@ -93,7 +93,7 @@ const zhActivities: ActivityInfo[] = [
     titleEn: 'Global Game Jam 2027 Shenyang Site',
     date: '2027-02',
     location: '沈阳',
-    description: '全球最大的游戏创作马拉松活动再度落地沈阳，48小时内从零开始创作游戏原型，汇聚东北亚最具创意的游戏开发者。',
+    description: '全球最大的游戏创作马拉松活动即将举办，48小时内从零开始创作游戏原型，汇聚东北亚最具创意的游戏开发者。',
     status: 'upcoming',
   },
 ];

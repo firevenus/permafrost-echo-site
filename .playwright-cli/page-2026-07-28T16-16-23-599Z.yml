@@ -1,0 +1,22 @@
+- generic [ref=e3]:
+  - navigation [ref=e4]:
+    - img "XIRANG GAMES" [ref=e6] [cursor=pointer]
+    - generic [ref=e7]:
+      - button "首页" [ref=e8] [cursor=pointer]
+      - button "关于我们" [ref=e9] [cursor=pointer]
+    - generic [ref=e10]:
+      - generic [ref=e11]:
+        - button "中" [ref=e12] [cursor=pointer]
+        - button "EN" [ref=e13] [cursor=pointer]
+        - button "日" [ref=e14] [cursor=pointer]
+        - button "ES" [ref=e15] [cursor=pointer]
+        - button "FR" [ref=e16] [cursor=pointer]
+      - button "探索戏壤" [ref=e17] [cursor=pointer]
+  - main [ref=e18]:
+    - generic [ref=e19]:
+      - paragraph [ref=e21]: © 2026 戏壤科技（沈阳）有限公司 保留所有权利。 ICP备案号：辽ICP备2022003649号 公司地址：沈阳市皇姑区网易数字产业中心
+      - generic:
+        - heading "游 戏 承载着光阴的故事。" [level=1]:
+          - generic: 游 戏
+          - generic: 承载着光阴的故事。
+      - button "探索戏壤" [ref=e23] [cursor=pointer]

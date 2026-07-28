@@ -2,23 +2,23 @@ import { useTranslations } from 'next-intl';
 import { useLocale } from 'next-intl';
 import { Metadata } from 'next';
 import {
-  ChipIcon,
-  UsersIcon,
-  BuildingIcon,
+  Cpu,
+  Users,
+  Building2,
 } from 'lucide-react';
 import { cityGroups, getAllUniversityInfos } from '@/lib/data/universities';
 import type { UniversityInfo } from '@/lib/data/universities';
 
 export const metadata: Metadata = {
-  title: '社群生态 | 冻土回声',
+  title: '社群生态 | 「冻土回声」',
   description:
-    '东北高校游戏开发社团联盟 — 覆盖哈尔滨、长春、沈阳、大连、锦州、呼和浩特 6 座城市的多所高校',
+    '东北高校游戏开发社团联盟 — 覆盖哈尔滨、长春、沈阳、大连、阜新、吉林市 6 座城市的 20+ 所高校',
 };
 
 function SkillBadge({ skill }: { skill: string }) {
   return (
     <span className="inline-flex items-center gap-1 rounded-full border border-ice-100/30 bg-ice-100/10 px-2.5 py-1 text-xs font-medium text-ice-200">
-      <ChipIcon className="h-3 w-3" />
+      <Cpu className="h-3 w-3" />
       {skill}
     </span>
   );
@@ -120,15 +120,15 @@ export default function CommunityPage() {
         </h1>
         <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-stone-400">
           {isZh
-            ? '覆盖哈尔滨、长春、沈阳、大连、锦州、呼和浩特 6 座城市，联合 20 余所高校，通过 16 个游戏开发社团构建东北高校独立游戏开发生态网络，致力于为东北地区的独立游戏开发者提供展示与交流的平台。'
-            : 'Covering 6 cities — Harbin, Changchun, Shenyang, Dalian, Jinzhou, and Hohhot — uniting 20+ universities through 16 game development clubs to build an indie game development ecosystem network across Northeast China, dedicated to providing a showcase and networking platform for indie game developers.'}
+            ? '覆盖哈尔滨、长春、沈阳、大连、阜新、吉林市 6 座城市，联合 20 余所高校，通过 16 个游戏开发社团构建东北高校独立游戏开发生态网络，致力于为东北地区的独立游戏开发者提供展示与交流的平台。'
+            : 'Covering 6 cities — Harbin, Changchun, Shenyang, Dalian, Fuxin, and Jilin City — uniting 20+ universities through 16 game development clubs to build an indie game development ecosystem network across Northeast China, dedicated to providing a showcase and networking platform for indie game developers.'}
         </p>
 
         {/* Stats */}
         <div className="mt-12 grid grid-cols-3 gap-6 sm:gap-8">
           <div className="rounded-2xl border border-ice-100/15 bg-tundra-950/60 p-6 backdrop-blur-sm">
             <div className="flex items-center justify-center gap-2 text-3xl font-bold text-stone-100">
-              <BuildingIcon className="h-6 w-6 text-ice-200" />
+              <Building2 className="h-6 w-6 text-ice-200" />
               {cityGroups.length}
             </div>
             <div className="mt-2 text-xs font-medium tracking-wide text-stone-400">
@@ -137,7 +137,7 @@ export default function CommunityPage() {
           </div>
           <div className="rounded-2xl border border-ice-100/15 bg-tundra-950/60 p-6 backdrop-blur-sm">
             <div className="flex items-center justify-center gap-2 text-3xl font-bold text-stone-100">
-              <UsersIcon className="h-6 w-6 text-ice-200" />
+              <Users className="h-6 w-6 text-ice-200" />
               {allClubs.length}
             </div>
             <div className="mt-2 text-xs font-medium tracking-wide text-stone-400">
@@ -146,7 +146,7 @@ export default function CommunityPage() {
           </div>
           <div className="rounded-2xl border border-ice-100/15 bg-tundra-950/60 p-6 backdrop-blur-sm">
             <div className="flex items-center justify-center gap-2 text-3xl font-bold text-stone-100">
-              <BuildingIcon className="h-6 w-6 text-ice-200" />
+              <Building2 className="h-6 w-6 text-ice-200" />
               {totalSchools}
             </div>
             <div className="mt-2 text-xs font-medium tracking-wide text-stone-400">

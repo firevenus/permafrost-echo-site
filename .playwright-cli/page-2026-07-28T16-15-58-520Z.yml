@@ -1,0 +1,195 @@
+- generic [active] [ref=e1]:
+  - generic: AULA
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "狼蛛首页" [ref=e5] [cursor=pointer]:
+        - /url: /
+        - img "狼蛛 AULA" [ref=e6]
+      - navigation "主导航" [ref=e7]:
+        - list [ref=e8]:
+          - listitem [ref=e9]:
+            - link "首页" [ref=e10] [cursor=pointer]:
+              - /url: /
+          - listitem [ref=e11]:
+            - link "驱动" [ref=e12] [cursor=pointer]:
+              - /url: /index/index/driver.html
+          - listitem [ref=e13]:
+            - link "键盘" [ref=e14] [cursor=pointer]:
+              - /url: /index/index/keyboard.html
+          - listitem [ref=e15]:
+            - link "鼠标" [ref=e16] [cursor=pointer]:
+              - /url: /index/index/mouse.html
+          - listitem [ref=e17]:
+            - link "音频" [ref=e18] [cursor=pointer]:
+              - /url: /index/index/radioReception.html
+          - listitem [ref=e19]:
+            - link "新闻资讯" [ref=e20] [cursor=pointer]:
+              - /url: /article.html
+          - listitem [ref=e21]:
+            - link "关于狼蛛" [ref=e22] [cursor=pointer]:
+              - /url: /index/index/about.html
+          - listitem [ref=e23]:
+            - link "商务合作" [ref=e24] [cursor=pointer]:
+              - /url: /index/index/business.html
+          - listitem [ref=e25]:
+            - link "官方店铺" [ref=e26] [cursor=pointer]:
+              - /url: /index/index/official.html
+          - listitem [ref=e27]:
+            - link "技术支持" [ref=e28] [cursor=pointer]:
+              - /url: /index/index/afterSales.html
+      - generic [ref=e29]:
+        - textbox "搜索" [ref=e30]:
+          - /placeholder: 搜索...
+        - button "搜索" [ref=e31] [cursor=pointer]:
+          - img "搜索" [ref=e32]
+  - navigation "移动端导航":
+    - generic [ref=e33]:
+      - link "首页" [ref=e34] [cursor=pointer]:
+        - /url: /
+      - link "驱动" [ref=e35] [cursor=pointer]:
+        - /url: /index/index/driver.html
+      - link "键盘" [ref=e36] [cursor=pointer]:
+        - /url: /index/index/keyboard.html
+      - link "鼠标" [ref=e37] [cursor=pointer]:
+        - /url: /index/index/mouse.html
+      - link "音频" [ref=e38] [cursor=pointer]:
+        - /url: /index/index/radioReception.html
+      - link "新闻资讯" [ref=e39] [cursor=pointer]:
+        - /url: /article.html
+      - link "关于狼蛛" [ref=e40] [cursor=pointer]:
+        - /url: /index/index/about.html
+      - link "商务合作" [ref=e41] [cursor=pointer]:
+        - /url: /index/index/business.html
+      - link "官方店铺" [ref=e42] [cursor=pointer]:
+        - /url: /index/index/official.html
+      - link "技术支持" [ref=e43] [cursor=pointer]:
+        - /url: /index/index/afterSales.html
+  - generic:
+    - generic [ref=e45]:
+      - generic [ref=e46]: 三芯二艺 · 聚焦三核
+      - link "了解详情" [ref=e48] [cursor=pointer]:
+        - /url: /index/index/product?goods_id=95
+    - generic:
+      - img "狼蛛产品新品-AG75-三芯二艺 · 聚焦三核"
+  - generic [ref=e49]:
+    - generic [ref=e50]:
+      - generic [ref=e51]: 满改终结者 · 一卷定乾坤
+      - link "了解详情" [ref=e53] [cursor=pointer]:
+        - /url: /index/index/product?goods_id=109
+    - img "狼蛛产品新品-AG63-满改终结者 · 一卷定乾坤" [ref=e55]
+  - generic [ref=e56]:
+    - generic [ref=e57]:
+      - generic [ref=e58]: 星链频变，无阻竞速
+      - link "了解详情" [ref=e60] [cursor=pointer]:
+        - /url: /index/index/product?goods_id=103
+    - img "狼蛛产品新品-L9-星链频变，无阻竞速" [ref=e62]
+  - generic [ref=e63]:
+    - generic [ref=e64]:
+      - generic [ref=e65]: 声临其境 · 光随乐动
+      - link "了解详情" [ref=e67] [cursor=pointer]:
+        - /url: /index/index/product?goods_id=101
+    - img "狼蛛产品新品-GS8-声临其境 · 光随乐动" [ref=e69]
+  - generic [ref=e70]:
+    - generic:
+      - generic [ref=e71]:
+        - generic [ref=e72]:
+          - generic [ref=e73]: V9 Pro
+          - generic [ref=e74]: 电竞超神鼠 · 铸就超神底气
+        - link "了解详情" [ref=e75] [cursor=pointer]:
+          - /url: /index/index/product?goods_id=92
+      - generic:
+        - img "狼蛛产品新品-V9 Pro-电竞超神鼠 · 铸就超神底气"
+    - generic:
+      - generic [ref=e76]:
+        - generic [ref=e77]:
+          - generic [ref=e78]: AG60
+          - generic [ref=e79]: 双擎瞬切 · 超频满配
+        - link "了解详情" [ref=e80] [cursor=pointer]:
+          - /url: /index/index/product?goods_id=89
+      - generic:
+        - img "狼蛛产品新品-AG60-双擎瞬切 · 超频满配"
+    - generic:
+      - generic [ref=e81]:
+        - generic [ref=e82]:
+          - generic [ref=e83]: A7Pro
+          - generic [ref=e84]: 声临其境 · 随“形”所驭
+        - link "了解详情" [ref=e85] [cursor=pointer]:
+          - /url: /index/index/product?goods_id=69
+      - generic:
+        - img "狼蛛产品新品-A7Pro-声临其境 · 随“形”所驭"
+    - generic:
+      - generic [ref=e86]:
+        - generic [ref=e87]:
+          - generic [ref=e88]: HERO 68HE
+          - generic [ref=e89]: 闪亮“灯”场 · 终结比赛
+        - link "了解详情" [ref=e90] [cursor=pointer]:
+          - /url: /index/index/product?goods_id=110
+      - generic:
+        - img "狼蛛产品新品-HERO 68HE-闪亮“灯”场 · 终结比赛"
+  - generic [ref=e91]:
+    - generic [ref=e92]:
+      - generic [ref=e93]: 社区
+      - generic [ref=e94]: Community
+    - generic:
+      - img "社区"
+  - contentinfo [ref=e95]:
+    - generic [ref=e96]:
+      - generic [ref=e97]:
+        - generic [ref=e98]:
+          - img "狼蛛 AULA" [ref=e99]
+          - generic [ref=e100]: 狼蛛·只为热爱！
+        - generic [ref=e102]:
+          - img "扫码登录" [ref=e103]
+          - generic [ref=e104]: 扫码登录
+      - navigation "选购产品" [ref=e105]:
+        - link "键盘" [ref=e107] [cursor=pointer]:
+          - /url: /index/index/keyboard.html
+        - link "鼠标" [ref=e108] [cursor=pointer]:
+          - /url: /index/index/mouse.html
+        - link "音频" [ref=e109] [cursor=pointer]:
+          - /url: /index/index/radioReception.html
+        - link "购买渠道" [ref=e110] [cursor=pointer]:
+          - /url: /index/index/official.html
+      - navigation "服务与支持" [ref=e111]:
+        - link "在线驱动" [ref=e113] [cursor=pointer]:
+          - /url: /index/index/webdriver
+        - link "驱动下载" [ref=e114] [cursor=pointer]:
+          - /url: /index/index/driverdownload.html
+        - link "产品说明书" [ref=e115] [cursor=pointer]:
+          - /url: /index/index/afterSales.html
+        - link "技术和支持" [ref=e116] [cursor=pointer]:
+          - /url: /index/index/afterSales.html
+      - navigation "关于我们" [ref=e117]:
+        - link "品牌简介" [ref=e119] [cursor=pointer]:
+          - /url: /index/index/about.html#profile
+        - link "品牌历程" [ref=e120] [cursor=pointer]:
+          - /url: /index/index/about.html#history
+        - link "品牌荣誉" [ref=e121] [cursor=pointer]:
+          - /url: /index/index/about.html#honor
+        - link "加入我们" [ref=e122] [cursor=pointer]:
+          - /url: /index/index/about.html#joinus
+      - generic [ref=e123]:
+        - generic [ref=e124]: 关注我们
+        - link "微博":
+          - /url: https://weibo.com/u/3104826171
+          - img "微博"
+        - link "微信":
+          - /url: https://mp.weixin.qq.com/cgi-bin/home?t=home/index&token=1363980638&lang=zh_CN
+          - img "微信"
+        - link "短信":
+          - /url: ""
+          - img "短信"
+        - link "哔哩哔哩":
+          - /url: https://space.bilibili.com/590123836
+          - img "哔哩哔哩"
+    - generic [ref=e125]:
+      - generic [ref=e126]: 东莞市索艾电子科技有限公司
+      - generic [ref=e127]:
+        - text: Copyright © 2024 Company AULA, Inc.
+        - link "粤ICP备15109273号-4" [ref=e128] [cursor=pointer]:
+          - /url: https://beian.miit.gov.cn/
+      - link "用户隐私" [ref=e130] [cursor=pointer]:
+        - /url: "#"
+      - link "用户协议" [ref=e132] [cursor=pointer]:
+        - /url: "#"
+  - button "回到顶部"

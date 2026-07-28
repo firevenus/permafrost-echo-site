@@ -48,7 +48,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       type: 'website',
       locale: ogLocaleMap[locale] || 'zh_CN',
-      siteName: '冻土回声 | Permafrost Echo',
+      siteName: '「冻土回声」 | Permafrost Echo',
       title: `${title} | Permafrost Echo`,
       description,
       url,

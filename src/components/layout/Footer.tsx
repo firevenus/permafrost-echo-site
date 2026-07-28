@@ -34,7 +34,7 @@ export default function Footer({ messages }: { messages: Record<string, string> 
             <div className="flex items-center gap-3 mb-5">
               <Image
                 src="/images/logo.png"
-                alt="冻土回声 Permafrost Echo"
+                alt="「冻土回声」 Permafrost Echo"
                 width={36}
                 height={36}
                 className="w-9 h-9 rounded-lg object-contain shadow-[0_0_16px_rgba(76,201,240,0.25)]"

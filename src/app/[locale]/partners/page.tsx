@@ -33,15 +33,19 @@ export default function PartnersPage() {
       <section className="page-section relative overflow-hidden">
         <div className="section-glow-top" />
         <div className="page-container relative">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-[1000px] mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-[900px] mx-auto">
             {partners.map((partner) => (
-              <div key={partner.id} className="glass-card p-6 game-card group">
-                <div className="flex items-start gap-4">
-                  <div className="w-14 h-14 rounded-xl bg-[rgba(76,201,240,0.04)] flex items-center justify-center flex-shrink-0 overflow-hidden transition-all duration-300 group-hover:bg-[rgba(76,201,240,0.08)] group-hover:scale-110">
+              <div key={partner.id} className="glass-card p-8 game-card group">
+                <div className="flex items-center gap-6">
+                  <div className={`w-36 h-36 rounded-2xl flex items-center justify-center flex-shrink-0 overflow-hidden transition-all duration-300 group-hover:scale-105 p-4 ${
+                    partner.id.startsWith('netease') 
+                      ? 'bg-white/20' 
+                      : 'bg-[rgba(76,201,240,0.04)] group-hover:bg-[rgba(76,201,240,0.08)]'
+                  }`}>
                     <img
                       src={partner.logo}
                       alt={partner.name}
-                      className="w-12 h-12 object-contain"
+                      className="w-full h-full object-contain"
                     />
                   </div>
                   <div className="flex-1 min-w-0">

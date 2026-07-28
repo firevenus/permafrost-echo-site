@@ -20,11 +20,11 @@ draft: false
 
 ## 组织（Structure）
 
-- 主办单位：冻土回声（Permafrost Echo）
+- 主办单位：「冻土回声」（Permafrost Echo）
 - 联盟协作成员：来自中国、韩国、日本、俄罗斯、蒙古的高校与独立开发团队
 - 支持机构：动漫产业协会、硬件品牌、XR与AI创作平台等合作方
 
 ## 名称由来（Name Origin）
 
-"Permafrost Echo"（冻土回声）象征着寒冷土地上不灭的声音。
+"Permafrost Echo"（「冻土回声」）象征着寒冷土地上不灭的声音。
 在这片被冬雪覆盖的北境，我们聆听每一个创作者的心跳与回响。
