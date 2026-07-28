@@ -20,7 +20,7 @@ const zhTimeline: TimelineEvent[] = [
   {
     year: '2025.10',
     title: '第十七届 SSCA 动漫游戏博览会 · 游戏区',
-    description: '首次承办沈阳第十七届 SSCA 动漫游戏博览会游戏展区，吸引 200+ 参与者。',
+    description: '首次承办沈阳第十七届 SSCA 动漫游戏博览会游戏展区，为东北地区的独立游戏开发者提供展示与交流的平台。',
   },
   {
     year: '2026.02',
@@ -30,7 +30,7 @@ const zhTimeline: TimelineEvent[] = [
   {
     year: '2026.03',
     title: 'SSCA 2026 动漫游戏博览会 · 游戏区',
-    description: 'SSCA 2026 规模升级，冻土回声游戏专区参展作品增至 12 款，参与者突破 500 人。',
+    description: 'SSCA 2026 规模升级，冻土回声游戏专区参展作品增至 12 款，为更多独立游戏开发者提供展示与交流的平台。',
   },
   {
     year: '2026.05',
@@ -53,7 +53,7 @@ const enTimeline: TimelineEvent[] = [
   {
     year: '2025.10',
     title: '17th SSCA Expo · Game Zone',
-    description: 'Hosted the game zone at the 17th Shenyang SSCA Animation, Comic & Game Expo, attracting 200+ participants.',
+    description: 'Hosted the game zone at the 17th Shenyang SSCA Animation, Comic & Game Expo, providing a showcase and networking platform for indie game developers from Northeast China.',
   },
   {
     year: '2026.02',
@@ -63,7 +63,7 @@ const enTimeline: TimelineEvent[] = [
   {
     year: '2026.03',
     title: 'SSCA 2026 Expo · Game Zone',
-    description: 'SSCA 2026 scaled up with 12 exhibited titles and over 500 participants at the game zone.',
+    description: 'SSCA 2026 scaled up with 12 exhibited titles, providing a showcase and networking platform for more indie game developers at the game zone.',
   },
   {
     year: '2026.05',
@@ -86,7 +86,7 @@ const jaTimeline: TimelineEvent[] = [
   {
     year: '2025.10',
     title: '第17回 SSCA 博覧会 · ゲームゾーン',
-    description: '第17回SSCA瀋陽アニメ・コミック・ゲーム博覧会でゲームゾーンを初運営。200名以上が参加。',
+    description: '第17回SSCA瀋陽アニメ・コミック・ゲーム博覧会でゲームゾーンを初運営。東北地方のインディーゲーム開発者に展示・交流の場を提供。',
   },
   {
     year: '2026.02',
@@ -96,7 +96,7 @@ const jaTimeline: TimelineEvent[] = [
   {
     year: '2026.03',
     title: 'SSCA 2026 博覧会 · ゲームゾーン',
-    description: 'SSCA 2026が規模拡大。出展作品が12作品に増え、参加者が500名を突破。',
+    description: 'SSCA 2026が規模拡大。出展作品が12作品に増え、より多くのインディーゲーム開発者に展示・交流の場を提供。',
   },
   {
     year: '2026.05',
@@ -119,7 +119,7 @@ const koTimeline: TimelineEvent[] = [
   {
     year: '2025.10',
     title: '제17회 SSCA 엑스포 · 게임 존',
-    description: '제17회 SSCA 선양 애니메이션·코믹·게임 엑스포에서 게임 존을 처음 운영. 200명 이상 참여.',
+    description: '제17회 SSCA 선양 애니메이션·코믹·게임 엑스포에서 게임 존을 처음 운영. 동북 지역 인디 게임 개발자에게 전시·교류의 장을 제공.',
   },
   {
     year: '2026.02',
@@ -129,7 +129,7 @@ const koTimeline: TimelineEvent[] = [
   {
     year: '2026.03',
     title: 'SSCA 2026 엑스포 · 게임 존',
-    description: 'SSCA 2026 규모 확대. 출품작 12개로 증가, 참여자 500명 돌파.',
+    description: 'SSCA 2026 규모 확대. 출품작 12개로 증가, 더 많은 인디 게임 개발자에게 전시·교류의 장을 제공.',
   },
   {
     year: '2026.05',
@@ -152,7 +152,7 @@ const ruTimeline: TimelineEvent[] = [
   {
     year: '2025.10',
     title: '17-я выставка SSCA · Игровая зона',
-    description: 'Впервые организована игровая зона на 17-й Шэньянской выставке аниме, комиксов и игр SSCA, привлекшая более 200 участников.',
+    description: 'Впервые организована игровая зона на 17-й Шэньянской выставке аниме, комиксов и игр SSCA, предоставив платформу для демонстрации и общения инди-разработчиков Северо-Восточного Китая.',
   },
   {
     year: '2026.02',
@@ -162,7 +162,7 @@ const ruTimeline: TimelineEvent[] = [
   {
     year: '2026.03',
     title: 'SSCA 2026 Выставка · Игровая зона',
-    description: 'SSCA 2026 масштабирована: 12 представленных проектов и более 500 участников игровой зоны.',
+    description: 'SSCA 2026 масштабирована: 12 представленных проектов, расширенная платформа для демонстрации и общения инди-разработчиков.',
   },
   {
     year: '2026.05',
@@ -185,7 +185,7 @@ const mnTimeline: TimelineEvent[] = [
   {
     year: '2025.10',
     title: '17 дахь SSCA Үзэсгэлэн · Тоглоомын Бүс',
-    description: '17 дахь SSCA Шэньян Анимэ, Комик, Тоглоомын Үзэсгэлэн дээр тоглоомын бүс анх удаа зохион байгуулж, 200+ оролцогч татав.',
+    description: '17 дахь SSCA Шэньян Анимэ, Комик, Тоглоомын Үзэсгэлэн дээр тоглоомын бүс анх удаа зохион байгуулж, Зүүн хойд Хятадын инди тоглоом хөгжүүлэгчдэд үзүүлэн, харилцааны тавцан бий болгов.',
   },
   {
     year: '2026.02',
@@ -195,7 +195,7 @@ const mnTimeline: TimelineEvent[] = [
   {
     year: '2026.03',
     title: 'SSCA 2026 Үзэсгэлэн · Тоглоомын Бүс',
-    description: 'SSCA 2026 цар хүрээгээ тэлж, үзүүлсэн бүтээл 12 болж, оролцогчид 500-г давлаа.',
+    description: 'SSCA 2026 цар хүрээгээ тэлж, үзүүлсэн бүтээл 12 болж, илүү олон инди тоглоом хөгжүүлэгчдэд үзүүлэн, харилцааны тавцан бий болгов.',
   },
   {
     year: '2026.05',

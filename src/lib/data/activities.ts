@@ -20,7 +20,7 @@ const zhActivities: ActivityInfo[] = [
     titleEn: 'SSCA Animation, Comic & Game Expo · Game Zone',
     date: '2025-10',
     location: '沈阳',
-    description: '冻土回声首次承办沈阳第十七届 SSCA 动漫游戏博览会游戏展区，为东北地区的独立游戏开发者提供展示与交流的平台，吸引超过200名开发者和玩家参与。',
+    description: '冻土回声首次承办沈阳第十七届 SSCA 动漫游戏博览会游戏展区，为东北地区的独立游戏开发者提供展示与交流的平台。',
     status: 'completed',
   },
   {
@@ -29,7 +29,7 @@ const zhActivities: ActivityInfo[] = [
     titleEn: 'SSCA Animation, Comic & Game Expo · Game Zone',
     date: '2026-03-15',
     location: '沈阳',
-    description: '冻土回声在 SSCA 沈阳动漫游戏博览会上承办独立游戏专区，为东北地区的独立游戏开发者提供展示和交流的平台，吸引超过500名开发者和玩家参与。',
+    description: '冻土回声在 SSCA 沈阳动漫游戏博览会上承办独立游戏专区，为东北地区的独立游戏开发者提供展示和交流的平台。',
     status: 'completed',
   },
   {
@@ -105,7 +105,7 @@ const enActivities: ActivityInfo[] = [
     titleEn: 'SSCA Animation, Comic & Game Expo · Game Zone',
     date: '2025-10',
     location: 'Shenyang',
-    description: 'Permafrost Echo hosted the game zone at the 17th Shenyang SSCA Animation, Comic & Game Expo for the first time, providing a showcase platform for indie developers from Northeast China, attracting over 200 developers and players.',
+    description: 'Permafrost Echo hosted the game zone at the 17th Shenyang SSCA Animation, Comic & Game Expo for the first time, providing a showcase and networking platform for indie developers from Northeast China.',
     status: 'completed',
   },
   {
@@ -114,7 +114,7 @@ const enActivities: ActivityInfo[] = [
     titleEn: 'SSCA Animation, Comic & Game Expo · Game Zone',
     date: '2026-03-15',
     location: 'Shenyang',
-    description: 'Permafrost Echo hosts the indie game zone at the SSCA Shenyang Animation, Comic & Game Expo, providing a showcase platform for indie developers from Northeast China, attracting over 500 developers and players.',
+    description: 'Permafrost Echo hosts the indie game zone at the SSCA Shenyang Animation, Comic & Game Expo, providing a showcase and networking platform for indie developers from Northeast China.',
     status: 'completed',
   },
   {
@@ -190,7 +190,7 @@ const jaActivities: ActivityInfo[] = [
     titleEn: 'SSCA Animation, Comic & Game Expo · Game Zone',
     date: '2025-10',
     location: '瀋陽',
-    description: 'パーマフロスト・エコーが第17回SSCA瀋陽アニメ・コミック・ゲーム博覧会でゲームゾーンを初運営。東北地方のインディーゲーム開発者に展示・交流の場を提供し、200名以上が参加。',
+    description: 'パーマフロスト・エコーが第17回SSCA瀋陽アニメ・コミック・ゲーム博覧会でゲームゾーンを初運営。東北地方のインディーゲーム開発者に展示・交流の場を提供。',
     status: 'completed',
   },
   {
@@ -199,7 +199,7 @@ const jaActivities: ActivityInfo[] = [
     titleEn: 'SSCA Animation, Comic & Game Expo · Game Zone',
     date: '2026-03-15',
     location: '瀋陽',
-    description: 'パーマフロスト・エコーがSSCA瀋陽アニメ・コミック・ゲーム博覧会でインディーゲームゾーンを運営。東北地方のインディーゲーム開発者に展示・交流のプラットフォームを提供し、500名以上の開発者とプレイヤーが参加。',
+    description: 'パーマフロスト・エコーがSSCA瀋陽アニメ・コミック・ゲーム博覧会でインディーゲームゾーンを運営。東北地方のインディーゲーム開発者に展示・交流のプラットフォームを提供。',
     status: 'completed',
   },
   {
@@ -275,7 +275,7 @@ const koActivities: ActivityInfo[] = [
     titleEn: 'SSCA Animation, Comic & Game Expo · Game Zone',
     date: '2025-10',
     location: '선양',
-    description: '페름프로스트 에코가 제17회 SSCA 선양 애니메이션·코믹·게임 엑스포에서 게임 존을 처음 운영. 동북 지역 인디 게임 개발자에게 전시·교류의 장을 제공하며 200명 이상 참여.',
+    description: '페름프로스트 에코가 제17회 SSCA 선양 애니메이션·코믹·게임 엑스포에서 게임 존을 처음 운영. 동북 지역 인디 게임 개발자에게 전시·교류의 장을 제공.',
     status: 'completed',
   },
   {
@@ -284,7 +284,7 @@ const koActivities: ActivityInfo[] = [
     titleEn: 'SSCA Animation, Comic & Game Expo · Game Zone',
     date: '2026-03-15',
     location: '선양',
-    description: '페름프로스트 에코가 SSCA 선양 애니메이션·코믹·게임 엑스포에서 인디 게임 존을 운영. 동북 지역의 인디 게임 개발자에게 전시·교류 플랫폼을 제공하며 500명 이상의 개발자와 플레이어가 참여.',
+    description: '페름프로스트 에코가 SSCA 선양 애니메이션·코믹·게임 엑스포에서 인디 게임 존을 운영. 동북 지역의 인디 게임 개발자에게 전시·교류 플랫폼을 제공.',
     status: 'completed',
   },
   {
@@ -360,7 +360,7 @@ const ruActivities: ActivityInfo[] = [
     titleEn: 'SSCA Animation, Comic & Game Expo · Game Zone',
     date: '2025-10',
     location: 'Шэньян',
-    description: 'Permafrost Echo впервые организовал игровую зону на 17-й Шэньянской выставке аниме, комиксов и игр SSCA, предоставив платформу для инди-разработчиков Северо-Восточного Китая, с участием более 200 человек.',
+    description: 'Permafrost Echo впервые организовал игровую зону на 17-й Шэньянской выставке аниме, комиксов и игр SSCA, предоставив платформу для демонстрации и общения инди-разработчиков Северо-Восточного Китая.',
     status: 'completed',
   },
   {
@@ -369,7 +369,7 @@ const ruActivities: ActivityInfo[] = [
     titleEn: 'SSCA Animation, Comic & Game Expo · Game Zone',
     date: '2026-03-15',
     location: 'Шэньян',
-    description: 'Permafrost Echo организует зону инди-игр на Шэньянской выставке аниме, комиксов и игр SSCA, предоставляя платформу для демонстрации и общения разработчикам инди-игр Северо-Восточного Китая, с участием более 500 разработчиков и игроков.',
+    description: 'Permafrost Echo организует зону инди-игр на Шэньянской выставке аниме, комиксов и игр SSCA, предоставляя платформу для демонстрации и общения разработчикам инди-игр Северо-Восточного Китая.',
     status: 'completed',
   },
   {
@@ -445,7 +445,7 @@ const mnActivities: ActivityInfo[] = [
     titleEn: 'SSCA Animation, Comic & Game Expo · Game Zone',
     date: '2025-10',
     location: 'Шэньян',
-    description: 'Мөсөн Хөрсний Цуурай нь 17 дахь SSCA Шэньян Анимэ, Комик, Тоглоомын Үзэсгэлэн дээр тоглоомын бүс анх удаа зохион байгуулж, Зүүн хойд Хятадын инди тоглоом хөгжүүлэгчдэд үзүүлэн, харилцааны тавцан бий болгож, 200 гаруй хөгжүүлэгч, тоглогч оролцов.',
+    description: 'Мөсөн Хөрсний Цуурай нь 17 дахь SSCA Шэньян Анимэ, Комик, Тоглоомын Үзэсгэлэн дээр тоглоомын бүс анх удаа зохион байгуулж, Зүүн хойд Хятадын инди тоглоом хөгжүүлэгчдэд үзүүлэн, харилцааны тавцан бий болгов.',
     status: 'completed',
   },
   {
@@ -454,7 +454,7 @@ const mnActivities: ActivityInfo[] = [
     titleEn: 'SSCA Animation, Comic & Game Expo · Game Zone',
     date: '2026-03-15',
     location: 'Шэньян',
-    description: 'Мөсөн Хөрсний Цуурай нь SSCA Шэньян Анимэ, Комик, Тоглоомын Үзэсгэлэн дээр инди тоглоомын бүс зохион байгуулж, Зүүн хойд Хятадын инди тоглоом хөгжүүлэгчдэд үзүүлэн, харилцааны платформ бий болгож, 500 гаруй хөгжүүлэгч, тоглогч оролцов.',
+    description: 'Мөсөн Хөрсний Цуурай нь SSCA Шэньян Анимэ, Комик, Тоглоомын Үзэсгэлэн дээр инди тоглоомын бүс зохион байгуулж, Зүүн хойд Хятадын инди тоглоом хөгжүүлэгчдэд үзүүлэн, харилцааны платформ бий болгов.',
     status: 'completed',
   },
   {

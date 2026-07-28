@@ -17,7 +17,7 @@ The SSCA Animation, Comic & Game Expo is one of the largest anime, comic, and ga
 ### Highlights
 
 - **Exhibited Titles**: 8+ indie games available for hands-on demo
-- **Participants**: The expo attracts over 10,000 visitors; the game zone expects to host 200+ demo players
+- **Scale**: A key showcase and networking platform for indie game developers from Northeast China
 - **Coverage**: Open to indie developers from across Northeast China
 - **Partners**: Brand sponsors and university support
 
