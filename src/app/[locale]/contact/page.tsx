@@ -88,7 +88,7 @@ export default function ContactPage() {
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-[600px] mx-auto">
             {[
               { icon: '💼', name: 'LinkedIn', href: 'https://www.linkedin.com/company/permafrost-echo/' },
-              { icon: '📺', name: 'Bilibili', href: '#' },
+              { icon: null, img: '/images/social/indieloop.png', name: 'IndieLoop', href: 'https://indieloop.com/#/journal/gameMedia?id=78' },
               { icon: '📱', name: 'WeChat', href: '#' },
               { icon: '🎯', name: 'Indienova', href: '#' },
             ].map((social, i) => (
@@ -97,7 +97,13 @@ export default function ContactPage() {
                 href={social.href}
                 className="glass-card p-5 text-center game-card no-underline group"
               >
-                <div className="text-2xl mb-2.5 transition-transform duration-300 group-hover:scale-110">{social.icon}</div>
+                <div className="flex items-center justify-center h-8 mb-2.5 transition-transform duration-300 group-hover:scale-110">
+                  {social.img ? (
+                    <img src={social.img} alt={social.name} className="h-8 w-auto object-contain" />
+                  ) : (
+                    <span className="text-2xl">{social.icon}</span>
+                  )}
+                </div>
                 <p className="text-xs text-[rgba(237,242,250,0.4)] group-hover:text-[rgba(237,242,250,0.6)] transition-colors duration-300">
                   {social.name}
                 </p>

@@ -426,7 +426,7 @@ export default function AboutPage() {
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
               {[
-                { icon: '📺', name: 'Bilibili', href: '#' },
+                { icon: null, img: '/images/social/indieloop.png', name: 'IndieLoop', href: 'https://indieloop.com/#/journal/gameMedia?id=78' },
                 { icon: '📱', name: 'WeChat', href: '#' },
                 { icon: '🎯', name: 'Indienova', href: '#' },
                 { icon: '🎙️', name: '机核', href: '#' },
@@ -436,8 +436,12 @@ export default function AboutPage() {
                   href={social.href}
                   className="glass-card p-4 text-center game-card no-underline group"
                 >
-                  <div className="text-xl mb-1.5 transition-transform duration-300 group-hover:scale-110">
-                    {social.icon}
+                  <div className="flex items-center justify-center h-6 mb-1.5 transition-transform duration-300 group-hover:scale-110">
+                    {social.img ? (
+                      <img src={social.img} alt={social.name} className="h-6 w-auto object-contain" />
+                    ) : (
+                      <span className="text-xl">{social.icon}</span>
+                    )}
                   </div>
                   <p className="text-xs text-[rgba(237,242,250,0.4)] group-hover:text-[rgba(237,242,250,0.6)] transition-colors duration-300">
                     {social.name}

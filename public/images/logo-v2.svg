@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 2000" width="2000" height="2000">
+  <!-- Background -->
+  <rect width="2000" height="2000" fill="#000000"/>
+
+  <!-- Circular Emblem (centered horizontally, upper portion) -->
+  <!-- Circle center: x=1000, y=530, radius=480 -->
+  <g transform="translate(1000, 530)">
+    <!-- Outer circle ring -->
+    <circle cx="0" cy="0" r="480" fill="none" stroke="#FFFFFF" stroke-width="8"/>
+
+    <!-- Mountains (white geometric peaks) -->
+    <polygon points="-340,140 -140,-220 -50,30 20,-140 120,70 240,-270 360,140" fill="#FFFFFF"/>
+    <polygon points="-360,160 -180,-100 -90,50 0,-120 140,70 280,-200 360,160" fill="#FFFFFF" opacity="0.9"/>
+
+    <!-- Pumpjack silhouette (black on white mountains) -->
+    <g fill="#000000">
+      <!-- A-frame tower -->
+      <polygon points="-40,120 -25,-80 -15,-80 -5,120"/>
+      <polygon points="5,120 15,-80 25,-80 40,120"/>
+      <!-- Cross braces -->
+      <line x1="-30" y1="20" x2="30" y2="-20" stroke="#000000" stroke-width="4"/>
+      <line x1="-30" y1="-20" x2="30" y2="20" stroke="#000000" stroke-width="4"/>
+      <!-- Beam -->
+      <rect x="-60" y="-90" width="120" height="12" transform="rotate(-12, 0, -84)"/>
+      <!-- Horse head -->
+      <polygon points="40,-95 65,-110 70,-88 45,-78"/>
+      <!-- Counterweight -->
+      <circle cx="-50" cy="-72" r="15"/>
+      <!-- Base platform -->
+      <rect x="-45" y="115" width="90" height="12"/>
+    </g>
+
+    <!-- Stratified terrain layers (wavy bands) -->
+    <path d="M -420,180 Q -300,155 -180,180 T 60,180 T 300,180 T 420,180 L 420,230 L -420,230 Z" fill="#FFFFFF"/>
+    <path d="M -420,230 Q -300,205 -180,230 T 60,230 T 300,230 T 420,230 L 420,280 L -420,280 Z" fill="#000000"/>
+    <path d="M -420,280 Q -300,255 -180,280 T 60,280 T 300,280 T 420,280 L 420,330 L -420,330 Z" fill="#FFFFFF"/>
+    <path d="M -420,330 Q -300,305 -180,330 T 60,330 T 300,330 T 420,330 L 420,380 L -420,380 Z" fill="#000000"/>
+    <path d="M -420,380 Q -300,355 -180,380 T 60,380 T 300,380 T 420,380 L 420,430 L -420,430 Z" fill="#FFFFFF"/>
+  </g>
+
+  <!-- Chinese text: 冻土回声 (centered) -->
+  <text x="1000" y="1290" text-anchor="middle" font-family="'Noto Sans CJK SC', 'Noto Sans SC', 'Microsoft YaHei', sans-serif" font-size="150" font-weight="bold" fill="#FFFFFF" letter-spacing="8">冻土回声</text>
+
+  <!-- English text: PERMAFROST ECHO (centered) -->
+  <text x="1000" y="1400" text-anchor="middle" font-family="'Noto Sans CJK SC', 'Noto Sans SC', 'Arial', sans-serif" font-size="48" font-weight="normal" fill="#FFFFFF" letter-spacing="12">PERMAFROST ECHO</text>
+</svg>

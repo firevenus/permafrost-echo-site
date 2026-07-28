@@ -10,6 +10,15 @@
 ### 二维码替换
 - 替换全站微信服务号二维码图片（Footer、联系方式页、关于我们页）
 
+### 社交媒体更新
+- 删除 Bilibili 社交卡片（联系方式页、关于我们页）
+- 新增 IndieLoop 社交卡片，链接指向 https://indieloop.com/#/journal/gameMedia?id=78
+- 从 indieloop.com 获取官方 Logo（256×256 透明 PNG）
+- 社交卡片渲染逻辑支持 emoji 图标和图片 Logo 两种方式
+
+### Logo 更新
+- 生成新版品牌 Logo（PNG + SVG），保留原始圆形徽章，英文文字替换为中文「冻土回声」
+
 ## 2026-07-19
 
 ### LinkedIn 社交集成
