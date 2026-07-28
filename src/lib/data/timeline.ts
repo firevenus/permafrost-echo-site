@@ -19,7 +19,7 @@ const zhTimeline: TimelineEvent[] = [
   },
   {
     year: '2025.10',
-    title: '第十七届 SSCA 动漫游戏博览会 · 游戏区',
+    title: '第十七届 SSCA 动漫游戏博览会 · 游戏展区',
     description: '首次承办沈阳第十七届 SSCA 动漫游戏博览会游戏展区，为东北地区的独立游戏开发者提供展示与交流的平台。',
   },
   {
@@ -29,7 +29,7 @@ const zhTimeline: TimelineEvent[] = [
   },
   {
     year: '2026.03',
-    title: 'SSCA 2026 动漫游戏博览会 · 游戏区',
+    title: 'SSCA 2026 动漫游戏博览会 · 游戏展区',
     description: 'SSCA 2026 规模升级，冻土回声游戏专区参展作品增至 12 款，为更多独立游戏开发者提供展示与交流的平台。',
   },
   {

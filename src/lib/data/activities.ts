@@ -16,7 +16,7 @@ export interface ActivityInfo {
 const zhActivities: ActivityInfo[] = [
   {
     id: 'ssca-2025',
-    title: 'SSCA 动漫游戏博览会 · 游戏区',
+    title: 'SSCA 动漫游戏博览会 · 游戏展区',
     titleEn: 'SSCA Animation, Comic & Game Expo · Game Zone',
     date: '2025-10',
     location: '沈阳',
@@ -25,7 +25,7 @@ const zhActivities: ActivityInfo[] = [
   },
   {
     id: 'ssca-2026',
-    title: 'SSCA 动漫游戏博览会 · 游戏区',
+    title: 'SSCA 动漫游戏博览会 · 游戏展区',
     titleEn: 'SSCA Animation, Comic & Game Expo · Game Zone',
     date: '2026-03-15',
     location: '沈阳',
@@ -70,7 +70,7 @@ const zhActivities: ActivityInfo[] = [
   },
   {
     id: 'northern-anime-2026',
-    title: '北境动漫游戏嘉年华 · 游戏区',
+    title: '北境动漫游戏嘉年华 · 游戏展区',
     titleEn: 'Northern Anime & Game Carnival · Game Zone',
     date: '2026-10',
     location: '沈阳',
@@ -80,7 +80,7 @@ const zhActivities: ActivityInfo[] = [
   },
   {
     id: 'ssca-2027',
-    title: 'SSCA 动漫游戏博览会 · 游戏区',
+    title: 'SSCA 动漫游戏博览会 · 游戏展区',
     titleEn: 'SSCA Animation, Comic & Game Expo · Game Zone',
     date: '2027-03',
     location: '沈阳',
