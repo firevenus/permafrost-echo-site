@@ -429,7 +429,7 @@ export default function AboutPage() {
                 { icon: null, img: '/images/social/indieloop.png', name: 'IndieLoop', href: 'https://indieloop.com/#/journal/gameMedia?id=78' },
                 { icon: null, img: '/images/social/bilibili.png', name: 'Bilibili', href: 'https://space.bilibili.com/3632304897395308' },
                 { icon: '📱', name: 'WeChat', href: '#' },
-                { icon: '🎯', name: 'Indienova', href: '#' },
+                { icon: null, img: '/images/social/indienova.png', name: 'Indienova', href: 'https://indienova.com/indie-game-development/the-first-game-jam-in-three-provinces-of-northeast-china/' },
               ].map((social) => (
                 <a
                   key={social.name}

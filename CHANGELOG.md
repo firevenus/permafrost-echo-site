@@ -6,9 +6,11 @@
 - 更新使命为四点：促进区域内游戏开发者交流 / 向社会推广多元的游戏文化内容 / 协助产业链接高校，助力青年团队成长与发展 / 推动东北亚游戏文化的国际间交流与传播（原为三点）
 - 删除关于我们页面「机核」社交卡片（暂未运营机核账号）
 - 社交媒体链接（IndieLoop、LinkedIn、Bilibili）在新窗口打开
-- 关于页、联系页社交卡片新增 Bilibili（logo 来自 simple-icons CDN）
+- 关于页、联系页社交卡片新增 Bilibili（链接指向 https://space.bilibili.com/3632304897395308）
+- 更新 Bilibili logo 为官方蓝色 TV 图标（#23ADE5）
 - 团队介绍统一角色描述为「核心团队成员」（中文），去掉原美术/策划/程序等分类（6 语言已同步）
 - 团队头像改为渐变首字母占位（移除不存在的图片引用，修复头像不显示问题）
+- 新增 Indienova 社交卡片，链接指向东北三省首届 Game Jam 报道：https://indienova.com/indie-game-development/the-first-game-jam-in-three-provinces-of-northeast-china/
 
 ### 文案更新
 - 首页活动描述改为「GameJam · EXPO · 高校联盟 · 企业生态 / 我们为游戏业态提供全新的舞台」，page.tsx 添加 whitespace-pre-line 支持换行
