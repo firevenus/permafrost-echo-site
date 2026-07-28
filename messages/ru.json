@@ -160,12 +160,12 @@
     "founder": "Основатель",
     "volunteers": "Волонтёры",
     "members": [
-      { "name": "L", "nameEn": "L", "role": "Сооснователь / Операции", "bio": "" },
-      { "name": "Чэн Сы", "nameEn": "Enki", "role": "Сооснователь / Технологии", "bio": "" },
-      { "name": "Фэн Ту", "nameEn": "FungTO", "role": "Художник", "bio": "" },
-      { "name": "Ма Туань", "nameEn": "MattUan", "role": "Дизайнер", "bio": "" },
-      { "name": "Ци Сюань", "nameEn": "Akv_Qixuan", "role": "Разработчик", "bio": "" },
-      { "name": "ZZK", "nameEn": "ZZK", "role": "", "bio": "" }
+      { "name": "L", "nameEn": "L", "role": "Член основной команды", "bio": "" },
+      { "name": "Чэн Сы", "nameEn": "Enki", "role": "Член основной команды", "bio": "" },
+      { "name": "Фэн Ту", "nameEn": "FungTO", "role": "Член основной команды", "bio": "" },
+      { "name": "Ма Туань", "nameEn": "MattUan", "role": "Член основной команды", "bio": "" },
+      { "name": "Ци Сюань", "nameEn": "Akv_Qixuan", "role": "Член основной команды", "bio": "" },
+      { "name": "ZZK", "nameEn": "ZZK", "role": "Член основной команды", "bio": "" }
     ]
   },
   "roadmap": {

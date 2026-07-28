@@ -160,12 +160,12 @@
     "founder": "Founder",
     "volunteers": "Volunteers",
     "members": [
-      { "name": "L", "nameEn": "L", "role": "Co-Founder / Operations", "bio": "" },
-      { "name": "Cheng Si", "nameEn": "Enki", "role": "Co-Founder / Tech", "bio": "" },
-      { "name": "Feng Tu", "nameEn": "FungTO", "role": "Art", "bio": "" },
-      { "name": "Ma Tuan", "nameEn": "MattUan", "role": "Design", "bio": "" },
-      { "name": "Qi Xuan", "nameEn": "Akv_Qixuan", "role": "Developer", "bio": "" },
-      { "name": "ZZK", "nameEn": "ZZK", "role": "", "bio": "" }
+      { "name": "L", "nameEn": "L", "role": "Core Team Member", "bio": "" },
+      { "name": "Cheng Si", "nameEn": "Enki", "role": "Core Team Member", "bio": "" },
+      { "name": "Feng Tu", "nameEn": "FungTO", "role": "Core Team Member", "bio": "" },
+      { "name": "Ma Tuan", "nameEn": "MattUan", "role": "Core Team Member", "bio": "" },
+      { "name": "Qi Xuan", "nameEn": "Akv_Qixuan", "role": "Core Team Member", "bio": "" },
+      { "name": "ZZK", "nameEn": "ZZK", "role": "Core Team Member", "bio": "" }
     ]
   },
   "roadmap": {

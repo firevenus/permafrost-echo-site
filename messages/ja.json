@@ -160,12 +160,12 @@
     "founder": "創業者",
     "volunteers": "ボランティアの皆様",
     "members": [
-      { "name": "L", "nameEn": "L", "role": "共同創設者 / 運営", "bio": "" },
-      { "name": "成思", "nameEn": "Enki", "role": "共同創設者 / 技術", "bio": "" },
-      { "name": "疯兔", "nameEn": "FungTO", "role": "美術", "bio": "" },
-      { "name": "麻团", "nameEn": "MattUan", "role": "企画", "bio": "" },
-      { "name": "漆玄", "nameEn": "Akv_Qixuan", "role": "プログラマー", "bio": "" },
-      { "name": "ZZK", "nameEn": "ZZK", "role": "", "bio": "" }
+      { "name": "L", "nameEn": "L", "role": "コアチームメンバー", "bio": "" },
+      { "name": "成思", "nameEn": "Enki", "role": "コアチームメンバー", "bio": "" },
+      { "name": "疯兔", "nameEn": "FungTO", "role": "コアチームメンバー", "bio": "" },
+      { "name": "麻团", "nameEn": "MattUan", "role": "コアチームメンバー", "bio": "" },
+      { "name": "漆玄", "nameEn": "Akv_Qixuan", "role": "コアチームメンバー", "bio": "" },
+      { "name": "ZZK", "nameEn": "ZZK", "role": "コアチームメンバー", "bio": "" }
     ]
   },
   "roadmap": {

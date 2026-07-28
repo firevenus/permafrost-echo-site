@@ -7,11 +7,7 @@ export const runtime = 'edge';
 interface TeamMember {
   name: string;
   nameEn: string;
-}
-
-function avatarId(nameEn: string): string {
-  // Extract the "clean" identifier: lowercase, keep only alphanumeric
-  return nameEn.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
+  role?: string;
 }
 
 export default function TeamPage() {
@@ -50,27 +46,20 @@ export default function TeamPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-[1000px] mx-auto">
             {members.map((member, i) => {
-              const id = avatarId(member.nameEn);
-              const avatarSrc = `/images/team/${id}.webp`;
               return (
               <div key={i} className="glass-card p-6 game-card group">
                 <div className="flex items-center gap-4">
-                  <div className="w-14 h-14 rounded-full bg-gradient-to-br from-[#4cc9f0] to-[#7b2ff7] flex items-center justify-center flex-shrink-0 shadow-[0_0_20px_rgba(76,201,240,0.2)] transition-shadow duration-300 group-hover:shadow-[0_0_30px_rgba(76,201,240,0.35)] overflow-hidden relative">
-                    <span className="text-white text-lg font-bold absolute">
+                  <div className="w-14 h-14 rounded-full bg-gradient-to-br from-[#4cc9f0] to-[#7b2ff7] flex items-center justify-center flex-shrink-0 shadow-[0_0_20px_rgba(76,201,240,0.2)] transition-shadow duration-300 group-hover:shadow-[0_0_30px_rgba(76,201,240,0.35)]">
+                    <span className="text-white text-lg font-bold">
                       {member.nameEn?.charAt(0).toUpperCase()}
                     </span>
-                    <img
-                      src={avatarSrc}
-                      alt={member.name}
-                      className="absolute inset-0 w-full h-full object-cover rounded-full"
-                      onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
-                    />
                   </div>
                   <div>
                     <h3 className="text-sm font-semibold text-[#edf2fa] group-hover:text-white transition-colors duration-300">
                       {member.name}
                     </h3>
                     <p className="text-xs text-[#4cc9f0] font-medium">{member.nameEn}</p>
+                    {member.role && <p className="text-xs text-[rgba(237,242,250,0.35)] mt-1">{member.role}</p>}
                   </div>
                 </div>
               </div>
