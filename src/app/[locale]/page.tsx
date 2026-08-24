@@ -181,7 +181,7 @@ export default function HomePage() {
                 <div className={activity.images?.length ? 'p-6 pt-0' : 'p-6'}>
                 <div className="flex items-start justify-between mb-5">
                   <div className="w-12 h-12 rounded-xl bg-[rgba(76,201,240,0.06)] flex items-center justify-center text-[#4cc9f0] transition-all duration-300 group-hover:bg-[rgba(76,201,240,0.12)] group-hover:scale-110">
-                    {activity.id === 'ssca-2025' || activity.id === 'ssca-2026' ? <Gamepad2 size={22} /> : activity.id === 'ggj-2026' ? <Palette size={22} /> : <GraduationCap size={22} />}
+                    {activity.id === 'ssca-2025' ? <Gamepad2 size={22} /> : activity.id === 'ggj-2026' ? <Palette size={22} /> : <GraduationCap size={22} />}
                   </div>
                   <span className={`text-xs ${activity.status === 'upcoming' ? 'pill-ember' : 'pill'}`}>
                     {activity.status === 'upcoming' ? t('activities.upcoming') : t('activities.completed')}

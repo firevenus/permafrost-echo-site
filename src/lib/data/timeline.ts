@@ -28,11 +28,6 @@ const zhTimeline: TimelineEvent[] = [
     description: '首次承办 Global Game Jam 沈阳站点，48小时创作马拉松圆满成功。',
   },
   {
-    year: '2026.03',
-    title: 'SSCA 2026 动漫游戏博览会 · 游戏展区',
-    description: 'SSCA 2026 规模升级，「冻土回声」游戏专区参展作品增至 12 款，为更多独立游戏开发者提供展示与交流的平台。',
-  },
-  {
     year: '2026.05',
     title: '北境动漫游戏嘉年华',
     description: '携12款作品亮相北境动漫游戏嘉年华，拓展全国影响力。',
@@ -59,11 +54,6 @@ const enTimeline: TimelineEvent[] = [
     year: '2026.02',
     title: 'GGJ 2026 Shenyang Site',
     description: 'First time hosting the Global Game Jam Shenyang site. The 48-hour creation marathon was a resounding success.',
-  },
-  {
-    year: '2026.03',
-    title: 'SSCA 2026 Expo · Game Zone',
-    description: 'SSCA 2026 scaled up with 12 exhibited titles, providing a showcase and networking platform for more indie game developers at the game zone.',
   },
   {
     year: '2026.05',
@@ -94,11 +84,6 @@ const jaTimeline: TimelineEvent[] = [
     description: 'Global Game Jam瀋陽会場を初開催。48時間の創作マラソンが大成功。',
   },
   {
-    year: '2026.03',
-    title: 'SSCA 2026 博覧会 · ゲームゾーン',
-    description: 'SSCA 2026が規模拡大。出展作品が12作品に増え、より多くのインディーゲーム開発者に展示・交流の場を提供。',
-  },
-  {
     year: '2026.05',
     title: '北境アニメ・ゲームカーニバル',
     description: '12作品を携えて北境アニメ・ゲームカーニバルに初出展。全国的な影響力を拡大。',
@@ -125,11 +110,6 @@ const koTimeline: TimelineEvent[] = [
     year: '2026.02',
     title: 'GGJ 2026 선양 사이트',
     description: 'Global Game Jam 선양 사이트 첫 개최. 48시간 창작 마라톤 대성공.',
-  },
-  {
-    year: '2026.03',
-    title: 'SSCA 2026 엑스포 · 게임 존',
-    description: 'SSCA 2026 규모 확대. 출품작 12개로 증가, 더 많은 인디 게임 개발자에게 전시·교류의 장을 제공.',
   },
   {
     year: '2026.05',
@@ -160,11 +140,6 @@ const ruTimeline: TimelineEvent[] = [
     description: 'Впервые проведён Global Game Jam в Шэньяне. 48-часовой марафон творчества прошёл с большим успехом.',
   },
   {
-    year: '2026.03',
-    title: 'SSCA 2026 Выставка · Игровая зона',
-    description: 'SSCA 2026 масштабирована: 12 представленных проектов, расширенная платформа для демонстрации и общения инди-разработчиков.',
-  },
-  {
     year: '2026.05',
     title: 'Дебют на Пекинской выставке',
     description: 'Дебютировали на Пекинской выставке инди-игр с 12 проектами, расширяя национальное влияние.',
@@ -191,11 +166,6 @@ const mnTimeline: TimelineEvent[] = [
     year: '2026.02',
     title: 'GGJ 2026 Шэньян',
     description: 'Global Game Jam Шэньян хотын цэгийг анх удаа зохион байгуулав. 48 цагийн бүтээлийн марафон амжилттай болж өндөрлөв.',
-  },
-  {
-    year: '2026.03',
-    title: 'SSCA 2026 Үзэсгэлэн · Тоглоомын Бүс',
-    description: 'SSCA 2026 цар хүрээгээ тэлж, үзүүлсэн бүтээл 12 болж, илүү олон инди тоглоом хөгжүүлэгчдэд үзүүлэн, харилцааны тавцан бий болгов.',
   },
   {
     year: '2026.05',
