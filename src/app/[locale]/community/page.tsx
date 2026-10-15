@@ -12,6 +12,8 @@ import type { UniversityInfo } from '@/lib/data/universities';
 import { getPartners, getStats } from '@/lib/data';
 import type { Locale } from '@/i18n/routing';
 
+export const runtime = 'edge';
+
 export const metadata: Metadata = {
   title: '社群生态 | 「冻土回声」',
   description:
