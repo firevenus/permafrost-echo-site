@@ -1,6 +1,6 @@
 'use client';
 
-import { useTranslations, useMessages } from 'next-intl';
+import { useTranslations } from 'next-intl';
 
 export const runtime = 'edge';
 
@@ -12,11 +12,7 @@ interface TeamMember {
 
 export default function TeamPage() {
   const t = useTranslations();
-  const messages = useMessages();
-  const members = (messages as Record<string, unknown>).team &&
-    typeof (messages as Record<string, unknown>).team === 'object'
-    ? ((messages as Record<string, { members?: TeamMember[] }>).team?.members || [])
-    : [];
+  const members = t.raw('team.members') as TeamMember[];
 
   return (
     <div>

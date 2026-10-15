@@ -2,12 +2,12 @@
 
 import { useState } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
-import Image from 'next/image';
 import { getActivities } from '@/lib/data';
 import type { Locale } from '@/i18n/routing';
-import { Calendar, MapPin, Gamepad2, Palette, GraduationCap, Images, ArrowRight, Grid3X3 } from 'lucide-react';
+import { Calendar, MapPin, Gamepad2, Palette, GraduationCap, ArrowRight, Grid3X3 } from 'lucide-react';
 import { Link } from '@/i18n/routing';
 import Lightbox from '@/components/ui/Lightbox';
+import ActivityMediaCarousel from '@/components/ActivityMediaCarousel';
 
 export const runtime = 'edge';
 
@@ -57,27 +57,11 @@ export default function ActivitiesPage() {
     if (!activity.images || activity.images.length === 0) return null;
 
     return (
-      <button
-        className="activity-card-image group/image"
-        onClick={() => openLightbox(activity.images!, 0, activity.title)}
-        aria-label={`查看 ${activity.title} 的 ${activity.images!.length} 张照片`}
-      >
-        <Image
-          src={activity.images[0]}
-          alt={activity.title}
-          fill
-          sizes="(max-width: 768px) 100vw, 50vw"
-          className="object-cover"
-        />
-        {/* 悬浮提示层 */}
-        <div className="activity-image-hover">
-          <Images size={20} />
-          <span>{activity.images.length} 张</span>
-        </div>
-        {activity.images.length > 1 && (
-          <span className="image-counter">{activity.images.length} 张</span>
-        )}
-      </button>
+      <ActivityMediaCarousel
+        images={activity.images}
+        title={activity.title}
+        onOpen={(index) => openLightbox(activity.images!, index, activity.title)}
+      />
     );
   };
 
@@ -95,6 +79,27 @@ export default function ActivitiesPage() {
           <p className="text-[rgba(237,242,250,0.4)] text-lg max-w-[520px] mx-auto leading-relaxed">
             {t('activities.description')}
           </p>
+        </div>
+      </section>
+
+      <section className="pb-4 relative overflow-hidden">
+        <div className="page-container relative">
+          <div className="activity-series-summary glass-card">
+            <div>
+              <span className="section-label">{locale === 'zh' ? '持续举办' : 'Recurring programme'}</span>
+              <h2>{locale === 'zh' ? '「冻土回声」原创游戏展区' : 'Permafrost Echo Original Games Zone'}</h2>
+              <p>
+                {locale === 'zh'
+                  ? '东北地区持续举办的综合性游戏展览活动，展出本地独立游戏、大陆独立游戏、大陆商业游戏与国际商业游戏。'
+                  : 'A recurring comprehensive game exhibition in Northeast China, presenting local and mainland indie games, mainland commercial titles, and international commercial games.'}
+              </p>
+            </div>
+            <dl>
+              <div><dt>30,000+</dt><dd>{locale === 'zh' ? '历届单场参与人数' : 'attendance per completed edition'}</dd></div>
+              <div><dt>180+</dt><dd>{locale === 'zh' ? '累计展出作品' : 'games shown to date'}</dd></div>
+              <div><dt>20+</dt><dd>{locale === 'zh' ? '国际作品' : 'international titles'}</dd></div>
+            </dl>
+          </div>
         </div>
       </section>
 

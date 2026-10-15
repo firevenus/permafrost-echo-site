@@ -5,11 +5,12 @@
   "scripts": {
     "setup": "powershell -ExecutionPolicy Bypass -File ./scripts/setup.ps1",
     "dev": "next dev",
-    "build": "node scripts/generate-articles-data.mjs && next build",
+    "build": "npm run validate:content && node scripts/generate-articles-data.mjs && next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "vitest run",
-    "test:watch": "vitest"
+    "test": "node scripts/run-with-local-temp.mjs vitest run",
+    "validate:content": "node scripts/run-with-local-temp.mjs vitest run src/__tests__/data/content-integrity.test.ts",
+    "test:watch": "node scripts/run-with-local-temp.mjs vitest"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",

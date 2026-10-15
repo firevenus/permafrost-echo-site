@@ -2,9 +2,9 @@
 
 import { Link } from '@/i18n/routing';
 import { useLocale } from 'next-intl';
-import Image from 'next/image';
 import { Mail } from 'lucide-react';
 import type { Locale } from '@/i18n/routing';
+import BrandedWechatQr from '@/components/BrandedWechatQr';
 
 const quickLinks = [
   { key: 'about', href: '/about' },
@@ -17,29 +17,31 @@ const quickLinks = [
   { key: 'articles', href: '/articles' },
 ];
 
+const friendLinks = [
+  { name: 'GMHub', href: 'https://gmhub.com/' },
+  { name: 'IndieLoop', href: 'https://indieloop.com/' },
+  { name: 'Indienova', href: 'https://indienova.com/' },
+  { name: 'Bilibili', href: 'https://space.bilibili.com/3632304897395308' },
+  { name: 'LinkedIn', href: 'https://www.linkedin.com/company/permafrost-echo/' },
+];
+
 export default function Footer({ messages }: { messages: Record<string, string> }) {
   const locale = useLocale() as Locale;
 
   const t = (key: string) => messages[key] || key;
 
   return (
-    <footer className="relative border-t border-[rgba(76,201,240,0.08)] bg-[#050a12]">
+    <footer className="relative overflow-hidden border-t border-[rgba(76,201,240,0.08)] bg-[#050a12]">
       {/* Top gradient glow */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-px bg-gradient-to-r from-transparent via-[rgba(45,212,191,0.1)] via-[rgba(76,201,240,0.15)] to-transparent" />
 
-      <div className="max-w-[1200px] mx-auto px-6 py-20">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+      <div className="max-w-[1480px] mx-auto px-6 lg:px-10 py-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-[minmax(280px,1.35fr)_minmax(140px,.75fr)_minmax(260px,1fr)_minmax(150px,.65fr)] gap-12">
           {/* Brand */}
           <div>
             <div className="flex items-center gap-3 mb-5">
-              <Image
-                src="/images/logo.png"
-                alt="「冻土回声」 Permafrost Echo"
-                width={36}
-                height={36}
-                className="w-9 h-9 rounded-lg object-contain shadow-[0_0_16px_rgba(76,201,240,0.25)]"
-              />
-              <span className="text-sm font-semibold text-[#edf2fa]">
+              <img src="/images/brand-original-mark.png" alt="「冻土回声」 Permafrost Echo" className="w-9 h-9 object-contain drop-shadow-[0_0_10px_rgba(76,201,240,0.3)]" />
+              <span className="text-sm font-semibold text-[#edf2fa] whitespace-nowrap">
                 {t('footer.brand')}
               </span>
             </div>
@@ -103,19 +105,27 @@ export default function Footer({ messages }: { messages: Record<string, string> 
             <h3 className="text-xs font-semibold text-[rgba(237,242,250,0.5)] uppercase tracking-[0.08em] mb-5">
               {t('footer.wechatQr')}
             </h3>
-            <div className="w-28 h-28 rounded-xl overflow-hidden border border-[rgba(76,201,240,0.08)] bg-[rgba(255,255,255,0.02)] relative">
-              <Image
-                src="/images/qr/wechat-official.png"
-                alt={t('footer.wechatQr')}
-                fill
-                className="object-cover"
-              />
+            <BrandedWechatQr className="w-32 h-32" label={t('footer.wechatQr')} />
+          </div>
+        </div>
+
+        <div className="mt-12 pt-7 border-t border-[rgba(76,201,240,0.04)]">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-center gap-3 sm:gap-5 text-center">
+            <span className="text-[10px] uppercase tracking-[0.14em] text-[rgba(237,242,250,0.24)]">
+              {locale === 'zh' ? '友情链接' : 'Links'}
+            </span>
+            <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2">
+              {friendLinks.map((link) => (
+                <a key={link.name} href={link.href} target="_blank" rel="noopener noreferrer" className="text-xs text-[rgba(237,242,250,0.32)] hover:text-[#4cc9f0] transition-colors">
+                  {link.name}
+                </a>
+              ))}
             </div>
           </div>
         </div>
 
         {/* Copyright */}
-        <div className="mt-16 pt-8 border-t border-[rgba(76,201,240,0.04)]">
+        <div className="mt-8 pt-8 border-t border-[rgba(76,201,240,0.04)]">
           <p className="text-center text-xs text-[rgba(237,242,250,0.25)]">
             {t('footer.copyright')}
           </p>

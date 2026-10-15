@@ -8,6 +8,7 @@
     "team": "チーム",
     "roadmap": "ロードマップ",
     "contact": "お問い合わせ",
+    "partners": "パートナー",
     "articles": "記事"
   },
   "hero": {
@@ -18,7 +19,7 @@
     "cta2": "コミュニティ参加",
     "stats": {
       "members": "コミュニティメンバー",
-      "universities": "大学連携",
+      "universities": "連盟大学",
       "games": "提携ゲーム作品",
       "years": "年の実績"
     }
@@ -43,7 +44,7 @@
     "title": "概要",
     "brandName": "パーマフロスト・エコー",
     "brandNameEn": "Permafrost Echo",
-    "slogan": "大地を破り、世界に響く",
+    "slogan": "Connecting the Unknown · Beyond the Known",
     "oneLiner": "ナラティブ、ビジュアル、サウンド、インタラクションを媒体として、時間を超えて響き続けるデジタルコンテンツ体験を創造する。",
     "intro": "パーマフロスト・エコー（Permafrost Echo）は、未来のナラティブ、デジタルコンテンツ、没入型体験に焦点を当てた革新的な企業です。「凍土」を時間・記憶・深層構造の象徴とし、「こだま」を音・フィードバック・持続的伝播の象徴として、冷たく広大な想像力を受容可能でインタラクティブ、長く記憶に残るコンテンツ体験へと変換します。",
     "intro2": "当社はテクノロジー、アート、人文科学の交差点に注目し、クリエイティブプランニング、ビジュアルデザイン、インタラクティブ体験、オーディオナラティブ、デジタル制作を通じて、ブランド、機関、文化プロジェクトに識別度の高いコンテンツソリューションを提供します。パーマフロスト・エコーは、真に生命力のある作品は一瞬の鑑賞に留まらず、人々の心に持続的なこだまを形成すると信じています。",
@@ -53,11 +54,11 @@
     },
     "business": {
       "title": "事業方向",
-      "item1": "Global Game Jam および CiGA Game Jam の開催",
-      "item2": "ゲーム展の運営",
+      "item1": "GameJamイベント企画・会場運営",
+      "item2": "オフライン展示・試遊イベント運営",
       "item3": "東北ゲーム開発業界コミュニティ運営",
       "item4": "東北大学ゲーム開発サークル連盟運営",
-      "item5": "ゲームパブリッシングコンプライアンスおよび展示サポート",
+      "item5": "ゲームパブリッシングコンプライアンス・テスト支援",
       "item6": "ゲームコミュニティメディア運営"
     },
     "advantage": {
@@ -109,11 +110,11 @@
     "description": "東北アジアのインディーゲーム開発者による創造的な作品",
     "comingSoon": "近日公開",
     "categories": {
-      "gamejam": "Game Jam 発祥",
-      "gamejamDesc": "Game Jamで生まれたゲームデモ",
-      "exhibition": "ゲーム展示会出展",
+      "gamejam": "私たちのGame Jam会場から誕生…",
+      "gamejamDesc": "Permafrost Echoが運営するGame Jam会場で生まれたゲームデモ",
+      "exhibition": "オフライン展示",
       "exhibitionDesc": "ゲーム展示会で披露されたインディーゲーム",
-      "upcoming": "近日発売",
+      "upcoming": "パブリッシング事業",
       "upcomingDesc": "準備中のゲームパブリッシングプロジェクト"
     },
     "status": {
@@ -137,17 +138,17 @@
       "stayTuned": "サークル紹介"
     },
     "partners": {
-      "title": "パートナー",
+      "title": "特別な感謝",
       "description": "パーマフロスト・エコーを支援してくださるパートナーの皆様に感謝します"
     },
     "stats": {
       "title": "コミュニティ統計",
-      "wechat": "WeChatグループ",
-      "wechatCount": "約600人",
-      "qq": "QQグループ",
-      "qqCount": "約300+人",
-      "alliance": "東北アジア・インディーゲーム連盟",
-      "allianceDate": "2026-05-29 設立"
+      "wechat": "QQ・WeChatグループ",
+      "wechatCount": "コミュニティ窓口",
+      "qq": "地域の業界関係者",
+      "qqCount": "30+",
+      "alliance": "連盟大学",
+      "allianceDate": "20+"
     }
   },
   "team": {
@@ -163,7 +164,7 @@
       { "name": "L", "nameEn": "L", "role": "コアチームメンバー", "bio": "" },
       { "name": "成思", "nameEn": "Enki", "role": "コアチームメンバー", "bio": "" },
       { "name": "疯兔", "nameEn": "FungTO", "role": "コアチームメンバー", "bio": "" },
-      { "name": "麻团", "nameEn": "MattUan", "role": "コアチームメンバー", "bio": "" },
+      { "name": "MT（麻团）", "nameEn": "MattUan", "role": "コアチームメンバー", "bio": "" },
       { "name": "漆玄", "nameEn": "Akv_Qixuan", "role": "コアチームメンバー", "bio": "" },
       { "name": "ZZK", "nameEn": "ZZK", "role": "コアチームメンバー", "bio": "" }
     ]

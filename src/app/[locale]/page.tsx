@@ -3,7 +3,8 @@
 import { useTranslations, useLocale } from 'next-intl';
 import Image from 'next/image';
 import { Link } from '@/i18n/routing';
-import { getActivities, getUpcomingActivities, getStats } from '@/lib/data';
+import { getCompletedActivities, getUpcomingActivities, getStats } from '@/lib/data';
+import { BRAND_SLOGAN_EN, BRAND_SLOGAN_ZH } from '@/lib/brand';
 import type { Locale } from '@/i18n/routing';
 import { ArrowRight, Calendar, MapPin, Gamepad2, Palette, GraduationCap, Images } from 'lucide-react';
 
@@ -14,14 +15,14 @@ export default function HomePage() {
   const locale = useLocale() as Locale;
 
   const stats = getStats();
-  const allActivities = getActivities(locale);
-  const upcomingActivities = getUpcomingActivities(locale);
-
-  const coreActivities = allActivities.slice(0, 3);
+  const upcomingActivities = getUpcomingActivities(locale).filter(
+    (activity) => activity.id === 'ggj-2027'
+  );
+  const coreActivities = getCompletedActivities(locale).slice(-3).reverse();
 
   const statItems = [
     { value: `${stats.members}+`, label: t('hero.stats.members') },
-    { value: `${stats.universities}+`, label: t('hero.stats.universities'), sublabel: '高校联盟' },
+    { value: `${stats.universities}+`, label: t('hero.stats.universities') },
     { value: `${stats.games}+`, label: t('hero.stats.games') },
     { value: stats.years.toString(), label: t('hero.stats.years') },
   ];
@@ -75,7 +76,7 @@ export default function HomePage() {
         <div className="absolute bottom-[20%] left-[3%] w-[320px] h-[320px] rounded-full bg-[rgba(123,47,247,0.05)] blur-[100px] pointer-events-none animate-float will-change-transform" style={{ animationDelay: '-3s' }} />
         <div className="absolute top-[50%] left-[35%] w-[250px] h-[250px] rounded-full bg-[rgba(76,201,240,0.03)] blur-[80px] pointer-events-none animate-float will-change-transform" style={{ animationDelay: '-5s' }} />
 
-        <div className="relative max-w-[1200px] mx-auto px-6 py-24 w-full">
+        <div className="relative max-w-[1480px] mx-auto px-6 lg:px-10 py-24 w-full">
           <div className="max-w-[760px] mx-auto text-center">
             {/* Subtitle with enhanced label — 冰晶光泽 */}
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[rgba(76,201,240,0.06)] border border-[rgba(76,201,240,0.1)] mb-10 fade-up shadow-[0_0_20px_rgba(76,201,240,0.06)]">
@@ -93,10 +94,12 @@ export default function HomePage() {
               Permafrost Echo
             </p>
 
-            {/* Tagline — 破土而出，回响世界 */}
-            <p className="brand-tagline mb-8 fade-up fade-up-delay-3">
-              破土而出，回响世界
-            </p>
+            <div className="mb-8 fade-up fade-up-delay-3">
+              <p className="brand-tagline">{BRAND_SLOGAN_ZH}</p>
+              <p className="mt-2 text-[11px] sm:text-xs uppercase tracking-[0.18em] text-[rgba(237,242,250,0.38)]">
+                {BRAND_SLOGAN_EN}
+              </p>
+            </div>
 
             {/* Description */}
             <p className="text-[rgba(237,242,250,0.55)] text-lg mb-12 max-w-[520px] mx-auto leading-relaxed whitespace-pre-line fade-up fade-up-delay-4">
@@ -121,17 +124,12 @@ export default function HomePage() {
                   key={i}
                   className="glass-card p-5 text-center group cursor-default"
                 >
-                  <div className="stat-number gradient-text mb-1.5 transition-transform duration-300 group-hover:scale-110">
+                  <div className="stat-number gradient-text mb-1.5 transition-transform duration-300 group-hover:scale-105">
                     {stat.value}
                   </div>
                   <div className="text-xs text-[rgba(237,242,250,0.4)] font-medium">
                     {stat.label}
                   </div>
-                  {stat.sublabel && (
-                    <div className="text-[10px] text-[rgba(237,242,250,0.25)] font-medium mt-0.5">
-                      {stat.sublabel}
-                    </div>
-                  )}
                 </div>
               ))}
             </div>

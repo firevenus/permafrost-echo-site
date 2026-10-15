@@ -12,14 +12,14 @@
     "articles": "文章"
   },
   "hero": {
-    "title1": "破土而出",
-    "title2": "回响世界",
-    "subtitle": "东北亚独立游戏生态平台",
+    "title1": "连接未知",
+    "title2": "超越已知",
+    "subtitle": "致力于成为东北亚游戏生态平台",
     "cta1": "了解更多",
     "cta2": "加入社群",
     "stats": {
       "members": "社群成员",
-      "universities": "高校游戏社团",
+      "universities": "联盟高校",
       "games": "合作游戏作品",
       "years": "年深耕"
     }
@@ -44,21 +44,21 @@
     "title": "关于我们",
     "brandName": "「冻土回声」",
     "brandNameEn": "Permafrost Echo",
-    "slogan": "破土而出，回响世界",
+    "slogan": "连接未知 · 超越已知",
     "oneLiner": "以叙事、视觉、声音与交互为媒介，创造能够穿越时间、持续回响的数字内容体验。",
-    "intro": "「冻土回声」（Permafrost Echo）是一家面向未来叙事、数字内容与沉浸式体验的创新型公司。我们以\"冻土\"象征时间、记忆与深层结构，以\"回声\"代表声音、反馈与持续传播，致力于将冷峻而辽阔的想象力转化为可感知、可互动、可被长期记住的内容体验。",
-    "intro2": "公司关注科技、艺术与人文之间的交汇地带，通过创意策划、视觉设计、交互体验、音频叙事与数字化制作，为品牌、机构和文化项目提供具有辨识度的内容解决方案。「冻土回声」相信，真正有生命力的作品不只停留在一瞬间的观看，而会在用户心中形成持续的回响。",
+    "intro": "「冻土回声」（Permafrost Echo）诞生于沈阳。我们关注游戏创作中那些尚未被充分看见的人、作品与地方经验，并尝试通过 Game Jam、线下展览与试玩、高校社群和行业内容，让分散的创作者、玩家与从业者有机会彼此相遇。我们不替他人决定应该做什么，也不把尚未发生的合作或成果写成事实；我们更愿意先把现场搭起来，让真实的反馈发生。",
+    "intro2": "冻土并不意味着沉寂。它保存痕迹，也等待季节改变；回声则来自一次表达被另一端听见之后的回应。对「冻土回声」而言，品牌不是一个宏大的结论，而是一种持续工作的方法：连接未知，尊重差异，记录正在发生的实践，并在每一次活动、内容与协作中，为下一次相遇留下可以继续生长的路径。",
     "philosophy": {
       "title": "品牌理念",
       "content": "冻土之下，保存着被时间封存的痕迹；回声之中，延续着人与世界之间的回应。Permafrost Echo 的名字表达了公司对\"深度\"\"记忆\"\"环境\"\"声音\"和\"未来感\"的关注。我们希望通过克制、精确且富有情绪张力的创作方式，让复杂议题变得可理解，让抽象概念拥有形状，让品牌表达具备更长久的穿透力。"
     },
     "business": {
       "title": "业务方向",
-      "item1": "Global Game Jam 与 CiGA Game Jam 承办",
-      "item2": "承办游戏展",
+      "item1": "GameJam活动策划与站点运营",
+      "item2": "线下展览/试玩活动运营",
       "item3": "东北游戏开发行业社群运营",
       "item4": "东北高校游戏开发社团联盟运营",
-      "item5": "游戏发行合规与展示支持",
+      "item5": "游戏发行合规与测试支持",
       "item6": "游戏社群媒体运营"
     },
     "advantage": {
@@ -110,11 +110,11 @@
     "description": "来自东北亚独立游戏开发者的创意之作",
     "comingSoon": "敬请期待",
     "categories": {
-      "gamejam": "Game Jam 诞生",
-      "gamejamDesc": "在 Game Jam 中诞生的游戏 Demo 作品",
-      "exhibition": "线下展会",
-      "exhibitionDesc": "近期将要出展的游戏作品",
-      "upcoming": "即将发行",
+      "gamejam": "从我们的 Game Jam 站点中诞生……",
+      "gamejamDesc": "诞生于「冻土回声」承办 Game Jam 站点的游戏 Demo 作品",
+      "exhibition": "线下展出",
+      "exhibitionDesc": "参与线下展览与试玩活动的游戏作品",
+      "upcoming": "发行业务",
       "upcomingDesc": "正在筹备中的游戏发行项目"
     },
     "status": {
@@ -138,17 +138,17 @@
       "stayTuned": "社团介绍"
     },
     "partners": {
-      "title": "合作伙伴",
+      "title": "特别致谢",
       "description": "感谢以下合作伙伴对「冻土回声」的支持"
     },
     "stats": {
       "title": "社群数据",
-      "wechat": "微信群",
-      "wechatCount": "约 600 人",
-      "qq": "QQ 群",
-      "qqCount": "约 300+ 人",
-      "alliance": "东北亚独立游戏联盟群",
-      "allianceDate": "2026-05-29 建立"
+      "wechat": "QQ 群 · 微信群",
+      "wechatCount": "社群沟通渠道",
+      "qq": "地区从业者",
+      "qqCount": "30+",
+      "alliance": "联盟高校",
+      "allianceDate": "20+"
     }
   },
   "team": {
@@ -180,7 +180,7 @@
         "bio": ""
       },
       {
-        "name": "麻团",
+        "name": "MT（麻团）",
         "nameEn": "MattUan",
         "role": "核心团队成员",
         "bio": ""
@@ -219,7 +219,7 @@
       "description": "商务合作、媒体采访、活动咨询，我们期待来自您的消息"
     },
     "wechat": {
-      "title": "微信公众号",
+      "title": "微信服务号",
       "description": "关注「冻土回声」微信服务号，了解更多东北游戏行业与活动资讯"
     },
     "social": {
@@ -246,11 +246,11 @@
   },
   "footer": {
     "brand": "「冻土回声」· Permafrost Echo",
-    "brandDesc": "东北亚独立游戏生态平台",
+    "brandDesc": "致力于成为东北亚游戏生态平台",
     "quickLinks": "快速链接",
     "contact": "联系方式",
     "linkedin": "LinkedIn · 领英",
-    "wechatQr": "微信公众号",
+    "wechatQr": "微信服务号",
     "copyright": "© 2026 「冻土回声」 Permafrost Echo. All rights reserved."
   },
   "gamejamDetail": {

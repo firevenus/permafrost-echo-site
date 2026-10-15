@@ -6,9 +6,9 @@ export default function JsonLd() {
       name: '「冻土回声」 | Permafrost Echo',
       alternateName: ['Permafrost Echo', '「冻土回声」'],
       url: 'https://permafrost-echo.com',
-      logo: 'https://permafrost-echo.com/images/logo.png',
+      logo: 'https://permafrost-echo.com/images/brand-original-lockup.png',
       description:
-        '东北亚独立游戏生态平台 — 专注于独立游戏生态的内容与活动组织平台，立足沈阳，覆盖东北亚。',
+        '致力于成为东北亚游戏生态平台 — 立足沈阳，连接游戏创作者、玩家、高校与行业伙伴。',
       email: 'contact@permafrost-echo.com',
       sameAs: ['https://www.linkedin.com/company/permafrost-echo/'],
       foundingDate: '2024',

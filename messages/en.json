@@ -8,6 +8,7 @@
     "team": "Team",
     "roadmap": "Roadmap",
     "contact": "Contact",
+    "partners": "Partners",
     "articles": "Articles"
   },
   "hero": {
@@ -18,7 +19,7 @@
     "cta2": "Join Community",
     "stats": {
       "members": "Community Members",
-      "universities": "University Partners",
+      "universities": "Alliance Universities",
       "games": "Partner Games",
       "years": "Years Active"
     }
@@ -43,7 +44,7 @@
     "title": "About Us",
     "brandName": "Permafrost Echo",
     "brandNameEn": "Permafrost Echo",
-    "slogan": "Break Through, Echo Worldwide",
+    "slogan": "Connecting the Unknown · Beyond the Known",
     "oneLiner": "Using narrative, visual, sound, and interaction as media, creating digital content experiences that transcend time and resonate continuously.",
     "intro": "Permafrost Echo is an innovative company focused on future narrative, digital content, and immersive experiences. We use \"permafrost\" to symbolize time, memory, and deep structures, and \"echo\" to represent sound, feedback, and continuous dissemination — transforming cold, expansive imagination into perceptible, interactive, and memorable content experiences.",
     "intro2": "The company focuses on the intersection of technology, art, and humanities. Through creative planning, visual design, interactive experiences, audio narrative, and digital production, we provide distinctive content solutions for brands, institutions, and cultural projects. Permafrost Echo believes that truly vital works don't just stay in a moment of viewing, but form lasting echoes in the hearts of audiences.",
@@ -53,11 +54,11 @@
     },
     "business": {
       "title": "Business Directions",
-      "item1": "Global Game Jam & CiGA Game Jam Hosting",
-      "item2": "Hosting Game Exhibitions",
+      "item1": "Game Jam Event Planning & Site Operations",
+      "item2": "Offline Exhibition & Playtest Operations",
       "item3": "Northeast Game Development Industry Community Operations",
       "item4": "Northeast University Game Development Club Alliance Operations",
-      "item5": "Game Publishing Compliance & Exhibition Support",
+      "item5": "Game Publishing Compliance & Testing Support",
       "item6": "Game Community Media Operations"
     },
     "advantage": {
@@ -109,11 +110,11 @@
     "description": "Creative works from Northeast Asia indie game developers",
     "comingSoon": "Coming Soon",
     "categories": {
-      "gamejam": "Born from Game Jam",
-      "gamejamDesc": "Game demos created during Game Jams",
-      "exhibition": "Showcased at Exhibitions",
+      "gamejam": "Born at Our Game Jam Sites…",
+      "gamejamDesc": "Game demos created at Game Jam sites hosted by Permafrost Echo",
+      "exhibition": "Offline Showcases",
       "exhibitionDesc": "Indie games exhibited at game expos",
-      "upcoming": "Upcoming Releases",
+      "upcoming": "Publishing",
       "upcomingDesc": "Game publishing projects in preparation"
     },
     "status": {
@@ -137,17 +138,17 @@
       "stayTuned": "Club Introduction"
     },
     "partners": {
-      "title": "Partners",
+      "title": "Special Thanks",
       "description": "Thank you to our partners for supporting Permafrost Echo"
     },
     "stats": {
       "title": "Community Stats",
-      "wechat": "WeChat Group",
-      "wechatCount": "~600 members",
-      "qq": "QQ Group",
-      "qqCount": "~300+ members",
-      "alliance": "Northeast Asia Indie Game Alliance",
-      "allianceDate": "Established 2026-05-29"
+      "wechat": "QQ & WeChat Groups",
+      "wechatCount": "Community channels",
+      "qq": "Regional Professionals",
+      "qqCount": "30+",
+      "alliance": "Alliance Universities",
+      "allianceDate": "20+"
     }
   },
   "team": {
@@ -163,7 +164,7 @@
       { "name": "L", "nameEn": "L", "role": "Core Team Member", "bio": "" },
       { "name": "Cheng Si", "nameEn": "Enki", "role": "Core Team Member", "bio": "" },
       { "name": "Feng Tu", "nameEn": "FungTO", "role": "Core Team Member", "bio": "" },
-      { "name": "Ma Tuan", "nameEn": "MattUan", "role": "Core Team Member", "bio": "" },
+      { "name": "MT (Ma Tuan)", "nameEn": "MattUan", "role": "Core Team Member", "bio": "" },
       { "name": "Qi Xuan", "nameEn": "Akv_Qixuan", "role": "Core Team Member", "bio": "" },
       { "name": "ZZK", "nameEn": "ZZK", "role": "Core Team Member", "bio": "" }
     ]
@@ -196,7 +197,7 @@
     },
     "wechat": {
       "title": "WeChat Official Account",
-      "description": "Follow '冻土回声' on WeChat for the latest event updates and indie game recommendations"
+      "description": "Follow '「冻土回声」' on WeChat for the latest event updates and indie game recommendations"
     },
     "social": {
       "title": "Social Media",

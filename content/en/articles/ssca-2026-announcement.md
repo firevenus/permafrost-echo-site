@@ -45,7 +45,7 @@ As the game zone operator at SSCA, Permafrost Echo is dedicated to carving out a
 
 **Event Date**: October 2025 (specific date TBA)
 **Venue**: Shenyang
-**Registration**: Follow the WeChat official account "冻土回声" for the registration link
+**Registration**: Follow the WeChat service account "「冻土回声」" for the registration link
 
 ---
 

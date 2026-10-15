@@ -1,4 +1,8 @@
 import type { Locale } from '@/i18n/routing';
+import {
+  getActivityCatalogEntry,
+  resolveActivityStatus,
+} from './activity-catalog';
 
 export interface ActivityInfo {
   id: string;
@@ -424,23 +428,128 @@ const activitiesMap: Record<Locale, ActivityInfo[]> = {
   mn: mnActivities,
 };
 
+const sscaExhibitionsZh: ActivityInfo[] = [
+  {
+    id: 'ssca-2026-07',
+    title: '「冻土回声」× SSCA20 原创游戏展区',
+    titleEn: 'Permafrost Echo × SSCA20 Original Games Zone',
+    date: '2026-07-31 — 08-02',
+    location: '沈阳工业展览馆',
+    description: '「冻土回声」原创游戏展区持续呈现本地独立游戏、大陆独立游戏、大陆商业游戏与国际商业游戏。本场参与人数超过 3 万。',
+    status: 'completed',
+  },
+  {
+    id: 'ssca-2026-10',
+    title: '「冻土回声」× SSCA21 原创游戏展区',
+    titleEn: 'Permafrost Echo × SSCA21 Original Games Zone',
+    date: '2026-10-01 — 10-04',
+    location: '沈阳工业展览馆',
+    description: '「冻土回声」原创游戏展区持续呈现本地独立游戏、大陆独立游戏、大陆商业游戏与国际商业游戏。本场参与人数超过 3 万。',
+    status: 'completed',
+  },
+  {
+    id: 'ssca-2027-01',
+    title: '「冻土回声」× SSCA22 原创游戏展区',
+    titleEn: 'Permafrost Echo × SSCA22 Original Games Zone',
+    date: '2027-01-22 — 01-24',
+    location: '沈阳新世界博览馆',
+    description: '「冻土回声」原创游戏展区将继续呈现本地独立游戏、大陆独立游戏、大陆商业游戏与国际商业游戏。',
+    status: 'upcoming',
+    highlight: true,
+  },
+];
+
+const sscaExhibitionsEn: ActivityInfo[] = [
+  {
+    id: 'ssca-2026-07',
+    title: 'Permafrost Echo × SSCA20 Original Games Zone',
+    titleEn: 'Permafrost Echo × SSCA20 Original Games Zone',
+    date: '2026-07-31 — 08-02',
+    location: 'Shenyang Industrial Exhibition Hall',
+    description: 'A recurring Northeast China showcase for local and mainland indie games, mainland commercial titles, and international commercial games. Attendance exceeded 30,000.',
+    status: 'completed',
+  },
+  {
+    id: 'ssca-2026-10',
+    title: 'Permafrost Echo × SSCA21 Original Games Zone',
+    titleEn: 'Permafrost Echo × SSCA21 Original Games Zone',
+    date: '2026-10-01 — 10-04',
+    location: 'Shenyang Industrial Exhibition Hall',
+    description: 'A recurring Northeast China showcase for local and mainland indie games, mainland commercial titles, and international commercial games. Attendance exceeded 30,000.',
+    status: 'completed',
+  },
+  {
+    id: 'ssca-2027-01',
+    title: 'Permafrost Echo × SSCA22 Original Games Zone',
+    titleEn: 'Permafrost Echo × SSCA22 Original Games Zone',
+    date: '2027-01-22 — 01-24',
+    location: 'Shenyang New World Expo',
+    description: 'The recurring showcase will continue to present local and mainland indie games, mainland commercial titles, and international commercial games.',
+    status: 'upcoming',
+    highlight: true,
+  },
+];
+
 function getActivityData(locale: Locale): ActivityInfo[] {
-  return activitiesMap[locale] || zhActivities;
+  const localized = activitiesMap[locale] || zhActivities;
+  const localizedContent = localized
+    .filter((activity) => activity.id !== 'ssca-2026-10')
+    .map((activity) => {
+      if (activity.id === 'northern-anime-carnival-2026-05' || activity.id === 'beijing-expo-2026') {
+        return {
+          ...activity,
+          id: 'northern-anime-carnival-2026-05',
+          title: locale === 'zh' ? '北境动漫游戏嘉年华' : 'Northern Anime & Game Carnival',
+          titleEn: 'Northern Anime & Game Carnival',
+          location: locale === 'zh' ? '沈阳' : 'Shenyang',
+          description: locale === 'zh'
+            ? '「冻土回声」携 12 款东北亚独立游戏作品亮相北境动漫游戏嘉年华，展示区域游戏创作力量。'
+            : 'Permafrost Echo presented 12 Northeast Asian indie games at the Northern Anime & Game Carnival in Shenyang.',
+        };
+      }
+      return activity;
+    });
+
+  return [
+    ...localizedContent,
+    ...(locale === 'zh' ? sscaExhibitionsZh : sscaExhibitionsEn),
+  ].map((activity) => {
+    const catalogEntry = getActivityCatalogEntry(activity.id);
+    return {
+      ...activity,
+      date: catalogEntry.dateLabel,
+      status: resolveActivityStatus(catalogEntry),
+      highlight: catalogEntry.highlight,
+      images: catalogEntry.images ? [...catalogEntry.images] : undefined,
+    };
+  });
+}
+
+function compareActivityStart(a: ActivityInfo, b: ActivityInfo): number {
+  return getActivityCatalogEntry(a.id).sortDate.localeCompare(
+    getActivityCatalogEntry(b.id).sortDate,
+  );
 }
 
 export function getActivities(locale?: Locale): ActivityInfo[] {
   const data = getActivityData(locale || 'zh');
   const completed = data
     .filter((a) => a.status === 'completed')
-    .sort((a, b) => b.date.localeCompare(a.date));
-  const upcoming = data.filter((a) => a.status === 'upcoming');
+    .sort((a, b) => compareActivityStart(b, a));
+  const upcoming = data
+    .filter((a) => a.status === 'upcoming')
+    .sort(compareActivityStart);
   return [...completed, ...upcoming];
 }
 
 export function getUpcomingActivities(locale?: Locale): ActivityInfo[] {
-  return getActivityData(locale || 'zh').filter((a) => a.status === 'upcoming');
+  return getActivityData(locale || 'zh')
+    .filter((a) => a.status === 'upcoming')
+    .sort(compareActivityStart);
 }
 
 export function getCompletedActivities(locale?: Locale): ActivityInfo[] {
-  return getActivityData(locale || 'zh').filter((a) => a.status === 'completed');
+  return getActivityData(locale || 'zh')
+    .filter((a) => a.status === 'completed')
+    .sort((a, b) => compareActivityStart(b, a));
 }

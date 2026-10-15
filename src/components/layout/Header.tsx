@@ -64,15 +64,15 @@ export default function Header({ messages }: { messages: Record<string, string> 
         }`}
       />
 
-      <div className="max-w-[1200px] mx-auto px-6 flex items-center justify-between h-16">
+      <div className="max-w-[1480px] mx-auto px-6 lg:px-10 flex items-center justify-between h-16">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3 no-underline group">
           <Image
-            src="/images/logo.png"
+            src="/images/brand-original-mark.png"
             alt="「冻土回声」 Permafrost Echo"
             width={32}
             height={32}
-            className="w-8 h-8 rounded-lg object-contain shadow-[0_0_16px_rgba(76,201,240,0.3)] transition-shadow duration-300 group-hover:shadow-[0_0_24px_rgba(76,201,240,0.5)]"
+            className="w-8 h-8 object-contain drop-shadow-[0_0_10px_rgba(76,201,240,0.35)] transition-[filter] duration-300 group-hover:drop-shadow-[0_0_16px_rgba(76,201,240,0.55)]"
           />
           <span className="text-sm font-semibold text-[#edf2fa] hidden sm:block">
             Permafrost Echo
@@ -107,6 +107,9 @@ export default function Header({ messages }: { messages: Record<string, string> 
             <button
               onClick={() => setLangOpen(!langOpen)}
               className="flex items-center gap-1.5 px-3 py-2 text-sm text-[rgba(237,242,250,0.5)] hover:text-[#edf2fa] rounded-lg hover:bg-[rgba(255,255,255,0.03)] transition-all duration-200"
+              aria-label={locale === 'zh' ? '切换语言' : 'Switch language'}
+              aria-expanded={langOpen}
+              aria-controls="language-menu"
             >
               <Globe size={14} />
               <span className="hidden sm:inline">{localeLabels[locale]}</span>
@@ -114,7 +117,7 @@ export default function Header({ messages }: { messages: Record<string, string> 
             </button>
 
             {langOpen && (
-              <div className="absolute right-0 top-full mt-2 py-2 w-36 bg-[rgba(8,14,22,0.97)] backdrop-blur-xl border border-[rgba(76,201,240,0.12)] rounded-xl shadow-[0_12px_40px_rgba(0,0,0,0.5)] z-50 overflow-hidden">
+              <div id="language-menu" className="absolute right-0 top-full mt-2 py-2 w-36 bg-[rgba(8,14,22,0.97)] backdrop-blur-xl border border-[rgba(76,201,240,0.12)] rounded-xl shadow-[0_12px_40px_rgba(0,0,0,0.5)] z-50 overflow-hidden">
                 {Object.entries(localeLabels).map(([code, label]) => (
                   <a
                     key={code}
@@ -136,7 +139,9 @@ export default function Header({ messages }: { messages: Record<string, string> 
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
             className="lg:hidden p-2 text-[rgba(237,242,250,0.5)] hover:text-[#edf2fa] transition-colors"
-            aria-label="Toggle menu"
+            aria-label={locale === 'zh' ? '打开或关闭导航菜单' : 'Toggle navigation menu'}
+            aria-expanded={mobileOpen}
+            aria-controls="mobile-navigation"
           >
             {mobileOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
@@ -145,6 +150,7 @@ export default function Header({ messages }: { messages: Record<string, string> 
 
       {/* Mobile Nav */}
       <div
+        id="mobile-navigation"
         className={`lg:hidden transition-all duration-300 ease-out overflow-hidden ${
           mobileOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
         }`}

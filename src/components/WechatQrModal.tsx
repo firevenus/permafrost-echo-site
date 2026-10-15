@@ -1,12 +1,12 @@
 'use client';
 
 import { useEffect } from 'react';
+import BrandedWechatQr from '@/components/BrandedWechatQr';
 
 interface WechatQrModalProps {
   open: boolean;
   onClose: () => void;
   title: string;
-  qrSrc: string;
   description?: string;
 }
 
@@ -14,7 +14,6 @@ export default function WechatQrModal({
   open,
   onClose,
   title,
-  qrSrc,
   description,
 }: WechatQrModalProps) {
   // ESC 键关闭
@@ -71,13 +70,7 @@ export default function WechatQrModal({
         )}
 
         {/* 二维码 */}
-        <div className="bg-white rounded-xl p-3 mx-auto inline-block">
-          <img
-            src={qrSrc}
-            alt={`${title} QR Code`}
-            className="w-56 h-56 block"
-          />
-        </div>
+        <BrandedWechatQr className="w-64 h-64 mx-auto" label={`${title} QR Code`} />
 
         <p className="text-xs text-[rgba(237,242,250,0.4)] mt-3">
           使用微信扫一扫

@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { Mail, MessageCircle, ExternalLink } from 'lucide-react';
 import WechatQrModal from '@/components/WechatQrModal';
+import BrandedWechatQr from '@/components/BrandedWechatQr';
 
 export const runtime = 'edge';
 
@@ -61,13 +62,7 @@ export default function ContactPage() {
               <h3 className="text-base font-semibold text-[#edf2fa] mb-2.5">
                 {t('contact.wechat.title')}
               </h3>
-              <div className="w-32 h-32 rounded-xl overflow-hidden border border-[rgba(76,201,240,0.08)] mb-3 bg-[rgba(255,255,255,0.02)]">
-                <img
-                  src="/images/qr/wechat-official.png"
-                  alt={t('contact.wechat.title')}
-                  className="w-full h-full object-cover"
-                />
-              </div>
+              <BrandedWechatQr className="w-36 h-36 mb-3" label={t('contact.wechat.title')} />
               <p className="text-xs text-[rgba(237,242,250,0.35)] leading-relaxed">
                 {t('contact.wechat.description')}
               </p>
@@ -139,7 +134,6 @@ export default function ContactPage() {
         open={wechatOpen}
         onClose={() => setWechatOpen(false)}
         title={t('contact.wechat.title')}
-        qrSrc="/images/qr/wechat-official.png"
         description={t('contact.wechat.description')}
       />
     </div>

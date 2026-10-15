@@ -1,6 +1,6 @@
 # 冻土回声 · Permafrost Echo
 
-> 破土而出，回响世界 — 东北亚独立游戏生态平台
+> 连接未知 · 超越已知 — 致力于成为东北亚游戏生态平台
 
 Permafrost Echo（冻土回声）是一个面向东北亚地区的独立游戏生态平台，致力于连接开发者、艺术家、高校社团与产业资源，共同推动区域独立游戏文化的发展。
 
@@ -87,6 +87,24 @@ npm start
 │   └── lib/          # 数据加载、SEO 元数据
 ├── tailwind.config.ts
 └── next.config.mjs
+```
+
+## 🤝 参与维护
+
+本项目面向多人开源协作。开始修改前请阅读：
+
+- [`AGENTS.md`](./AGENTS.md)：AI 工具的权限边界、架构二次确认和发布规则；
+- [`CONTRIBUTING.md`](./CONTRIBUTING.md)：人工贡献流程与 Pull Request 要求；
+- [`docs/website-maintenance/ARCHITECTURE.md`](./docs/website-maintenance/ARCHITECTURE.md)：权威数据源与兼容层；
+- [`docs/website-maintenance/SOP.md`](./docs/website-maintenance/SOP.md)：人工更新步骤；
+- [`docs/website-maintenance/UPDATE_PROMPT.md`](./docs/website-maintenance/UPDATE_PROMPT.md)：可复用的 AI 增量更新提示词。
+
+提交前至少运行：
+
+```bash
+npm run validate:content
+npm test
+npm run build
 ```
 
 ## 📝 更新日志

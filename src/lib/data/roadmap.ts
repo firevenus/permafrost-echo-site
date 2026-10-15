@@ -12,9 +12,9 @@ const zhRoadmap: RoadmapPhase[] = [
     phase: 'Phase 1',
     title: '品牌建立与社群运营',
     items: [
-      '建立「冻土回声」品牌视觉体系，搭建微信/QQ社群（600+人）',
+      '建立「冻土回声」品牌视觉体系，搭建微信/QQ社群',
       '联合东北20余所高校发起东北高校游戏开发社团联盟',
-      '承办第十七届SSCA动漫游戏博览会游戏专区',
+      '承办第十七届SSCA动漫游戏博览会游戏展区',
     ],
     status: 'completed',
   },
@@ -55,7 +55,7 @@ const enRoadmap: RoadmapPhase[] = [
     phase: 'Phase 1',
     title: 'Brand Building & Community Operations',
     items: [
-      'Establish brand visual identity, build WeChat & QQ communities (600+ members)',
+      'Establish brand visual identity and build WeChat & QQ communities',
       'Form Northeast University Game Dev Club Alliance with 20+ universities',
       'Host the 17th SSCA Animation, Comic & Game Expo game zone',
     ],

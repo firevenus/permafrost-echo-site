@@ -1,9 +1,15 @@
 import createNextIntlPlugin from 'next-intl/plugin';
+import path from 'node:path';
 
 const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts');
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  webpack(config) {
+    // Keep the source alias explicit for Windows, CI and open-source forks.
+    config.resolve.alias['@'] = path.resolve(process.cwd(), 'src');
+    return config;
+  },
   async headers() {
     return [
       {

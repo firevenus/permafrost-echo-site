@@ -8,6 +8,7 @@
     "team": "팀",
     "roadmap": "로드맵",
     "contact": "연락처",
+    "partners": "파트너",
     "articles": "기사"
   },
   "hero": {
@@ -18,7 +19,7 @@
     "cta2": "커뮤니티 가입",
     "stats": {
       "members": "커뮤니티 회원",
-      "universities": "대학 제휴",
+      "universities": "연합 대학",
       "games": "협력 게임 작품",
       "years": "년 활동"
     }
@@ -43,7 +44,7 @@
     "title": "소개",
     "brandName": "페름프로스트 에코",
     "brandNameEn": "Permafrost Echo",
-    "slogan": "땅을 뚫고, 세계에 울려퍼지다",
+    "slogan": "Connecting the Unknown · Beyond the Known",
     "oneLiner": "내러티브, 비주얼, 사운드, 인터랙션을 매체로 삼아 시간을 초월해 지속적으로 울려 퍼지는 디지털 콘텐츠 경험을 창조합니다.",
     "intro": "페름프로스트 에코(Permafrost Echo)는 미래 내러티브, 디지털 콘텐츠 및 몰입형 경험을 지향하는 혁신적인 기업입니다. '동토'를 시간, 기억, 심층 구조의 상징으로, '메아리'를 소리, 피드백, 지속적 전파의 상징으로 삼아, 차갑고 광활한 상상력을 지각 가능하고 상호작용 가능하며 오래 기억될 수 있는 콘텐츠 경험으로 전환합니다.",
     "intro2": "회사는 기술, 예술, 인문학의 교차점에 주목하며, 크리에이티브 기획, 비주얼 디자인, 인터랙티브 경험, 오디오 내러티브, 디지털 제작을 통해 브랜드, 기관, 문화 프로젝트에 식별도 높은 콘텐츠 솔루션을 제공합니다. 페름프로스트 에코는 진정한 생명력을 가진 작품은 한순간의 감상에 머물지 않고 사람들의 마음속에 지속적인 메아리를 형성한다고 믿습니다.",
@@ -53,11 +54,11 @@
     },
     "business": {
       "title": "사업 방향",
-      "item1": "Global Game Jam 및 CiGA Game Jam 개최",
-      "item2": "게임 전시 운영",
+      "item1": "GameJam 이벤트 기획 및 사이트 운영",
+      "item2": "오프라인 전시·플레이테스트 운영",
       "item3": "동북 게임 개발 업계 커뮤니티 운영",
       "item4": "동북 대학 게임 개발 동아리 연합 운영",
-      "item5": "게임 퍼블리싱 컴플라이언스 및 전시 지원",
+      "item5": "게임 퍼블리싱 컴플라이언스 및 테스트 지원",
       "item6": "게임 커뮤니티 미디어 운영"
     },
     "advantage": {
@@ -109,11 +110,11 @@
     "description": "동북아시아 인디 게임 개발자들의 창의적인 작품",
     "comingSoon": "곧 공개 예정",
     "categories": {
-      "gamejam": "Game Jam 탄생",
-      "gamejamDesc": "Game Jam에서 탄생한 게임 데모",
-      "exhibition": "게임 전시회 출품",
+      "gamejam": "우리 Game Jam 사이트에서 탄생…",
+      "gamejamDesc": "Permafrost Echo가 운영한 Game Jam 사이트에서 탄생한 게임 데모",
+      "exhibition": "오프라인 전시",
       "exhibitionDesc": "게임 전시회에서 선보인 인디 게임",
-      "upcoming": "출시 예정",
+      "upcoming": "퍼블리싱 사업",
       "upcomingDesc": "준비 중인 게임 퍼블리싱 프로젝트"
     },
     "status": {
@@ -137,17 +138,17 @@
       "stayTuned": "동아리 소개"
     },
     "partners": {
-      "title": "파트너",
+      "title": "특별 감사",
       "description": "페름프로스트 에코를 지원해 주시는 파트너분들께 감사드립니다"
     },
     "stats": {
       "title": "커뮤니티 통계",
-      "wechat": "위챗 그룹",
-      "wechatCount": "약 600명",
-      "qq": "QQ 그룹",
-      "qqCount": "약 300+명",
-      "alliance": "동북아시아 인디 게임 연합",
-      "allianceDate": "2026-05-29 설립"
+      "wechat": "QQ · 위챗 그룹",
+      "wechatCount": "커뮤니티 채널",
+      "qq": "지역 업계 종사자",
+      "qqCount": "30+",
+      "alliance": "연합 대학",
+      "allianceDate": "20+"
     }
   },
   "team": {
@@ -163,7 +164,7 @@
       { "name": "L", "nameEn": "L", "role": "핵심 팀 멤버", "bio": "" },
       { "name": "成思", "nameEn": "Enki", "role": "핵심 팀 멤버", "bio": "" },
       { "name": "疯兔", "nameEn": "FungTO", "role": "핵심 팀 멤버", "bio": "" },
-      { "name": "麻团", "nameEn": "MattUan", "role": "핵심 팀 멤버", "bio": "" },
+      { "name": "MT（麻团）", "nameEn": "MattUan", "role": "핵심 팀 멤버", "bio": "" },
       { "name": "漆玄", "nameEn": "Akv_Qixuan", "role": "핵심 팀 멤버", "bio": "" },
       { "name": "ZZK", "nameEn": "ZZK", "role": "핵심 팀 멤버", "bio": "" }
     ]
@@ -196,7 +197,7 @@
     },
     "wechat": {
       "title": "위챗 공식 계정",
-      "description": "위챗에서 '冻土回声'을 팔로우하여 최신 이벤트 소식과 인디 게임 추천을 받아보세요"
+      "description": "위챗에서 '「冻土回声」'을 팔로우하여 최신 이벤트 소식과 인디 게임 추천을 받아보세요"
     },
     "social": {
       "title": "소셜 미디어",

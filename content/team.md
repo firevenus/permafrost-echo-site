@@ -16,7 +16,7 @@
 
 ### 3. 疯兔 (FungTO)
 
-### 4. 麻团 (MattUan)
+### 4. MT（麻团） (MattUan)
 
 ### 5. 漆玄 (Akv_Qixuan)
 

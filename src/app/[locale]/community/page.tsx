@@ -5,9 +5,12 @@ import {
   Cpu,
   Users,
   Building2,
+  MapPinned,
 } from 'lucide-react';
 import { cityGroups, getAllUniversityInfos } from '@/lib/data/universities';
 import type { UniversityInfo } from '@/lib/data/universities';
+import { getPartners, getStats } from '@/lib/data';
+import type { Locale } from '@/i18n/routing';
 
 export const metadata: Metadata = {
   title: '社群生态 | 「冻土回声」',
@@ -104,10 +107,29 @@ export default function CommunityPage() {
   const isZh = locale === 'zh';
 
   const allClubs = getAllUniversityInfos();
-  const totalSchools = new Set(allClubs.map((c) => c.school)).size;
+  const stats = getStats();
+  const partners = getPartners(locale as Locale);
+
+  const communityStats = [
+    {
+      icon: <Users className="h-6 w-6 text-ice-200" />,
+      value: `${stats.members}+`,
+      label: isZh ? '社群成员' : 'Community Members',
+    },
+    {
+      icon: <MapPinned className="h-6 w-6 text-ice-200" />,
+      value: `${stats.regionalProfessionals}+`,
+      label: isZh ? '地区从业者' : 'Regional Professionals',
+    },
+    {
+      icon: <Building2 className="h-6 w-6 text-ice-200" />,
+      value: `${stats.universities}+`,
+      label: isZh ? '联盟高校' : 'Alliance Universities',
+    },
+  ];
 
   return (
-    <main className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
+    <main className="mx-auto max-w-[1480px] px-4 py-16 sm:px-6 lg:px-10">
       {/* Header */}
       <section className="mb-20 text-center">
         <span className="section-label text-sm font-medium tracking-widest text-ice-200">
@@ -125,35 +147,24 @@ export default function CommunityPage() {
         </p>
 
         {/* Stats */}
-        <div className="mt-12 grid grid-cols-3 gap-6 sm:gap-8">
-          <div className="rounded-2xl border border-ice-100/15 bg-tundra-950/60 p-6 backdrop-blur-sm">
-            <div className="flex items-center justify-center gap-2 text-3xl font-bold text-stone-100">
-              <Building2 className="h-6 w-6 text-ice-200" />
-              {cityGroups.length}
+        <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
+          {communityStats.map((stat) => (
+            <div key={stat.label} className="rounded-2xl border border-ice-100/15 bg-tundra-950/60 p-5 sm:p-6 backdrop-blur-sm min-w-0">
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-2 text-center text-xl sm:text-2xl font-bold text-stone-100 whitespace-nowrap">
+                {stat.icon}
+                <span>{stat.value}</span>
+              </div>
+              <div className="mt-2 text-xs font-medium tracking-wide text-stone-400">
+                {stat.label}
+              </div>
             </div>
-            <div className="mt-2 text-xs font-medium tracking-wide text-stone-400">
-              {isZh ? '覆盖城市' : 'Cities'}
-            </div>
-          </div>
-          <div className="rounded-2xl border border-ice-100/15 bg-tundra-950/60 p-6 backdrop-blur-sm">
-            <div className="flex items-center justify-center gap-2 text-3xl font-bold text-stone-100">
-              <Users className="h-6 w-6 text-ice-200" />
-              {allClubs.length}
-            </div>
-            <div className="mt-2 text-xs font-medium tracking-wide text-stone-400">
-              {isZh ? '游戏开发社团' : 'Game Dev Clubs'}
-            </div>
-          </div>
-          <div className="rounded-2xl border border-ice-100/15 bg-tundra-950/60 p-6 backdrop-blur-sm">
-            <div className="flex items-center justify-center gap-2 text-3xl font-bold text-stone-100">
-              <Building2 className="h-6 w-6 text-ice-200" />
-              {totalSchools}
-            </div>
-            <div className="mt-2 text-xs font-medium tracking-wide text-stone-400">
-              {isZh ? '覆盖高校' : 'Universities'}
-            </div>
-          </div>
+          ))}
         </div>
+        <p className="mt-5 text-xs text-stone-500">
+          {isZh
+            ? `联盟现覆盖 ${cityGroups.length} 座城市、${allClubs.length} 个游戏开发社团。`
+            : `The alliance currently spans ${cityGroups.length} cities and ${allClubs.length} game development clubs.`}
+        </p>
       </section>
 
       {/* City Groups */}
@@ -168,6 +179,30 @@ export default function CommunityPage() {
           locale={locale}
         />
       ))}
+
+      <section className="mt-24 pt-16 border-t border-ice-100/10">
+        <div className="text-center mb-10">
+          <span className="section-label">{t('partners.title')}</span>
+          <h2 className="section-title mb-3">{t('partners.title')}</h2>
+          <p className="text-sm text-stone-400">
+            {isZh ? '感谢一路同行的品牌、平台与社群，展示不分先后。' : t('partners.description')}
+          </p>
+        </div>
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+          {partners.map((partner) => (
+            <div key={partner.id} className="glass-card min-h-28 p-4 flex flex-col items-center justify-center text-center gap-2">
+              <div className="h-9 max-w-24 flex items-center justify-center">
+                {partner.logo ? (
+                  <img src={partner.logo} alt="" className={`max-w-full max-h-full object-contain ${partner.logoTone === 'light' ? 'partner-logo--light' : ''}`} />
+                ) : (
+                  <span className="text-xs font-semibold text-ice-200">{partner.logoText || partner.name}</span>
+                )}
+              </div>
+              <span className="text-[11px] leading-tight text-stone-300">{partner.name}</span>
+            </div>
+          ))}
+        </div>
+      </section>
     </main>
   );
 }

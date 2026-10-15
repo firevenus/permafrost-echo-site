@@ -1,10 +1,11 @@
 export function getStats() {
   return {
-    members: 1000,
+    members: 2000,
     universities: 20,
     games: 30,
     years: 4,
-    partners: 7,
-    events: 6,
+    partners: 50,
+    events: 8,
+    regionalProfessionals: 30,
   };
 }

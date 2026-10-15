@@ -1,11 +1,13 @@
 'use client';
 
 import { useState } from 'react';
-import { useTranslations, useMessages, useLocale } from 'next-intl';
-import { Quote, Target, Gamepad2, Calendar, Users, GraduationCap, Shield, Radio, Heart, Mail, MessageCircle, ExternalLink, MapPin, Eye } from 'lucide-react';
+import { useTranslations, useLocale } from 'next-intl';
+import { Quote, Target, Gamepad2, Calendar, Users, GraduationCap, Shield, Radio, Heart, Mail, MessageCircle, ExternalLink, MapPin, Compass } from 'lucide-react';
 import { getTimelineEvents } from '@/lib/data';
 import type { Locale } from '@/i18n/routing';
 import WechatQrModal from '@/components/WechatQrModal';
+import BrandedWechatQr from '@/components/BrandedWechatQr';
+import { BRAND_SLOGAN_EN, BRAND_SLOGAN_ZH } from '@/lib/brand';
 
 export const runtime = 'edge';
 
@@ -23,14 +25,9 @@ function avatarId(nameEn: string): string {
 export default function AboutPage() {
   const t = useTranslations();
   const locale = useLocale() as Locale;
-  const messages = useMessages();
   const [wechatOpen, setWechatOpen] = useState(false);
 
-  const members: TeamMember[] =
-    (messages as Record<string, unknown>).team &&
-    typeof (messages as Record<string, unknown>).team === 'object'
-      ? ((messages as Record<string, { members?: TeamMember[] }>).team?.members || [])
-      : [];
+  const members = t.raw('team.members') as TeamMember[];
 
   const timelineEvents = getTimelineEvents(locale);
 
@@ -53,9 +50,9 @@ export default function AboutPage() {
         <div className="page-container relative py-24 text-center">
           {/* Brand mark */}
           <img
-            src="/images/logo.png"
+            src="/images/brand-original-lockup.png"
             alt="Permafrost Echo"
-            className="w-16 h-16 rounded-2xl object-contain mx-auto mb-6 shadow-[0_0_30px_rgba(76,201,240,0.25)]"
+            className="w-40 sm:w-48 h-auto object-contain mx-auto mb-7 drop-shadow-[0_0_24px_rgba(76,201,240,0.22)]"
           />
           <h1 className="hero-title mb-4">
             <span className="gradient-text">{t('about.brandName')}</span>
@@ -63,8 +60,11 @@ export default function AboutPage() {
           <p className="text-[rgba(237,242,250,0.5)] text-sm font-medium tracking-widest uppercase mb-4">
             {t('about.brandNameEn')}
           </p>
-          <p className="text-[rgba(237,242,250,0.4)] text-lg max-w-[520px] mx-auto leading-relaxed">
-            {t('about.slogan')}
+          <p className="text-[#bfefff] text-base sm:text-lg max-w-[520px] mx-auto leading-relaxed tracking-[0.12em]">
+            {BRAND_SLOGAN_ZH}
+          </p>
+          <p className="mt-2 text-[11px] sm:text-xs uppercase tracking-[0.16em] text-[rgba(237,242,250,0.38)]">
+            {BRAND_SLOGAN_EN}
           </p>
         </div>
       </section>
@@ -186,9 +186,11 @@ export default function AboutPage() {
           <div className="max-w-[800px] mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
               {/* Mission */}
-              <div className="glass-card p-8 md:p-10 game-card group relative overflow-hidden">
+              <div className="glass-card p-8 md:p-10 game-card group relative overflow-hidden flex flex-col">
                 <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#f48c06] to-transparent opacity-40" />
-                <Target size={24} className="text-[#f48c06] mb-5 transition-transform duration-300 group-hover:scale-110" />
+                <div className="w-11 h-11 rounded-xl bg-[rgba(244,140,6,0.08)] flex items-center justify-center mb-5">
+                  <Target size={22} className="text-[#f48c06] transition-transform duration-300 group-hover:scale-110" />
+                </div>
                 <h3 className="text-lg font-bold text-[#edf2fa] mb-4">{t('about.mission.title')}</h3>
                 <div className="space-y-3">
                   {[t('about.mission.item1'), t('about.mission.item2'), t('about.mission.item3'), t('about.mission.item4')].map((item, i) => (
@@ -201,9 +203,11 @@ export default function AboutPage() {
               </div>
 
               {/* Vision */}
-              <div className="glass-card p-8 md:p-10 game-card group relative overflow-hidden flex flex-col justify-center">
+              <div className="glass-card p-8 md:p-10 game-card group relative overflow-hidden flex flex-col">
                 <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#7b2ff7] to-transparent opacity-40" />
-                <Eye size={24} className="text-[#7b2ff7] mb-5 transition-transform duration-300 group-hover:scale-110" />
+                <div className="w-11 h-11 rounded-xl bg-[rgba(123,47,247,0.08)] flex items-center justify-center mb-5">
+                  <Compass size={22} className="text-[#c77dff] transition-transform duration-300 group-hover:scale-110" />
+                </div>
                 <h3 className="text-lg font-bold text-[#edf2fa] mb-4">{t('about.vision.title')}</h3>
                 <p className="text-[rgba(237,242,250,0.5)] leading-relaxed text-base italic">
                   &ldquo;{t('about.vision.content')}&rdquo;
@@ -362,13 +366,7 @@ export default function AboutPage() {
                 <h3 className="text-sm font-semibold text-[#edf2fa] mb-2">
                   {t('contact.wechat.title')}
                 </h3>
-                <div className="w-28 h-28 rounded-xl overflow-hidden border border-[rgba(76,201,240,0.08)] mb-2 bg-[rgba(255,255,255,0.02)]">
-                  <img
-                    src="/images/qr/wechat-official.png"
-                    alt={t('contact.wechat.title')}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
+                <BrandedWechatQr className="w-32 h-32 mb-3" label={t('contact.wechat.title')} />
                 <p className="text-xs text-[rgba(237,242,250,0.35)] leading-relaxed">
                   {t('contact.wechat.description')}
                 </p>
@@ -434,7 +432,6 @@ export default function AboutPage() {
         open={wechatOpen}
         onClose={() => setWechatOpen(false)}
         title={t('contact.wechat.title')}
-        qrSrc="/images/qr/wechat-official.png"
         description={t('contact.wechat.description')}
       />
     </div>

@@ -1,4 +1,5 @@
 import type { Locale } from '@/i18n/routing';
+import { getPartnerCatalogEntry } from './partner-catalog';
 
 export interface PartnerInfo {
   id: string;
@@ -6,7 +7,9 @@ export interface PartnerInfo {
   nameEn?: string;
   category: string;
   description: string;
-  logo: string;
+  logo?: string;
+  logoTone?: 'normal' | 'light';
+  logoText?: string;
   website?: string;
 }
 
@@ -66,7 +69,6 @@ const zhPartners: PartnerInfo[] = [
     category: '游戏开发',
     description: '位于沈阳的独立游戏开发公司，致力于创造承载光阴故事的游戏作品。「游戏承载着光阴的故事。」',
     logo: '/images/partners/xirang-games.png',
-    website: 'https://www.xirang.games/',
   },
 ];
 
@@ -126,7 +128,6 @@ const enPartners: PartnerInfo[] = [
     category: 'Game Development',
     description: 'An indie game development studio based in Shenyang, dedicated to creating games that carry the story of time. "Games carry the story of time."',
     logo: '/images/partners/xirang-games.png',
-    website: 'https://www.xirang.games/',
   },
 ];
 
@@ -186,7 +187,6 @@ const jaPartners: PartnerInfo[] = [
     category: 'ゲーム開発',
     description: '瀋陽を拠点とするインディーゲーム開発スタジオ。時間の物語を紡ぐゲーム制作に取り組む。「ゲームは時間の物語を紡ぐ。」',
     logo: '/images/partners/xirang-games.png',
-    website: 'https://www.xirang.games/',
   },
 ];
 
@@ -246,7 +246,6 @@ const koPartners: PartnerInfo[] = [
     category: '게임 개발',
     description: '선양에 기반을 둔 인디 게임 개발 스튜디오. 시간의 이야기를 담은 게임을 만드는 데 전념합니다. "게임은 시간의 이야기를 담습니다."',
     logo: '/images/partners/xirang-games.png',
-    website: 'https://www.xirang.games/',
   },
 ];
 
@@ -306,7 +305,6 @@ const ruPartners: PartnerInfo[] = [
     category: 'Разработка игр',
     description: 'Студия инди-игр из Шэньяна, создающая игры, хранящие историю времени. «Игры хранят историю времени.»',
     logo: '/images/partners/xirang-games.png',
-    website: 'https://www.xirang.games/',
   },
 ];
 
@@ -366,7 +364,6 @@ const mnPartners: PartnerInfo[] = [
     category: 'Тоглоом хөгжүүлэлт',
     description: 'Шэньян хотод төвтэй инди тоглоом хөгжүүлэгч студи. Цаг хугацааны түүхийг агуулсан тоглоом бүтээхэд зориулагдсан. "Тоглоом цаг хугацааны түүхийг агуулдаг."',
     logo: '/images/partners/xirang-games.png',
-    website: 'https://www.xirang.games/',
   },
 ];
 
@@ -379,10 +376,75 @@ const partnersMap: Record<Locale, PartnerInfo[]> = {
   mn: mnPartners,
 };
 
+const additionalPartnersZh: PartnerInfo[] = [
+  {
+    id: 'gamesir',
+    name: '盖世小鸡',
+    nameEn: 'GameSir',
+    category: '游戏外设',
+    description: '游戏外设品牌，为玩家与现场试玩体验提供多平台控制设备支持。',
+    logoText: 'GameSir · 盖世小鸡',
+  },
+  {
+    id: 'autofull',
+    name: '傲风',
+    nameEn: 'AutoFull',
+    category: '电竞装备',
+    description: '电竞装备品牌，为游戏活动与创作者工作场景提供设备支持。',
+    logoText: 'AutoFull · 傲风',
+  },
+  {
+    id: 'youxichaguan',
+    name: '游戏茶馆',
+    nameEn: 'Game Teahouse',
+    category: '行业媒体',
+    description: '关注游戏产业与开发者生态的行业媒体与交流平台。',
+    logoText: '游戏茶馆',
+  },
+  {
+    id: 'indie-light',
+    name: '独立之光',
+    nameEn: 'Indie Light',
+    category: '独立游戏社群',
+    description: '连接独立游戏创作者与行业伙伴的社群及交流活动品牌。',
+    logoText: '独立之光',
+  },
+];
+
+const additionalPartnersEn: PartnerInfo[] = additionalPartnersZh.map((partner) => ({
+  ...partner,
+  name: partner.nameEn || partner.name,
+  category: ({
+    gamesir: 'Gaming Peripherals',
+    autofull: 'Esports Equipment',
+    youxichaguan: 'Industry Media',
+    'indie-light': 'Indie Game Community',
+  } as Record<string, string>)[partner.id] || partner.category,
+  description: ({
+    gamesir: 'A gaming peripherals brand supporting players and hands-on game experiences across platforms.',
+    autofull: 'An esports equipment brand supporting game events and creator workspaces.',
+    youxichaguan: 'An industry media and exchange platform focused on games and developer ecosystems.',
+    'indie-light': 'A community and event brand connecting indie game creators with industry partners.',
+  } as Record<string, string>)[partner.id] || partner.description,
+}));
+
 function getPartnerData(locale: Locale): PartnerInfo[] {
   return partnersMap[locale] || zhPartners;
 }
 
 export function getPartners(locale?: Locale): PartnerInfo[] {
-  return getPartnerData(locale || 'zh');
+  const resolvedLocale = locale || 'zh';
+  return [
+    ...getPartnerData(resolvedLocale),
+    ...(resolvedLocale === 'zh' ? additionalPartnersZh : additionalPartnersEn),
+  ].map((partner) => {
+    const catalogEntry = getPartnerCatalogEntry(partner.id);
+    return {
+      ...partner,
+      logo: catalogEntry.logo,
+      logoText: catalogEntry.logoText,
+      logoTone: catalogEntry.logoTone,
+      website: catalogEntry.website,
+    };
+  });
 }

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" role="img" aria-labelledby="title desc">
+  <title id="title">「冻土回声」品牌图形</title>
+  <desc id="desc">由山脉、井架与冻土层组成的透明背景品牌标志</desc>
+  <defs>
+    <linearGradient id="brand-gradient" x1="120" y1="80" x2="900" y2="920" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EAFBFF"/>
+      <stop offset="0.42" stop-color="#4CC9F0"/>
+      <stop offset="0.72" stop-color="#2DD4BF"/>
+      <stop offset="1" stop-color="#C77DFF"/>
+    </linearGradient>
+    <mask id="mark-mask">
+      <rect width="1000" height="1000" fill="black"/>
+      <circle cx="500" cy="500" r="454" fill="none" stroke="white" stroke-width="16"/>
+      <polygon points="150,610 330,250 430,500 510,330 620,540 750,210 860,610" fill="white"/>
+      <polygon points="130,640 320,370 415,530 505,350 640,545 790,285 875,640" fill="white" opacity=".92"/>
+      <g fill="black" stroke="black">
+        <polygon points="455,595 472,398 487,398 497,595"/>
+        <polygon points="505,595 516,398 531,398 548,595"/>
+        <line x1="468" y1="500" x2="534" y2="455" stroke-width="10"/>
+        <line x1="468" y1="455" x2="536" y2="505" stroke-width="10"/>
+        <rect x="428" y="385" width="140" height="18" rx="7" transform="rotate(-12 498 394)"/>
+        <polygon points="554,372 596,350 606,385 566,410"/>
+        <circle cx="444" cy="412" r="20"/>
+        <rect x="453" y="585" width="102" height="18" rx="4"/>
+      </g>
+      <path d="M105 650 Q250 610 390 650 T680 650 T895 650 V715 H105Z" fill="white"/>
+      <path d="M105 715 Q250 675 390 715 T680 715 T895 715 V770 H105Z" fill="black"/>
+      <path d="M105 770 Q250 730 390 770 T680 770 T895 770 V825 H105Z" fill="white"/>
+    </mask>
+  </defs>
+  <rect width="1000" height="1000" fill="url(#brand-gradient)" mask="url(#mark-mask)"/>
+</svg>

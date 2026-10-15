@@ -5,6 +5,7 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import JsonLd from '@/components/seo/JsonLd';
 import AutoBreadcrumb from '@/components/seo/AutoBreadcrumb';
+import HtmlLangSetter from '@/components/seo/HtmlLangSetter';
 import type { Metadata } from 'next';
 
 const BASE_URL = 'https://permafrost-echo.com';
@@ -33,7 +34,7 @@ const localeConfig: Record<
   zh: {
     lang: 'zh-CN',
     ogLocale: 'zh_CN',
-    title: '「冻土回声」 | Permafrost Echo — 东北亚独立游戏生态平台',
+    title: '「冻土回声」 | Permafrost Echo — 致力于成为东北亚游戏生态平台',
     description:
       '「冻土回声」（Permafrost Echo）— 专注于游戏开发的独立游戏生态平台，立足中国东北沈阳，覆盖东北亚。举办 Game Jam、SSCA 游戏展区、高校联盟等活动。探秘中国游戏市场新势力。',
     keywords: [...baseKeywords, '「冻土回声」', 'Permafrost Echo', '独立游戏', '游戏开发', '中国游戏市场', '中国东北', '东北亚', '沈阳', '游戏社区', '独立游戏生态', '游戏开发社区'],
@@ -127,6 +128,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       apple: '/favicon.svg',
     },
     manifest: '/manifest.webmanifest',
+    alternates: {
+      canonical: `${BASE_URL}/${locale}`,
+      languages: Object.fromEntries([
+        ...routing.locales.map((code) => [code, `${BASE_URL}/${code}`]),
+        ['x-default', `${BASE_URL}/zh`],
+      ]),
+    },
     // Google Search Console verification — set NEXT_PUBLIC_GSC_VERIFICATION in .env.local
     ...(process.env.NEXT_PUBLIC_GSC_VERIFICATION
       ? {
@@ -166,6 +174,7 @@ export default async function LocaleLayout({ children, params }: Props) {
 
   return (
     <NextIntlClientProvider messages={messages}>
+      <HtmlLangSetter lang={config.lang} />
       <JsonLd />
       <AutoBreadcrumb />
       <div className="min-h-screen bg-[#080e16] flex flex-col">
