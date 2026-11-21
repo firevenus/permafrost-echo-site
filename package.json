@@ -15,8 +15,8 @@
   "dependencies": {
     "gray-matter": "^4.0.3",
     "lucide-react": "^0.469.0",
-    "next": "^15.1.0",
-    "next-intl": "^3.26.0",
+    "next": "^15.5.29",
+    "next-intl": "^4.9.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-markdown": "^10.1.0",
@@ -31,11 +31,11 @@
     "@vitejs/plugin-react": "^6.0.3",
     "autoprefixer": "^10.4.20",
     "jsdom": "^29.1.1",
-    "postcss": "^8.5.0",
-    "sharp": "^0.35.3",
+    "postcss": "^8.5.23",
+    "sharp": "^0.35.5",
     "tailwindcss": "^3.4.17",
     "typescript": "^5.7.0",
-    "vitest": "^4.1.10"
+    "vitest": "^4.1.12"
   },
   "allowScripts": {
     "esbuild@0.14.47": true,
